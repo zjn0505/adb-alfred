@@ -1,0 +1,4014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>xyz.jienan.adb</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0461824C-6237-42B9-9882-BEC93329153D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>0461824C-6237-42B9-9882-BEC93329153D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1C25779-58E1-4E2F-8919-2222088581E1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>061518C5-6CFD-42EF-AB68-D2B11F98889E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>758F2BFC-527A-4C8D-9D3B-000CCF42574B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>069543F3-22C3-4769-BA1A-3BAE3C668883</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>22B91932-B6D7-48A0-9B52-33690AB7C852</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4C080E3F-1926-4006-B9DF-784BA5D78D52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>D18A1AD3-E0AD-422C-A477-E940251249B3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CA48997C-8B9B-4D82-885E-464BE23DA1C9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A7827D60-49E5-4845-955D-E0E6AA964E29</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1D757879-51AE-436E-801E-CD252FE7E60E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>232D69C4-27A2-48C5-BBFE-B6FADC33A290</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>232D69C4-27A2-48C5-BBFE-B6FADC33A290</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A7A732FB-5BB9-41F1-B2EA-B2B51AF0258C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A9816DA9-B0F0-45FB-B78B-D4ADE97BFECA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>91DBE388-01F6-45EE-A1E7-3A64000857CB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2E90C599-66C8-4C95-9847-D85E40AB94E6</key>
+		<array/>
+		<key>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3DE08189-D2BD-491C-A6A4-D49DA3305FED</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>311C79EE-C023-425C-8303-F1A23C9E7FDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3E8E5CAD-9421-47F3-9397-E211EA4271C3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F469FFED-AC36-4B5D-B761-A5C784037E38</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>38F77EED-1B8C-4A81-970F-9937F947E558</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4C080E3F-1926-4006-B9DF-784BA5D78D52</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>F1325793-7F9C-498B-9BBB-902A9349DFC1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4D037152-7CC5-482E-8F94-E9EF92983E07</key>
+		<array/>
+		<key>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E90C599-66C8-4C95-9847-D85E40AB94E6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5C4E1E87-7648-436C-B15A-9C7A0D6BA929</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5C4E1E87-7648-436C-B15A-9C7A0D6BA929</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5E89349C-E31D-40BC-A828-91A81C965ECF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D88E8039-6195-47AD-982B-CC4CA5C5EED5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>39FA7A4F-C0B8-4F74-A1F7-50ADEA19EDC7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6137EDAB-7A87-43EC-8766-49022D50387D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>64394AEA-7969-4695-BA1E-DEADC6BFE619</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6CC71670-241E-4E01-ADC6-0EA61C4D238C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>01B9D557-FFBF-462C-8CDA-68526EC37F97</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>64394AEA-7969-4695-BA1E-DEADC6BFE619</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A407AB1A-4308-4860-BECE-967104C1E851</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DB07D86E-AFED-4393-8A6E-73DA686CD001</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>758F2BFC-527A-4C8D-9D3B-000CCF42574B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>86E0AE80-E859-4D5D-B15B-D8631B27C24D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>069543F3-22C3-4769-BA1A-3BAE3C668883</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>873C7D72-9821-4192-9962-D46D7E2B3D5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>887CA3AA-747C-4110-ACA4-0DB0A3F45303</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</key>
+		<array/>
+		<key>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C6A84CEC-A533-4892-A67F-8D01904475E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>91DBE388-01F6-45EE-A1E7-3A64000857CB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>97545688-EEF7-4A89-8E4D-BC1C6C3EA01A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>94661296-E020-4CEE-9C3F-D324AFB76D71</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A146BAFF-E767-4A05-A819-A4E0E8D90446</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A1CCB5CC-E148-45B8-B0A8-CF25FE4AA72A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C6A84CEC-A533-4892-A67F-8D01904475E4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A407AB1A-4308-4860-BECE-967104C1E851</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>887CA3AA-747C-4110-ACA4-0DB0A3F45303</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A9816DA9-B0F0-45FB-B78B-D4ADE97BFECA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>09084E4E-89ED-475D-BAF3-3C5A8815C66F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A1CCB5CC-E148-45B8-B0A8-CF25FE4AA72A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B81B0663-A4BF-4BB1-94B2-66752B977EBC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C6A84CEC-A533-4892-A67F-8D01904475E4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CA48997C-8B9B-4D82-885E-464BE23DA1C9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3E8E5CAD-9421-47F3-9397-E211EA4271C3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1D757879-51AE-436E-801E-CD252FE7E60E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>498DE7B3-7E57-4556-B6DD-76104C1AFF88</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E211B0B6-2DE5-45AF-9D9D-645F70743468</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D037152-7CC5-482E-8F94-E9EF92983E07</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>5E89349C-E31D-40BC-A828-91A81C965ECF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EFFE7088-1ACC-4315-9346-BC5607565A63</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F1325793-7F9C-498B-9BBB-902A9349DFC1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F469FFED-AC36-4B5D-B761-A5C784037E38</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6137EDAB-7A87-43EC-8766-49022D50387D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A146BAFF-E767-4A05-A819-A4E0E8D90446</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Jienan Zhang</string>
+	<key>description</key>
+	<string>adb - all in one</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>adb</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+cmd = os.getenv(&apos;mod&apos;)
+
+shell_cmd= &apos;{0} -s {1} reboot {2}&apos;.format(adb_path, serial, cmd)
+sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	print(&quot;Reboot device succeed&quot;)
+except:
+	print(&quot;Reboot device failed&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>232D69C4-27A2-48C5-BBFE-B6FADC33A290</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python show_device_options.py &quot;{query}&quot;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>86E0AE80-E859-4D5D-B15B-D8631B27C24D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>01&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<true/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>01B9D557-FFBF-462C-8CDA-68526EC37F97</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:serial} - {var:name}</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>adb</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python list_devices.py &quot;{query}&quot;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>02&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^(?!(restart_adb|adb_connect|adb_disconnect)).*$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>09&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{query}</string>
+				<key>variables</key>
+				<dict>
+					<key>function</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>069543F3-22C3-4769-BA1A-3BAE3C668883</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>adb_reboot</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>22B91932-B6D7-48A0-9B52-33690AB7C852</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>serial</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>758F2BFC-527A-4C8D-9D3B-000CCF42574B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>04&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import os
+import subprocess
+from workflow import Workflow3
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+api = os.getenv(&apos;device_api&apos;)
+serial = os.getenv(&apos;serial&apos;)
+
+cmd_cfg = adb_path + &apos; -s &apos; + serial + &apos; shell netcfg&apos;
+cmd_ifcfg = adb_path + &apos; -s &apos; + serial + &quot; shell ip addr show wlan0| grep &apos;inet &apos; | cut -d&apos; &apos; -f6|cut -d/ -f1&quot;
+
+query = sys.argv[1]
+
+log = subprocess.check_output(
+            cmd_ifcfg,
+            stderr=subprocess.STDOUT,
+            shell=True)
+
+sys.stderr.write(log)
+
+wf = Workflow3()
+
+wf.setvar(&apos;ip&apos;, log)
+
+wf.send_feedback()</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>97545688-EEF7-4A89-8E4D-BC1C6C3EA01A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+import re
+
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+shell_cmd = &apos;{0} -s {1} shell getprop debug.layout&apos;.format(adb_path, serial)
+
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+	isOn = &apos;off&apos;
+	if result.lower() != &apos;on&apos;:
+		isOn = &apos;on&apos;
+	shell_cmd = &apos;{0} -s {1} shell setprop debug.layout {2} &amp;&amp; {0} -s {1} shell service call activity 1599295570&apos;.format(adb_path, serial, isOn)
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+	sys.stderr.write(result)
+	print(&quot;Debug layout is &quot; + isOn)
+except:
+	print(&quot;Failed to toggle debug layout&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F1325793-7F9C-498B-9BBB-902A9349DFC1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>debug_layout</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>4C080E3F-1926-4006-B9DF-784BA5D78D52</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>03&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>soundname</key>
+				<string>Hero</string>
+				<key>systemsound</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>311C79EE-C023-425C-8303-F1A23C9E7FDB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+package = os.getenv(&apos;package&apos;)
+adb_s = &quot;{query}&quot;
+datetime = os.getenv(&apos;time&apos;)
+mod = os.getenv(&apos;mod&apos;)
+remote_path = &quot;sdcard/screenshot_{0}.png&quot;.format(datetime)
+shell_cmd_1 = &apos;{0} shell screencap -p {1}&apos;.format(adb_s, remote_path)
+shell_cmd_2 = &quot;{0} pull {1} {2}&quot;.format(adb_s, remote_path, (&quot;/tmp/&quot;, &quot;~/Desktop/&quot;)[mod == &quot;cmd&quot;])
+shell_cmd_3 = &quot;{0} shell rm {1}&quot;.format(adb_s, remote_path)
+sys.stderr.write(shell_cmd_1 + &quot;\n&quot;)
+sys.stderr.write(shell_cmd_2 + &quot;\n&quot;)
+sys.stderr.write(shell_cmd_3 + &quot;\n&quot;)
+try:
+	result = subprocess.check_output(shell_cmd_1,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	sys.stderr.write(result)
+	result = subprocess.check_output(shell_cmd_2,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	sys.stderr.write(result)
+	result = subprocess.check_output(shell_cmd_3,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	sys.stderr.write(result)
+	local_path = &quot;&quot;
+	if mod and mod == &quot;cmd&quot;:
+		local_path = &quot;~/Desktop/screenshot_{0}.png&quot;.format(datetime)
+	else:
+		local_path = &quot;/tmp/screenshot_{0}.png&quot;.format(datetime)
+	
+	if not mod == &quot;cmd&quot;:
+		shell_cmd_4 = &quot;osascript -e &apos;on run args&apos; -e &apos;set thisFile to item 1 of args&apos; -e &apos;set the clipboard to (read thisFile as «class PNGf»)&apos; -e return -e end {0}&quot;.format(local_path)
+		if subprocess.call([&apos;which&apos;, &apos;osascript&apos;]) == 0:
+			result = subprocess.check_output(shell_cmd_4,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+			sys.stderr.write(result)
+		elif subprocess.call([&apos;which&apos;, &apos;xclip&apos;]) == 0:
+			result = subprocess.check_output(&quot;xclip -selection clipboard -t image/png -i {0}&quot;.format(local_path),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+			sys.stderr.write(result)
+
+		result = subprocess.check_output(&quot;rm {0}&quot;.format(local_path),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+		sys.stderr.write(result)
+		print(&quot;Screenshot captured to clipboard&quot;)
+	else:
+		print(&quot;Screenshot captured to desktop&quot;)
+except:
+	print(&quot;Failed to capture screenshot&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+
+response = subprocess.check_output(
+           &apos;{0} kill-server &amp;&amp; {1} start-server&apos;.format(adb_path, adb_path),
+           stderr=subprocess.STDOUT,
+           shell=True)
+
+if &apos;daemon started successfully&apos; in response:
+    sys.stdout.write(&apos;Successfully restarted&apos;)
+else:
+    sys.stdout.write(&apos;Failed restarting&apos;)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:adb_path} -s {var:serial}</string>
+				<key>variables</key>
+				<dict>
+					<key>time</key>
+					<string>{datetime:yyyyMMddHHmmss}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>91DBE388-01F6-45EE-A1E7-3A64000857CB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>screenshot</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>restart_adb</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>64394AEA-7969-4695-BA1E-DEADC6BFE619</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+import re
+
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+action = os.getenv(&apos;action&apos;)
+shell_cmd = &apos;{0} -s {1} shell am start -a {2}&apos;.format(adb_path, serial, action)
+
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+except:
+	print(&quot;Failed to open settings&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>94661296-E020-4CEE-9C3F-D324AFB76D71</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>open_settings</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+package = os.getenv(&apos;package&apos;)
+mod = os.getenv(&apos;mod&apos;)
+adb_s = &quot;{0} -s {1}&quot;.format(adb_path, serial)
+
+shell_cmd_1 = &apos;{0} shell settings get global sysui_demo_allowed&apos;.format(adb_s)
+sys.stderr.write(shell_cmd_1 + &quot;\n&quot;)
+try:
+	result = subprocess.check_output(shell_cmd_1,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	sys.stderr.write(result)
+	
+	if result and int(result) != 0:
+		sys.stderr.write(&quot;Turn demo mode off&quot;)
+		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command exit&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+		result = subprocess.check_output(&quot;{0} shell settings put global sysui_demo_allowed 0&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+
+	else:
+		
+		sys.stderr.write(&quot;Turn demo mode on&quot;)
+		result = subprocess.check_output(&quot;{0} shell settings put global sysui_demo_allowed 1&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+
+		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command enter&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+
+		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+
+		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+		shell_cmd = &quot;{0} shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false&quot;.format(adb_s)
+		sys.stderr.write(shell_cmd)
+		result = subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+
+		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command network -e wifi show -e level 4 -e fully true&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+
+		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e notifications -e visible false&quot;.format(adb_s),
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+		sys.stderr.write(result)
+		
+
+except:
+	print(&quot;Failed to capture screenshot&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>demo_mode</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>D18A1AD3-E0AD-422C-A477-E940251249B3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+ip = os.getenv(&apos;ip&apos;)
+shell_cmd = &apos;{0} connect {1}&apos;.format(adb_path, ip)
+sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print(&quot;Executed: adb connect &quot; + ip)
+except:
+	print(&quot;Failed to execute: adb connect &quot; + ip)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>887CA3AA-747C-4110-ACA4-0DB0A3F45303</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>adb_connect</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>A407AB1A-4308-4860-BECE-967104C1E851</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+package = os.getenv(&apos;package&apos;)
+
+shell_cmd = &apos;{0} -s {1} shell am force-stop {2}&apos;.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print(&quot;Force stop &quot; + package + &quot; succeed&quot;)
+except:
+	print(&quot;Force stop &quot; + package + &quot; failed&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python show_package_options.py &quot;{query}&quot;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python list_apps.py &quot;{query}&quot;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Listing installed packages......</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F469FFED-AC36-4B5D-B761-A5C784037E38</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3E8E5CAD-9421-47F3-9397-E211EA4271C3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>force_stop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>package</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6137EDAB-7A87-43EC-8766-49022D50387D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:package}</string>
+				<key>variables</key>
+				<dict>
+					<key>function</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>list_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>CA48997C-8B9B-4D82-885E-464BE23DA1C9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>08&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>10&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:serial} - {var:name}</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+ip = os.getenv(&apos;ip&apos;)
+shell_cmd = &apos;{0} disconnect {1}&apos;.format(adb_path, ip)
+sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print(&quot;Executed: adb disconnect &quot; + ip)
+except:
+	print(&quot;Failed to execute: adb disconnect &quot; + ip)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1D757879-51AE-436E-801E-CD252FE7E60E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import subprocess as sp
+import os
+import sys
+import time
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+
+cmd_devices = adb_path + &apos; devices&apos;
+cmd_cfg = adb_path + &apos; -s &apos; + serial + &apos; shell netcfg&apos;
+cmd_ifcfg = adb_path + &apos; -s &apos; + serial + &quot; shell ip -f inet addr show wlan0 | grep inet | tr -s &apos; &apos;&quot;
+cmd_tcpip = adb_path + &apos; -s &apos; + serial + &apos; tcpip 5555&apos;
+
+cmd_conn = adb_path + &apos; connect %s &apos;
+# info_devices = sp.Popen(cmd_devices,shell=True)
+src_outer = os.popen(cmd_devices).read().strip()
+# info_devices = sp.call(cmd_devices)
+print(&quot;---------&quot;)
+# print(info_devices)
+# print(&quot;src_outer&quot; , src_outer)
+if not src_outer :
+    print(&apos;there is no message out when cmd &apos; + cmd_devices)
+    sys.exit(0)
+touch_info = &apos;List of devices attached&apos;
+lists = src_outer[src_outer.index(touch_info) + len(touch_info):]
+
+if not lists :
+    print(&quot;There has no device connect ths computer ! &quot;)
+    sys.exit(0)
+print(lists)
+dev_list = lists.strip().split(&apos;\n&apos;)
+print(dev_list)
+if dev_list and len(dev_list) &gt;= 1:
+    for device in dev_list :
+        print(device)
+        if &apos;5555&apos; in device :
+            break
+        dev_name = device.split(&apos;\t&apos;)[0]
+        print(dev_name)
+        tcpip_info = os.popen(cmd_tcpip % dev_name).read().strip()
+        print((cmd_tcpip % dev_name) , tcpip_info)
+        time.sleep(3)
+        cfg_info = os.popen(cmd_cfg % dev_name).read().strip().split(&apos;\n&apos;)
+        if not cfg_info :
+            print(&apos;adb shell cfg command run error &apos;)
+            sys.exit(0)
+        wlan = &apos;wlan&apos;
+        for cfg in cfg_info :
+            
+            iter_cfg = cfg.strip()
+            if iter_cfg.startswith(wlan) :
+                # print(&apos;iter_cfg&apos; , iter_cfg)
+                ips = iter_cfg.split(&apos; &apos;)[-4]
+                ip = ips[:ips.index(&apos;/&apos;)]
+                # print(&quot;ip--&gt;&quot; , ip)
+                conn_info = os.popen(cmd_conn % ip).read().strip()
+                print((cmd_conn % ip) , conn_info)
+                # pass
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>adb_disconnect</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>DB07D86E-AFED-4393-8A6E-73DA686CD001</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+package = os.getenv(&apos;package&apos;)
+
+shell_cmd = &apos;{0} -s {1} shell monkey -p {2} -c android.intent.category.LAUNCHER 1&apos;.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print(&quot;Launch app &quot; + package + &quot; succeed&quot;)
+except:
+	print(&quot;Launch app &quot; + package + &quot; failed&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>debug_wifi</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>start_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>07&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>D88E8039-6195-47AD-982B-CC4CA5C5EED5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>05&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>4D037152-7CC5-482E-8F94-E9EF92983E07</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:serial} - {var:name}</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>39FA7A4F-C0B8-4F74-A1F7-50ADEA19EDC7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+cmd = os.getenv(&apos;function&apos;)[5:]
+shell_cmd = &apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd)
+sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print(&quot;Executed: &quot; + cmd)
+except:
+	print(&quot;Failed to execute: adb &quot;+cmd)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5E89349C-E31D-40BC-A828-91A81C965ECF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+package = os.getenv(&apos;package&apos;)
+
+param = &quot;&quot;
+if os.getenv(&apos;mod&apos;) == &quot;keep_data&quot;:
+	param = &quot;-k&quot;
+
+shell_cmd = &apos;{0} -s {1} shell pm clear {2}&apos;.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print(&quot;Data clear &quot; + package + &quot; succeed&quot;)
+except:
+	print(&quot;Data clear &quot; + package + &quot; failed&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>&lt;adb&gt;.*</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>clear_app_data</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>498DE7B3-7E57-4556-B6DD-76104C1AFF88</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:mod}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>none</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>11&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>06&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>2E90C599-66C8-4C95-9847-D85E40AB94E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+package = os.getenv(&apos;package&apos;)
+
+param = &quot;&quot;
+if os.getenv(&apos;mod&apos;) == &quot;keep_data&quot;:
+	param = &quot;-k&quot;
+
+shell_cmd = &apos;{0} -s {1} shell pm uninstall {2} {3}&apos;.format(adb_path, serial, param, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print(&quot;Uninstall app &quot; + package + &quot; succeed&quot;)
+except:
+	print(&quot;Uninstall app &quot; + package + &quot; failed&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>uninstall_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+cmd = os.getenv(&apos;function&apos;)[5:]
+
+print(&apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5C4E1E87-7648-436C-B15A-9C7A0D6BA929</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:mod}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>cmd</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>13&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>F1C25779-58E1-4E2F-8919-2222088581E1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>12&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>38F77EED-1B8C-4A81-970F-9937F947E558</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python show_install_options.py &quot;{query}&quot;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>0461824C-6237-42B9-9882-BEC93329153D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemAlternateNames</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemFinderComment</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array/>
+				<key>subtext</key>
+				<string>or folder name for batch installation</string>
+				<key>title</key>
+				<string>Input the file name of APK</string>
+				<key>types</key>
+				<array>
+					<string>dyn.ah62d4rv4ge80c6dp</string>
+					<string>public.folder</string>
+				</array>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+import pipes
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+apkFiles = os.getenv(&apos;apkFile&apos;).split(&quot;\t&quot;)
+options = os.getenv(&apos;option&apos;)
+optionArg = &quot;&quot;
+for option in options:
+	if option and option.strip():
+		optionArg = optionArg + &quot; -&quot; + option
+
+try:
+	if apkFiles:
+		totalFiles = len(apkFiles)
+		installResults = 0
+		sys.stderr.write(&quot;Step 1 {0}\n&quot;.format(totalFiles))
+		for apkFile in apkFiles:
+			sys.stderr.write(&quot;Step 2&quot; + &quot;\n&quot;)
+			if not apkFile:
+				continue
+			shell_cmd = &apos;{0} -s {1} install -r {2} {3}&apos;.format(adb_path, serial, optionArg, pipes.quote(apkFile))
+			sys.stderr.write(shell_cmd + &quot;\n&quot;)
+			result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+			if &quot;Failure [&quot; not in result:
+				installResults = installResults + 1
+			sys.stderr.write(result + &quot;\n&quot;)
+	if installResults == totalFiles:
+		print(&quot;Install app succeed&quot;)
+	else:
+		print(&quot;Install app failed, {0}/{1} failed&quot;.format(totalFiles - installResults, totalFiles))
+except:
+	print(&quot;Install app failed&quot;)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C6A84CEC-A533-4892-A67F-8D01904475E4</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>apkFile</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>uninstall_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A146BAFF-E767-4A05-A819-A4E0E8D90446</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>install_apk</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>uninstall_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>seconds</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.delay</string>
+			<key>uid</key>
+			<string>A1CCB5CC-E148-45B8-B0A8-CF25FE4AA72A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>14&apos;{query}&apos;, {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>A7A732FB-5BB9-41F1-B2EA-B2B51AF0258C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python show_keyevent_options.py &quot;{query}&quot;</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+import pipes
+
+adb_path = os.getenv(&apos;adb_path&apos;)
+serial = os.getenv(&apos;serial&apos;)
+cmd = os.getenv(&apos;function&apos;)
+text = os.getenv(&apos;key&apos;)
+mod = os.getenv(&apos;mod&apos;)
+
+if cmd==&quot;text&quot;:
+	text = pipes.quote(text.replace(&quot; &quot;, &quot;%s&quot;))
+
+shell_cmd = &quot;&quot;
+status_cmd = &quot;{0} -s {1} shell dumpsys window | grep mCurrentFocus&quot;.format(adb_path, serial)
+if cmd == &quot;STATUS_BAR&quot;:
+
+	result = subprocess.check_output(status_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	expanded = &quot;StatusBar&quot; in result
+
+	shell_cmd = &apos;{0} -s {1} shell service call statusbar {2}&apos;.format(adb_path, serial, (&quot;1&quot;, &quot;2&quot;)[expanded])
+elif cmd == &quot;KEYBOARD&quot;:
+	shell_cmd = &apos;{0} -s {1} shell input {2} {3} {4}&apos;.format(adb_path, serial, cmd, mod, text)
+else:
+	shell_cmd = &apos;{0} -s {1} shell input {2} {3} {4}&apos;.format(adb_path, serial, cmd, (&quot;&quot;, &quot;--longpress&quot;)[mod==&quot;cmd&quot;], text)
+
+sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print(&quot;Executed: &quot; + cmd)
+except:
+	print(&quot;Failed to execute: adb &quot;+cmd)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>09084E4E-89ED-475D-BAF3-3C5A8815C66F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>key</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A9816DA9-B0F0-45FB-B78B-D4ADE97BFECA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>keyevent_input</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>A7827D60-49E5-4845-955D-E0E6AA964E29</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string># Workflow Configuration
+
+- adb_path,  e.g. &quot;~/Library/Android/sdk/platform-tools/adb&quot;
+- aapt_path, e.g. &quot;~/Library/Android/sdk/build-tools/28.0.3/aapt&quot;
+
+# Usage
+
+Use keyword &quot;adb&quot; to get quick access to:
+
+- restart adb
+- connect devices over WiFi
+- connected devices
+- run any shell command to target device
+- check installed application
+- install new APKs
+- open settings, dev tool, WiFi, applications, accessibility page</string>
+	<key>uidata</key>
+	<dict>
+		<key>01B9D557-FFBF-462C-8CDA-68526EC37F97</key>
+		<dict>
+			<key>note</key>
+			<string>01</string>
+			<key>xpos</key>
+			<integer>190</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>1470</integer>
+		</dict>
+		<key>0461824C-6237-42B9-9882-BEC93329153D</key>
+		<dict>
+			<key>note</key>
+			<string>Show install options</string>
+			<key>xpos</key>
+			<integer>1630</integer>
+			<key>ypos</key>
+			<integer>1440</integer>
+		</dict>
+		<key>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>1270</integer>
+		</dict>
+		<key>061518C5-6CFD-42EF-AB68-D2B11F98889E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>069543F3-22C3-4769-BA1A-3BAE3C668883</key>
+		<dict>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>09084E4E-89ED-475D-BAF3-3C5A8815C66F</key>
+		<dict>
+			<key>note</key>
+			<string>Execute Input</string>
+			<key>xpos</key>
+			<integer>1630</integer>
+			<key>ypos</key>
+			<integer>1640</integer>
+		</dict>
+		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>1670</integer>
+		</dict>
+		<key>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2920</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>1D757879-51AE-436E-801E-CD252FE7E60E</key>
+		<dict>
+			<key>note</key>
+			<string>disconnect</string>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>890</integer>
+		</dict>
+		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>232D69C4-27A2-48C5-BBFE-B6FADC33A290</key>
+		<dict>
+			<key>note</key>
+			<string>Reboot device</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</key>
+		<dict>
+			<key>note</key>
+			<string>Input keyevent</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>1640</integer>
+		</dict>
+		<key>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>350</integer>
+		</dict>
+		<key>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</key>
+		<dict>
+			<key>note</key>
+			<string>Screen shot</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>2E90C599-66C8-4C95-9847-D85E40AB94E6</key>
+		<dict>
+			<key>note</key>
+			<string>06</string>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>1190</integer>
+		</dict>
+		<key>311C79EE-C023-425C-8303-F1A23C9E7FDB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2370</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>38F77EED-1B8C-4A81-970F-9937F947E558</key>
+		<dict>
+			<key>note</key>
+			<string>12</string>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>1390</integer>
+		</dict>
+		<key>39FA7A4F-C0B8-4F74-A1F7-50ADEA19EDC7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1630</integer>
+			<key>ypos</key>
+			<integer>1090</integer>
+		</dict>
+		<key>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</key>
+		<dict>
+			<key>note</key>
+			<string>restart adb</string>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>330</integer>
+		</dict>
+		<key>3DE08189-D2BD-491C-A6A4-D49DA3305FED</key>
+		<dict>
+			<key>note</key>
+			<string>11</string>
+			<key>xpos</key>
+			<integer>2240</integer>
+			<key>ypos</key>
+			<integer>1190</integer>
+		</dict>
+		<key>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>960</integer>
+		</dict>
+		<key>3E8E5CAD-9421-47F3-9397-E211EA4271C3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1000</integer>
+			<key>ypos</key>
+			<integer>800</integer>
+		</dict>
+		<key>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</key>
+		<dict>
+			<key>note</key>
+			<string>APK file selector for installation</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>1440</integer>
+		</dict>
+		<key>44884808-4D5F-4718-87D6-9348E5D73EBD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>TODO adb connect wifi</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>920</integer>
+		</dict>
+		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>1120</integer>
+		</dict>
+		<key>4C080E3F-1926-4006-B9DF-784BA5D78D52</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>4D037152-7CC5-482E-8F94-E9EF92983E07</key>
+		<dict>
+			<key>note</key>
+			<string>05</string>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>1040</integer>
+		</dict>
+		<key>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1000</integer>
+			<key>ypos</key>
+			<integer>1300</integer>
+		</dict>
+		<key>5C4E1E87-7648-436C-B15A-9C7A0D6BA929</key>
+		<dict>
+			<key>note</key>
+			<string>Run custom command in terminal</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>1270</integer>
+		</dict>
+		<key>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</key>
+		<dict>
+			<key>note</key>
+			<string>Demo mode</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>620</integer>
+		</dict>
+		<key>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1630</integer>
+			<key>ypos</key>
+			<integer>1270</integer>
+		</dict>
+		<key>5E89349C-E31D-40BC-A828-91A81C965ECF</key>
+		<dict>
+			<key>note</key>
+			<string>Run custom command</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>1090</integer>
+		</dict>
+		<key>6137EDAB-7A87-43EC-8766-49022D50387D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1350</integer>
+			<key>ypos</key>
+			<integer>800</integer>
+		</dict>
+		<key>64394AEA-7969-4695-BA1E-DEADC6BFE619</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>360</integer>
+		</dict>
+		<key>6CC71670-241E-4E01-ADC6-0EA61C4D238C</key>
+		<dict>
+			<key>note</key>
+			<string>List devices
+Add root functions</string>
+			<key>xpos</key>
+			<integer>20</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</key>
+		<dict>
+			<key>note</key>
+			<string>03</string>
+			<key>xpos</key>
+			<integer>660</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>701402E8-8901-4D87-A8EE-33E00C20A4CF</key>
+		<dict>
+			<key>note</key>
+			<string>04</string>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>120</integer>
+		</dict>
+		<key>758F2BFC-527A-4C8D-9D3B-000CCF42574B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</key>
+		<dict>
+			<key>note</key>
+			<string>Clear data</string>
+			<key>xpos</key>
+			<integer>2040</integer>
+			<key>ypos</key>
+			<integer>1090</integer>
+		</dict>
+		<key>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</key>
+		<dict>
+			<key>note</key>
+			<string>02</string>
+			<key>xpos</key>
+			<integer>420</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
+		<dict>
+			<key>note</key>
+			<string>Show device options</string>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>10</integer>
+		</dict>
+		<key>873C7D72-9821-4192-9962-D46D7E2B3D5E</key>
+		<dict>
+			<key>note</key>
+			<string>Uninstall</string>
+			<key>xpos</key>
+			<integer>2040</integer>
+			<key>ypos</key>
+			<integer>1240</integer>
+		</dict>
+		<key>887CA3AA-747C-4110-ACA4-0DB0A3F45303</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>connect
+History
+cmd to remove</string>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>720</integer>
+		</dict>
+		<key>89D37B8E-3886-41E7-A948-FAE513D4FD56</key>
+		<dict>
+			<key>note</key>
+			<string>10</string>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>890</integer>
+		</dict>
+		<key>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</key>
+		<dict>
+			<key>note</key>
+			<string>Launch app</string>
+			<key>xpos</key>
+			<integer>2040</integer>
+			<key>ypos</key>
+			<integer>930</integer>
+		</dict>
+		<key>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>1470</integer>
+		</dict>
+		<key>91DBE388-01F6-45EE-A1E7-3A64000857CB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1000</integer>
+			<key>ypos</key>
+			<integer>350</integer>
+		</dict>
+		<key>94661296-E020-4CEE-9C3F-D324AFB76D71</key>
+		<dict>
+			<key>note</key>
+			<string>Open Settings</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>470</integer>
+		</dict>
+		<key>97545688-EEF7-4A89-8E4D-BC1C6C3EA01A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Background ip</string>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>500</integer>
+		</dict>
+		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1000</integer>
+			<key>ypos</key>
+			<integer>950</integer>
+		</dict>
+		<key>A146BAFF-E767-4A05-A819-A4E0E8D90446</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>1470</integer>
+		</dict>
+		<key>A1CCB5CC-E148-45B8-B0A8-CF25FE4AA72A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>1550</integer>
+		</dict>
+		<key>A407AB1A-4308-4860-BECE-967104C1E851</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>750</integer>
+		</dict>
+		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>1670</integer>
+		</dict>
+		<key>A7A732FB-5BB9-41F1-B2EA-B2B51AF0258C</key>
+		<dict>
+			<key>note</key>
+			<string>14</string>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>1590</integer>
+		</dict>
+		<key>A9816DA9-B0F0-45FB-B78B-D4ADE97BFECA</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>1670</integer>
+		</dict>
+		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1820</integer>
+			<key>ypos</key>
+			<integer>1550</integer>
+		</dict>
+		<key>B81B0663-A4BF-4BB1-94B2-66752B977EBC</key>
+		<dict>
+			<key>note</key>
+			<string>Show package options</string>
+			<key>xpos</key>
+			<integer>1630</integer>
+			<key>ypos</key>
+			<integer>770</integer>
+		</dict>
+		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
+		<dict>
+			<key>note</key>
+			<string>Force stop</string>
+			<key>xpos</key>
+			<integer>2040</integer>
+			<key>ypos</key>
+			<integer>770</integer>
+		</dict>
+		<key>C6A84CEC-A533-4892-A67F-8D01904475E4</key>
+		<dict>
+			<key>note</key>
+			<string>Install app</string>
+			<key>xpos</key>
+			<integer>2040</integer>
+			<key>ypos</key>
+			<integer>1440</integer>
+		</dict>
+		<key>CA48997C-8B9B-4D82-885E-464BE23DA1C9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>800</integer>
+		</dict>
+		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>650</integer>
+		</dict>
+		<key>D88E8039-6195-47AD-982B-CC4CA5C5EED5</key>
+		<dict>
+			<key>note</key>
+			<string>07</string>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>1010</integer>
+		</dict>
+		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>920</integer>
+		</dict>
+		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1820</integer>
+			<key>ypos</key>
+			<integer>800</integer>
+		</dict>
+		<key>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>1120</integer>
+		</dict>
+		<key>E211B0B6-2DE5-45AF-9D9D-645F70743468</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>800</integer>
+		</dict>
+		<key>E4836C8C-4232-4791-BBF9-F3FF12DECB74</key>
+		<dict>
+			<key>xpos</key>
+			<integer>670</integer>
+			<key>ypos</key>
+			<integer>890</integer>
+		</dict>
+		<key>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>950</integer>
+		</dict>
+		<key>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1000</integer>
+			<key>ypos</key>
+			<integer>1120</integer>
+		</dict>
+		<key>EFFE7088-1ACC-4315-9346-BC5607565A63</key>
+		<dict>
+			<key>note</key>
+			<string>09</string>
+			<key>xpos</key>
+			<integer>1480</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>F1325793-7F9C-498B-9BBB-902A9349DFC1</key>
+		<dict>
+			<key>note</key>
+			<string>Toggle debug layout</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>F1C25779-58E1-4E2F-8919-2222088581E1</key>
+		<dict>
+			<key>note</key>
+			<string>13</string>
+			<key>xpos</key>
+			<integer>1940</integer>
+			<key>ypos</key>
+			<integer>1380</integer>
+		</dict>
+		<key>F469FFED-AC36-4B5D-B761-A5C784037E38</key>
+		<dict>
+			<key>note</key>
+			<string>List installed packages</string>
+			<key>xpos</key>
+			<integer>1190</integer>
+			<key>ypos</key>
+			<integer>770</integer>
+		</dict>
+		<key>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>930</integer>
+			<key>ypos</key>
+			<integer>1470</integer>
+		</dict>
+		<key>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</key>
+		<dict>
+			<key>note</key>
+			<string>08</string>
+			<key>xpos</key>
+			<integer>1090</integer>
+			<key>ypos</key>
+			<integer>880</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>aapt_path</key>
+		<string>~/Library/Android/sdk/build-tools/28.0.3/aapt</string>
+		<key>adb_path</key>
+		<string>~/Library/Android/sdk/platform-tools/adb</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>adb_path</string>
+		<string>aapt_path</string>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/zjn0505/adb-alfred</string>
+</dict>
+</plist>
