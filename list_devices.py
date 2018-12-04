@@ -130,7 +130,8 @@ def list_devices(args):
                 # if not historyWifiDevice.title in currentDevices:
                 log.debug("history item title " + historyWifiDevice.title)
                 it = wf.add_item(title="Connect over WiFi", valid = valid, arg="adb_connect", autocomplete="connect ", subtitle=historyWifiDevice.title)
-                it.setvar("ip", targetIp)
+                it.setvar("ip", historyWifiDevice.title)
+                it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
     
     # DISCONNECT
     if wifiDevices:

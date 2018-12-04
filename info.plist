@@ -144,7 +144,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>CA48997C-8B9B-4D82-885E-464BE23DA1C9</string>
+				<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -154,7 +154,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
+				<string>CA48997C-8B9B-4D82-885E-464BE23DA1C9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -306,11 +306,34 @@
 		</array>
 		<key>2E90C599-66C8-4C95-9847-D85E40AB94E6</key>
 		<array/>
+		<key>324F9367-F28B-4745-9733-1F9745496D67</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A83BC89A-9B15-4875-802C-0867AB333ACD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -359,7 +382,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>F469FFED-AC36-4B5D-B761-A5C784037E38</string>
+				<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -369,7 +392,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
+				<string>F469FFED-AC36-4B5D-B761-A5C784037E38</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -515,7 +538,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
+				<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -525,7 +548,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
+				<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -536,16 +559,6 @@
 		</array>
 		<key>64394AEA-7969-4695-BA1E-DEADC6BFE619</key>
 		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</string>
@@ -582,6 +595,16 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>64394AEA-7969-4695-BA1E-DEADC6BFE619</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>324F9367-F28B-4745-9733-1F9745496D67</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -723,19 +746,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>97545688-EEF7-4A89-8E4D-BC1C6C3EA01A</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<array>
 			<dict>
@@ -763,7 +773,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
+				<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -773,7 +783,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
+				<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -826,6 +836,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A83BC89A-9B15-4875-802C-0867AB333ACD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1125,19 +1148,19 @@
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-cmd = os.getenv(&apos;mod&apos;)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+cmd = os.getenv('mod')
 
-shell_cmd= &apos;{0} -s {1} reboot {2}&apos;.format(adb_path, serial, cmd)
+shell_cmd= '{0} -s {1} reboot {2}'.format(adb_path, serial, cmd)
 sys.stderr.write(shell_cmd)
 try:
 	subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
-	print(&quot;Reboot device succeed&quot;)
+	print("Reboot device succeed")
 except:
-	print(&quot;Reboot device failed&quot;)</string>
+	print("Reboot device failed")</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1176,7 +1199,7 @@ except:
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python show_device_options.py &quot;{query}&quot;</string>
+				<string>python show_device_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1201,7 +1224,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>01&apos;{query}&apos;, {allvars}</string>
+				<string>01'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<true/>
 				<key>processoutputs</key>
@@ -1261,7 +1284,7 @@ except:
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python list_devices.py &quot;{query}&quot;</string>
+				<string>python list_devices.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1286,7 +1309,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>02&apos;{query}&apos;, {allvars}</string>
+				<string>02'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -1322,7 +1345,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>09&apos;{query}&apos;, {allvars}</string>
+				<string>09'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -1394,7 +1417,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>04&apos;{query}&apos;, {allvars}</string>
+				<string>04'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -1413,54 +1436,6 @@ except:
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>import sys
-import os
-import subprocess
-from workflow import Workflow3
-
-adb_path = os.getenv(&apos;adb_path&apos;)
-api = os.getenv(&apos;device_api&apos;)
-serial = os.getenv(&apos;serial&apos;)
-
-cmd_cfg = adb_path + &apos; -s &apos; + serial + &apos; shell netcfg&apos;
-cmd_ifcfg = adb_path + &apos; -s &apos; + serial + &quot; shell ip addr show wlan0| grep &apos;inet &apos; | cut -d&apos; &apos; -f6|cut -d/ -f1&quot;
-
-query = sys.argv[1]
-
-log = subprocess.check_output(
-            cmd_ifcfg,
-            stderr=subprocess.STDOUT,
-            shell=True)
-
-sys.stderr.write(log)
-
-wf = Workflow3()
-
-wf.setvar(&apos;ip&apos;, log)
-
-wf.send_feedback()</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>97545688-EEF7-4A89-8E4D-BC1C6C3EA01A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
 				<string>import subprocess
@@ -1469,25 +1444,25 @@ import sys
 import re
 
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-shell_cmd = &apos;{0} -s {1} shell getprop debug.layout&apos;.format(adb_path, serial)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+shell_cmd = '{0} -s {1} shell getprop debug.layout'.format(adb_path, serial)
 
 try:
 	result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True).strip()
-	isOn = &apos;off&apos;
-	if result.lower() != &apos;on&apos;:
-		isOn = &apos;on&apos;
-	shell_cmd = &apos;{0} -s {1} shell setprop debug.layout {2} &amp;&amp; {0} -s {1} shell service call activity 1599295570&apos;.format(adb_path, serial, isOn)
+	isOn = 'off'
+	if result.lower() != 'on':
+		isOn = 'on'
+	shell_cmd = '{0} -s {1} shell setprop debug.layout {2} &amp;&amp; {0} -s {1} shell service call activity 1599295570'.format(adb_path, serial, isOn)
 	result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True).strip()
 	sys.stderr.write(result)
-	print(&quot;Debug layout is &quot; + isOn)
+	print("Debug layout is " + isOn)
 except:
-	print(&quot;Failed to toggle debug layout&quot;)</string>
+	print("Failed to toggle debug layout")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1524,23 +1499,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>03&apos;{query}&apos;, {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>soundname</key>
 				<string>Hero</string>
 				<key>systemsound</key>
@@ -1565,19 +1523,19 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-package = os.getenv(&apos;package&apos;)
-adb_s = &quot;{query}&quot;
-datetime = os.getenv(&apos;time&apos;)
-mod = os.getenv(&apos;mod&apos;)
-remote_path = &quot;sdcard/screenshot_{0}.png&quot;.format(datetime)
-shell_cmd_1 = &apos;{0} shell screencap -p {1}&apos;.format(adb_s, remote_path)
-shell_cmd_2 = &quot;{0} pull {1} {2}&quot;.format(adb_s, remote_path, (&quot;/tmp/&quot;, &quot;~/Desktop/&quot;)[mod == &quot;cmd&quot;])
-shell_cmd_3 = &quot;{0} shell rm {1}&quot;.format(adb_s, remote_path)
-sys.stderr.write(shell_cmd_1 + &quot;\n&quot;)
-sys.stderr.write(shell_cmd_2 + &quot;\n&quot;)
-sys.stderr.write(shell_cmd_3 + &quot;\n&quot;)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+adb_s = "{query}"
+datetime = os.getenv('time')
+mod = os.getenv('mod')
+remote_path = "sdcard/screenshot_{0}.png".format(datetime)
+shell_cmd_1 = '{0} shell screencap -p {1}'.format(adb_s, remote_path)
+shell_cmd_2 = "{0} pull {1} {2}".format(adb_s, remote_path, ("/tmp/", "~/Desktop/")[mod == "cmd"])
+shell_cmd_3 = "{0} shell rm {1}".format(adb_s, remote_path)
+sys.stderr.write(shell_cmd_1 + "\n")
+sys.stderr.write(shell_cmd_2 + "\n")
+sys.stderr.write(shell_cmd_3 + "\n")
 try:
 	result = subprocess.check_output(shell_cmd_1,
                             stderr=subprocess.STDOUT,
@@ -1594,34 +1552,34 @@ try:
                             shell=True)
 	
 	sys.stderr.write(result)
-	local_path = &quot;&quot;
-	if mod and mod == &quot;cmd&quot;:
-		local_path = &quot;~/Desktop/screenshot_{0}.png&quot;.format(datetime)
+	local_path = ""
+	if mod and mod == "cmd":
+		local_path = "~/Desktop/screenshot_{0}.png".format(datetime)
 	else:
-		local_path = &quot;/tmp/screenshot_{0}.png&quot;.format(datetime)
+		local_path = "/tmp/screenshot_{0}.png".format(datetime)
 	
-	if not mod == &quot;cmd&quot;:
-		shell_cmd_4 = &quot;osascript -e &apos;on run args&apos; -e &apos;set thisFile to item 1 of args&apos; -e &apos;set the clipboard to (read thisFile as «class PNGf»)&apos; -e return -e end {0}&quot;.format(local_path)
-		if subprocess.call([&apos;which&apos;, &apos;osascript&apos;]) == 0:
+	if not mod == "cmd":
+		shell_cmd_4 = "osascript -e 'on run args' -e 'set thisFile to item 1 of args' -e 'set the clipboard to (read thisFile as «class PNGf»)' -e return -e end {0}".format(local_path)
+		if subprocess.call(['which', 'osascript']) == 0:
 			result = subprocess.check_output(shell_cmd_4,
                             stderr=subprocess.STDOUT,
                             shell=True)
 			sys.stderr.write(result)
-		elif subprocess.call([&apos;which&apos;, &apos;xclip&apos;]) == 0:
-			result = subprocess.check_output(&quot;xclip -selection clipboard -t image/png -i {0}&quot;.format(local_path),
+		elif subprocess.call(['which', 'xclip']) == 0:
+			result = subprocess.check_output("xclip -selection clipboard -t image/png -i {0}".format(local_path),
                             stderr=subprocess.STDOUT,
                             shell=True)
 			sys.stderr.write(result)
 
-		result = subprocess.check_output(&quot;rm {0}&quot;.format(local_path),
+		result = subprocess.check_output("rm {0}".format(local_path),
                             stderr=subprocess.STDOUT,
                             shell=True)
 		sys.stderr.write(result)
-		print(&quot;Screenshot captured to clipboard&quot;)
+		print("Screenshot captured to clipboard")
 	else:
-		print(&quot;Screenshot captured to desktop&quot;)
+		print("Screenshot captured to desktop")
 except:
-	print(&quot;Failed to capture screenshot&quot;)</string>
+	print("Failed to capture screenshot")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1648,17 +1606,17 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
+adb_path = os.getenv('adb_path')
 
 response = subprocess.check_output(
-           &apos;{0} kill-server &amp;&amp; {1} start-server&apos;.format(adb_path, adb_path),
+           '{0} kill-server &amp;&amp; {1} start-server'.format(adb_path, adb_path),
            stderr=subprocess.STDOUT,
            shell=True)
 
-if &apos;daemon started successfully&apos; in response:
-    sys.stdout.write(&apos;Successfully restarted&apos;)
+if 'daemon started successfully' in response:
+    print('adb successfully restarted')
 else:
-    sys.stdout.write(&apos;Failed restarting&apos;)</string>
+    print('Failed to restart adb')</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1732,6 +1690,23 @@ else:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>03'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1743,17 +1718,17 @@ import sys
 import re
 
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-action = os.getenv(&apos;action&apos;)
-shell_cmd = &apos;{0} -s {1} shell am start -a {2}&apos;.format(adb_path, serial, action)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+action = os.getenv('action')
+shell_cmd = '{0} -s {1} shell am start -a {2}'.format(adb_path, serial, action)
 
 try:
 	result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True).strip()
 except:
-	print(&quot;Failed to open settings&quot;)</string>
+	print("Failed to open settings")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1795,18 +1770,86 @@ except:
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
+				<string>import os
+import sys
+import re
+import pickle
+from workflow import Workflow3
+
+adb_path = os.getenv('adb_path')
+ip = os.getenv('ip')
+
+def main(wf):
+
+	historyWifiDevices = []
+	history = wf.stored_data("wifi_history")
+	if history:
+		historyWifiDevices = pickle.loads(history)
+		if historyWifiDevices:
+			for historyWifiDevice in historyWifiDevices:
+				if historyWifiDevice.title == ip:
+					historyWifiDevices.remove(historyWifiDevice)
+					break
+		wf.store_data("wifi_history", pickle.dumps(historyWifiDevices))
+		print("Connection history removed")
+
+if __name__ == '__main__':
+    wf = Workflow3()
+    log = wf.logger
+    sys.exit(wf.run(main))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A83BC89A-9B15-4875-802C-0867AB333ACD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>adb_connect_remove</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>324F9367-F28B-4745-9733-1F9745496D67</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
 				<string>import subprocess
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-package = os.getenv(&apos;package&apos;)
-mod = os.getenv(&apos;mod&apos;)
-adb_s = &quot;{0} -s {1}&quot;.format(adb_path, serial)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+mod = os.getenv('mod')
+adb_s = "{0} -s {1}".format(adb_path, serial)
 
-shell_cmd_1 = &apos;{0} shell settings get global sysui_demo_allowed&apos;.format(adb_s)
-sys.stderr.write(shell_cmd_1 + &quot;\n&quot;)
+shell_cmd_1 = '{0} shell settings get global sysui_demo_allowed'.format(adb_s)
+sys.stderr.write(shell_cmd_1 + "\n")
 try:
 	result = subprocess.check_output(shell_cmd_1,
                             stderr=subprocess.STDOUT,
@@ -1815,13 +1858,13 @@ try:
 	sys.stderr.write(result)
 	
 	if result and int(result) != 0:
-		sys.stderr.write(&quot;Turn demo mode off&quot;)
-		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command exit&quot;.format(adb_s),
+		sys.stderr.write("Turn demo mode off")
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command exit".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
 		sys.stderr.write(result)
-		result = subprocess.check_output(&quot;{0} shell settings put global sysui_demo_allowed 0&quot;.format(adb_s),
+		result = subprocess.check_output("{0} shell settings put global sysui_demo_allowed 0".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
@@ -1829,31 +1872,31 @@ try:
 
 	else:
 		
-		sys.stderr.write(&quot;Turn demo mode on&quot;)
-		result = subprocess.check_output(&quot;{0} shell settings put global sysui_demo_allowed 1&quot;.format(adb_s),
+		sys.stderr.write("Turn demo mode on")
+		result = subprocess.check_output("{0} shell settings put global sysui_demo_allowed 1".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
 		sys.stderr.write(result)
 
-		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command enter&quot;.format(adb_s),
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command enter".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
 		sys.stderr.write(result)
 
-		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200&quot;.format(adb_s),
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
 		sys.stderr.write(result)
 
-		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100&quot;.format(adb_s),
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
 		sys.stderr.write(result)
-		shell_cmd = &quot;{0} shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false&quot;.format(adb_s)
+		shell_cmd = "{0} shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false".format(adb_s)
 		sys.stderr.write(shell_cmd)
 		result = subprocess.check_output(shell_cmd,
                             stderr=subprocess.STDOUT,
@@ -1861,13 +1904,13 @@ try:
 	
 		sys.stderr.write(result)
 
-		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e command network -e wifi show -e level 4 -e fully true&quot;.format(adb_s),
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command network -e wifi show -e level 4 -e fully true".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
 		sys.stderr.write(result)
 
-		result = subprocess.check_output(&quot;{0} shell am broadcast -a com.android.systemui.demo -e notifications -e visible false&quot;.format(adb_s),
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e notifications -e visible false".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
@@ -1875,7 +1918,7 @@ try:
 		
 
 except:
-	print(&quot;Failed to capture screenshot&quot;)</string>
+	print("Failed to capture screenshot")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1921,18 +1964,18 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-ip = os.getenv(&apos;ip&apos;)
-shell_cmd = &apos;{0} connect {1}&apos;.format(adb_path, ip)
-sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+adb_path = os.getenv('adb_path')
+ip = os.getenv('ip')
+shell_cmd = '{0} connect {1}'.format(adb_path, ip)
+sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
 try:
 	result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
 	sys.stderr.write(result)
-	print(&quot;Executed: adb connect &quot; + ip)
+	print("Executed: adb connect " + ip)
 except:
-	print(&quot;Failed to execute: adb connect &quot; + ip)</string>
+	print("Failed to execute: adb connect " + ip)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1978,20 +2021,20 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-package = os.getenv(&apos;package&apos;)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
 
-shell_cmd = &apos;{0} -s {1} shell am force-stop {2}&apos;.format(adb_path, serial, package)
+shell_cmd = '{0} -s {1} shell am force-stop {2}'.format(adb_path, serial, package)
 # sys.stderr.write(shell_cmd)
 try:
 	subprocess.check_output(shell_cmd,
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-	print(&quot;Force stop &quot; + package + &quot; succeed&quot;)
+	print("Force stop " + package + " succeed")
 except:
-	print(&quot;Force stop &quot; + package + &quot; failed&quot;)</string>
+	print("Force stop " + package + " failed")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2003,6 +2046,314 @@ except:
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>import subprocess as sp
+import os
+import sys
+import time
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+
+cmd_devices = adb_path + ' devices'
+cmd_cfg = adb_path + ' -s ' + serial + ' shell netcf | grep wlan0 | awk '{ print $3}''
+cmd_ifcfg = adb_path + ' -s ' + serial + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' '"
+cmd_tcpip = adb_path + ' -s ' + serial + ' tcpip 5555'
+
+cmd_conn = adb_path + ' connect %s '
+# info_devices = sp.Popen(cmd_devices,shell=True)
+src_outer = os.popen(cmd_devices).read().strip()
+# info_devices = sp.call(cmd_devices)
+print("---------")
+# print(info_devices)
+# print("src_outer" , src_outer)
+if not src_outer :
+    print('there is no message out when cmd ' + cmd_devices)
+    sys.exit(0)
+touch_info = 'List of devices attached'
+lists = src_outer[src_outer.index(touch_info) + len(touch_info):]
+
+if not lists :
+    print("There has no device connect ths computer ! ")
+    sys.exit(0)
+print(lists)
+dev_list = lists.strip().split('\n')
+print(dev_list)
+if dev_list and len(dev_list) &gt;= 1:
+    for device in dev_list :
+        print(device)
+        if '5555' in device :
+            break
+        dev_name = device.split('\t')[0]
+        print(dev_name)
+        tcpip_info = os.popen(cmd_tcpip % dev_name).read().strip()
+        print((cmd_tcpip % dev_name) , tcpip_info)
+        time.sleep(3)
+        cfg_info = os.popen(cmd_cfg % dev_name).read().strip().split('\n')
+        if not cfg_info :
+            print('adb shell cfg command run error ')
+            sys.exit(0)
+        wlan = 'wlan'
+        for cfg in cfg_info :
+            
+            iter_cfg = cfg.strip()
+            if iter_cfg.startswith(wlan) :
+                # print('iter_cfg' , iter_cfg)
+                ips = iter_cfg.split(' ')[-4]
+                ip = ips[:ips.index('/')]
+                # print("ip--&gt;" , ip)
+                conn_info = os.popen(cmd_conn % ip).read().strip()
+                print((cmd_conn % ip) , conn_info)
+                # pass
+</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>force_stop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>debug_wifi</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>10'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>08'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:serial} - {var:name}</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+ip = os.getenv('ip')
+shell_cmd = '{0} disconnect {1}'.format(adb_path, ip)
+sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print("Executed: adb disconnect " + ip)
+except:
+	print("Failed to execute: adb disconnect " + ip)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1D757879-51AE-436E-801E-CD252FE7E60E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>adb_disconnect</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>DB07D86E-AFED-4393-8A6E-73DA686CD001</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+
+shell_cmd = '{0} -s {1} shell monkey -p {2} -c android.intent.category.LAUNCHER 1'.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print("Launch app " + package + " succeed")
+except:
+	print("Launch app " + package + " failed")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -2030,7 +2381,7 @@ except:
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python show_package_options.py &quot;{query}&quot;</string>
+				<string>python show_package_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2075,7 +2426,7 @@ except:
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python list_apps.py &quot;{query}&quot;</string>
+				<string>python list_apps.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2108,25 +2459,6 @@ except:
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>3E8E5CAD-9421-47F3-9397-E211EA4271C3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>force_stop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2188,295 +2520,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>08&apos;{query}&apos;, {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>10&apos;{query}&apos;, {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:serial} - {var:name}</string>
-				<key>title</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv(&apos;adb_path&apos;)
-ip = os.getenv(&apos;ip&apos;)
-shell_cmd = &apos;{0} disconnect {1}&apos;.format(adb_path, ip)
-sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
-try:
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)
-	sys.stderr.write(result)
-	print(&quot;Executed: adb disconnect &quot; + ip)
-except:
-	print(&quot;Failed to execute: adb disconnect &quot; + ip)</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1D757879-51AE-436E-801E-CD252FE7E60E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>import subprocess as sp
-import os
-import sys
-import time
-
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-
-cmd_devices = adb_path + &apos; devices&apos;
-cmd_cfg = adb_path + &apos; -s &apos; + serial + &apos; shell netcfg&apos;
-cmd_ifcfg = adb_path + &apos; -s &apos; + serial + &quot; shell ip -f inet addr show wlan0 | grep inet | tr -s &apos; &apos;&quot;
-cmd_tcpip = adb_path + &apos; -s &apos; + serial + &apos; tcpip 5555&apos;
-
-cmd_conn = adb_path + &apos; connect %s &apos;
-# info_devices = sp.Popen(cmd_devices,shell=True)
-src_outer = os.popen(cmd_devices).read().strip()
-# info_devices = sp.call(cmd_devices)
-print(&quot;---------&quot;)
-# print(info_devices)
-# print(&quot;src_outer&quot; , src_outer)
-if not src_outer :
-    print(&apos;there is no message out when cmd &apos; + cmd_devices)
-    sys.exit(0)
-touch_info = &apos;List of devices attached&apos;
-lists = src_outer[src_outer.index(touch_info) + len(touch_info):]
-
-if not lists :
-    print(&quot;There has no device connect ths computer ! &quot;)
-    sys.exit(0)
-print(lists)
-dev_list = lists.strip().split(&apos;\n&apos;)
-print(dev_list)
-if dev_list and len(dev_list) &gt;= 1:
-    for device in dev_list :
-        print(device)
-        if &apos;5555&apos; in device :
-            break
-        dev_name = device.split(&apos;\t&apos;)[0]
-        print(dev_name)
-        tcpip_info = os.popen(cmd_tcpip % dev_name).read().strip()
-        print((cmd_tcpip % dev_name) , tcpip_info)
-        time.sleep(3)
-        cfg_info = os.popen(cmd_cfg % dev_name).read().strip().split(&apos;\n&apos;)
-        if not cfg_info :
-            print(&apos;adb shell cfg command run error &apos;)
-            sys.exit(0)
-        wlan = &apos;wlan&apos;
-        for cfg in cfg_info :
-            
-            iter_cfg = cfg.strip()
-            if iter_cfg.startswith(wlan) :
-                # print(&apos;iter_cfg&apos; , iter_cfg)
-                ips = iter_cfg.split(&apos; &apos;)[-4]
-                ip = ips[:ips.index(&apos;/&apos;)]
-                # print(&quot;ip--&gt;&quot; , ip)
-                conn_info = os.popen(cmd_conn % ip).read().strip()
-                print((cmd_conn % ip) , conn_info)
-                # pass
-</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>adb_disconnect</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>DB07D86E-AFED-4393-8A6E-73DA686CD001</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-package = os.getenv(&apos;package&apos;)
-
-shell_cmd = &apos;{0} -s {1} shell monkey -p {2} -c android.intent.category.LAUNCHER 1&apos;.format(adb_path, serial, package)
-# sys.stderr.write(shell_cmd)
-try:
-	subprocess.check_output(shell_cmd,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	print(&quot;Launch app &quot; + package + &quot; succeed&quot;)
-except:
-	print(&quot;Launch app &quot; + package + &quot; failed&quot;)</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>debug_wifi</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{var:function}</string>
 				<key>matchcasesensitive</key>
@@ -2497,24 +2540,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>07&apos;{query}&apos;, {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>D88E8039-6195-47AD-982B-CC4CA5C5EED5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>05&apos;{query}&apos;, {allvars}</string>
+				<string>05'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -2524,6 +2550,23 @@ except:
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>4D037152-7CC5-482E-8F94-E9EF92983E07</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>07'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>D88E8039-6195-47AD-982B-CC4CA5C5EED5</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2560,19 +2603,19 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-cmd = os.getenv(&apos;function&apos;)[5:]
-shell_cmd = &apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd)
-sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+cmd = os.getenv('function')[5:]
+shell_cmd = '{0} -s {1} {2}'.format(adb_path, serial, cmd)
+sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
 try:
 	result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
 	sys.stderr.write(result)
-	print(&quot;Executed: &quot; + cmd)
+	print("Executed: " + cmd)
 except:
-	print(&quot;Failed to execute: adb &quot;+cmd)</string>
+	print("Failed to execute: adb "+cmd)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2599,24 +2642,24 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-package = os.getenv(&apos;package&apos;)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
 
-param = &quot;&quot;
-if os.getenv(&apos;mod&apos;) == &quot;keep_data&quot;:
-	param = &quot;-k&quot;
+param = ""
+if os.getenv('mod') == "keep_data":
+	param = "-k"
 
-shell_cmd = &apos;{0} -s {1} shell pm clear {2}&apos;.format(adb_path, serial, package)
+shell_cmd = '{0} -s {1} shell pm clear {2}'.format(adb_path, serial, package)
 # sys.stderr.write(shell_cmd)
 try:
 	subprocess.check_output(shell_cmd,
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-	print(&quot;Data clear &quot; + package + &quot; succeed&quot;)
+	print("Data clear " + package + " succeed")
 except:
-	print(&quot;Data clear &quot; + package + &quot; failed&quot;)</string>
+	print("Data clear " + package + " failed")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2692,7 +2735,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>11&apos;{query}&apos;, {allvars}</string>
+				<string>11'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -2709,7 +2752,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>06&apos;{query}&apos;, {allvars}</string>
+				<string>06'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -2734,24 +2777,24 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-package = os.getenv(&apos;package&apos;)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
 
-param = &quot;&quot;
-if os.getenv(&apos;mod&apos;) == &quot;keep_data&quot;:
-	param = &quot;-k&quot;
+param = ""
+if os.getenv('mod') == "keep_data":
+	param = "-k"
 
-shell_cmd = &apos;{0} -s {1} shell pm uninstall {2} {3}&apos;.format(adb_path, serial, param, package)
+shell_cmd = '{0} -s {1} shell pm uninstall {2} {3}'.format(adb_path, serial, param, package)
 # sys.stderr.write(shell_cmd)
 try:
 	subprocess.check_output(shell_cmd,
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-	print(&quot;Uninstall app &quot; + package + &quot; succeed&quot;)
+	print("Uninstall app " + package + " succeed")
 except:
-	print(&quot;Uninstall app &quot; + package + &quot; failed&quot;)</string>
+	print("Uninstall app " + package + " failed")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2797,11 +2840,11 @@ except:
 import os
 import sys
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-cmd = os.getenv(&apos;function&apos;)[5:]
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+cmd = os.getenv('function')[5:]
 
-print(&apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd))</string>
+print('{0} -s {1} {2}'.format(adb_path, serial, cmd))</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2854,7 +2897,7 @@ print(&apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd))</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>13&apos;{query}&apos;, {allvars}</string>
+				<string>13'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -2871,7 +2914,7 @@ print(&apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd))</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>12&apos;{query}&apos;, {allvars}</string>
+				<string>12'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -2908,7 +2951,7 @@ print(&apos;{0} -s {1} {2}&apos;.format(adb_path, serial, cmd))</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python show_install_options.py &quot;{query}&quot;</string>
+				<string>python show_install_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3017,38 +3060,38 @@ import os
 import sys
 import pipes
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-apkFiles = os.getenv(&apos;apkFile&apos;).split(&quot;\t&quot;)
-options = os.getenv(&apos;option&apos;)
-optionArg = &quot;&quot;
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+apkFiles = os.getenv('apkFile').split("\t")
+options = os.getenv('option')
+optionArg = ""
 for option in options:
 	if option and option.strip():
-		optionArg = optionArg + &quot; -&quot; + option
+		optionArg = optionArg + " -" + option
 
 try:
 	if apkFiles:
 		totalFiles = len(apkFiles)
 		installResults = 0
-		sys.stderr.write(&quot;Step 1 {0}\n&quot;.format(totalFiles))
+		sys.stderr.write("Step 1 {0}\n".format(totalFiles))
 		for apkFile in apkFiles:
-			sys.stderr.write(&quot;Step 2&quot; + &quot;\n&quot;)
+			sys.stderr.write("Step 2" + "\n")
 			if not apkFile:
 				continue
-			shell_cmd = &apos;{0} -s {1} install -r {2} {3}&apos;.format(adb_path, serial, optionArg, pipes.quote(apkFile))
-			sys.stderr.write(shell_cmd + &quot;\n&quot;)
+			shell_cmd = '{0} -s {1} install -r {2} {3}'.format(adb_path, serial, optionArg, pipes.quote(apkFile))
+			sys.stderr.write(shell_cmd + "\n")
 			result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
-			if &quot;Failure [&quot; not in result:
+			if "Failure [" not in result:
 				installResults = installResults + 1
-			sys.stderr.write(result + &quot;\n&quot;)
+			sys.stderr.write(result + "\n")
 	if installResults == totalFiles:
-		print(&quot;Install app succeed&quot;)
+		print("Install app succeed")
 	else:
-		print(&quot;Install app failed, {0}/{1} failed&quot;.format(totalFiles - installResults, totalFiles))
+		print("Install app failed, {0}/{1} failed".format(totalFiles - installResults, totalFiles))
 except:
-	print(&quot;Install app failed&quot;)</string>
+	print("Install app failed")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3170,7 +3213,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>14&apos;{query}&apos;, {allvars}</string>
+				<string>14'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
 				<key>processoutputs</key>
@@ -3207,7 +3250,7 @@ except:
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python show_keyevent_options.py &quot;{query}&quot;</string>
+				<string>python show_keyevent_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3241,39 +3284,39 @@ import os
 import sys
 import pipes
 
-adb_path = os.getenv(&apos;adb_path&apos;)
-serial = os.getenv(&apos;serial&apos;)
-cmd = os.getenv(&apos;function&apos;)
-text = os.getenv(&apos;key&apos;)
-mod = os.getenv(&apos;mod&apos;)
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+cmd = os.getenv('function')
+text = os.getenv('key')
+mod = os.getenv('mod')
 
-if cmd==&quot;text&quot;:
-	text = pipes.quote(text.replace(&quot; &quot;, &quot;%s&quot;))
+if cmd=="text":
+	text = pipes.quote(text.replace(" ", "%s"))
 
-shell_cmd = &quot;&quot;
-status_cmd = &quot;{0} -s {1} shell dumpsys window | grep mCurrentFocus&quot;.format(adb_path, serial)
-if cmd == &quot;STATUS_BAR&quot;:
+shell_cmd = ""
+status_cmd = "{0} -s {1} shell dumpsys window | grep mCurrentFocus".format(adb_path, serial)
+if cmd == "STATUS_BAR":
 
 	result = subprocess.check_output(status_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
-	expanded = &quot;StatusBar&quot; in result
+	expanded = "StatusBar" in result
 
-	shell_cmd = &apos;{0} -s {1} shell service call statusbar {2}&apos;.format(adb_path, serial, (&quot;1&quot;, &quot;2&quot;)[expanded])
-elif cmd == &quot;KEYBOARD&quot;:
-	shell_cmd = &apos;{0} -s {1} shell input {2} {3} {4}&apos;.format(adb_path, serial, cmd, mod, text)
+	shell_cmd = '{0} -s {1} shell service call statusbar {2}'.format(adb_path, serial, ("1", "2")[expanded])
+elif cmd == "KEYBOARD":
+	shell_cmd = '{0} -s {1} shell input {2} {3} {4}'.format(adb_path, serial, cmd, mod, text)
 else:
-	shell_cmd = &apos;{0} -s {1} shell input {2} {3} {4}&apos;.format(adb_path, serial, cmd, (&quot;&quot;, &quot;--longpress&quot;)[mod==&quot;cmd&quot;], text)
+	shell_cmd = '{0} -s {1} shell input {2} {3} {4}'.format(adb_path, serial, cmd, ("", "--longpress")[mod=="cmd"], text)
 
-sys.stderr.write(&quot;Execute:\n{0}\n&quot;.format(shell_cmd))
+sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
 try:
 	result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
 	sys.stderr.write(result)
-	print(&quot;Executed: &quot; + cmd)
+	print("Executed: " + cmd)
 except:
-	print(&quot;Failed to execute: adb &quot;+cmd)</string>
+	print("Failed to execute: adb "+cmd)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3344,12 +3387,12 @@ except:
 	<key>readme</key>
 	<string># Workflow Configuration
 
-- adb_path,  e.g. &quot;~/Library/Android/sdk/platform-tools/adb&quot;
-- aapt_path, e.g. &quot;~/Library/Android/sdk/build-tools/28.0.3/aapt&quot;
+- adb_path,  e.g. "~/Library/Android/sdk/platform-tools/adb"
+- aapt_path, e.g. "~/Library/Android/sdk/build-tools/28.0.3/aapt"
 
 # Usage
 
-Use keyword &quot;adb&quot; to get quick access to:
+Use keyword "adb" to get quick access to:
 
 - restart adb
 - connect devices over WiFi
@@ -3395,7 +3438,7 @@ Use keyword &quot;adb&quot; to get quick access to:
 		<key>061518C5-6CFD-42EF-AB68-D2B11F98889E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>250</integer>
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
@@ -3495,6 +3538,13 @@ Use keyword &quot;adb&quot; to get quick access to:
 			<key>ypos</key>
 			<integer>240</integer>
 		</dict>
+		<key>324F9367-F28B-4745-9733-1F9745496D67</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>580</integer>
+		</dict>
 		<key>38F77EED-1B8C-4A81-970F-9937F947E558</key>
 		<dict>
 			<key>note</key>
@@ -3541,7 +3591,7 @@ Use keyword &quot;adb&quot; to get quick access to:
 			<key>xpos</key>
 			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>800</integer>
+			<integer>960</integer>
 		</dict>
 		<key>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</key>
 		<dict>
@@ -3561,7 +3611,7 @@ Use keyword &quot;adb&quot; to get quick access to:
 			<key>xpos</key>
 			<integer>1190</integer>
 			<key>ypos</key>
-			<integer>920</integer>
+			<integer>780</integer>
 		</dict>
 		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
 		<dict>
@@ -3630,9 +3680,9 @@ Use keyword &quot;adb&quot; to get quick access to:
 		<key>6137EDAB-7A87-43EC-8766-49022D50387D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1350</integer>
+			<integer>1420</integer>
 			<key>ypos</key>
-			<integer>800</integer>
+			<integer>960</integer>
 		</dict>
 		<key>64394AEA-7969-4695-BA1E-DEADC6BFE619</key>
 		<dict>
@@ -3658,7 +3708,7 @@ Add root functions</string>
 			<key>xpos</key>
 			<integer>660</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>360</integer>
 		</dict>
 		<key>701402E8-8901-4D87-A8EE-33E00C20A4CF</key>
 		<dict>
@@ -3714,12 +3764,8 @@ Add root functions</string>
 		</dict>
 		<key>887CA3AA-747C-4110-ACA4-0DB0A3F45303</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>1</integer>
 			<key>note</key>
-			<string>connect
-History
-cmd to remove</string>
+			<string>connect</string>
 			<key>xpos</key>
 			<integer>480</integer>
 			<key>ypos</key>
@@ -3730,9 +3776,9 @@ cmd to remove</string>
 			<key>note</key>
 			<string>10</string>
 			<key>xpos</key>
-			<integer>1440</integer>
+			<integer>1560</integer>
 			<key>ypos</key>
-			<integer>890</integer>
+			<integer>860</integer>
 		</dict>
 		<key>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</key>
 		<dict>
@@ -3766,17 +3812,6 @@ cmd to remove</string>
 			<key>ypos</key>
 			<integer>470</integer>
 		</dict>
-		<key>97545688-EEF7-4A89-8E4D-BC1C6C3EA01A</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>1</integer>
-			<key>note</key>
-			<string>Background ip</string>
-			<key>xpos</key>
-			<integer>480</integer>
-			<key>ypos</key>
-			<integer>170</integer>
-		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
 			<key>xpos</key>
@@ -3789,7 +3824,7 @@ cmd to remove</string>
 			<key>xpos</key>
 			<integer>1000</integer>
 			<key>ypos</key>
-			<integer>950</integer>
+			<integer>810</integer>
 		</dict>
 		<key>A146BAFF-E767-4A05-A819-A4E0E8D90446</key>
 		<dict>
@@ -3828,6 +3863,15 @@ cmd to remove</string>
 			<key>ypos</key>
 			<integer>1590</integer>
 		</dict>
+		<key>A83BC89A-9B15-4875-802C-0867AB333ACD</key>
+		<dict>
+			<key>note</key>
+			<string>Remove connection history</string>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>550</integer>
+		</dict>
 		<key>A9816DA9-B0F0-45FB-B78B-D4ADE97BFECA</key>
 		<dict>
 			<key>xpos</key>
@@ -3849,7 +3893,7 @@ cmd to remove</string>
 			<key>xpos</key>
 			<integer>1630</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>930</integer>
 		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
@@ -3874,7 +3918,7 @@ cmd to remove</string>
 			<key>xpos</key>
 			<integer>930</integer>
 			<key>ypos</key>
-			<integer>800</integer>
+			<integer>960</integer>
 		</dict>
 		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
 		<dict>
@@ -3888,9 +3932,9 @@ cmd to remove</string>
 			<key>note</key>
 			<string>07</string>
 			<key>xpos</key>
-			<integer>1440</integer>
+			<integer>1420</integer>
 			<key>ypos</key>
-			<integer>1010</integer>
+			<integer>1050</integer>
 		</dict>
 		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
 		<dict>
@@ -3904,7 +3948,7 @@ cmd to remove</string>
 			<key>xpos</key>
 			<integer>1820</integer>
 			<key>ypos</key>
-			<integer>800</integer>
+			<integer>960</integer>
 		</dict>
 		<key>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</key>
 		<dict>
@@ -3932,7 +3976,7 @@ cmd to remove</string>
 			<key>xpos</key>
 			<integer>930</integer>
 			<key>ypos</key>
-			<integer>950</integer>
+			<integer>810</integer>
 		</dict>
 		<key>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</key>
 		<dict>
@@ -3975,7 +4019,7 @@ cmd to remove</string>
 			<key>xpos</key>
 			<integer>1190</integer>
 			<key>ypos</key>
-			<integer>770</integer>
+			<integer>930</integer>
 		</dict>
 		<key>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</key>
 		<dict>
