@@ -33,3 +33,9 @@ Features
   - `adb install -t -d -g` and bulk installation
   
 ![install options](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2004%20show%20install%20options.png)
+
+References
+------
+- [109021017/alfred-adb-workflow](https://github.com/109021017/alfred-adb-workflow)
+
+- [nassendelft/alfred-android-adb](https://github.com/nassendelft/alfred-android-adb)
