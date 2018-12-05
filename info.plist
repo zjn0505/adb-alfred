@@ -2690,7 +2690,7 @@ except:
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string>none</string>
+				<string>cmd</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
@@ -2852,7 +2852,7 @@ print('{0} -s {1} {2}'.format(adb_path, serial, cmd))</string>
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string>cmd</string>
+				<string>none</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>

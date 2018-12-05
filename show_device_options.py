@@ -147,11 +147,8 @@ def main(wf):
                         subtitle="adb " + arg,
                         arg="<adb>" + arg,
                         valid=True)
-        if arg.strip().lower() == "shell":
-            it.setvar('mod', 'cmd')
-        else:
-            it.setvar('mod', 'none')
-        m = it.add_modifier('cmd', 'Run in terminal: adb ' + arg)
+        it.setvar('mod', 'none')
+        m = it.add_modifier('cmd', 'Run without opening terminal')
         m.setvar('mod', 'cmd')
 
     
