@@ -135,21 +135,27 @@ def main(wf):
     # KEY INPUT
     title = "Keyevent input"
 
-    if addAll or wordMatch(arg, title + " shell"):
+    if addAll or wordMatch(arg, title):
         wf.add_item(title=title,
                     arg="keyevent_input",
                     valid=True)
         itemCount += 1
 
+    # CUSTOM ACTION
     if itemCount == 0:
         it = wf.add_item(title="Execute custom command for " + serial,
                         subtitle="adb " + arg,
                         arg="<adb>" + arg,
                         valid=True)
-        it.setvar('mod', 'none')
+        if arg.strip().lower() == "shell":
+            it.setvar('mod', 'cmd')
+        else:
+            it.setvar('mod', 'none')
         m = it.add_modifier('cmd', 'Run in terminal: adb ' + arg)
         m.setvar('mod', 'cmd')
 
+    
+    
     wf.send_feedback()
 
 if __name__ == '__main__':

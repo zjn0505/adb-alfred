@@ -4015,11 +4015,6 @@ Add root functions</string>
 		<key>adb_path</key>
 		<string>~/Library/Android/sdk/platform-tools/adb</string>
 	</dict>
-	<key>variablesdontexport</key>
-	<array>
-		<string>adb_path</string>
-		<string>aapt_path</string>
-	</array>
 	<key>version</key>
 	<string>1.0.0</string>
 	<key>webaddress</key>
