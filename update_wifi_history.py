@@ -25,7 +25,7 @@ def main(wf):
                     itemInDB = True
                     break
 
-            if not itemInDB:
+            if not itemInDB and not "[OFFLINE]" in item.title:
                 historyWifiDevices.append(item)
                 
         if historyWifiDevices:

@@ -424,6 +424,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>4204602D-966C-4A9A-A398-EF35B429CF6D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
 		<array>
 			<dict>
@@ -773,7 +786,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
+				<string>4204602D-966C-4A9A-A398-EF35B429CF6D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1499,21 +1512,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>soundname</key>
-				<string>Hero</string>
-				<key>systemsound</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.playsound</string>
-			<key>uid</key>
-			<string>311C79EE-C023-425C-8303-F1A23C9E7FDB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2052,103 +2050,73 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
+				<key>soundname</key>
+				<string>Hero</string>
+				<key>systemsound</key>
 				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.playsound</string>
+			<key>uid</key>
+			<string>311C79EE-C023-425C-8303-F1A23C9E7FDB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
 				<key>script</key>
-				<string>import subprocess as sp
+				<string>import subprocess
 import os
 import sys
 import time
 
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
+ip = os.getenv("ip")
 
-cmd_devices = adb_path + ' devices'
-cmd_cfg = adb_path + ' -s ' + serial + ' shell netcf | grep wlan0 | awk '{ print $3}''
-cmd_ifcfg = adb_path + ' -s ' + serial + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' '"
 cmd_tcpip = adb_path + ' -s ' + serial + ' tcpip 5555'
+cmd_gettcpip = adb_path + ' -s ' + serial + " shell getprop service.adb.tcp.port"
 
-cmd_conn = adb_path + ' connect %s '
-# info_devices = sp.Popen(cmd_devices,shell=True)
-src_outer = os.popen(cmd_devices).read().strip()
-# info_devices = sp.call(cmd_devices)
-print("---------")
-# print(info_devices)
-# print("src_outer" , src_outer)
-if not src_outer :
-    print('there is no message out when cmd ' + cmd_devices)
-    sys.exit(0)
-touch_info = 'List of devices attached'
-lists = src_outer[src_outer.index(touch_info) + len(touch_info):]
+def connect():
+	cmd_conn = adb_path + " connect " + ip.split("/")[0]
+	sys.stderr.write(cmd_conn + "\n")
+	result = subprocess.check_output(cmd_conn, stderr=subprocess.STDOUT, shell=True)
 
-if not lists :
-    print("There has no device connect ths computer ! ")
-    sys.exit(0)
-print(lists)
-dev_list = lists.strip().split('\n')
-print(dev_list)
-if dev_list and len(dev_list) &gt;= 1:
-    for device in dev_list :
-        print(device)
-        if '5555' in device :
-            break
-        dev_name = device.split('\t')[0]
-        print(dev_name)
-        tcpip_info = os.popen(cmd_tcpip % dev_name).read().strip()
-        print((cmd_tcpip % dev_name) , tcpip_info)
-        time.sleep(3)
-        cfg_info = os.popen(cmd_cfg % dev_name).read().strip().split('\n')
-        if not cfg_info :
-            print('adb shell cfg command run error ')
-            sys.exit(0)
-        wlan = 'wlan'
-        for cfg in cfg_info :
-            
-            iter_cfg = cfg.strip()
-            if iter_cfg.startswith(wlan) :
-                # print('iter_cfg' , iter_cfg)
-                ips = iter_cfg.split(' ')[-4]
-                ip = ips[:ips.index('/')]
-                # print("ip--&gt;" , ip)
-                conn_info = os.popen(cmd_conn % ip).read().strip()
-                print((cmd_conn % ip) , conn_info)
-                # pass
-</string>
+	print("Executed: " + result)
+
+if ip:
+
+	sys.stderr.write(cmd_gettcpip + "\n")
+	result = subprocess.check_output(cmd_gettcpip,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write("getprop tcpip " + result + "\n")
+	if result.strip() != "5555":
+		sys.stderr.write(cmd_tcpip + "\n")
+		result = subprocess.check_output(cmd_tcpip,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+		time.sleep(2)
+		connect()
+		
+	if result:
+		connect()</string>
 				<key>scriptargtype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
 				<string></string>
 				<key>type</key>
 				<integer>3</integer>
-				<key>withspace</key>
-				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>44884808-4D5F-4718-87D6-9348E5D73EBD</string>
+			<string>4204602D-966C-4A9A-A398-EF35B429CF6D</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -3395,12 +3363,16 @@ except:
 Use keyword "adb" to get quick access to:
 
 - restart adb
-- connect devices over WiFi
-- connected devices
+- connect/disconnect devices over WiFi
+- check connected devices
 - run any shell command to target device
-- check installed application
-- install new APKs
-- open settings, dev tool, WiFi, applications, accessibility page</string>
+- check installed application to force stop, clear data, uninstall
+- install new APK or APKs with various options
+- take screenshot and/or copy to clipboard
+- open settings, dev tool, WiFi, applications, accessibility page
+- toggle debug layout and demo mode
+- advanced reboot
+- input key or text on device</string>
 	<key>uidata</key>
 	<dict>
 		<key>01B9D557-FFBF-462C-8CDA-68526EC37F97</key>
@@ -3534,9 +3506,9 @@ Use keyword "adb" to get quick access to:
 		<key>311C79EE-C023-425C-8303-F1A23C9E7FDB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2370</integer>
+			<integer>2340</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>770</integer>
 		</dict>
 		<key>324F9367-F28B-4745-9733-1F9745496D67</key>
 		<dict>
@@ -3602,12 +3574,10 @@ Use keyword "adb" to get quick access to:
 			<key>ypos</key>
 			<integer>1440</integer>
 		</dict>
-		<key>44884808-4D5F-4718-87D6-9348E5D73EBD</key>
+		<key>4204602D-966C-4A9A-A398-EF35B429CF6D</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>1</integer>
 			<key>note</key>
-			<string>TODO adb connect wifi</string>
+			<string>ADB WiFi connect</string>
 			<key>xpos</key>
 			<integer>1190</integer>
 			<key>ypos</key>

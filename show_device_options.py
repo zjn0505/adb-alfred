@@ -123,14 +123,14 @@ def main(wf):
         m.setvar('mod', 'sideload')
 
     # CONNECT OVER WIFI
-    # if not isWifiDevice and not isEmulator:
-    #     title = "Connect over Wi-Fi"
+    if not isWifiDevice and not isEmulator:
+        title = "Connect over Wi-Fi"
         
-    #     if addAll or wordMatch(arg, title):
-    #         wf.add_item(title=title,
-    #                     arg="debug_wifi",
-    #                     valid=True)
-    #         itemCount += 1
+        if addAll or wordMatch(arg, title):
+            wf.add_item(title=title,
+                        arg="debug_wifi",
+                        valid=True)
+            itemCount += 1
 
     # KEY INPUT
     title = "Keyevent input"

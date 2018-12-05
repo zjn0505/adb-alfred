@@ -98,6 +98,13 @@ def list_devices(args):
             if item.valid:
                 it.setvar('device_api', item.get('device_api'))
             it.setvar('name', item.get('name'))
+            if item.subtitle and not re.match(regexIp + ":5555", name):
+                cmd_ip = adb_path + ' -s ' + name + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
+                ip = subprocess.check_output(cmd_ip,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+                it.setvar("ip", ip)
+                it.add_modifier("cmd", subtitle=ip)
 
 
     # CONNECT
@@ -106,7 +113,7 @@ def list_devices(args):
             stderr=subprocess.STDOUT,
             shell=True)
         # log.debug(localIp)
-
+        
         targetIp = arg[8:]
         # log.debug(targetIp)
         if not targetIp or re.match(regexIpInput, targetIp):
@@ -127,11 +134,11 @@ def list_devices(args):
                 currentDevices.append(item.title.strip())
 
             for historyWifiDevice in historyWifiDevices:
-                # if not historyWifiDevice.title in currentDevices:
-                log.debug("history item title " + historyWifiDevice.title)
-                it = wf.add_item(title="Connect over WiFi", valid = valid, arg="adb_connect", autocomplete="connect ", subtitle=historyWifiDevice.title)
-                it.setvar("ip", historyWifiDevice.title)
-                it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
+                if not historyWifiDevice.title in currentDevices:
+                    log.debug("history item title " + historyWifiDevice.title)
+                    it = wf.add_item(title="Connect over WiFi", valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
+                    it.setvar("ip", historyWifiDevice.title)
+                    it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
     
     # DISCONNECT
     if wifiDevices:
@@ -143,7 +150,11 @@ def list_devices(args):
         if wifiDevices:
             for wifiDevice in wifiDevices:
                 it = wf.add_item(title="Disconnect from WiFi", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle=wifiDevice.title)
-                it.setvar("ip", wifiDevice.title)
+                ip = wifiDevice.title
+                if  "[OFFLINE]" in ip:
+                    ip = ip.split(" ")[0]
+
+                it.setvar("ip", ip)
         elif targetIp:
             it = wf.add_item(title="Disconnect from WiFi", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle="adb disconnect " + targetIp)
             it.setvar("ip", targetIp)
