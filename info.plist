@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>xyz.jienan.adb</string>
 	<key>category</key>
-	<string>Productivity</string>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</key>
@@ -3046,7 +3046,7 @@ try:
 			sys.stderr.write("Step 2" + "\n")
 			if not apkFile:
 				continue
-			shell_cmd = '{0} -s {1} install -r {2} {3}'.format(adb_path, serial, optionArg, pipes.quote(apkFile))
+			shell_cmd = '{0} -s {1} install -r {2} {3}'.format(adb_path, serial, optionArg, (pipes.quote(apkFile), apkFile)[apkFile.startswith('\"') or apkFile.startswith("\'")])
 			sys.stderr.write(shell_cmd + "\n")
 			result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
