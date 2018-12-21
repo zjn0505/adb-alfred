@@ -193,6 +193,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>11C25097-223D-4E8A-928A-D85DAE9A40AC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7D4D7653-002D-40E5-834E-081DCF379586</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
 		<array>
 			<dict>
@@ -682,6 +695,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7D4D7653-002D-40E5-834E-081DCF379586</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<array>
 			<dict>
@@ -751,6 +787,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>95743DF0-8450-41C2-82AC-1E540F2D9B83</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6137EDAB-7A87-43EC-8766-49022D50387D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1116,7 +1165,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6137EDAB-7A87-43EC-8766-49022D50387D</string>
+				<string>11C25097-223D-4E8A-928A-D85DAE9A40AC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>95743DF0-8450-41C2-82AC-1E540F2D9B83</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1953,6 +2012,43 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{var:func}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>11C25097-223D-4E8A-928A-D85DAE9A40AC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:func}</string>
+				<key>variables</key>
+				<dict>
+					<key>package</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>7D4D7653-002D-40E5-834E-081DCF379586</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -2501,6 +2597,25 @@ except:
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:func}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>95743DF0-8450-41C2-82AC-1E540F2D9B83</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3430,6 +3545,13 @@ Use keyword "adb" to get quick access to:
 			<key>ypos</key>
 			<integer>1640</integer>
 		</dict>
+		<key>11C25097-223D-4E8A-928A-D85DAE9A40AC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>710</integer>
+		</dict>
 		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
 		<dict>
 			<key>xpos</key>
@@ -3650,7 +3772,7 @@ Use keyword "adb" to get quick access to:
 		<key>6137EDAB-7A87-43EC-8766-49022D50387D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1420</integer>
+			<integer>1500</integer>
 			<key>ypos</key>
 			<integer>960</integer>
 		</dict>
@@ -3714,6 +3836,13 @@ Add root functions</string>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
+		<key>7D4D7653-002D-40E5-834E-081DCF379586</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1500</integer>
+			<key>ypos</key>
+			<integer>710</integer>
+		</dict>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<dict>
 			<key>note</key>
@@ -3746,7 +3875,7 @@ Add root functions</string>
 			<key>note</key>
 			<string>10</string>
 			<key>xpos</key>
-			<integer>1560</integer>
+			<integer>1610</integer>
 			<key>ypos</key>
 			<integer>860</integer>
 		</dict>
@@ -3781,6 +3910,13 @@ Add root functions</string>
 			<integer>1190</integer>
 			<key>ypos</key>
 			<integer>470</integer>
+		</dict>
+		<key>95743DF0-8450-41C2-82AC-1E540F2D9B83</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1440</integer>
+			<key>ypos</key>
+			<integer>960</integer>
 		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
@@ -3902,9 +4038,9 @@ Add root functions</string>
 			<key>note</key>
 			<string>07</string>
 			<key>xpos</key>
-			<integer>1420</integer>
+			<integer>1440</integer>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<integer>1060</integer>
 		</dict>
 		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
 		<dict>

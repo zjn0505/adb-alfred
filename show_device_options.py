@@ -36,10 +36,24 @@ def main(wf):
     # SHOW INSTALLED PACKAGES
     title = "Show apps list"
     
-    if addAll or wordMatch(arg, title):
-        wf.add_item(title=title,
+    if addAll or wordMatch(arg, title + " start launch uninstall force stop clear"):
+        func = ""
+        if "start" in arg.lower() or "launch" in arg.lower():
+            title = "Select app to launch"
+            func = "start_app"
+        elif "uninstall" in arg.lower():
+            title = "Select app to uninstall"
+            func = "uninstall_app"
+        elif "force" in arg.lower() or "stop" in arg.lower():
+            title = "Select app to force stop"
+            func = "force_stop"
+        elif "clear" in arg.lower():
+            title = "Select app to clear data"
+            func = "clear_app_data"
+        it = wf.add_item(title=title,
                     arg="list_app",
                     valid=True)
+        it.setvar("func", func)
         itemCount += 1
 
     # INSTALL APK
