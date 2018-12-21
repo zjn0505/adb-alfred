@@ -3,6 +3,7 @@ import os
 import sys
 import re
 import pickle
+import ipaddress
 from workflow import Workflow3, ICON_INFO
 from workflow.background import run_in_background, is_running
 from item import Item
@@ -109,36 +110,64 @@ def list_devices(args):
 
     # CONNECT
     if arg and ("connect ".startswith(arg.lower()) or re.match(regexConnect, arg)):
-        localIp = subprocess.check_output('ifconfig | grep -A 1 "en" | grep broadcast | cut -d " " -f 2 | tr "\\n" " "',
+        localIpWithMask = subprocess.check_output('ifconfig | grep -A 1 "en" | grep broadcast | cut -d " " -f 2,4 | tr "\\n" " "',
             stderr=subprocess.STDOUT,
             shell=True)
         # log.debug(localIp)
-        
+        localIp = localIpWithMask.split(" ")[0]
+        rawMask = localIpWithMask.split(" ")[1].count("f") * 4
+
+        # wf.add_item(title=("%s - %d" % (localIp, rawMask)))
+    
         targetIp = arg[8:]
         # log.debug(targetIp)
         if not targetIp or re.match(regexIpInput, targetIp):
             subtitle = "adb connect " + targetIp if targetIp else ''
             valid = True if re.match(regexIp, targetIp) else False
             it = wf.add_item(title="Connect over WiFi", valid = valid, arg="adb_connect", autocomplete="connect ", subtitle=subtitle)
+            m = it.add_modifier('cmd', subtitle="Remove all connection histories", arg='adb_connect_remove')
+            m.setvar('extra', "all")
             it.setvar("ip", targetIp)
-
-        history = wf.stored_data("wifi_history")
         
-        if history:
-            log.error(history)
-            historyWifiDevices = pickle.loads(history)
-            log.debug(historyWifiDevices)
-            currentDevices = []
-            for item in items:
-                log.debug("current item title " + item.title)
-                currentDevices.append(item.title.strip())
+        if localIp:
 
-            for historyWifiDevice in historyWifiDevices:
-                if not historyWifiDevice.title in currentDevices:
-                    log.debug("history item title " + historyWifiDevice.title)
-                    it = wf.add_item(title="Connect over WiFi", valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
-                    it.setvar("ip", historyWifiDevice.title)
-                    it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
+            history = wf.stored_data("wifi_history")
+            
+            if history:
+                # log.error(history)
+                historyWifiDevices = pickle.loads(history)
+                log.debug(historyWifiDevices)
+                currentDevices = []
+                for item in items:
+                    log.debug("current item title " + item.title)
+                    currentDevices.append(item.title.strip())
+
+                for historyWifiDevice in historyWifiDevices:
+                    if not historyWifiDevice.title in currentDevices:
+                        deviceIp = historyWifiDevice.title.split(":")[0]
+                        same_network = False
+                        if hasattr(historyWifiDevice, 'mask'):
+                            same_network = ipaddress.ip_network(u'%s/%d' % (localIp, rawMask), False) == ipaddress.ip_network(u'%s/%s' % (deviceIp, historyWifiDevice.mask), False)
+                        else:
+                            same_network = ipaddress.ip_network(u'%s/%d' % (localIp, rawMask), False) == ipaddress.ip_network(u'%s/%d' % (deviceIp, rawMask), False)
+
+                        if not same_network:
+                            continue
+
+                        log.debug("history item title " + historyWifiDevice.title)
+                        title = "Connect over WiFi"
+                        if historyWifiDevice.subtitle:
+                            title = "Connect " + historyWifiDevice.subtitle.split('- ', 1)[1].split(', ', 1)[0] + " over WiFi"
+
+                            log.error("!!!!!" + pickle.dumps(historyWifiDevice))
+
+                            if historyWifiDevice.variables.get("ip", None):
+                                wf.add_item(title=historyWifiDevice.variables["ip"])
+
+                        it = wf.add_item(title=title, valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
+                        it.setvar("ip", historyWifiDevice.title)
+                        it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
+                        it.add_modifier('alt', historyWifiDevice.subtitle)
     
     # DISCONNECT
     if wifiDevices:

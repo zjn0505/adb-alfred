@@ -7,6 +7,7 @@ from workflow import Workflow3
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
 api = os.getenv('device_api')
+ip = os.getenv("ip")
 
 def wordMatch(arg, sentence): 
     words = arg.lower().split(" ")
@@ -137,11 +138,12 @@ def main(wf):
         m.setvar('mod', 'sideload')
 
     # CONNECT OVER WIFI
-    if not isWifiDevice and not isEmulator:
+    if not isWifiDevice and not isEmulator and ip:
         title = "Connect over Wi-Fi"
         
         if addAll or wordMatch(arg, title):
             wf.add_item(title=title,
+                        subtitle=ip,
                         arg="debug_wifi",
                         valid=True)
             itemCount += 1
