@@ -10,7 +10,7 @@ serial = os.getenv('serial')
 def main(wf):
     arg = wf.args[0].strip()
     apps = subprocess.check_output(
-            "{0} -s {1} shell 'pm list packages -f' | sed -e 's/.*=//' | sed 's/\r//g' | sort".format(adb_path, serial),
+            "{0} -s {1} shell 'pm list packages -f' | grep package: | sed -e 's/.*=//' | sed 's/\r//g' | sort".format(adb_path, serial),
             stderr=subprocess.STDOUT,
             shell=True)
     apps = apps.rstrip().split('\n')
