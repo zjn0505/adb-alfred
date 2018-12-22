@@ -30,17 +30,13 @@ def main(wf):
 
             if not itemInDB and not "[OFFLINE]" in item.title:
 
-
-                cmd_ip = adb_path + ' -s ' + item.variables['serial'] + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
-                ip = subprocess.check_output(cmd_ip,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)
-                # historyWifiDevice.variables["ip"] = ip
-                # historyWifiDevice.ip = ip
-
-                # historyWifiDevice.variables["123123123"] = "123123123"
-                if ip:
-                    item.mask = ip.split('/')[1].split("\n")[0]
+                if not hasattr(item, "mask"):
+                    cmd_ip = adb_path + ' -s ' + item.variables['serial'] + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
+                    ip = subprocess.check_output(cmd_ip,
+                                        stderr=subprocess.STDOUT,
+                                        shell=True)
+                    if ip:
+                        item.mask = ip.split('/')[1].split("\n")[0]
                 historyWifiDevices.append(item)
                 
         if historyWifiDevices:
