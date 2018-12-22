@@ -37,7 +37,7 @@ def main(wf):
     # SHOW INSTALLED PACKAGES
     title = "Show apps list"
     
-    if addAll or wordMatch(arg, title + " start launch uninstall force stop clear"):
+    if addAll or (wordMatch(arg, title + " start launch uninstall force stop clear") and not arg.startswith("in")):
         func = ""
         if "start" in arg.lower() or "launch" in arg.lower():
             title = "Select app to launch"

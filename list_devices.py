@@ -85,6 +85,7 @@ def list_devices(args):
 
     items, wifiDevices = get_device_items(arg, devices)
     if wifiDevices:
+
         run_in_background("update_wifi_history",
                            ['/usr/bin/python',
                             wf.workflowfile('update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
@@ -96,6 +97,7 @@ def list_devices(args):
         if arg == '' or arg.lower() in name.lower():
             it = wf.add_item(title=item.title, autocomplete=('', item.autocomplete)[item.valid], valid=item.valid, arg=item.arg, subtitle=item.subtitle)
             it.setvar('status', item.get("status"))
+            it.setvar('full_info', item.subtitle)
             if item.valid:
                 it.setvar('device_api', item.get('device_api'))
             it.setvar('name', item.get('name'))
@@ -104,8 +106,9 @@ def list_devices(args):
                 ip = subprocess.check_output(cmd_ip,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
-                it.setvar("ip", ip)
-                it.add_modifier("cmd", subtitle=ip)
+                if '/' in ip and re.match(regexIp, ip.split('/')[0]):
+                    it.setvar("ip", ip.strip('\n'))
+                    it.add_modifier("cmd", subtitle=ip)
 
 
     # CONNECT
@@ -113,30 +116,25 @@ def list_devices(args):
         localIpWithMask = subprocess.check_output('ifconfig | grep -A 1 "en" | grep broadcast | cut -d " " -f 2,4 | tr "\\n" " "',
             stderr=subprocess.STDOUT,
             shell=True)
-        # log.debug(localIp)
+
         localIp = localIpWithMask.split(" ")[0]
         rawMask = localIpWithMask.split(" ")[1].count("f") * 4
-
-        # wf.add_item(title=("%s - %d" % (localIp, rawMask)))
     
         targetIp = arg[8:]
-        # log.debug(targetIp)
         if not targetIp or re.match(regexIpInput, targetIp):
             subtitle = "adb connect " + targetIp if targetIp else ''
             valid = True if re.match(regexIp, targetIp) else False
             it = wf.add_item(title="Connect over WiFi", valid = valid, arg="adb_connect", autocomplete="connect ", subtitle=subtitle)
             m = it.add_modifier('cmd', subtitle="Remove all connection histories", arg='adb_connect_remove')
             m.setvar('extra', "all")
-            it.setvar("ip", targetIp)
+            it.setvar("ip", targetIp.strip('\n'))
         
         if localIp:
 
             history = wf.stored_data("wifi_history")
             
             if history:
-                # log.error(history)
                 historyWifiDevices = pickle.loads(history)
-                log.debug(historyWifiDevices)
                 currentDevices = []
                 for item in items:
                     log.debug("current item title " + item.title)
@@ -146,7 +144,7 @@ def list_devices(args):
                     if not historyWifiDevice.title in currentDevices:
                         deviceIp = historyWifiDevice.title.split(":")[0]
                         same_network = False
-                        if hasattr(historyWifiDevice, 'mask'):
+                        if hasattr(historyWifiDevice, 'mask') and historyWifiDevice.mask:
                             same_network = ipaddress.ip_network(u'%s/%d' % (localIp, rawMask), False) == ipaddress.ip_network(u'%s/%s' % (deviceIp, historyWifiDevice.mask), False)
                         else:
                             same_network = ipaddress.ip_network(u'%s/%d' % (localIp, rawMask), False) == ipaddress.ip_network(u'%s/%d' % (deviceIp, rawMask), False)
@@ -158,11 +156,6 @@ def list_devices(args):
                         title = "Connect over WiFi"
                         if historyWifiDevice.subtitle:
                             title = "Connect " + historyWifiDevice.subtitle.split('- ', 1)[1].split(', ', 1)[0] + " over WiFi"
-
-                            log.error("!!!!!" + pickle.dumps(historyWifiDevice))
-
-                            if historyWifiDevice.variables.get("ip", None):
-                                wf.add_item(title=historyWifiDevice.variables["ip"])
 
                         it = wf.add_item(title=title, valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
                         it.setvar("ip", historyWifiDevice.title)

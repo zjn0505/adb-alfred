@@ -2173,6 +2173,10 @@ except:
 import os
 import sys
 import time
+from workflow.background import run_in_background, is_running
+from item import Item
+import pickle
+from workflow import Workflow3
 
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
@@ -2185,26 +2189,38 @@ def connect():
 	cmd_conn = adb_path + " connect " + ip.split("/")[0]
 	sys.stderr.write(cmd_conn + "\n")
 	result = subprocess.check_output(cmd_conn, stderr=subprocess.STDOUT, shell=True)
-
+	if "connected to" in result:
+		it = Item(title=result.strip().split("connected to ")[1], subtitle=os.getenv("full_info"), mask=ip.split("/")[1])
+		wifiDevices = []
+		wifiDevices.append(it)
+		run_in_background("update_wifi_history", 
+				['/usr/bin/python',
+				wf.workflowfile('update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
 	print("Executed: " + result)
 
-if ip:
 
-	sys.stderr.write(cmd_gettcpip + "\n")
-	result = subprocess.check_output(cmd_gettcpip,
+def init():
+	if ip:
+
+		sys.stderr.write(cmd_gettcpip + "\n")
+		result = subprocess.check_output(cmd_gettcpip,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
-	sys.stderr.write("getprop tcpip " + result + "\n")
-	if result.strip() != "5555":
-		sys.stderr.write(cmd_tcpip + "\n")
-		result = subprocess.check_output(cmd_tcpip,
+		sys.stderr.write("getprop tcpip " + result + "\n")
+		if result.strip() != "5555":
+			sys.stderr.write(cmd_tcpip + "\n")
+			result = subprocess.check_output(cmd_tcpip,
                                        stderr=subprocess.STDOUT,
                                        shell=True)
-		time.sleep(2)
-		connect()
+			time.sleep(2)
+			connect()
 		
-	if result:
-		connect()</string>
+		if result:
+			connect()
+
+if __name__ == '__main__':
+	wf = Workflow3()
+	init()</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
