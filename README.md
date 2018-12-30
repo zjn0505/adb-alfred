@@ -3,10 +3,17 @@
 
 adb with alfred workflow
 
+Keywords
+----
+
+`adb`, `apk`, `avd`
+
+
 Dependencies
 ----
 - adb
-- aapt (optional, for showing local apk info)
+- aapt
+- emulator
 
 Features
 ----
@@ -33,6 +40,10 @@ Features
   - `adb install -t -d -g` and bulk installation
   
 ![install options](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2004%20show%20install%20options.png)
+
+- `apk` to search for local apk files, and check package info
+
+- `avd` to list installed emulators, select one to start an emulator
 
 References
 ------
