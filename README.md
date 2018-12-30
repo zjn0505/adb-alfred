@@ -11,9 +11,9 @@ Keywords
 
 Dependencies
 ----
-- adb
-- aapt
-- emulator
+- [adb](https://developer.android.com/studio/command-line/adb)
+- [aapt](https://developer.android.com/studio/command-line/aapt2)
+- [emulator](https://developer.android.com/studio/run/emulator-commandline)
 
 Features
 ----
