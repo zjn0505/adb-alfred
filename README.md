@@ -23,6 +23,7 @@ Configurations
 Add the path of the executable files of dependencies to workflow settings.
 
 Here is a screenshot of my configurations.
+
 ![Workflow config screenshot](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/configs.png)
 
 What's required:
