@@ -15,6 +15,24 @@ Dependencies
 - [aapt](https://developer.android.com/studio/command-line/aapt2)
 - [emulator](https://developer.android.com/studio/run/emulator-commandline)
 
+These dependencies are included in Android Studio and Android command line tools. [link](https://developer.android.com/studio/#downloads)
+
+Configurations
+----
+
+Add the path of the executable files of dependencies to workflow settings.
+
+Here is a screenshot of my configurations.
+![Workflow config screenshot](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/configs.png)
+
+What's required:
+
+|Name|Value (example)|
+|--|--|
+|`adb_path`|~/Library/Android/sdk/platform-tools/adb|
+|`aapt_path`|~/Library/Android/sdk/build-tools/28.0.3/aapt|
+|`emulator_path`|~/Library/Android/sdk/tools/emulator|
+
 Features
 ----
 - `adb` to list connected devices
