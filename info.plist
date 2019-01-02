@@ -4677,6 +4677,12 @@ Use keyword "avd" to list and start emulator</string>
 		<key>emulator_path</key>
 		<string>~/Library/Android/sdk/tools/emulator</string>
 	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>emulator_path</string>
+		<string>adb_path</string>
+		<string>aapt_path</string>
+	</array>
 	<key>version</key>
 	<string>1.2.1</string>
 	<key>webaddress</key>
