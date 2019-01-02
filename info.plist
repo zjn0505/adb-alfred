@@ -4678,7 +4678,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>~/Library/Android/sdk/tools/emulator</string>
 	</dict>
 	<key>version</key>
-	<string>1.2.0</string>
+	<string>1.2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>

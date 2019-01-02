@@ -55,6 +55,18 @@ def main(wf):
                     arg="list_app",
                     valid=True)
         it.setvar("func", func)
+        if func == "":
+            m = it.add_modifier('cmd', "Select app to launch")
+            m.setvar("func", "start_app")
+
+            m = it.add_modifier('alt', "Select app to uninstall")
+            m.setvar("func", "uninstall_app")
+
+            m = it.add_modifier('ctrl', "Select app to force stop")
+            m.setvar("func", "force_stop")
+
+            m = it.add_modifier('fn', "Select app to clear data")
+            m.setvar("func", "clear_app_data")
         itemCount += 1
 
     # INSTALL APK
