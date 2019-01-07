@@ -37,7 +37,7 @@ def main(wf):
     # SHOW INSTALLED PACKAGES
     title = "Show apps list"
     
-    if addAll or (wordMatch(arg, title + " start launch uninstall force stop clear") and not arg.startswith("in")):
+    if addAll or (wordMatch(arg, title + " start launch uninstall force stop clear info") and not arg.startswith("ins")):
         func = ""
         if "start" in arg.lower() or "launch" in arg.lower():
             title = "Select app to launch"
@@ -51,6 +51,9 @@ def main(wf):
         elif "clear" in arg.lower():
             title = "Select app to clear data"
             func = "clear_app_data"
+        elif "info" in arg.lower():
+            title = "Select app to show app info"
+            func = "app_info"
         it = wf.add_item(title=title,
                     arg="list_app",
                     valid=True)
@@ -67,6 +70,9 @@ def main(wf):
 
             m = it.add_modifier('fn', "Select app to clear data")
             m.setvar("func", "clear_app_data")
+
+            m = it.add_modifier('shift', "Select app to show app info")
+            m.setvar("func", "app_info")
         itemCount += 1
 
     # INSTALL APK

@@ -23,6 +23,12 @@ def main(wf):
         log.debug(infos)
         it = wf.add_item(title=packName, subtitle="{0}({1})".format(infos[1][12:], infos[0].strip()[12:]), valid=False, icon=ICON_INFO)
 
+    # App info
+    title = "App info"
+    wf.add_item(title=title,
+                arg="app_info",
+                valid=True) 
+
     # Force stop
     title = "Force stop"
     wf.add_item(title=title,

@@ -731,6 +731,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B01199D3-B213-4598-A3E9-EB101E6728F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</key>
 		<array>
 			<dict>
@@ -1130,6 +1143,16 @@
 		</array>
 		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
 		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 			<dict>
 				<key>destinationuid</key>
 				<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
@@ -2055,6 +2078,46 @@ import sys
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
 package = os.getenv('package')
+
+shell_cmd = '{0} -s {1} shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS -d package:{2}'.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print("App info of " + package + " shown")
+except:
+	print("Failed to show app info of " + package)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B01199D3-B213-4598-A3E9-EB101E6728F3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
 mod = os.getenv('mod')
 adb_s = "{0} -s {1}".format(adb_path, serial)
 
@@ -2142,6 +2205,25 @@ except:
 			<string>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>app_info</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4303,6 +4385,13 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>110</integer>
 		</dict>
+		<key>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2030</integer>
+			<key>ypos</key>
+			<integer>710</integer>
+		</dict>
 		<key>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</key>
 		<dict>
 			<key>note</key>
@@ -4492,6 +4581,15 @@ Use keyword "avd" to list and start emulator</string>
 			<integer>480</integer>
 			<key>ypos</key>
 			<integer>110</integer>
+		</dict>
+		<key>B01199D3-B213-4598-A3E9-EB101E6728F3</key>
+		<dict>
+			<key>note</key>
+			<string>App info</string>
+			<key>xpos</key>
+			<integer>2130</integer>
+			<key>ypos</key>
+			<integer>680</integer>
 		</dict>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<dict>
@@ -4684,7 +4782,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.2.1</string>
+	<string>1.2.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
