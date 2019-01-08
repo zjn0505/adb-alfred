@@ -55,6 +55,7 @@ def main(wf):
             title = "Select app to show app info"
             func = "app_info"
         it = wf.add_item(title=title,
+                    uid="list_app",
                     arg="list_app",
                     valid=True)
         it.setvar("func", func)
@@ -80,6 +81,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title):
         wf.add_item(title=title,
+                    uid="install_apk",
                     arg="install_apk",
                     subtitle="install apk or apks",
                     valid=True)
@@ -90,6 +92,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="screenshot",
                     arg="screenshot",
                     subtitle="take a screenshot and copy to clipboard, `cmd` to copy to desktop",
                     valid=True)
@@ -102,6 +105,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="open_settings",
                     arg="open_settings",
                     subtitle="'cmd' - Dev Tool, 'alt' - WiFi, 'ctrl' - App, 'fn' - Date, 'shift' - Accessibility",
                     valid=True)
@@ -123,6 +127,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title):
         wf.add_item(title=title,
+                    uid="debug_layout",
                     arg="debug_layout",
                     valid=True)
         itemCount += 1
@@ -134,6 +139,7 @@ def main(wf):
         
         if addAll or wordMatch(arg, title):
             wf.add_item(title=title,
+                        uid="demo_mode",
                         arg="demo_mode",
                         valid=True)
             itemCount += 1
@@ -143,6 +149,7 @@ def main(wf):
 
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="adb_reboot",
                     arg="adb_reboot",
                     subtitle="'cmd' - Bootloader, 'alt' - Recovery, 'ctrl' - Sideload",
                     valid=True)
@@ -162,6 +169,7 @@ def main(wf):
         if addAll or wordMatch(arg, title):
             wf.add_item(title=title,
                         subtitle=ip,
+                        uid="debug_wifi",
                         arg="debug_wifi",
                         valid=True)
             itemCount += 1
@@ -171,6 +179,7 @@ def main(wf):
 
     if addAll or wordMatch(arg, title):
         wf.add_item(title=title,
+                    uid="keyevent_input",
                     arg="keyevent_input",
                     valid=True)
         itemCount += 1

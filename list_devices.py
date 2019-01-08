@@ -95,7 +95,7 @@ def list_devices(args):
         name = item.get('serial')
         log.debug(arg + " " + name)
         if arg == '' or arg.lower() in name.lower():
-            it = wf.add_item(title=item.title, autocomplete=('', item.autocomplete)[item.valid], valid=item.valid, arg=item.arg, subtitle=item.subtitle)
+            it = wf.add_item(title=item.title, uid=item.title, autocomplete=('', item.autocomplete)[item.valid], valid=item.valid, arg=item.arg, subtitle=item.subtitle)
             it.setvar('status', item.get("status"))
             it.setvar('full_info', item.subtitle)
             if item.valid:
@@ -157,7 +157,7 @@ def list_devices(args):
                         if historyWifiDevice.subtitle:
                             title = "Connect " + historyWifiDevice.subtitle.split('- ', 1)[1].split(', ', 1)[0] + " over WiFi"
 
-                        it = wf.add_item(title=title, valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
+                        it = wf.add_item(title=title, uid="adb_connect", valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
                         it.setvar("ip", historyWifiDevice.title)
                         it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
                         it.add_modifier('alt', historyWifiDevice.subtitle)
@@ -171,20 +171,20 @@ def list_devices(args):
         
         if wifiDevices:
             for wifiDevice in wifiDevices:
-                it = wf.add_item(title="Disconnect from WiFi", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle=wifiDevice.title)
+                it = wf.add_item(title="Disconnect from WiFi", uid="adb_disconnect", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle=wifiDevice.title)
                 ip = wifiDevice.title
                 if  "[OFFLINE]" in ip:
                     ip = ip.split(" ")[0]
 
                 it.setvar("ip", ip)
         elif targetIp:
-            it = wf.add_item(title="Disconnect from WiFi", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle="adb disconnect " + targetIp)
+            it = wf.add_item(title="Disconnect from WiFi", uid="adb_disconnect", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle="adb disconnect " + targetIp)
             it.setvar("ip", targetIp)
 
     if arg and ("restart".startswith(arg.lower()) 
         or "kill-server".startswith(arg.lower())
         or "start-server".startswith(arg.lower())) or len(items) == 0: 
-        wf.add_item(title="Restart adb", valid =True, arg="restart_adb")
+        wf.add_item(title="Restart adb", valid =True, arg="restart_adb", uid="restart_adb")
 
 def main(wf):
     if not adb_path:

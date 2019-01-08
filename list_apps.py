@@ -18,6 +18,7 @@ def main(wf):
     for app in apps:
         if arg is '' or arg in app:
             wf.add_item(title=app,
+                    uid=app,
                     arg=app,
                     valid=True)
 

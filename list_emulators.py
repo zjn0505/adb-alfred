@@ -20,7 +20,7 @@ def list_emulators():
                     shell=True)
     emulators = result.rstrip().split('\n')
     for emulator in emulators:
-        wf.add_item(title=emulator, arg=emulator, valid=True)
+        wf.add_item(title=emulator, uid=emulator, arg=emulator, valid=True)
 
 def main(wf):
     if not emulator_path:

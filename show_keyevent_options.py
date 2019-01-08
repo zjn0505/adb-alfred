@@ -35,6 +35,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="KEYCODE_BACK",
                     arg="KEYCODE_BACK",
                     valid=True)
         it.setvar('mod', 'none')
@@ -47,6 +48,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="KEYCODE_HOME",
                     arg="KEYCODE_HOME",
                     valid=True)
 
@@ -60,6 +62,7 @@ def main(wf):
     
     if addAll or wordMatch(arg, title + " recent"):
         it = wf.add_item(title=title,
+                    uid="KEYCODE_APP_SWITCH",
                     arg="KEYCODE_APP_SWITCH",
                     valid=True)
         it.setvar('mod', 'none')
@@ -72,6 +75,7 @@ def main(wf):
 
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="KEYCODE_POWER",
                     arg="KEYCODE_POWER",
                     valid=True)
 
@@ -85,6 +89,7 @@ def main(wf):
 
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
+                    uid="STATUS_BAR",
                     arg="STATUS_BAR",
                     subtitle="Toggle status bar menu",
                     valid=True)
@@ -99,6 +104,7 @@ def main(wf):
             shell=True)
     if (addAll or wordMatch(arg, title)) and "true" in result:
         it = wf.add_item(title=title,
+                    uid="KEYCODE_ESCAPE",
                     arg="KEYCODE_ESCAPE",
                     valid=True)
 
