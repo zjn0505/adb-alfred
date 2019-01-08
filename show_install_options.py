@@ -44,6 +44,9 @@ def showApkInstallItems():
                         apk["target"] = int(info.split("'")[1])
                     elif info.startswith("application-label:"):
                         apk["label"] = info.split("'")[1]
+                
+                if not apk.has_key('label'):
+                    apk["label"] = ""
 
                 log.debug(apk)
 
