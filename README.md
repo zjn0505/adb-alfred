@@ -1,4 +1,4 @@
-# adb-alfred
+# adb-alfred [![release](https://img.shields.io/github/release/zjn0505/adb-alfred.svg)](https://github.com/zjn0505/adb-alfred/releases/latest)
 ![logo](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/adb%20alfred.png)
 
 adb with alfred workflow
