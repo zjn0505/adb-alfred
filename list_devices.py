@@ -22,7 +22,7 @@ regexConnect = "^connect .*"
 
 def get_property(name=None):
     infos = subprocess.check_output(
-            adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'",
+            adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'",
             stderr=subprocess.STDOUT,
             shell=True)
     infos = infos.rstrip().split('\n')
@@ -43,6 +43,7 @@ def get_device_items(arg, devices):
         subtitle = ""
         title = ""
         valid = False
+        mod_alt = ""
         if values[1] == 'offline':
             title = name + " [OFFLINE]"
         elif values[1] == 'connecting':
@@ -50,20 +51,22 @@ def get_device_items(arg, devices):
         else:
             title = name
             infos = get_property(name)
-            if not infos or len(infos) < 3:
+            if not infos or len(infos) < 4:
                 continue
-            manufacturer = infos[2].title()
-            model = infos[3].title()
+            manufacturer = infos[3].title()
+            model = infos[4].title()
             valid = True
-            subtitle = "%s - %s - Android %s, API %s" % (manufacturer, model, infos[0], infos[1])
+            subtitle = "%s - %s - Android %s, API %s" % (manufacturer, model, infos[1], infos[2])
+            mod_alt = infos[0]
 
         it = Item(title=title, autocomplete=name, valid=valid, arg=name, subtitle=subtitle)
         it.setvar('status', values[1])
         if valid:
-            it.setvar('device_api', infos[1])
+            it.setvar('device_api', infos[2])
         it.setvar('name', model)
         it.setvar('serial', values[0])
-
+        it.setvar('build_number', mod_alt)
+        
         items.append(it)
         if it and re.match(regexIp + ":5555", name):
             log.debug("add " + name)
@@ -109,6 +112,8 @@ def list_devices(args):
                 if '/' in ip and re.match(regexIp, ip.split('/')[0]):
                     it.setvar("ip", ip.strip('\n'))
                     it.add_modifier("cmd", subtitle=ip)
+            if item.get("build_number"):
+                it.add_modifier("alt", subtitle=item.get("build_number"))
 
 
     # CONNECT
@@ -197,7 +202,7 @@ if __name__ == '__main__':
     update_settings = {'github_slug': GITHUB_SLUG, 'version': VERSION}
     wf = Workflow3(update_settings=update_settings)
     log = wf.logger
-
+    log.debug("Hello from adb")
     if wf.update_available:
         wf.add_item(u'New version available',
                     u'Action this item to install the update',

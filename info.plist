@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>040618F1-A368-4045-8757-4058D0AFB11D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>0461824C-6237-42B9-9882-BEC93329153D</key>
 		<array>
 			<dict>
@@ -1208,6 +1221,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>040618F1-A368-4045-8757-4058D0AFB11D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1387,6 +1410,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Jienan Zhang</string>
@@ -1459,7 +1495,7 @@ except:
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
@@ -1697,6 +1733,46 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+
+shell_cmd = '{0} -s {1} shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS -d package:{2}'.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print("App info of " + package + " shown")
+except:
+	print("Failed to show app info of " + package)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>B01199D3-B213-4598-A3E9-EB101E6728F3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>02'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -1708,6 +1784,25 @@ except:
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>app_info</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1776,6 +1871,46 @@ except:
 			<string>4C080E3F-1926-4006-B9DF-784BA5D78D52</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+
+shell_cmd = '{0} -s {1} shell am force-stop {2}'.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print("Force stop " + package + " succeed")
+except:
+	print("Force stop " + package + " failed")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1900,6 +2035,25 @@ else:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>force_stop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{var:adb_path} -s {var:serial}</string>
 				<key>variables</key>
@@ -1986,16 +2140,16 @@ adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
 package = os.getenv('package')
 
-shell_cmd = '{0} -s {1} shell am start -a android.settings.APPLICATION_DETAILS_SETTINGS -d package:{2}'.format(adb_path, serial, package)
-# sys.stderr.write(shell_cmd)
+shell_cmd = '{0} -s {1} shell monkey -p {2} -c android.intent.category.LAUNCHER 1'.format(adb_path, serial, package)
+sys.stderr.write(shell_cmd)
 try:
 	subprocess.check_output(shell_cmd,
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-	print("App info of " + package + " shown")
+	print("Launch app " + package + " succeed")
 except:
-	print("Failed to show app info of " + package)</string>
+	print("Launch app " + package + " failed")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2006,28 +2160,9 @@ except:
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B01199D3-B213-4598-A3E9-EB101E6728F3</string>
+			<string>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>app_info</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2067,6 +2202,25 @@ except:
 			<string>94661296-E020-4CEE-9C3F-D324AFB76D71</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>start_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2142,46 +2296,6 @@ if __name__ == '__main__':
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-package = os.getenv('package')
-
-shell_cmd = '{0} -s {1} shell am force-stop {2}'.format(adb_path, serial, package)
-# sys.stderr.write(shell_cmd)
-try:
-	subprocess.check_output(shell_cmd,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	print("Force stop " + package + " succeed")
-except:
-	print("Force stop " + package + " failed")</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{query}</string>
 				<key>matchcasesensitive</key>
@@ -2195,25 +2309,6 @@ except:
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>324F9367-F28B-4745-9733-1F9745496D67</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>force_stop</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>E211B0B6-2DE5-45AF-9D9D-645F70743468</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2323,6 +2418,69 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+
+param = ""
+if os.getenv('mod') == "keep_data":
+	param = "-k"
+
+shell_cmd = '{0} -s {1} shell pm clear {2}'.format(adb_path, serial, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print("Data clear " + package + " succeed")
+except:
+	print("Data clear " + package + " failed")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>clear_app_data</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>498DE7B3-7E57-4556-B6DD-76104C1AFF88</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>inputstring</key>
 				<string>{var:function}</string>
 				<key>matchcasesensitive</key>
@@ -2417,46 +2575,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-package = os.getenv('package')
-
-shell_cmd = '{0} -s {1} shell monkey -p {2} -c android.intent.category.LAUNCHER 1'.format(adb_path, serial, package)
-# sys.stderr.write(shell_cmd)
-try:
-	subprocess.check_output(shell_cmd,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	print("Launch app " + package + " succeed")
-except:
-	print("Launch app " + package + " failed")</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{query}</string>
 				<key>matchcasesensitive</key>
@@ -2476,25 +2594,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>start_app</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>soundname</key>
 				<string>Hero</string>
 				<key>systemsound</key>
@@ -2506,6 +2605,50 @@ except:
 			<string>311C79EE-C023-425C-8303-F1A23C9E7FDB</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+
+param = ""
+if os.getenv('mod') == "keep_data":
+	param = "-k"
+
+shell_cmd = '{0} -s {1} shell pm uninstall {2} {3}'.format(adb_path, serial, param, package)
+# sys.stderr.write(shell_cmd)
+try:
+	subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	
+	print("Uninstall app " + package + " succeed")
+except:
+	print("Uninstall app " + package + " failed")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2580,6 +2723,25 @@ if __name__ == '__main__':
 			<string>4204602D-966C-4A9A-A398-EF35B429CF6D</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>uninstall_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2683,50 +2845,6 @@ import os
 import sys
 
 adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-package = os.getenv('package')
-
-param = ""
-if os.getenv('mod') == "keep_data":
-	param = "-k"
-
-shell_cmd = '{0} -s {1} shell pm clear {2}'.format(adb_path, serial, package)
-# sys.stderr.write(shell_cmd)
-try:
-	subprocess.check_output(shell_cmd,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	print("Data clear " + package + " succeed")
-except:
-	print("Data clear " + package + " failed")</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
 ip = os.getenv('ip')
 shell_cmd = '{0} disconnect {1}'.format(adb_path, ip)
 sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
@@ -2774,25 +2892,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>clear_app_data</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>498DE7B3-7E57-4556-B6DD-76104C1AFF88</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -2832,6 +2931,57 @@ except:
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+package = os.getenv('package')
+enabled = os.getenv('enabled')
+prettyVersion = os.getenv('pretty_version')
+
+shell_cmd = '{0} -s {1} shell pm {3} {2}'.format(adb_path, serial, package, ("enable", "disable")[enabled=='1'])
+sys.stderr.write(shell_cmd)
+try:
+	result = subprocess.check_output(shell_cmd,
+                            stderr=subprocess.STDOUT,
+                            shell=True)
+	sys.stderr.write(result)
+	#if result and result.startswith("package:"):
+	#	path = result[8:].strip()
+	#	shell_cmd = '{0} -s {1} pull {2} ~/Desktop/{3}-{4}.apk'.format(adb_path, serial, path, package, prettyVersion)
+	#	sys.stderr.write(shell_cmd)
+	#	subprocess.check_output(shell_cmd,
+    #                        stderr=subprocess.STDOUT,
+    #                        shell=True)
+	#	print("Apk extracted to desktop")
+	#else:
+	#	print("Failed to extract apk")
+except:
+	print("Failed to extract apk")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -2892,6 +3042,25 @@ except:
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>3E8E5CAD-9421-47F3-9397-E211EA4271C3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>dis_enable_app</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>040618F1-A368-4045-8757-4058D0AFB11D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2989,50 +3158,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-package = os.getenv('package')
-
-param = ""
-if os.getenv('mod') == "keep_data":
-	param = "-k"
-
-shell_cmd = '{0} -s {1} shell pm uninstall {2} {3}'.format(adb_path, serial, param, package)
-# sys.stderr.write(shell_cmd)
-try:
-	subprocess.check_output(shell_cmd,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	print("Uninstall app " + package + " succeed")
-except:
-	print("Uninstall app " + package + " failed")</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{var:apkFile}</string>
 				<key>matchcasesensitive</key>
@@ -3063,25 +3188,6 @@ except:
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>D88E8039-6195-47AD-982B-CC4CA5C5EED5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>uninstall_app</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3165,78 +3271,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>&lt;adb&gt;.*</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:mod}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>cmd</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>06'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>2E90C599-66C8-4C95-9847-D85E40AB94E6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>11'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -3282,6 +3316,97 @@ except:
 			<string>BB52EF52-75A2-459D-AA0E-55FD5B8297D1</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>&lt;adb&gt;.*</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:mod}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>cmd</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>extract_apk</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>06'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>2E90C599-66C8-4C95-9847-D85E40AB94E6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>11'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>3DE08189-D2BD-491C-A6A4-D49DA3305FED</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3401,25 +3526,6 @@ except:
 			<string>alfred.workflow.input.filefilter</string>
 			<key>uid</key>
 			<string>3359B203-2E42-4A93-B948-DD5840AD2204</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>extract_apk</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3575,10 +3681,10 @@ adb_path = os.getenv('adb_path')
 emulator_path = os.getenv('emulator_path')
 
 shell_cmd = ""
-status_cmd = "{0} -avd {query}".format(emulator_path)
+shell_cmd = "{0} -avd {query}".format(emulator_path)
 
-
-result = subprocess.check_output(status_cmd,
+sys.stderr.write(shell_cmd)
+result = subprocess.check_output(shell_cmd,
                                        stderr=subprocess.STDOUT,
                                        shell=True)</string>
 				<key>scriptargtype</key>
@@ -4144,6 +4250,13 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>1540</integer>
 		</dict>
+		<key>040618F1-A368-4045-8757-4058D0AFB11D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2030</integer>
+			<key>ypos</key>
+			<integer>1030</integer>
+		</dict>
 		<key>0461824C-6237-42B9-9882-BEC93329153D</key>
 		<dict>
 			<key>note</key>
@@ -4156,9 +4269,9 @@ Use keyword "avd" to list and start emulator</string>
 		<key>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>1140</integer>
+			<integer>870</integer>
 		</dict>
 		<key>061518C5-6CFD-42EF-AB68-D2B11F98889E</key>
 		<dict>
@@ -4341,9 +4454,9 @@ Use keyword "avd" to list and start emulator</string>
 		<key>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>830</integer>
+			<integer>560</integer>
 		</dict>
 		<key>3E8E5CAD-9421-47F3-9397-E211EA4271C3</key>
 		<dict>
@@ -4373,9 +4486,9 @@ Use keyword "avd" to list and start emulator</string>
 		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>990</integer>
+			<integer>720</integer>
 		</dict>
 		<key>4C080E3F-1926-4006-B9DF-784BA5D78D52</key>
 		<dict>
@@ -4492,18 +4605,18 @@ Use keyword "avd" to list and start emulator</string>
 		<key>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>510</integer>
+			<integer>240</integer>
 		</dict>
 		<key>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</key>
 		<dict>
 			<key>note</key>
 			<string>Clear data</string>
 			<key>xpos</key>
-			<integer>2140</integer>
+			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>960</integer>
+			<integer>690</integer>
 		</dict>
 		<key>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</key>
 		<dict>
@@ -4535,9 +4648,9 @@ Use keyword "avd" to list and start emulator</string>
 			<key>note</key>
 			<string>Uninstall</string>
 			<key>xpos</key>
-			<integer>2140</integer>
+			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>1110</integer>
+			<integer>840</integer>
 		</dict>
 		<key>887CA3AA-747C-4110-ACA4-0DB0A3F45303</key>
 		<dict>
@@ -4571,9 +4684,9 @@ Use keyword "avd" to list and start emulator</string>
 			<key>note</key>
 			<string>Launch app</string>
 			<key>xpos</key>
-			<integer>2140</integer>
+			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>800</integer>
+			<integer>530</integer>
 		</dict>
 		<key>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</key>
 		<dict>
@@ -4691,9 +4804,9 @@ Use keyword "avd" to list and start emulator</string>
 			<key>note</key>
 			<string>App info</string>
 			<key>xpos</key>
-			<integer>2140</integer>
+			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>210</integer>
 		</dict>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<dict>
@@ -4716,18 +4829,18 @@ Use keyword "avd" to list and start emulator</string>
 			<key>note</key>
 			<string>Extract apk</string>
 			<key>xpos</key>
-			<integer>2140</integer>
+			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>1270</integer>
+			<integer>1170</integer>
 		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
 			<key>note</key>
 			<string>Force stop</string>
 			<key>xpos</key>
-			<integer>2140</integer>
+			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>640</integer>
+			<integer>370</integer>
 		</dict>
 		<key>C6A84CEC-A533-4892-A67F-8D01904475E4</key>
 		<dict>
@@ -4785,16 +4898,16 @@ Use keyword "avd" to list and start emulator</string>
 		<key>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>1300</integer>
+			<integer>1200</integer>
 		</dict>
 		<key>E211B0B6-2DE5-45AF-9D9D-645F70743468</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>670</integer>
+			<integer>400</integer>
 		</dict>
 		<key>E4836C8C-4232-4791-BBF9-F3FF12DECB74</key>
 		<dict>
@@ -4876,6 +4989,15 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>1540</integer>
 		</dict>
+		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
+		<dict>
+			<key>note</key>
+			<string>Disable/Enable</string>
+			<key>xpos</key>
+			<integer>2130</integer>
+			<key>ypos</key>
+			<integer>1000</integer>
+		</dict>
 		<key>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</key>
 		<dict>
 			<key>note</key>
@@ -4902,7 +5024,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.3.0</string>
+	<string>1.3.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
