@@ -9,24 +9,31 @@ packName = os.getenv('package')
 
 def main(wf):
 
-    shell_cmd = "{0} -s {1} shell dumpsys package {2} | grep 'versionCode\|versionName' | awk '{{print $1}}'".format(adb_path, serial, packName)
+    shell_cmd = "{0} -s {1} shell dumpsys package {2} | grep 'versionCode\|versionName\|enabled=' | awk 'NR!=3{{print $1}}NR==3{{print $7}}'".format(adb_path, serial, packName)
 
     result = None
+    infos= None
     versionName = ""
     # Package info
     try:
         result = subprocess.check_output(shell_cmd, stderr=subprocess.STDOUT, shell=True)
+        log.debug(result)
     except subprocess.CalledProcessError as e:
         log.debug(e)
     if result:
         infos = result.rstrip().split('\n')
         log.debug(infos)
         versionName = infos[1][12:]
-        it = wf.add_item(title=packName, subtitle="{0}({1})".format(versionName, infos[0].strip()[12:]), valid=False, icon=ICON_INFO)
+        it = wf.add_item(title=packName,
+                        subtitle="{0}({1})".format(versionName, infos[0].strip()[12:]),
+                        valid=False,
+                        copytext=packName,
+                        icon=ICON_INFO)
 
     # App info
     title = "App info"
     wf.add_item(title=title,
+                subtitle="Open app info page",
                 arg="app_info",
                 valid=True) 
 
@@ -57,6 +64,20 @@ def main(wf):
 
     mod = it.add_modifier("cmd", subtitle="keep the data and cache directories")
     mod.setvar("mod", "keep_data")
+
+    if infos:
+        enabled = (infos[2][8:] != '2')
+        log.debug("enabled ? {0}".format(enabled))
+        
+        # Disable/Enable app
+
+        title = ("Enable app", "Disable app")[enabled]
+        it = wf.add_item(title=title,
+            arg="dis_enable_app",
+            valid=True)
+        
+        it.setvar("enabled", enabled)
+
 
     # Get apk file
     title = "Extract apk file"
