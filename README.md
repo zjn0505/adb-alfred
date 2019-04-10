@@ -32,7 +32,7 @@ What's required:
 |--|--|
 |`adb_path`|~/Library/Android/sdk/platform-tools/adb|
 |`aapt_path`|~/Library/Android/sdk/build-tools/28.0.3/aapt|
-|`emulator_path`|~/Library/Android/sdk/tools/emulator|
+|`emulator_path`|~/Library/Android/sdk/emulator/emulator|
 
 Features
 ----
