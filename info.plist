@@ -844,6 +844,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</key>
 		<array/>
@@ -2337,20 +2347,18 @@ try:
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-	sys.stderr.write(result)
-	
-	if result and int(result) != 0:
+	if result == 'null\n' or int(result) != 0:
 		sys.stderr.write("Turn demo mode off")
 		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command exit".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("2 " + result)
 		result = subprocess.check_output("{0} shell settings put global sysui_demo_allowed 0".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("3 " + result)
 
 	else:
 		
@@ -2359,48 +2367,47 @@ try:
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("4 " + result)
 
 		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command enter".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("5 " + result)
 
 		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("6 " + result)
 
 		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("7 " + result)
 		shell_cmd = "{0} shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false".format(adb_s)
 		sys.stderr.write(shell_cmd)
 		result = subprocess.check_output(shell_cmd,
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("8 " + result)
 
 		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command network -e wifi show -e level 4 -e fully true".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
+		sys.stderr.write("9 " + result)
 
-		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e notifications -e visible false".format(adb_s),
+		result = subprocess.check_output("{0} shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false".format(adb_s),
                             stderr=subprocess.STDOUT,
                             shell=True)
 	
-		sys.stderr.write(result)
-		
-
+		sys.stderr.write("10 " + result)
+	
 except:
-	print("Failed to capture screenshot")</string>
+	print("Failed to toggle demo mode")</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3668,7 +3675,7 @@ print('{0} -s {1} {2}'.format(adb_path, serial, cmd))</string>
 			<key>config</key>
 			<dict>
 				<key>concurrently</key>
-				<false/>
+				<true/>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -3723,7 +3730,7 @@ result = subprocess.check_output(shell_cmd,
 				<key>queuedelaymode</key>
 				<integer>0</integer>
 				<key>queuemode</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
@@ -4157,6 +4164,23 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
+				<string>16 '{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
 				<string></string>
 				<key>variables</key>
 				<dict>
@@ -4211,7 +4235,7 @@ except:
 
 - adb_path,  e.g. "~/Library/Android/sdk/platform-tools/adb"
 - aapt_path, e.g. "~/Library/Android/sdk/build-tools/28.0.3/aapt"
-- emulator_path, e.g. "~/Library/Android/sdk/tools/emulator"
+- emulator_path, e.g. "~/Library/Android/sdk/emulator/emulator"
 
 # Usage
 
@@ -4808,6 +4832,13 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>210</integer>
 		</dict>
+		<key>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>1720</integer>
+		</dict>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<dict>
 			<key>xpos</key>
@@ -5015,7 +5046,7 @@ Use keyword "avd" to list and start emulator</string>
 		<key>adb_path</key>
 		<string>~/Library/Android/sdk/platform-tools/adb</string>
 		<key>emulator_path</key>
-		<string>~/Library/Android/sdk/tools/emulator</string>
+		<string>~/Library/Android/sdk/emulator/emulator</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
@@ -5024,7 +5055,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.3.1</string>
+	<string>1.3.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
