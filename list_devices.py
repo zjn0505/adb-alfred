@@ -162,7 +162,7 @@ def list_devices(args):
                         if historyWifiDevice.subtitle:
                             title = "Connect " + historyWifiDevice.subtitle.split('- ', 1)[1].split(', ', 1)[0] + " over WiFi"
 
-                        it = wf.add_item(title=title, uid="adb_connect", valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
+                        it = wf.add_item(title=title, uid=historyWifiDevice.title, valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
                         it.setvar("ip", historyWifiDevice.title)
                         it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
                         it.add_modifier('alt', historyWifiDevice.subtitle)
@@ -176,7 +176,7 @@ def list_devices(args):
         
         if wifiDevices:
             for wifiDevice in wifiDevices:
-                it = wf.add_item(title="Disconnect from WiFi", uid="adb_disconnect", valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle=wifiDevice.title)
+                it = wf.add_item(title="Disconnect from WiFi", uid=wifiDevice.title, valid = True, arg="adb_disconnect", autocomplete="disconnect ", subtitle=wifiDevice.title)
                 ip = wifiDevice.title
                 if  "[OFFLINE]" in ip:
                     ip = ip.split(" ")[0]
