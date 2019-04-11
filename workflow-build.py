@@ -234,6 +234,19 @@ def build_workflow(workflow_dir, outputdir, overwrite=False, verbose=False,
             with open('version') as fp:
                 version = fp.read().strip().decode('utf-8')
 
+        if 'variablesdontexport' in info and info.get('variablesdontexport'):
+            variablesdontexport = info['variablesdontexport']
+            if 'variables' in info and info.get('variables'):
+                variables = info['variables']
+
+                for key in variablesdontexport:
+                    log.debug("Remove key " + key)
+                    if key in variables:
+                        log.debug("Remove key " + key)
+                        variables[key] = ""
+
+                plistlib.writePlist(info, u'info.plist')
+
         name = safename(info['name'])
         zippath = os.path.join(outputdir, name)
         if version:
