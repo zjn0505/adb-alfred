@@ -23,9 +23,10 @@ def main(wf):
     if result:
         infos = result.rstrip().split('\n')
         log.debug(infos)
-        versionName = infos[1][12:]
+        versionName = infos[1].strip()[12:]
+        versionCode = infos[0].strip()[12:]
         it = wf.add_item(title=packName,
-                        subtitle="{0}({1})".format(versionName, infos[0].strip()[12:]),
+                        subtitle="{0}({1})".format(versionName, versionCode),
                         valid=False,
                         copytext=packName,
                         icon=ICON_INFO)
