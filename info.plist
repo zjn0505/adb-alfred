@@ -127,6 +127,26 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>649D1C50-60FE-4F0F-9008-51875966FFE6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E9EFF180-2EDA-445B-A876-6C4F791198FE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -260,6 +280,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>208A6634-44C3-447D-BDE7-FF37725783FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -537,6 +570,19 @@
 		</array>
 		<key>4D037152-7CC5-482E-8F94-E9EF92983E07</key>
 		<array/>
+		<key>580CA274-39E9-4F86-AD7F-0C6752D70BE1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</key>
 		<array>
 			<dict>
@@ -637,6 +683,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>649D1C50-60FE-4F0F-9008-51875966FFE6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>580CA274-39E9-4F86-AD7F-0C6752D70BE1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1312,6 +1381,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>E9EFF180-2EDA-445B-A876-6C4F791198FE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>208A6634-44C3-447D-BDE7-FF37725783FA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</key>
 		<array>
 			<dict>
@@ -1893,6 +1985,289 @@ except:
 				<string>import subprocess
 import os
 import sys
+import re
+
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+shell_cmd = '{0} -s {1} shell settings get system pointer_location'.format(adb_path, serial)
+sys.stderr.write(shell_cmd + "\n")
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+	sys.stderr.write(result + "\n")
+	isOn = (result == '1')
+	sys.stderr.write("Pointer location is " + ("OFF", "ON")[isOn])
+	shell_cmd = '{0} -s {1} shell settings put system pointer_location {2}'.format(adb_path, serial, ("1", "0")[isOn])
+	sys.stderr.write(shell_cmd + "\n")
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+	print("Pointer location is " + ("ON", "OFF")[isOn])
+except:
+	print("Failed to toggle pointer location")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>580CA274-39E9-4F86-AD7F-0C6752D70BE1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+
+response = subprocess.check_output(
+           '{0} kill-server &amp;&amp; {1} start-server'.format(adb_path, adb_path),
+           stderr=subprocess.STDOUT,
+           shell=True)
+
+if 'daemon started successfully' in response:
+    print('adb successfully restarted')
+else:
+    print('Failed to restart adb')</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>03'{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>restart_adb</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>64394AEA-7969-4695-BA1E-DEADC6BFE619</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>pointer_location</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>649D1C50-60FE-4F0F-9008-51875966FFE6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+import re
+
+
+adb_path = os.getenv('adb_path')
+serial = os.getenv('serial')
+shell_cmd = '{0} -s {1} shell content query --uri content://settings/system --projection name:value --where "name=\\\'show_touches\\\'"'.format(adb_path, serial)
+sys.stderr.write(shell_cmd + "\n")
+
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+	sys.stderr.write(result + "\n")
+	isOn = (result[-1:] == '1')
+	
+	shell_cmd = '{0} -s {1} shell content insert --uri content://settings/system --bind name:s:show_touches --bind value:i:'.format(adb_path, serial)
+	
+	if isOn:
+		shell_cmd = shell_cmd + "0"
+	else:
+		shell_cmd = shell_cmd + "1"
+	sys.stderr.write(shell_cmd + "\n")
+
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True).strip()
+	print("Show taps is " + ("ON", "OFF")[isOn])
+except:
+	print("Failed to toggle show taps")</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>208A6634-44C3-447D-BDE7-FF37725783FA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>show_taps</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>E9EFF180-2EDA-445B-A876-6C4F791198FE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import os
+import sys
+import re
+import pickle
+from workflow import Workflow3
+
+adb_path = os.getenv('adb_path')
+ip = os.getenv('ip')
+extra = os.getenv('extra')
+
+def main(wf):
+
+	historyWifiDevices = []
+	history = wf.stored_data("wifi_history")
+	if history:
+		historyWifiDevices = pickle.loads(history)
+		if extra == "all":
+			historyWifiDevices = []
+		elif historyWifiDevices:
+			for historyWifiDevice in historyWifiDevices:
+				if historyWifiDevice.title == ip:
+					historyWifiDevices.remove(historyWifiDevice)
+					break
+		wf.store_data("wifi_history", pickle.dumps(historyWifiDevices))
+		print("Connection history removed")
+
+if __name__ == '__main__':
+    wf = Workflow3()
+    log = wf.logger
+    sys.exit(wf.run(main))</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A83BC89A-9B15-4875-802C-0867AB333ACD</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>adb_connect_remove</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>324F9367-F28B-4745-9733-1F9745496D67</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
 
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
@@ -2008,43 +2383,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-
-response = subprocess.check_output(
-           '{0} kill-server &amp;&amp; {1} start-server'.format(adb_path, adb_path),
-           stderr=subprocess.STDOUT,
-           shell=True)
-
-if 'daemon started successfully' in response:
-    print('adb successfully restarted')
-else:
-    print('Failed to restart adb')</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{var:function}</string>
 				<key>matchcasesensitive</key>
@@ -2101,19 +2439,40 @@ else:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>03'{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
+				<key>concurrently</key>
 				<false/>
-				<key>processoutputs</key>
-				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+
+adb_path = os.getenv('adb_path')
+ip = os.getenv('ip')
+shell_cmd = '{0} connect {1}'.format(adb_path, ip)
+sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print("Executed: adb connect " + ip)
+except:
+	print("Failed to execute: adb connect " + ip)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</string>
+			<string>887CA3AA-747C-4110-ACA4-0DB0A3F45303</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2125,12 +2484,12 @@ else:
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string>restart_adb</string>
+				<string>adb_connect</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
-			<string>64394AEA-7969-4695-BA1E-DEADC6BFE619</string>
+			<string>A407AB1A-4308-4860-BECE-967104C1E851</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2254,41 +2613,48 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:serial} - {var:name}</string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>import os
+				<string>import subprocess
+import os
 import sys
-import re
-import pickle
-from workflow import Workflow3
 
 adb_path = os.getenv('adb_path')
 ip = os.getenv('ip')
-extra = os.getenv('extra')
-
-def main(wf):
-
-	historyWifiDevices = []
-	history = wf.stored_data("wifi_history")
-	if history:
-		historyWifiDevices = pickle.loads(history)
-		if extra == "all":
-			historyWifiDevices = []
-		elif historyWifiDevices:
-			for historyWifiDevice in historyWifiDevices:
-				if historyWifiDevice.title == ip:
-					historyWifiDevices.remove(historyWifiDevice)
-					break
-		wf.store_data("wifi_history", pickle.dumps(historyWifiDevices))
-		print("Connection history removed")
-
-if __name__ == '__main__':
-    wf = Workflow3()
-    log = wf.logger
-    sys.exit(wf.run(main))</string>
+shell_cmd = '{0} disconnect {1}'.format(adb_path, ip)
+sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
+try:
+	result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)
+	sys.stderr.write(result)
+	print("Executed: adb disconnect " + ip)
+except:
+	print("Failed to execute: adb disconnect " + ip)</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2299,7 +2665,7 @@ if __name__ == '__main__':
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>A83BC89A-9B15-4875-802C-0867AB333ACD</string>
+			<string>1D757879-51AE-436E-801E-CD252FE7E60E</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -2313,12 +2679,12 @@ if __name__ == '__main__':
 				<key>matchmode</key>
 				<integer>0</integer>
 				<key>matchstring</key>
-				<string>adb_connect_remove</string>
+				<string>adb_disconnect</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
-			<string>324F9367-F28B-4745-9733-1F9745496D67</string>
+			<string>DB07D86E-AFED-4393-8A6E-73DA686CD001</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2507,6 +2873,42 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{var:apkFile}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>93E3005E-CB38-4064-B1CA-AF5491BB8CE5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>15 '{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{var:func}</string>
 				<key>variables</key>
@@ -2538,63 +2940,6 @@ except:
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>11C25097-223D-4E8A-928A-D85DAE9A40AC</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-ip = os.getenv('ip')
-shell_cmd = '{0} connect {1}'.format(adb_path, ip)
-sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
-try:
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)
-	sys.stderr.write(result)
-	print("Executed: adb connect " + ip)
-except:
-	print("Failed to execute: adb connect " + ip)</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>887CA3AA-747C-4110-ACA4-0DB0A3F45303</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>adb_connect</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>A407AB1A-4308-4860-BECE-967104C1E851</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -2787,6 +3132,127 @@ if __name__ == '__main__':
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python show_install_options.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>anchorfields</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>daterange</key>
+				<integer>0</integer>
+				<key>fields</key>
+				<array>
+					<dict>
+						<key>field</key>
+						<string>kMDItemDisplayName</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemAlternateNames</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>field</key>
+						<string>kMDItemFinderComment</string>
+						<key>not</key>
+						<false/>
+						<key>split</key>
+						<true/>
+						<key>value</key>
+						<string>{query}</string>
+						<key>words</key>
+						<true/>
+					</dict>
+				</array>
+				<key>includesystem</key>
+				<false/>
+				<key>keyword</key>
+				<string>apk</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>scopes</key>
+				<array/>
+				<key>subtext</key>
+				<string>Input the file name of APK</string>
+				<key>title</key>
+				<string>APK info checker</string>
+				<key>types</key>
+				<array>
+					<string>dyn.ah62d4rv4ge80c6dp</string>
+				</array>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.filefilter</string>
+			<key>uid</key>
+			<string>3359B203-2E42-4A93-B948-DD5840AD2204</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>10'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -2805,6 +3271,42 @@ if __name__ == '__main__':
 			<key>config</key>
 			<dict>
 				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>apkFile</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>apkFile</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>700A7846-7245-4F35-8025-53D42AB866E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
 				<string>08'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<false/>
@@ -2815,84 +3317,6 @@ if __name__ == '__main__':
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:serial} - {var:name}</string>
-				<key>title</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>E4836C8C-4232-4791-BBF9-F3FF12DECB74</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-ip = os.getenv('ip')
-shell_cmd = '{0} disconnect {1}'.format(adb_path, ip)
-sys.stderr.write("Execute:\n{0}\n".format(shell_cmd))
-try:
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)
-	sys.stderr.write(result)
-	print("Executed: adb disconnect " + ip)
-except:
-	print("Failed to execute: adb disconnect " + ip)</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1D757879-51AE-436E-801E-CD252FE7E60E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>adb_disconnect</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>DB07D86E-AFED-4393-8A6E-73DA686CD001</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3165,21 +3589,86 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{var:apkFile}</string>
-				<key>matchcasesensitive</key>
+				<key>concurrently</key>
 				<true/>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>import subprocess
+import os
+import sys
+import pipes
+
+adb_path = os.getenv('adb_path')
+emulator_path = os.getenv('emulator_path')
+
+shell_cmd = ""
+shell_cmd = "{0} -avd {query}".format(emulator_path)
+
+sys.stderr.write(shell_cmd)
+result = subprocess.check_output(shell_cmd,
+                                       stderr=subprocess.STDOUT,
+                                       shell=True)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
 				<string></string>
+				<key>type</key>
+				<integer>3</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>93E3005E-CB38-4064-B1CA-AF5491BB8CE5</string>
+			<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>avd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python list_emulators.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3195,23 +3684,6 @@ except:
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>D88E8039-6195-47AD-982B-CC4CA5C5EED5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>15 '{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3418,163 +3890,6 @@ except:
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python show_install_options.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>anchorfields</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>daterange</key>
-				<integer>0</integer>
-				<key>fields</key>
-				<array>
-					<dict>
-						<key>field</key>
-						<string>kMDItemDisplayName</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<true/>
-						<key>value</key>
-						<string>{query}</string>
-						<key>words</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemAlternateNames</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<true/>
-						<key>value</key>
-						<string>{query}</string>
-						<key>words</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>field</key>
-						<string>kMDItemFinderComment</string>
-						<key>not</key>
-						<false/>
-						<key>split</key>
-						<true/>
-						<key>value</key>
-						<string>{query}</string>
-						<key>words</key>
-						<true/>
-					</dict>
-				</array>
-				<key>includesystem</key>
-				<false/>
-				<key>keyword</key>
-				<string>apk</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>scopes</key>
-				<array/>
-				<key>subtext</key>
-				<string>Input the file name of APK</string>
-				<key>title</key>
-				<string>APK info checker</string>
-				<key>types</key>
-				<array>
-					<string>dyn.ah62d4rv4ge80c6dp</string>
-				</array>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.filefilter</string>
-			<key>uid</key>
-			<string>3359B203-2E42-4A93-B948-DD5840AD2204</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>apkFile</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>apkFile</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>700A7846-7245-4F35-8025-53D42AB866E2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -3615,6 +3930,23 @@ print('{0} -s {1} {2}'.format(adb_path, serial, cmd))</string>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>16 '{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3670,90 +4002,6 @@ print('{0} -s {1} {2}'.format(adb_path, serial, cmd))</string>
 			<string>38F77EED-1B8C-4A81-970F-9937F947E558</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-import pipes
-
-adb_path = os.getenv('adb_path')
-emulator_path = os.getenv('emulator_path')
-
-shell_cmd = ""
-shell_cmd = "{0} -avd {query}".format(emulator_path)
-
-sys.stderr.write(shell_cmd)
-result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>avd</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python list_emulators.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4164,23 +4412,6 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>16 '{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
 				<string></string>
 				<key>variables</key>
 				<dict>
@@ -4272,14 +4503,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>1910</integer>
 		</dict>
 		<key>040618F1-A368-4045-8757-4058D0AFB11D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>1030</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>0461824C-6237-42B9-9882-BEC93329153D</key>
 		<dict>
@@ -4288,14 +4519,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1720</integer>
 			<key>ypos</key>
-			<integer>1510</integer>
+			<integer>1880</integer>
 		</dict>
 		<key>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>870</integer>
+			<integer>1240</integer>
 		</dict>
 		<key>061518C5-6CFD-42EF-AB68-D2B11F98889E</key>
 		<dict>
@@ -4318,7 +4549,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1720</integer>
 			<key>ypos</key>
-			<integer>1710</integer>
+			<integer>2080</integer>
 		</dict>
 		<key>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</key>
 		<dict>
@@ -4334,14 +4565,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>780</integer>
+			<integer>1150</integer>
 		</dict>
 		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>1740</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</key>
 		<dict>
@@ -4358,6 +4589,15 @@ Use keyword "avd" to list and start emulator</string>
 			<integer>570</integer>
 			<key>ypos</key>
 			<integer>960</integer>
+		</dict>
+		<key>208A6634-44C3-447D-BDE7-FF37725783FA</key>
+		<dict>
+			<key>note</key>
+			<string>Toggle show taps</string>
+			<key>xpos</key>
+			<integer>1280</integer>
+			<key>ypos</key>
+			<integer>580</integer>
 		</dict>
 		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
 		<dict>
@@ -4382,14 +4622,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>1710</integer>
+			<integer>2080</integer>
 		</dict>
 		<key>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>790</integer>
 		</dict>
 		<key>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</key>
 		<dict>
@@ -4398,7 +4638,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>390</integer>
+			<integer>760</integer>
 		</dict>
 		<key>2E90C599-66C8-4C95-9847-D85E40AB94E6</key>
 		<dict>
@@ -4407,14 +4647,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>1260</integer>
+			<integer>1630</integer>
 		</dict>
 		<key>311C79EE-C023-425C-8303-F1A23C9E7FDB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2430</integer>
 			<key>ypos</key>
-			<integer>840</integer>
+			<integer>1210</integer>
 		</dict>
 		<key>324F9367-F28B-4745-9733-1F9745496D67</key>
 		<dict>
@@ -4439,14 +4679,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>1460</integer>
+			<integer>1830</integer>
 		</dict>
 		<key>39FA7A4F-C0B8-4F74-A1F7-50ADEA19EDC7</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1720</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1530</integer>
 		</dict>
 		<key>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</key>
 		<dict>
@@ -4473,21 +4713,21 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2330</integer>
 			<key>ypos</key>
-			<integer>1260</integer>
+			<integer>1630</integer>
 		</dict>
 		<key>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>560</integer>
+			<integer>930</integer>
 		</dict>
 		<key>3E8E5CAD-9421-47F3-9397-E211EA4271C3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1090</integer>
 			<key>ypos</key>
-			<integer>1030</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</key>
 		<dict>
@@ -4496,7 +4736,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>1510</integer>
+			<integer>1880</integer>
 		</dict>
 		<key>4204602D-966C-4A9A-A398-EF35B429CF6D</key>
 		<dict>
@@ -4505,14 +4745,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>850</integer>
+			<integer>1220</integer>
 		</dict>
 		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>1090</integer>
 		</dict>
 		<key>4C080E3F-1926-4006-B9DF-784BA5D78D52</key>
 		<dict>
@@ -4528,14 +4768,23 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>1110</integer>
+			<integer>1480</integer>
+		</dict>
+		<key>580CA274-39E9-4F86-AD7F-0C6752D70BE1</key>
+		<dict>
+			<key>note</key>
+			<string>Toggle pointer location</string>
+			<key>xpos</key>
+			<integer>1280</integer>
+			<key>ypos</key>
+			<integer>400</integer>
 		</dict>
 		<key>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1090</integer>
 			<key>ypos</key>
-			<integer>1370</integer>
+			<integer>1740</integer>
 		</dict>
 		<key>5C4E1E87-7648-436C-B15A-9C7A0D6BA929</key>
 		<dict>
@@ -4544,7 +4793,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>1340</integer>
+			<integer>1710</integer>
 		</dict>
 		<key>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</key>
 		<dict>
@@ -4553,14 +4802,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>690</integer>
+			<integer>1060</integer>
 		</dict>
 		<key>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1720</integer>
 			<key>ypos</key>
-			<integer>1340</integer>
+			<integer>1710</integer>
 		</dict>
 		<key>5E89349C-E31D-40BC-A828-91A81C965ECF</key>
 		<dict>
@@ -4569,19 +4818,26 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1530</integer>
 		</dict>
 		<key>6137EDAB-7A87-43EC-8766-49022D50387D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1590</integer>
 			<key>ypos</key>
-			<integer>1030</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>64394AEA-7969-4695-BA1E-DEADC6BFE619</key>
 		<dict>
 			<key>xpos</key>
 			<integer>340</integer>
+			<key>ypos</key>
+			<integer>430</integer>
+		</dict>
+		<key>649D1C50-60FE-4F0F-9008-51875966FFE6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1020</integer>
 			<key>ypos</key>
 			<integer>430</integer>
 		</dict>
@@ -4640,7 +4896,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>690</integer>
+			<integer>1060</integer>
 		</dict>
 		<key>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</key>
 		<dict>
@@ -4656,7 +4912,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1590</integer>
 			<key>ypos</key>
-			<integer>780</integer>
+			<integer>1150</integer>
 		</dict>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<dict>
@@ -4674,7 +4930,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>840</integer>
+			<integer>1210</integer>
 		</dict>
 		<key>887CA3AA-747C-4110-ACA4-0DB0A3F45303</key>
 		<dict>
@@ -4692,7 +4948,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1700</integer>
 			<key>ypos</key>
-			<integer>930</integer>
+			<integer>1300</integer>
 		</dict>
 		<key>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</key>
 		<dict>
@@ -4710,21 +4966,21 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>530</integer>
+			<integer>900</integer>
 		</dict>
 		<key>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1910</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>1910</integer>
 		</dict>
 		<key>91DBE388-01F6-45EE-A1E7-3A64000857CB</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1090</integer>
 			<key>ypos</key>
-			<integer>420</integer>
+			<integer>790</integer>
 		</dict>
 		<key>93E3005E-CB38-4064-B1CA-AF5491BB8CE5</key>
 		<dict>
@@ -4740,42 +4996,42 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>540</integer>
+			<integer>910</integer>
 		</dict>
 		<key>95743DF0-8450-41C2-82AC-1E540F2D9B83</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>1030</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>570</integer>
+			<integer>940</integer>
 		</dict>
 		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1090</integer>
 			<key>ypos</key>
-			<integer>880</integer>
+			<integer>1250</integer>
 		</dict>
 		<key>A146BAFF-E767-4A05-A819-A4E0E8D90446</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>1910</integer>
 		</dict>
 		<key>A1CCB5CC-E148-45B8-B0A8-CF25FE4AA72A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>1990</integer>
 		</dict>
 		<key>A407AB1A-4308-4860-BECE-967104C1E851</key>
 		<dict>
@@ -4789,7 +5045,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>1740</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>A7A732FB-5BB9-41F1-B2EA-B2B51AF0258C</key>
 		<dict>
@@ -4798,7 +5054,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>1660</integer>
+			<integer>2030</integer>
 		</dict>
 		<key>A83BC89A-9B15-4875-802C-0867AB333ACD</key>
 		<dict>
@@ -4814,7 +5070,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>1740</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>ADCC5FCA-C722-4D8E-92FD-78DBC974FB3C</key>
 		<dict>
@@ -4844,7 +5100,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1910</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>1990</integer>
 		</dict>
 		<key>B81B0663-A4BF-4BB1-94B2-66752B977EBC</key>
 		<dict>
@@ -4853,7 +5109,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1720</integer>
 			<key>ypos</key>
-			<integer>1000</integer>
+			<integer>1370</integer>
 		</dict>
 		<key>BB52EF52-75A2-459D-AA0E-55FD5B8297D1</key>
 		<dict>
@@ -4862,7 +5118,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>1170</integer>
+			<integer>1540</integer>
 		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
@@ -4871,7 +5127,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>740</integer>
 		</dict>
 		<key>C6A84CEC-A533-4892-A67F-8D01904475E4</key>
 		<dict>
@@ -4880,21 +5136,21 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>1510</integer>
+			<integer>1880</integer>
 		</dict>
 		<key>CA48997C-8B9B-4D82-885E-464BE23DA1C9</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>1030</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>1090</integer>
 		</dict>
 		<key>D88E8039-6195-47AD-982B-CC4CA5C5EED5</key>
 		<dict>
@@ -4903,7 +5159,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1530</integer>
 			<key>ypos</key>
-			<integer>1130</integer>
+			<integer>1500</integer>
 		</dict>
 		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
 		<dict>
@@ -4917,28 +5173,28 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1910</integer>
 			<key>ypos</key>
-			<integer>1030</integer>
+			<integer>1400</integer>
 		</dict>
 		<key>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>1190</integer>
+			<integer>1560</integer>
 		</dict>
 		<key>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>1200</integer>
+			<integer>1570</integer>
 		</dict>
 		<key>E211B0B6-2DE5-45AF-9D9D-645F70743468</key>
 		<dict>
 			<key>xpos</key>
 			<integer>2030</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>770</integer>
 		</dict>
 		<key>E4836C8C-4232-4791-BBF9-F3FF12DECB74</key>
 		<dict>
@@ -4952,7 +5208,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>880</integer>
+			<integer>1250</integer>
+		</dict>
+		<key>E9EFF180-2EDA-445B-A876-6C4F791198FE</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1020</integer>
+			<key>ypos</key>
+			<integer>610</integer>
 		</dict>
 		<key>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</key>
 		<dict>
@@ -4968,7 +5231,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1090</integer>
 			<key>ypos</key>
-			<integer>1190</integer>
+			<integer>1560</integer>
 		</dict>
 		<key>ED7185EE-E248-4535-AB02-D48AFC8196B4</key>
 		<dict>
@@ -5002,7 +5265,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2090</integer>
 			<key>ypos</key>
-			<integer>1440</integer>
+			<integer>1810</integer>
 		</dict>
 		<key>F469FFED-AC36-4B5D-B761-A5C784037E38</key>
 		<dict>
@@ -5011,14 +5274,14 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1280</integer>
 			<key>ypos</key>
-			<integer>1000</integer>
+			<integer>1370</integer>
 		</dict>
 		<key>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1020</integer>
 			<key>ypos</key>
-			<integer>1540</integer>
+			<integer>1910</integer>
 		</dict>
 		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
 		<dict>
@@ -5027,7 +5290,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>2130</integer>
 			<key>ypos</key>
-			<integer>1000</integer>
+			<integer>1370</integer>
 		</dict>
 		<key>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</key>
 		<dict>
@@ -5036,7 +5299,7 @@ Use keyword "avd" to list and start emulator</string>
 			<key>xpos</key>
 			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>950</integer>
+			<integer>1320</integer>
 		</dict>
 	</dict>
 	<key>variables</key>

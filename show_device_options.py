@@ -126,11 +126,15 @@ def main(wf):
     title = "Toggle debug layout"
     
     if addAll or wordMatch(arg, title):
-        wf.add_item(title=title,
+        it = wf.add_item(title=title,
                     uid="debug_layout",
                     arg="debug_layout",
                     valid=True)
         itemCount += 1
+
+        m = it.add_modifier('cmd', 'Toggle pointer location', arg="pointer_location")
+
+        m = it.add_modifier('alt', 'Toggle show taps', arg="show_taps")
 
 
     # DEMO MODE
