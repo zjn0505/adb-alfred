@@ -305,7 +305,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>232D69C4-27A2-48C5-BBFE-B6FADC33A290</string>
+				<string>CAE7B37C-9567-4FEF-90B7-CB73D363B773</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -316,19 +316,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>701402E8-8901-4D87-A8EE-33E00C20A4CF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>232D69C4-27A2-48C5-BBFE-B6FADC33A290</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1220,6 +1207,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CAE7B37C-9567-4FEF-90B7-CB73D363B773</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
 		<array>
 			<dict>
@@ -1539,45 +1539,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-cmd = os.getenv('mod')
-
-shell_cmd= '{0} -s {1} reboot {2}'.format(adb_path, serial, cmd)
-sys.stderr.write(shell_cmd)
-try:
-	subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)
-	print("Reboot device succeed")
-except:
-	print("Reboot device failed")</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>3</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>232D69C4-27A2-48C5-BBFE-B6FADC33A290</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1702,6 +1663,29 @@ except:
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>86E0AE80-E859-4D5D-B15B-D8631B27C24D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python scripts/reboot_device.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>CAE7B37C-9567-4FEF-90B7-CB73D363B773</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1916,37 +1900,13 @@ except:
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-import re
-
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-shell_cmd = '{0} -s {1} shell getprop debug.layout'.format(adb_path, serial)
-
-try:
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True).strip()
-	isOn = 'off'
-	if result.lower() != 'on':
-		isOn = 'on'
-	shell_cmd = '{0} -s {1} shell setprop debug.layout {2} &amp;&amp; {0} -s {1} shell service call activity 1599295570'.format(adb_path, serial, isOn)
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True).strip()
-	sys.stderr.write(result)
-	print("Debug layout is " + isOn)
-except:
-	print("Failed to toggle debug layout")</string>
+				<string>python scripts/toggle_debug_layout.py</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -1982,37 +1942,13 @@ except:
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-import re
-
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-shell_cmd = '{0} -s {1} shell settings get system pointer_location'.format(adb_path, serial)
-sys.stderr.write(shell_cmd + "\n")
-try:
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True).strip()
-	sys.stderr.write(result + "\n")
-	isOn = (result == '1')
-	sys.stderr.write("Pointer location is " + ("OFF", "ON")[isOn])
-	shell_cmd = '{0} -s {1} shell settings put system pointer_location {2}'.format(adb_path, serial, ("1", "0")[isOn])
-	sys.stderr.write(shell_cmd + "\n")
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True).strip()
-	print("Pointer location is " + ("ON", "OFF")[isOn])
-except:
-	print("Failed to toggle pointer location")</string>
+				<string>python scripts/toggle_pointer_location.py</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -2121,44 +2057,13 @@ else:
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-import re
-
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-shell_cmd = '{0} -s {1} shell content query --uri content://settings/system --projection name:value --where "name=\\\'show_touches\\\'"'.format(adb_path, serial)
-sys.stderr.write(shell_cmd + "\n")
-
-try:
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True).strip()
-	sys.stderr.write(result + "\n")
-	isOn = (result[-1:] == '1')
-	
-	shell_cmd = '{0} -s {1} shell content insert --uri content://settings/system --bind name:s:show_touches --bind value:i:'.format(adb_path, serial)
-	
-	if isOn:
-		shell_cmd = shell_cmd + "0"
-	else:
-		shell_cmd = shell_cmd + "1"
-	sys.stderr.write(shell_cmd + "\n")
-
-	result = subprocess.check_output(shell_cmd,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True).strip()
-	print("Show taps is " + ("ON", "OFF")[isOn])
-except:
-	print("Failed to toggle show taps")</string>
+				<string>python scripts/toggle_show_taps.py</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -2303,75 +2208,15 @@ except:
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>68</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string>import subprocess
-import os
-import sys
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
-package = os.getenv('package')
-adb_s = "{query}"
-datetime = os.getenv('time')
-mod = os.getenv('mod')
-remote_path = "sdcard/screenshot_{0}.png".format(datetime)
-shell_cmd_1 = '{0} shell screencap -p {1}'.format(adb_s, remote_path)
-shell_cmd_2 = "{0} pull {1} {2}".format(adb_s, remote_path, ("/tmp/", "~/Desktop/")[mod == "cmd"])
-shell_cmd_3 = "{0} shell rm {1}".format(adb_s, remote_path)
-sys.stderr.write(shell_cmd_1 + "\n")
-sys.stderr.write(shell_cmd_2 + "\n")
-sys.stderr.write(shell_cmd_3 + "\n")
-try:
-	result = subprocess.check_output(shell_cmd_1,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	sys.stderr.write(result)
-	result = subprocess.check_output(shell_cmd_2,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	sys.stderr.write(result)
-	result = subprocess.check_output(shell_cmd_3,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-	
-	sys.stderr.write(result)
-	local_path = ""
-	if mod and mod == "cmd":
-		local_path = "~/Desktop/screenshot_{0}.png".format(datetime)
-	else:
-		local_path = "/tmp/screenshot_{0}.png".format(datetime)
-	
-	if not mod == "cmd":
-		shell_cmd_4 = "osascript -e 'on run args' -e 'set thisFile to item 1 of args' -e 'set the clipboard to (read thisFile as «class PNGf»)' -e return -e end {0}".format(local_path)
-		if subprocess.call(['which', 'osascript']) == 0:
-			result = subprocess.check_output(shell_cmd_4,
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-			sys.stderr.write(result)
-		elif subprocess.call(['which', 'xclip']) == 0:
-			result = subprocess.check_output("xclip -selection clipboard -t image/png -i {0}".format(local_path),
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-			sys.stderr.write(result)
-
-		result = subprocess.check_output("rm {0}".format(local_path),
-                            stderr=subprocess.STDOUT,
-                            shell=True)
-		sys.stderr.write(result)
-		print("Screenshot captured to clipboard")
-	else:
-		print("Screenshot captured to desktop")
-except:
-	print("Failed to capture screenshot")</string>
+				<string>python scripts/screen_shot.py</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -2403,7 +2248,7 @@ except:
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>{var:adb_path} -s {var:serial}</string>
+				<string></string>
 				<key>variables</key>
 				<dict>
 					<key>time</key>
@@ -4606,15 +4451,6 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>110</integer>
 		</dict>
-		<key>232D69C4-27A2-48C5-BBFE-B6FADC33A290</key>
-		<dict>
-			<key>note</key>
-			<string>Reboot device</string>
-			<key>xpos</key>
-			<integer>1280</integer>
-			<key>ypos</key>
-			<integer>80</integer>
-		</dict>
 		<key>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</key>
 		<dict>
 			<key>note</key>
@@ -5144,6 +4980,15 @@ Use keyword "avd" to list and start emulator</string>
 			<integer>1020</integer>
 			<key>ypos</key>
 			<integer>1400</integer>
+		</dict>
+		<key>CAE7B37C-9567-4FEF-90B7-CB73D363B773</key>
+		<dict>
+			<key>note</key>
+			<string>Reboot device</string>
+			<key>xpos</key>
+			<integer>1280</integer>
+			<key>ypos</key>
+			<integer>80</integer>
 		</dict>
 		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
 		<dict>
