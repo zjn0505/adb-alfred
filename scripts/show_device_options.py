@@ -197,6 +197,8 @@ def main(wf):
         it.setvar('mod', 'none')
         m = it.add_modifier('cmd', 'Run without opening terminal')
         m.setvar('mod', 'cmd')
+        it.setvar('cmd', arg)
+        m.setvar('cmd', arg)
 
     
     

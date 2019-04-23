@@ -16,7 +16,7 @@ deviceApi = os.getenv('device_api')
 
 needsTestFlag = False
 needsDowngradeFlag = False
-hasDangerousPermission = False # TODO
+hasDangerousPermission = False
 validApkByApiCheck = True
 isDebuggable = False
 

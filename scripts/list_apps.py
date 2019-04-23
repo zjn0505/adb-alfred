@@ -1,18 +1,11 @@
-import subprocess
-import os
 import sys
-import re
 from workflow import Workflow3
-
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
+from toolchain import run_script
+from commands import CMD_LIST_APPS
 
 def main(wf):
     arg = wf.args[0].strip()
-    apps = subprocess.check_output(
-            "{0} -s {1} shell 'pm list packages -f' | grep package: | sed -e 's/.*=//' | sed 's/\r//g' | sort".format(adb_path, serial),
-            stderr=subprocess.STDOUT,
-            shell=True)
+    apps = run_script(CMD_LIST_APPS)
     apps = apps.rstrip().split('\n')
 
     for app in apps:

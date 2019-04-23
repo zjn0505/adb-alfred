@@ -1,11 +1,9 @@
-import subprocess
-import os
-import sys
 import re
+import sys
 from workflow import Workflow3
- 
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
+from toolchain import run_script
+from commands import CMD_CHECK_KEYBOARD
+
 
 def wordMatch(arg, sentence): 
     words = arg.lower().split(" ")
@@ -99,15 +97,12 @@ def main(wf):
 
     # KEYBOARD
     title = "Hide keyboard"
-    result = subprocess.check_output("{0} -s {1} shell dumpsys input_method | grep mInputShown | awk '{{print $4}}'".format(adb_path, serial), 
-            stderr=subprocess.STDOUT,
-            shell=True)
+    result = run_script(CMD_CHECK_KEYBOARD)
     if (addAll or wordMatch(arg, title)) and "true" in result:
         it = wf.add_item(title=title,
                     uid="KEYCODE_ESCAPE",
                     arg="KEYCODE_ESCAPE",
                     valid=True)
-
 
         it.setvar('mod', 'none')
         itemCount += 1

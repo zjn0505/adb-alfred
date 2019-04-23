@@ -1,16 +1,16 @@
-import subprocess
 import os
 import sys
 import re
 import pickle
 import ipaddress
+from toolchain import run_script
 from workflow import Workflow3, ICON_INFO
 from workflow.background import run_in_background, is_running
 from item import Item
 
 GITHUB_SLUG = 'zjn0505/adb-alfred'
 VERSION = open(os.path.join(os.path.dirname(__file__),
-                            'version')).read().strip()
+                            '../version')).read().strip()
  
 adb_path = os.getenv('adb_path')
 
@@ -21,10 +21,7 @@ regexIpInput = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){0,3}([0-9]
 regexConnect = "^connect .*"
 
 def get_property(name=None):
-    infos = subprocess.check_output(
-            adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'",
-            stderr=subprocess.STDOUT,
-            shell=True)
+    infos = run_script(adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'")
     infos = infos.rstrip().split('\n')
     return infos
 
@@ -80,10 +77,7 @@ def list_devices(args):
 
     arg = args[0] if args else ''
 
-    devices = subprocess.check_output(
-            adb_path + " devices -l | sed -n '1!p' | tr -s ' '",
-            stderr=subprocess.STDOUT,
-            shell=True)
+    devices = run_script(adb_path + " devices -l | sed -n '1!p' | tr -s ' '")
     devices = devices.rstrip().split('\n')
 
     items, wifiDevices = get_device_items(arg, devices)
@@ -106,9 +100,7 @@ def list_devices(args):
             it.setvar('name', item.get('name'))
             if item.subtitle and not re.match(regexIp + ":5555", name):
                 cmd_ip = adb_path + ' -s ' + name + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
-                ip = subprocess.check_output(cmd_ip,
-                                       stderr=subprocess.STDOUT,
-                                       shell=True)
+                ip = run_script(cmd_ip)
                 if '/' in ip and re.match(regexIp, ip.split('/')[0]):
                     it.setvar("ip", ip.strip('\n'))
                     it.add_modifier("cmd", subtitle=ip)
@@ -118,9 +110,7 @@ def list_devices(args):
 
     # CONNECT
     if arg and ("connect ".startswith(arg.lower()) or re.match(regexConnect, arg)):
-        localIpWithMask = subprocess.check_output('ifconfig | grep -A 1 "en" | grep broadcast | cut -d " " -f 2,4 | tr "\\n" " "',
-            stderr=subprocess.STDOUT,
-            shell=True)
+        localIpWithMask = run_script('ifconfig | grep -A 1 "en" | grep broadcast | cut -d " " -f 2,4 | tr "\\n" " "')
 
         localIp = localIpWithMask.split(" ")[0]
         rawMask = localIpWithMask.split(" ")[1].count("f") * 4
