@@ -140,6 +140,7 @@ def main(wf):
 
         m = it.add_modifier('fn', 'Toggle GPU overdraw', arg="gpu_overdraw")
 
+        m = it.add_modifier('shift', 'Turn off everything', arg="debug_off")
 
     # DEMO MODE
     if api and int(api) >= 23:
