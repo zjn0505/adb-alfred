@@ -23,6 +23,14 @@ CMD_SET_POINTER_LOCATION = adbshell + 'settings put system pointer_location {}'
 CMD_GET_SHOW_TAPS = adbshell + 'content query --uri content://settings/system --projection name:value --where "name=\\\'show_touches\\\'"'
 CMD_SET_SHOW_TAPS = adbshell + 'content insert --uri content://settings/system --bind name:s:show_touches --bind value:i:{}'
 
+# GPU profile
+CMD_GET_GPU_PROFILE = adbshell + 'getprop debug.hwui.profile'
+CMD_SET_GPU_PROFILE = adbshell + 'setprop debug.hwui.profile {}'
+
+# GPU overdraw
+CMD_GET_GPU_OVERDRAW = adbshell + 'getprop debug.hwui.overdraw'
+CMD_SET_GPU_OVERDRAW = adbshell + 'setprop debug.hwui.overdraw {}'
+
 # Screen shot
 CMD_SCREENCAP = adbshell + 'screencap -p sdcard/screenshot_{}.jpg'
 CMD_PULL_TEMP_TO_DESKTOP = adbs + 'pull sdcard/screenshot_{0}.jpg {1}'

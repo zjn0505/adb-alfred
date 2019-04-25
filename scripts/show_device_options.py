@@ -136,6 +136,10 @@ def main(wf):
 
         m = it.add_modifier('alt', 'Toggle show taps', arg="show_taps")
 
+        m = it.add_modifier('ctrl', 'Toggle GPU profile', arg="gpu_profile")
+
+        m = it.add_modifier('fn', 'Toggle GPU overdraw', arg="gpu_overdraw")
+
 
     # DEMO MODE
     if api and int(api) >= 23:
