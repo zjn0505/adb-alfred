@@ -87,10 +87,16 @@ CMD_SHOW_APK_PATH = adbshell + 'pm path {}'
 CMD_PULL_APK_TO_DESKTOP = adbs + 'pull {0} ~/Desktop/{1}-{2}.apk'
 
 # Install app
-CMD_INSTALL_APP = adbshell + 'install -r {0} {1}'
+CMD_INSTALL_APP = adbs + 'install -r {0} {1}'
 
 # List apps
 CMD_LIST_APPS = adbshell + "'pm list packages -f' | grep package: | sed -e 's/.*=//' | sed 's/\r//g' | sort"
 
 # Check keyboard
 CMD_CHECK_KEYBOARD = adbshell + "dumpsys input_method | grep mInputShown | awk '{{print $4}}'"
+
+# Dump package
+CMD_DUMP_PACKAGE = adbshell + "dumpsys package {} | grep 'versionCode\|versionName\|enabled=\|Category: \"android.intent.category.LAUNCHER\"' | tail -r | awk 'NR!=1{{print $1}}NR==1{{print $0}}'"
+
+# Dump task stack
+CMD_DUMP_STACK = adbshell + "dumpsys activity activities | grep 'Hist \|taskAffinity='"

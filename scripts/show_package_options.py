@@ -2,34 +2,38 @@ import subprocess
 import os
 import sys
 from workflow import Workflow3, ICON_INFO
+from toolchain import run_script
+from commands import CMD_DUMP_PACKAGE
  
-adb_path = os.getenv('adb_path')
-serial = os.getenv('serial')
 packName = os.getenv('package')
 
 def main(wf):
 
-    shell_cmd = "{0} -s {1} shell dumpsys package {2} | grep 'versionCode\|versionName\|enabled=' | awk 'NR!=3{{print $1}}NR==3{{print $7}}'".format(adb_path, serial, packName)
+    shell_cmd = CMD_DUMP_PACKAGE.format(packName)
 
     result = None
     infos= None
     versionName = ""
+    enabled = True
     # Package info
     try:
-        result = subprocess.check_output(shell_cmd, stderr=subprocess.STDOUT, shell=True)
-        log.debug(result)
+        result = run_script(shell_cmd)
     except subprocess.CalledProcessError as e:
         log.debug(e)
     if result:
         infos = result.rstrip().split('\n')
         log.debug(infos)
         versionName = infos[1].strip()[12:]
-        versionCode = infos[0].strip()[12:]
+        versionCode = infos[2].strip()[12:]
         it = wf.add_item(title=packName,
                         subtitle="{0}({1})".format(versionName, versionCode),
                         valid=False,
                         copytext=packName,
                         icon=ICON_INFO)
+    if infos:
+        appInfo = infos[0].strip()
+        enabled = (appInfo[appInfo.find("enabled=") + 8] != '2')
+        log.debug("enabled ? {0}".format(enabled))
 
     # App info
     title = "App info"
@@ -37,18 +41,20 @@ def main(wf):
                 subtitle="Open app info page",
                 arg="app_info",
                 valid=True) 
+    
+    if (infos and enabled):
+        # Force stop
+        title = "Force stop"
+        wf.add_item(title=title,
+                    arg="force_stop",
+                    valid=True) 
 
-    # Force stop
-    title = "Force stop"
-    wf.add_item(title=title,
-                arg="force_stop",
-                valid=True) 
-
-    # Start app
-    title = "Start application"
-    wf.add_item(title=title,
-                arg="start_app",
-                valid=True)
+    if (infos and len(infos) > 3 and enabled):
+        # Start app
+        title = "Start application"
+        wf.add_item(title=title,
+                    arg="start_app",
+                    valid=True)
 
     # Clear data
     title = "Clear app data"
@@ -66,10 +72,8 @@ def main(wf):
     mod = it.add_modifier("cmd", subtitle="keep the data and cache directories")
     mod.setvar("mod", "keep_data")
 
-    if infos:
-        enabled = (infos[2][8:] != '2')
-        log.debug("enabled ? {0}".format(enabled))
-        
+    
+    if infos:    
         # Disable/Enable app
 
         title = ("Enable app", "Disable app")[enabled]

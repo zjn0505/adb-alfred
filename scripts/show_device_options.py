@@ -191,6 +191,21 @@ def main(wf):
                     arg="keyevent_input",
                     valid=True)
         itemCount += 1
+        
+    # DUMP STACK
+    title = "Dump task stacks"
+
+    if addAll or wordMatch(arg, title):
+        it = wf.add_item(title=title,
+                    uid="dump_stack",
+                    arg="dump_stack",
+                    valid=True)
+        itemCount += 1
+        it.setvar('mod', '')
+        m = it.add_modifier('cmd', 'Dump the first application')
+        m.setvar('mod', 'first_app')
+        m = it.add_modifier('alt', 'Dump the first stack')
+        m.setvar('mod', 'first_stack')
 
     # CUSTOM ACTION
     if itemCount == 0:
@@ -204,8 +219,6 @@ def main(wf):
         it.setvar('cmd', arg)
         m.setvar('cmd', arg)
 
-    
-    
     wf.send_feedback()
 
 if __name__ == '__main__':
