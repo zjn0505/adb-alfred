@@ -9,7 +9,7 @@ isOff = (os.getenv("function") == "debug_off")
 try:
 	result = run_script(CMD_GET_GPU_PROFILE)
 
-	isOn = (result == 'visual_bars') and isOff
+	isOn = (result == 'visual_bars') or isOff
 
 	sys.stderr.write("GPU profile is " + ("OFF", "ON")[isOn])
 

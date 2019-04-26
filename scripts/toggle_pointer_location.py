@@ -9,7 +9,7 @@ isOff = (os.getenv("function") == "debug_off")
 try:
 	result = run_script(CMD_GET_POINTER_LOCATION)
 
-	isOn = (result == '1') and isOff
+	isOn = (result == '1') or isOff
 
 	sys.stderr.write("Pointer location is " + ("OFF", "ON")[isOn])
 
