@@ -19,7 +19,7 @@ def connect():
 		wifiDevices = []
 		wifiDevices.append(it)
 		run_in_background("update_wifi_history", 
-			['/usr/bin/python', wf.workflowfile('update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
+			['/usr/bin/python', wf.workflowfile('scripts/update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
 	print("Executed: " + result)
 
 def init():

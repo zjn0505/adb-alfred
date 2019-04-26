@@ -14,7 +14,7 @@ VERSION = open(os.path.join(os.path.dirname(__file__),
  
 adb_path = os.getenv('adb_path')
 
-regexIp = "((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.)){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))"
+regexIp = "^((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.)){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))"
 
 regexIpInput = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){0,3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])?(:|:5|:55|:555|:5555)?$"
 
@@ -81,8 +81,8 @@ def list_devices(args):
     devices = devices.rstrip().split('\n')
 
     items, wifiDevices = get_device_items(arg, devices)
-    if wifiDevices:
 
+    if wifiDevices:
         run_in_background("update_wifi_history",
                            ['/usr/bin/python',
                             wf.workflowfile('scripts/update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
@@ -116,25 +116,27 @@ def list_devices(args):
         rawMask = localIpWithMask.split(" ")[1].count("f") * 4
     
         targetIp = arg[8:]
-        if not targetIp or re.match(regexIpInput, targetIp):
-            subtitle = "adb connect " + targetIp if targetIp else ''
-            valid = True if re.match(regexIp, targetIp) else False
-            it = wf.add_item(title="Connect over WiFi", valid = valid, arg="adb_connect", autocomplete="connect ", subtitle=subtitle)
-            m = it.add_modifier('cmd', subtitle="Remove all connection histories", arg='adb_connect_remove')
-            m.setvar('extra', "all")
-            it.setvar("ip", targetIp.strip('\n'))
         
         if localIp:
 
             history = wf.stored_data("wifi_history")
             
+            counter = 0
+            valid = True if re.match("^" + regexIp + "(:|:5|:55|:555|:5555)?$", targetIp) else False
+
+            if valid:
+                subtitle = "adb connect " + targetIp if targetIp else ''
+                it = wf.add_item(title="Connect over WiFi", valid = valid, arg="adb_connect", subtitle=subtitle)
+                m = it.add_modifier('cmd', subtitle="Remove all connection histories", arg='adb_connect_remove')
+                m.setvar('extra', "all")
+                it.setvar("ip", targetIp.strip('\n'))
+        
             if history:
                 historyWifiDevices = pickle.loads(history)
                 currentDevices = []
                 for item in items:
-                    log.debug("current item title " + item.title)
                     currentDevices.append(item.title.strip())
-
+                
                 for historyWifiDevice in historyWifiDevices:
                     if not historyWifiDevice.title in currentDevices:
                         deviceIp = historyWifiDevice.title.split(":")[0]
@@ -146,16 +148,28 @@ def list_devices(args):
 
                         if not same_network:
                             continue
+                        if arg and historyWifiDevice.title.find(targetIp) == -1:
+                            continue
 
                         log.debug("history item title " + historyWifiDevice.title)
+                        
                         title = "Connect over WiFi"
                         if historyWifiDevice.subtitle:
                             title = "Connect " + historyWifiDevice.subtitle.split('- ', 1)[1].split(', ', 1)[0] + " over WiFi"
 
-                        it = wf.add_item(title=title, valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title)
+                        it = wf.add_item(title=title, valid = True, arg="adb_connect", autocomplete="connect " + historyWifiDevice.title, subtitle=historyWifiDevice.title, uid=(historyWifiDevice.title, "")[valid])
                         it.setvar("ip", historyWifiDevice.title)
                         it.add_modifier('cmd', 'Remove connection history with {0}'.format(historyWifiDevice.title), arg='adb_connect_remove')
                         it.add_modifier('alt', historyWifiDevice.subtitle)
+                        counter += 1
+
+            if not valid and counter == 0:
+                if (not targetIp or re.match(regexIpInput, targetIp)):
+                    subtitle = "adb connect " + targetIp if targetIp else ''
+                    if not targetIp:
+                        it = wf.add_item(title="Connect over WiFi", valid = False, arg="adb_connect", autocomplete="connect ", subtitle=subtitle)
+                    else:
+                        it = wf.add_item(title="Connect over WiFi", valid = False, arg="adb_connect", subtitle=subtitle)
     
     # DISCONNECT
     if wifiDevices:
