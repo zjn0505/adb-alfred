@@ -21,6 +21,7 @@ def main(wf):
     except subprocess.CalledProcessError as e:
         log.debug(e)
     if result:
+        result = result[result.rfind("enabled="):]
         infos = result.rstrip().split('\n')
         log.debug(infos)
         versionName = infos[1].strip()[12:]
@@ -72,7 +73,6 @@ def main(wf):
     mod = it.add_modifier("cmd", subtitle="keep the data and cache directories")
     mod.setvar("mod", "keep_data")
 
-    
     if infos:    
         # Disable/Enable app
 
