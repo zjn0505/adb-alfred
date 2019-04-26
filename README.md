@@ -39,7 +39,7 @@ What's required:
 |`aapt_path`|~/Library/Android/sdk/build-tools/28.0.3/aapt|
 |`emulator_path`|~/Library/Android/sdk/emulator/emulator|
 
-What's optional
+What's optional:
 
 |Name|Value (example)|
 |--|--|
