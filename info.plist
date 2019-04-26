@@ -315,6 +315,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>16B1106B-C18C-423A-A5AE-BE8676769C18</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C38782A7-0016-44BC-94F8-B6EC35107210</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
 		<array>
 			<dict>
@@ -1498,6 +1511,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E65C40C2-C240-4D08-8CB7-7F7B3CF0F84E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>38F77EED-1B8C-4A81-970F-9937F947E558</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>16B1106B-C18C-423A-A5AE-BE8676769C18</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3744,6 +3780,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>C38782A7-0016-44BC-94F8-B6EC35107210</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -3785,6 +3838,25 @@
 			<string>E65C40C2-C240-4D08-8CB7-7F7B3CF0F84E</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:config_clipboard}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>16B1106B-C18C-423A-A5AE-BE8676769C18</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4201,6 +4273,7 @@
 - adb_path,  e.g. "~/Library/Android/sdk/platform-tools/adb"
 - aapt_path, e.g. "~/Library/Android/sdk/build-tools/28.0.3/aapt"
 - emulator_path, e.g. "~/Library/Android/sdk/emulator/emulator"
+- config_clipboard, set as 1 if needs copy output to clipboard, 
 
 # Usage
 
@@ -4307,6 +4380,13 @@ Use keyword "avd" to list and start emulator</string>
 			<integer>1530</integer>
 			<key>ypos</key>
 			<integer>1400</integer>
+		</dict>
+		<key>16B1106B-C18C-423A-A5AE-BE8676769C18</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2800</integer>
+			<key>ypos</key>
+			<integer>1980</integer>
 		</dict>
 		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
 		<dict>
@@ -4871,6 +4951,13 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>1180</integer>
 		</dict>
+		<key>C38782A7-0016-44BC-94F8-B6EC35107210</key>
+		<dict>
+			<key>xpos</key>
+			<integer>3010</integer>
+			<key>ypos</key>
+			<integer>1950</integer>
+		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
 			<key>note</key>
@@ -5102,6 +5189,8 @@ Use keyword "avd" to list and start emulator</string>
 		<string>~/Library/Android/sdk/build-tools/28.0.3/aapt</string>
 		<key>adb_path</key>
 		<string>~/Library/Android/sdk/platform-tools/adb</string>
+		<key>config_clipboard</key>
+		<string>1</string>
 		<key>emulator_path</key>
 		<string>~/Library/Android/sdk/emulator/emulator</string>
 	</dict>
@@ -5112,7 +5201,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.4.1</string>
+	<string>1.4.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
