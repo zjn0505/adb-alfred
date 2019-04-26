@@ -250,7 +250,7 @@ def build_workflow(workflow_dir, outputdir, overwrite=False, verbose=False,
         name = safename(info['name'])
         zippath = os.path.join(outputdir, name)
         if version:
-            zippath = '{}-{}'.format(zippath, version)
+            zippath = '{}-v{}'.format(zippath, version)
 
         zippath += '.alfredworkflow'
 
