@@ -85,7 +85,7 @@ def list_devices(args):
 
         run_in_background("update_wifi_history",
                            ['/usr/bin/python',
-                            wf.workflowfile('update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
+                            wf.workflowfile('scripts/update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
         log.error("Save history wifi devices : count : {0}".format(len(wifiDevices)))
     
     for item in items:
