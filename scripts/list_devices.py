@@ -7,6 +7,7 @@ from toolchain import run_script
 from workflow import Workflow3, ICON_INFO
 from workflow.background import run_in_background, is_running
 from item import Item
+import hashlib
 
 GITHUB_SLUG = 'zjn0505/adb-alfred'
 VERSION = open(os.path.join(os.path.dirname(__file__),
@@ -107,6 +108,16 @@ def list_devices(args):
             if item.get("build_number"):
                 it.add_modifier("alt", subtitle=item.get("build_number"))
 
+            # last func
+            if name.startswith("emulator-"):
+                name = hashlib.md5(item.subtitle).hexdigest()
+            it.setvar("his_tag", name)
+            lastFuncs = wf.cached_data('last_func:' + name, max_age=0)
+            if lastFuncs and len(lastFuncs) > 0:
+                log.debug(lastFuncs)
+                last_func = lastFuncs[len(lastFuncs) - 1]
+                mod = it.add_modifier("ctrl", subtitle="Run last command {}".format(last_func))
+                mod.setvar("last_func", last_func)
 
     # CONNECT
     if arg and ("connect ".startswith(arg.lower()) or re.match(regexConnect, arg)):

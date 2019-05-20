@@ -93,11 +93,10 @@ def main(wf):
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
                     uid="screenshot",
-                    arg="screenshot",
+                    arg="screenshot:to_clipboard",
                     subtitle="take a screenshot and copy to clipboard, `cmd` to copy to desktop",
                     valid=True)
-        m = it.add_modifier('cmd', 'take a screenshot and copy to desktop')
-        m.setvar("mod", "cmd")
+        it.add_modifier('cmd', 'take a screenshot and copy to desktop', arg="screenshot:to_desktop")
         itemCount += 1
 
     # OPEN SETTINGS
@@ -109,17 +108,11 @@ def main(wf):
                     arg="open_settings",
                     subtitle="'cmd' - Dev Tool, 'alt' - WiFi, 'ctrl' - App, 'fn' - Date, 'shift' - Accessibility",
                     valid=True)
-        it.setvar("action", "android.settings.SETTINGS")
-        m = it.add_modifier('cmd', 'Open Developer Settings')
-        m.setvar('action', 'com.android.settings.APPLICATION_DEVELOPMENT_SETTINGS')
-        m = it.add_modifier('alt', 'Open WiFi Settings')
-        m.setvar('action', 'android.settings.WIFI_SETTINGS')
-        m = it.add_modifier('fn', 'Open Date Settings')
-        m.setvar('action', 'android.settings.DATE_SETTINGS')
-        m = it.add_modifier('shift', 'Open Accessibility Settings')
-        m.setvar('action', 'android.settings.ACCESSIBILITY_SETTINGS')
-        m = it.add_modifier('ctrl', 'Open Application Settings')
-        m.setvar('action', 'android.settings.APPLICATION_SETTINGS:')
+        it.add_modifier('cmd', 'Open Developer Settings', arg="open_settings:developer_options")
+        it.add_modifier('alt', 'Open WiFi Settings', arg="open_settings:wifi")
+        it.add_modifier('fn', 'Open Date Settings', arg="open_settings:date")
+        it.add_modifier('shift', 'Open Accessibility Settings', arg="open_settings:accessibility")
+        it.add_modifier('ctrl', 'Open Application Settings', arg="open_settings:application")
         itemCount += 1
 
     # TOGGLE DEBUG LAYOUT
@@ -131,16 +124,11 @@ def main(wf):
                     arg="debug_layout",
                     valid=True)
         itemCount += 1
-
-        m = it.add_modifier('cmd', 'Toggle pointer location', arg="pointer_location")
-
-        m = it.add_modifier('alt', 'Toggle show taps', arg="show_taps")
-
-        m = it.add_modifier('ctrl', 'Toggle GPU profile', arg="gpu_profile")
-
-        m = it.add_modifier('fn', 'Toggle GPU overdraw', arg="gpu_overdraw")
-
-        m = it.add_modifier('shift', 'Turn off everything', arg="debug_off")
+        it.add_modifier('cmd', 'Toggle pointer location', arg="pointer_location")
+        it.add_modifier('alt', 'Toggle show taps', arg="show_taps")
+        it.add_modifier('ctrl', 'Toggle GPU profile', arg="gpu_profile")
+        it.add_modifier('fn', 'Toggle GPU overdraw', arg="gpu_overdraw")
+        it.add_modifier('shift', 'Turn off everything', arg="debug_off")
 
     # DEMO MODE
     if api and int(api) >= 23:
@@ -163,13 +151,9 @@ def main(wf):
                     subtitle="'cmd' - Bootloader, 'alt' - Recovery, 'ctrl' - Sideload",
                     valid=True)
         itemCount += 1
-        it.setvar('mod', '')
-        m = it.add_modifier('cmd', 'Bootloader')
-        m.setvar('mod', 'bootloader')
-        m = it.add_modifier('alt', 'Recovery')
-        m.setvar('mod', 'recovery')
-        m = it.add_modifier('ctrl', 'Sideload')
-        m.setvar('mod', 'sideload')
+        it.add_modifier('cmd', 'Bootloader', arg="adb_reboot:bootloader")
+        it.add_modifier('alt', 'Recovery', arg="adb_reboot:recovery")
+        it.add_modifier('ctrl', 'Sideload', arg="adb_reboot:sideload")
 
     # CONNECT OVER WIFI
     if not isWifiDevice and not isEmulator and ip:
@@ -202,24 +186,29 @@ def main(wf):
                     arg="dump_stack",
                     valid=True)
         itemCount += 1
-        it.setvar('mod', '')
-        m = it.add_modifier('cmd', 'Dump the first application')
-        m.setvar('mod', 'first_app')
-        m = it.add_modifier('alt', 'Dump the first stack')
-        m.setvar('mod', 'first_stack')
+        it.add_modifier('cmd', 'Dump the first application', arg="dump_stack:first_app")
+        it.add_modifier('alt', 'Dump the first stack', arg="dump_stack:first_stack")
+
+    # COMMAND HISTORY
+    title = "Command history"
+    lastFuncs = wf.cached_data('last_func:' + os.getenv("his_tag"), max_age=0)
+
+    if (addAll or wordMatch(arg, title)) and lastFuncs and len(lastFuncs) > 0:
+        it = wf.add_item(title=title,
+                    subtitle="show command history",
+                    arg="cmd_history",
+                    valid=True)
+        itemCount += 1
+        it.add_modifier('cmd', 'Clear command history', arg="cmd_history:clear")
 
     # CUSTOM ACTION
     if itemCount == 0:
         it = wf.add_item(title="Execute custom command for " + serial,
                         subtitle="adb " + arg,
-                        arg="<adb>" + arg,
+                        arg="adb_cmd:in_terminal:" + arg,
                         valid=True)
-        it.setvar('mod', 'none')
-        m = it.add_modifier('cmd', 'Run without opening terminal')
-        m.setvar('mod', 'cmd')
-        it.setvar('cmd', arg)
-        m.setvar('cmd', arg)
-
+        m = it.add_modifier('cmd', 'Run without opening terminal', arg="adb_cmd:in_background:" + arg)
+        
     wf.send_feedback()
 
 if __name__ == '__main__':

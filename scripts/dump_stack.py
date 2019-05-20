@@ -4,7 +4,7 @@ from workflow import Workflow3
 from toolchain import run_script
 from commands import CMD_DUMP_STACK
 
-mod = os.getenv('mod')
+mod = os.getenv('function')[11:]
 
 class Activity():
     def __init__(self, name, package, affinity=None):
@@ -44,10 +44,12 @@ def main(wf):
                     continue
                 elif mod == "first_stack" and item.affinity != activityList[0].affinity:
                     continue
-
+                simpleName = item.name.split('.')[-1]
                 it = wf.add_item(title=item.name,
                     subtitle='Affinity: ' + item.affinity,
-                    match=item.name.split('.')[-1],
+                    autocomplete=simpleName,
+                    match=simpleName,
+                    arg=item.name,
                     copytext=item.name,
                     valid=True)
                 it.add_modifier("cmd", subtitle="Package: " + item.package)
