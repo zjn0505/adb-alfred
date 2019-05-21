@@ -199,7 +199,7 @@ def main(wf):
                     arg="cmd_history",
                     valid=True)
         itemCount += 1
-        it.add_modifier('cmd', 'Clear command history', arg="cmd_history:clear")
+        it.add_modifier('cmd', 'clear command history', arg="cmd_history:clear")
 
     # CUSTOM ACTION
     if itemCount == 0:
