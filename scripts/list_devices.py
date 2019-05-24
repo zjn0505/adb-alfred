@@ -205,7 +205,8 @@ def list_devices(args):
 
     if arg and ("restart".startswith(arg.lower()) 
         or "kill-server".startswith(arg.lower())
-        or "start-server".startswith(arg.lower())) or (len(items) == 0 and (len(arg) == 0 or (not "connect".startswith(arg.lower()) and not "disconnect".startswith(arg.lower())))): 
+        or "start-server".startswith(arg.lower())) or (
+            len(items) == 0 and (len(arg) == 0 or (not arg.lower().startswith("connect") and not arg.lower().startswith("disconnect")))): 
         wf.add_item(title="Restart adb", valid =True, arg="restart_adb", uid="restart_adb")
 
 def main(wf):
