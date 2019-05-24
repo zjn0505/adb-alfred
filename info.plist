@@ -1079,6 +1079,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>758F2BFC-527A-4C8D-9D3B-000CCF42574B</key>
 		<array>
 			<dict>
@@ -3612,10 +3625,57 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>apkf</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python scripts/list_apks.py $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>15 '{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
-				<false/>
+				<true/>
 				<key>processoutputs</key>
 				<true/>
 			</dict>
@@ -5213,6 +5273,8 @@ Use keyword "adb" to get quick access to:
 
 Use keyword "apk" to check the infomation of apk file and execute installation
 
+Use keyword "apkf" to list all apk files of the front Finder window
+
 Use keyword "avd" to list and start emulator</string>
 	<key>uidata</key>
 	<dict>
@@ -5706,6 +5768,13 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>650</integer>
 		</dict>
+		<key>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>1110</integer>
+		</dict>
 		<key>758F2BFC-527A-4C8D-9D3B-000CCF42574B</key>
 		<dict>
 			<key>xpos</key>
@@ -6018,6 +6087,8 @@ Use keyword "avd" to list and start emulator</string>
 		</dict>
 		<key>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</key>
 		<dict>
+			<key>note</key>
+			<string>16</string>
 			<key>xpos</key>
 			<integer>300</integer>
 			<key>ypos</key>
@@ -6319,7 +6390,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.5.0</string>
+	<string>1.6.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
