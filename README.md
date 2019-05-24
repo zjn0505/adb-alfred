@@ -11,7 +11,7 @@ adb with alfred workflow
 Keywords
 ----
 
-`adb`, `apk`, `avd`
+`adb`, `apk`, `apkf`, `avd`
 
 
 Dependencies
@@ -72,6 +72,8 @@ Features
 ![install options](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2004%20show%20install%20options.png)
 
 - `apk` to search for local apk files, and check package info
+
+- `apkf` to directly list apk files under current front Finder window
 
 - `avd` to list installed emulators, select one to start an emulator
 
