@@ -993,6 +993,32 @@
 				<false/>
 			</dict>
 		</array>
+		<key>65F89D11-6969-4A77-8DDB-DA38C2105483</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6B0B9504-B36E-41AB-9616-E5105AC8F30A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>6CC71670-241E-4E01-ADC6-0EA61C4D238C</key>
 		<array>
 			<dict>
@@ -1070,7 +1096,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
+				<string>F9D679BA-BFE0-476F-A2FA-75F71A09F74F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1302,7 +1328,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
+				<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1312,7 +1338,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
+				<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1643,6 +1669,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</key>
+		<array/>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<array>
 			<dict>
@@ -2066,11 +2094,24 @@
 				<false/>
 			</dict>
 		</array>
+		<key>ECBC0BA2-3FA9-46AE-98C2-467707D33917</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>ED7185EE-E248-4535-AB02-D48AFC8196B4</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</string>
+				<string>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2080,7 +2121,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</string>
+				<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2265,6 +2306,19 @@
 			<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>adb</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>65F89D11-6969-4A77-8DDB-DA38C2105483</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2601,6 +2655,37 @@
 			<string>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>6B0B9504-B36E-41AB-9616-E5105AC8F30A</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3608,6 +3693,37 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>ECBC0BA2-3FA9-46AE-98C2-467707D33917</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>matchmode</key>
 				<integer>1</integer>
 				<key>matchstring</key>
@@ -3619,70 +3735,6 @@
 			<string>alfred.workflow.utility.replace</string>
 			<key>uid</key>
 			<string>A429E820-14E4-4E2B-8466-EEECD42BD4AA</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>keyword</key>
-				<string>apkf</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python scripts/list_apks.py $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>15 '{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<true/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -3823,6 +3875,171 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>apkf</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python scripts/list_apks.py $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>15 '{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>:.*?$</string>
+				<key>replacestring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.replace</string>
+			<key>uid</key>
+			<string>97D46C32-564A-4D98-A740-81706B950CA4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python scripts/demo_mode.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python scripts/uninstall_app.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>demo_mode</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>D18A1AD3-E0AD-422C-A477-E940251249B3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^uninstall_app(:.*)?</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>anchorfields</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -3944,137 +4161,19 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>:.*?$</string>
-				<key>replacestring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.replace</string>
-			<key>uid</key>
-			<string>97D46C32-564A-4D98-A740-81706B950CA4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>apkFile</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>700A7846-7245-4F35-8025-53D42AB866E2</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>apkFile</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python scripts/demo_mode.py</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python scripts/uninstall_app.py</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
+				<key>externaltriggerid</key>
+				<string>adb</string>
+				<key>passinputasargument</key>
 				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>demo_mode</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>D18A1AD3-E0AD-422C-A477-E940251249B3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
+				<key>passvariables</key>
 				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string>^uninstall_app(:.*)?</string>
+				<key>workflowbundleid</key>
+				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+			<string>F9D679BA-BFE0-476F-A2FA-75F71A09F74F</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4136,6 +4235,42 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>apkFile</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>700A7846-7245-4F35-8025-53D42AB866E2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>apkFile</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -4153,76 +4288,6 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>4204602D-966C-4A9A-A398-EF35B429CF6D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>avd</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python scripts/list_emulators.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>python scripts/list_avd.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -4257,6 +4322,23 @@
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>16 '{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<false/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4387,6 +4469,76 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>avd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python scripts/list_emulators.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>python scripts/list_avd.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>inputstring</key>
 				<string>{var:function}</string>
 				<key>matchcasesensitive</key>
@@ -4477,23 +4629,6 @@
 			<string>C6A84CEC-A533-4892-A67F-8D01904475E4</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>16 '{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<false/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5283,1093 +5418,1125 @@ Use keyword "avd" to list and start emulator</string>
 			<key>note</key>
 			<string>01</string>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>430</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>70</integer>
 		</dict>
 		<key>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>1810</integer>
+			<integer>1800</integer>
 		</dict>
 		<key>040618F1-A368-4045-8757-4058D0AFB11D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1030</integer>
 		</dict>
 		<key>0461824C-6237-42B9-9882-BEC93329153D</key>
 		<dict>
 			<key>note</key>
 			<string>Show install options</string>
 			<key>xpos</key>
-			<integer>2220</integer>
+			<integer>2370</integer>
 			<key>ypos</key>
-			<integer>1780</integer>
+			<integer>1770</integer>
 		</dict>
 		<key>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>1370</integer>
+			<integer>1360</integer>
 		</dict>
 		<key>061518C5-6CFD-42EF-AB68-D2B11F98889E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>069543F3-22C3-4769-BA1A-3BAE3C668883</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1000</integer>
+			<integer>1150</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>09084E4E-89ED-475D-BAF3-3C5A8815C66F</key>
 		<dict>
 			<key>note</key>
 			<string>Execute Input</string>
 			<key>xpos</key>
-			<integer>2220</integer>
+			<integer>2370</integer>
 			<key>ypos</key>
-			<integer>2150</integer>
+			<integer>2140</integer>
 		</dict>
 		<key>09888B11-904A-4B29-BC71-E743740A9A19</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1990</integer>
+			<integer>2140</integer>
 			<key>ypos</key>
-			<integer>880</integer>
+			<integer>870</integer>
 		</dict>
 		<key>0B448801-6741-4E22-A607-2AFA21E9B84B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1220</integer>
+			<integer>1370</integer>
 			<key>ypos</key>
-			<integer>320</integer>
+			<integer>310</integer>
 		</dict>
 		<key>0B9F8E6D-345B-4028-A4A2-71BDA4D77E7E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>580</integer>
+			<integer>730</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>0D58A646-F076-41A6-AE27-E70A77DCF1E9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>1970</integer>
 		</dict>
 		<key>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</key>
 		<dict>
 			<key>note</key>
 			<string>Show install options</string>
 			<key>xpos</key>
-			<integer>480</integer>
+			<integer>620</integer>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<integer>1380</integer>
 		</dict>
 		<key>11086EB4-2930-4F46-A979-32AD4DA8EBA1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>890</integer>
+			<integer>1040</integer>
 			<key>ypos</key>
-			<integer>410</integer>
+			<integer>400</integer>
 		</dict>
 		<key>11C25097-223D-4E8A-928A-D85DAE9A40AC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>1400</integer>
+			<integer>1390</integer>
 		</dict>
 		<key>11DD8375-62F3-42E4-83AB-95F0FF2CBDD1</key>
 		<dict>
 			<key>note</key>
 			<string>111</string>
 			<key>xpos</key>
-			<integer>2810</integer>
+			<integer>2960</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>200</integer>
 		</dict>
 		<key>155750E3-45FB-464D-92EC-5A2D40E6EE50</key>
 		<dict>
 			<key>note</key>
 			<string>List command history</string>
 			<key>xpos</key>
-			<integer>980</integer>
+			<integer>1130</integer>
 			<key>ypos</key>
-			<integer>380</integer>
+			<integer>370</integer>
 		</dict>
 		<key>16B1106B-C18C-423A-A5AE-BE8676769C18</key>
 		<dict>
 			<key>xpos</key>
-			<integer>3300</integer>
+			<integer>3450</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>1970</integer>
 		</dict>
 		<key>1BC881D2-3B09-4133-B9A1-13A2827AD580</key>
 		<dict>
 			<key>xpos</key>
-			<integer>860</integer>
+			<integer>1010</integer>
 			<key>ypos</key>
-			<integer>320</integer>
+			<integer>310</integer>
 		</dict>
 		<key>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>2180</integer>
+			<integer>2170</integer>
 		</dict>
 		<key>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>3510</integer>
+			<integer>3660</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>70</integer>
 		</dict>
 		<key>1D757879-51AE-436E-801E-CD252FE7E60E</key>
 		<dict>
 			<key>note</key>
 			<string>disconnect</string>
 			<key>xpos</key>
-			<integer>660</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>950</integer>
+			<integer>940</integer>
 		</dict>
 		<key>208A6634-44C3-447D-BDE7-FF37725783FA</key>
 		<dict>
 			<key>note</key>
 			<string>Toggle show taps</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>540</integer>
 		</dict>
 		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</key>
 		<dict>
 			<key>note</key>
 			<string>Input keyevent</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>2150</integer>
+			<integer>2140</integer>
 		</dict>
 		<key>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1030</integer>
 		</dict>
 		<key>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</key>
 		<dict>
 			<key>note</key>
 			<string>Screen shot</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1010</integer>
+			<integer>1000</integer>
 		</dict>
 		<key>2E90C599-66C8-4C95-9847-D85E40AB94E6</key>
 		<dict>
 			<key>note</key>
 			<string>06</string>
 			<key>xpos</key>
-			<integer>2120</integer>
+			<integer>2270</integer>
 			<key>ypos</key>
-			<integer>2400</integer>
+			<integer>2390</integer>
 		</dict>
 		<key>2EA58399-95FB-4AC8-92E3-16070F86559F</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1140</integer>
+			<integer>1290</integer>
 			<key>ypos</key>
-			<integer>260</integer>
+			<integer>250</integer>
 		</dict>
 		<key>311C79EE-C023-425C-8303-F1A23C9E7FDB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2930</integer>
+			<integer>3080</integer>
 			<key>ypos</key>
-			<integer>1180</integer>
+			<integer>1170</integer>
 		</dict>
 		<key>324F9367-F28B-4745-9733-1F9745496D67</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>640</integer>
 		</dict>
 		<key>3359B203-2E42-4A93-B948-DD5840AD2204</key>
 		<dict>
 			<key>note</key>
 			<string>APK file selector for installation</string>
 			<key>xpos</key>
-			<integer>110</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1280</integer>
+			<integer>1380</integer>
 		</dict>
 		<key>3832371E-0AEE-4E8A-B8C3-0C1D41518AA7</key>
 		<dict>
 			<key>note</key>
 			<string>Custom command convert</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>2300</integer>
+			<integer>2290</integer>
 		</dict>
 		<key>38F77EED-1B8C-4A81-970F-9937F947E558</key>
 		<dict>
 			<key>note</key>
 			<string>12</string>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>1730</integer>
+			<integer>1720</integer>
 		</dict>
 		<key>39FA7A4F-C0B8-4F74-A1F7-50ADEA19EDC7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>2300</integer>
+			<integer>2290</integer>
 		</dict>
 		<key>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</key>
 		<dict>
 			<key>note</key>
 			<string>restart adb</string>
 			<key>xpos</key>
-			<integer>660</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>460</integer>
+			<integer>450</integer>
 		</dict>
 		<key>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</key>
 		<dict>
 			<key>note</key>
 			<string>Launch emulator</string>
 			<key>xpos</key>
-			<integer>350</integer>
+			<integer>620</integer>
 			<key>ypos</key>
-			<integer>1490</integer>
+			<integer>1620</integer>
 		</dict>
 		<key>3DE08189-D2BD-491C-A6A4-D49DA3305FED</key>
 		<dict>
 			<key>note</key>
 			<string>11</string>
 			<key>xpos</key>
-			<integer>2830</integer>
+			<integer>2980</integer>
 			<key>ypos</key>
-			<integer>1210</integer>
+			<integer>1200</integer>
 		</dict>
 		<key>3E5072E8-8380-46B5-B2FF-BDC4FCAA7195</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>710</integer>
 		</dict>
 		<key>3E8E5CAD-9421-47F3-9397-E211EA4271C3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1590</integer>
+			<integer>1740</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1640</integer>
 		</dict>
 		<key>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</key>
 		<dict>
 			<key>note</key>
 			<string>APK file selector for installation</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1780</integer>
+			<integer>1770</integer>
 		</dict>
 		<key>3FD4151A-E23B-4D09-9C40-3DD4D1246577</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1330</integer>
+			<integer>1480</integer>
 			<key>ypos</key>
-			<integer>720</integer>
+			<integer>710</integer>
 		</dict>
 		<key>405F0D3E-FD33-43FD-B850-161835E03BBC</key>
 		<dict>
 			<key>note</key>
 			<string>Clear command history</string>
 			<key>xpos</key>
-			<integer>1290</integer>
+			<integer>1440</integer>
 			<key>ypos</key>
-			<integer>380</integer>
+			<integer>370</integer>
 		</dict>
 		<key>4204602D-966C-4A9A-A398-EF35B429CF6D</key>
 		<dict>
 			<key>note</key>
 			<string>ADB WiFi connect</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1470</integer>
+			<integer>1460</integer>
 		</dict>
 		<key>498DE7B3-7E57-4556-B6DD-76104C1AFF88</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>880</integer>
+			<integer>870</integer>
 		</dict>
 		<key>4C080E3F-1926-4006-B9DF-784BA5D78D52</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>270</integer>
+			<integer>260</integer>
 		</dict>
 		<key>4D037152-7CC5-482E-8F94-E9EF92983E07</key>
 		<dict>
 			<key>note</key>
 			<string>05</string>
 			<key>xpos</key>
-			<integer>2120</integer>
+			<integer>2270</integer>
 			<key>ypos</key>
-			<integer>2250</integer>
+			<integer>2240</integer>
 		</dict>
 		<key>4E30CBC8-28EC-43CC-B9E1-D8B32DEB5A1A</key>
 		<dict>
 			<key>note</key>
 			<string>last function</string>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>850</integer>
 			<key>ypos</key>
-			<integer>320</integer>
+			<integer>310</integer>
 		</dict>
 		<key>53C9D27B-FA0D-4E36-BDAC-1A6499D211FB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1220</integer>
+			<integer>1370</integer>
 			<key>ypos</key>
-			<integer>410</integer>
+			<integer>400</integer>
 		</dict>
 		<key>57E0C2F4-066B-41AE-8507-731E7DA13994</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1340</integer>
+			<integer>1490</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>580CA274-39E9-4F86-AD7F-0C6752D70BE1</key>
 		<dict>
 			<key>note</key>
 			<string>Toggle pointer location</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>390</integer>
 		</dict>
 		<key>5BA92D4C-39EB-4D2D-AA36-7FBB3A45DA6E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>2510</integer>
+			<integer>2500</integer>
 		</dict>
 		<key>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</key>
 		<dict>
 			<key>note</key>
 			<string>Demo mode</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1310</integer>
+			<integer>1300</integer>
 		</dict>
 		<key>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>2480</integer>
+			<integer>2470</integer>
 		</dict>
 		<key>5E89349C-E31D-40BC-A828-91A81C965ECF</key>
 		<dict>
 			<key>note</key>
 			<string>Run custom command</string>
 			<key>xpos</key>
-			<integer>2220</integer>
+			<integer>2370</integer>
 			<key>ypos</key>
-			<integer>2300</integer>
+			<integer>2290</integer>
 		</dict>
 		<key>6137EDAB-7A87-43EC-8766-49022D50387D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2090</integer>
+			<integer>2240</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1640</integer>
 		</dict>
 		<key>64394AEA-7969-4695-BA1E-DEADC6BFE619</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
-			<key>ypos</key>
 			<integer>490</integer>
+			<key>ypos</key>
+			<integer>480</integer>
 		</dict>
 		<key>649D1C50-60FE-4F0F-9008-51875966FFE6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>430</integer>
+			<integer>420</integer>
+		</dict>
+		<key>65F89D11-6969-4A77-8DDB-DA38C2105483</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>70</integer>
+		</dict>
+		<key>6B0B9504-B36E-41AB-9616-E5105AC8F30A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>210</integer>
 		</dict>
 		<key>6CC71670-241E-4E01-ADC6-0EA61C4D238C</key>
 		<dict>
 			<key>note</key>
 			<string>List devices</string>
 			<key>xpos</key>
-			<integer>110</integer>
+			<integer>260</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>70</integer>
 		</dict>
 		<key>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</key>
 		<dict>
 			<key>note</key>
 			<string>03</string>
 			<key>xpos</key>
-			<integer>840</integer>
+			<integer>990</integer>
 			<key>ypos</key>
-			<integer>490</integer>
+			<integer>480</integer>
 		</dict>
 		<key>700A7846-7245-4F35-8025-53D42AB866E2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>720</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>1310</integer>
+			<integer>1410</integer>
 		</dict>
 		<key>701402E8-8901-4D87-A8EE-33E00C20A4CF</key>
 		<dict>
 			<key>note</key>
 			<string>04</string>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>650</integer>
+			<integer>640</integer>
 		</dict>
 		<key>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</key>
 		<dict>
+			<key>note</key>
+			<string>List apk files from current front Finder window</string>
 			<key>xpos</key>
-			<integer>110</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1110</integer>
+			<integer>1220</integer>
 		</dict>
 		<key>758F2BFC-527A-4C8D-9D3B-000CCF42574B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>410</integer>
+			<integer>560</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>76E2BE52-4544-4465-8CED-B67D07AB3647</key>
 		<dict>
 			<key>note</key>
 			<string>save last func</string>
 			<key>xpos</key>
-			<integer>2930</integer>
+			<integer>3080</integer>
 			<key>ypos</key>
-			<integer>180</integer>
+			<integer>170</integer>
 		</dict>
 		<key>76E3CD85-6401-4C0D-95B0-35236DAA1B3B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>390</integer>
+			<integer>380</integer>
 		</dict>
 		<key>79DE1CD6-2A5B-47D5-B6D5-6170402B0BC8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>730</integer>
+			<integer>720</integer>
 		</dict>
 		<key>7A47B32F-10FE-4D3A-B63F-5F05910DEE3F</key>
 		<dict>
 			<key>note</key>
 			<string>Clear data</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>850</integer>
+			<integer>840</integer>
 		</dict>
 		<key>7BF391A6-D555-4661-B622-20D0B522E854</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>1980</integer>
+			<integer>1970</integer>
 		</dict>
 		<key>7C648184-0666-4DFE-8F3B-CCF1963BE6D3</key>
 		<dict>
 			<key>note</key>
 			<string>02</string>
 			<key>xpos</key>
-			<integer>780</integer>
+			<integer>930</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>200</integer>
 		</dict>
 		<key>7D4D7653-002D-40E5-834E-081DCF379586</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2090</integer>
+			<integer>2240</integer>
 			<key>ypos</key>
-			<integer>1400</integer>
+			<integer>1390</integer>
 		</dict>
 		<key>7E37DE51-4178-4C89-9357-09981E6E9678</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2120</integer>
+			<integer>2270</integer>
 			<key>ypos</key>
-			<integer>2510</integer>
+			<integer>2500</integer>
 		</dict>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<dict>
 			<key>note</key>
 			<string>Show device options</string>
 			<key>xpos</key>
-			<integer>830</integer>
+			<integer>980</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>70</integer>
 		</dict>
 		<key>873C7D72-9821-4192-9962-D46D7E2B3D5E</key>
 		<dict>
 			<key>note</key>
 			<string>Uninstall</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>1340</integer>
+			<integer>1330</integer>
 		</dict>
 		<key>887CA3AA-747C-4110-ACA4-0DB0A3F45303</key>
 		<dict>
 			<key>note</key>
 			<string>connect</string>
 			<key>xpos</key>
-			<integer>660</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>790</integer>
+			<integer>780</integer>
 		</dict>
 		<key>8892EF15-80BA-4943-B19D-07EC5E24E112</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1960</integer>
+			<integer>2110</integer>
 			<key>ypos</key>
-			<integer>2330</integer>
+			<integer>2320</integer>
 		</dict>
 		<key>89201298-073F-4809-9CD0-B80F85F57FD1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1160</integer>
+			<integer>1310</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>89D37B8E-3886-41E7-A948-FAE513D4FD56</key>
 		<dict>
 			<key>note</key>
 			<string>10</string>
 			<key>xpos</key>
-			<integer>2200</integer>
+			<integer>2350</integer>
 			<key>ypos</key>
-			<integer>1550</integer>
+			<integer>1540</integer>
 		</dict>
 		<key>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</key>
 		<dict>
 			<key>note</key>
 			<string>List emulators</string>
 			<key>xpos</key>
-			<integer>110</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1490</integer>
+			<integer>1620</integer>
 		</dict>
 		<key>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</key>
 		<dict>
 			<key>note</key>
 			<string>Launch app</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>690</integer>
+			<integer>680</integer>
 		</dict>
 		<key>91A5B8A2-C868-4206-9CF7-A95B331AD9F1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2420</integer>
+			<integer>2570</integer>
 			<key>ypos</key>
-			<integer>2090</integer>
+			<integer>2080</integer>
 		</dict>
 		<key>91DBE388-01F6-45EE-A1E7-3A64000857CB</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1590</integer>
+			<integer>1740</integer>
 			<key>ypos</key>
-			<integer>1040</integer>
+			<integer>1030</integer>
 		</dict>
 		<key>93E3005E-CB38-4064-B1CA-AF5491BB8CE5</key>
 		<dict>
 			<key>note</key>
 			<string>apk install</string>
 			<key>xpos</key>
-			<integer>830</integer>
+			<integer>1480</integer>
 			<key>ypos</key>
-			<integer>2090</integer>
+			<integer>2080</integer>
 		</dict>
 		<key>94661296-E020-4CEE-9C3F-D324AFB76D71</key>
 		<dict>
 			<key>note</key>
 			<string>Open Settings</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1160</integer>
+			<integer>1150</integer>
 		</dict>
 		<key>95743DF0-8450-41C2-82AC-1E540F2D9B83</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1640</integer>
 		</dict>
 		<key>958DA79A-399F-4A3B-8C8E-F7A342F42B5A</key>
 		<dict>
 			<key>note</key>
 			<string>filter list_app</string>
 			<key>xpos</key>
-			<integer>2330</integer>
+			<integer>2480</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>200</integer>
 		</dict>
 		<key>97B146C1-8880-4285-95D2-1F5FE8A3A929</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>280</integer>
+			<integer>270</integer>
 		</dict>
 		<key>97D46C32-564A-4D98-A740-81706B950CA4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2330</integer>
+			<integer>2480</integer>
 			<key>ypos</key>
-			<integer>1290</integer>
+			<integer>1280</integer>
 		</dict>
 		<key>9B14C086-40D8-42DA-92B0-B527FE47C807</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2660</integer>
+			<integer>2810</integer>
 			<key>ypos</key>
-			<integer>210</integer>
+			<integer>200</integer>
 		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1190</integer>
+			<integer>1180</integer>
 		</dict>
 		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1590</integer>
+			<integer>1740</integer>
 			<key>ypos</key>
-			<integer>1500</integer>
+			<integer>1490</integer>
 		</dict>
 		<key>A146BAFF-E767-4A05-A819-A4E0E8D90446</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>1810</integer>
+			<integer>1800</integer>
 		</dict>
 		<key>A1CCB5CC-E148-45B8-B0A8-CF25FE4AA72A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>1720</integer>
+			<integer>1710</integer>
 		</dict>
 		<key>A407AB1A-4308-4860-BECE-967104C1E851</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>820</integer>
+			<integer>810</integer>
 		</dict>
 		<key>A429E820-14E4-4E2B-8466-EEECD42BD4AA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2170</integer>
+			<integer>2320</integer>
 			<key>ypos</key>
-			<integer>1100</integer>
+			<integer>1090</integer>
 		</dict>
 		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>2180</integer>
+			<integer>2170</integer>
 		</dict>
 		<key>A7A732FB-5BB9-41F1-B2EA-B2B51AF0258C</key>
 		<dict>
 			<key>note</key>
 			<string>14</string>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>2120</integer>
+			<integer>2110</integer>
 		</dict>
 		<key>A83BC89A-9B15-4875-802C-0867AB333ACD</key>
 		<dict>
 			<key>note</key>
 			<string>Remove connection history</string>
 			<key>xpos</key>
-			<integer>660</integer>
+			<integer>810</integer>
 			<key>ypos</key>
-			<integer>620</integer>
+			<integer>610</integer>
 		</dict>
 		<key>A9816DA9-B0F0-45FB-B78B-D4ADE97BFECA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2030</integer>
-			<key>ypos</key>
 			<integer>2180</integer>
+			<key>ypos</key>
+			<integer>2170</integer>
 		</dict>
 		<key>AB1BC7DE-EFE7-4132-AF36-4713517586AA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2080</integer>
+			<integer>2230</integer>
 			<key>ypos</key>
-			<integer>990</integer>
+			<integer>980</integer>
 		</dict>
 		<key>ADCC5FCA-C722-4D8E-92FD-78DBC974FB3C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>850</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>B01199D3-B213-4598-A3E9-EB101E6728F3</key>
 		<dict>
 			<key>note</key>
 			<string>App info</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>360</integer>
+			<integer>350</integer>
 		</dict>
 		<key>B2115A23-1679-4F90-9EC4-E996DA7BF2EA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>890</integer>
+			<integer>880</integer>
 		</dict>
 		<key>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</key>
 		<dict>
 			<key>note</key>
 			<string>16</string>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>580</integer>
 			<key>ypos</key>
-			<integer>1720</integer>
+			<integer>1520</integer>
 		</dict>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2420</integer>
+			<integer>2570</integer>
 			<key>ypos</key>
-			<integer>1720</integer>
+			<integer>1710</integer>
 		</dict>
 		<key>B81B0663-A4BF-4BB1-94B2-66752B977EBC</key>
 		<dict>
 			<key>note</key>
 			<string>Show package options</string>
 			<key>xpos</key>
-			<integer>2220</integer>
+			<integer>2370</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>1610</integer>
 		</dict>
 		<key>BB0A60C4-2F87-444B-8938-AEF5F2F2F1A7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1280</integer>
+			<integer>1430</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>220</integer>
 		</dict>
 		<key>BB52EF52-75A2-459D-AA0E-55FD5B8297D1</key>
 		<dict>
 			<key>note</key>
 			<string>Extract apk</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>1180</integer>
+			<integer>1170</integer>
 		</dict>
 		<key>C38782A7-0016-44BC-94F8-B6EC35107210</key>
 		<dict>
 			<key>xpos</key>
-			<integer>3510</integer>
+			<integer>3660</integer>
 			<key>ypos</key>
-			<integer>1950</integer>
+			<integer>1940</integer>
 		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
 			<key>note</key>
 			<string>Force stop</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>530</integer>
+			<integer>520</integer>
 		</dict>
 		<key>C6A84CEC-A533-4892-A67F-8D01904475E4</key>
 		<dict>
 			<key>note</key>
 			<string>Install app</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>1690</integer>
+			<integer>1680</integer>
 		</dict>
 		<key>CA48997C-8B9B-4D82-885E-464BE23DA1C9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1650</integer>
+			<integer>1640</integer>
 		</dict>
 		<key>CAE7B37C-9567-4FEF-90B7-CB73D363B773</key>
 		<dict>
 			<key>note</key>
 			<string>Reboot device</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>80</integer>
+			<integer>70</integer>
 		</dict>
 		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1340</integer>
+			<integer>1330</integer>
 		</dict>
 		<key>D2F900A6-2B55-4594-9D6B-F84C581F901E</key>
 		<dict>
 			<key>note</key>
 			<string>Toggle GPU overdraw</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>860</integer>
+			<integer>850</integer>
 		</dict>
 		<key>D5C1C4B2-9ACD-4611-B432-202822D374CC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2250</integer>
+			<integer>2400</integer>
 			<key>ypos</key>
-			<integer>1200</integer>
+			<integer>1190</integer>
 		</dict>
 		<key>D88E8039-6195-47AD-982B-CC4CA5C5EED5</key>
 		<dict>
 			<key>note</key>
 			<string>07</string>
 			<key>xpos</key>
-			<integer>2470</integer>
+			<integer>2620</integer>
 			<key>ypos</key>
-			<integer>2270</integer>
+			<integer>2260</integer>
 		</dict>
 		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
 		<dict>
 			<key>xpos</key>
-			<integer>340</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>980</integer>
+			<integer>970</integer>
 		</dict>
 		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2410</integer>
+			<integer>2560</integer>
 			<key>ypos</key>
-			<integer>1400</integer>
+			<integer>1390</integer>
 		</dict>
 		<key>DFABF67E-FC72-4CF2-B945-2F12D69B9B53</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>2330</integer>
+			<integer>2320</integer>
 		</dict>
 		<key>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>1210</integer>
+			<integer>1200</integer>
 		</dict>
 		<key>E211B0B6-2DE5-45AF-9D9D-645F70743468</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>560</integer>
+			<integer>550</integer>
 		</dict>
 		<key>E413BD08-6847-4BD4-9048-48B8879089EC</key>
 		<dict>
 			<key>note</key>
 			<string>Toggle GPU profile</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>700</integer>
+			<integer>690</integer>
 		</dict>
 		<key>E4836C8C-4232-4791-BBF9-F3FF12DECB74</key>
 		<dict>
 			<key>xpos</key>
-			<integer>850</integer>
+			<integer>980</integer>
 			<key>ypos</key>
-			<integer>950</integer>
+			<integer>940</integer>
 		</dict>
 		<key>E65C40C2-C240-4D08-8CB7-7F7B3CF0F84E</key>
 		<dict>
 			<key>note</key>
 			<string>Dump task stacks</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1950</integer>
+			<integer>1940</integer>
 		</dict>
 		<key>E6BE1B2A-0511-43C1-A91D-14965EA240B4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>510</integer>
+			<integer>500</integer>
 		</dict>
 		<key>E6BF5B5A-EF08-4D0D-8786-D36C0CCC40B9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1500</integer>
+			<integer>1490</integer>
 		</dict>
 		<key>E9EFF180-2EDA-445B-A876-6C4F791198FE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>580</integer>
+			<integer>570</integer>
 		</dict>
 		<key>EC5A3218-A7ED-42B4-B2AC-C964AB6CA922</key>
 		<dict>
 			<key>note</key>
 			<string>15</string>
 			<key>xpos</key>
-			<integer>400</integer>
+			<integer>840</integer>
 			<key>ypos</key>
-			<integer>1140</integer>
+			<integer>1240</integer>
 		</dict>
 		<key>EC6080C1-D63B-4AD6-96D8-D47D96229D3D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2030</integer>
+			<integer>2180</integer>
 			<key>ypos</key>
-			<integer>2330</integer>
+			<integer>2320</integer>
+		</dict>
+		<key>ECBC0BA2-3FA9-46AE-98C2-467707D33917</key>
+		<dict>
+			<key>note</key>
+			<string>Hotkey to open select apk file</string>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>1050</integer>
 		</dict>
 		<key>ED7185EE-E248-4535-AB02-D48AFC8196B4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>490</integer>
 			<key>ypos</key>
-			<integer>1310</integer>
+			<integer>1410</integer>
 		</dict>
 		<key>EED72B13-239A-4F38-87D3-1D4BCB11AE23</key>
 		<dict>
 			<key>xpos</key>
-			<integer>810</integer>
+			<integer>960</integer>
 			<key>ypos</key>
-			<integer>410</integer>
+			<integer>400</integer>
 		</dict>
 		<key>EFFE7088-1ACC-4315-9346-BC5607565A63</key>
 		<dict>
 			<key>note</key>
 			<string>09</string>
 			<key>xpos</key>
-			<integer>2070</integer>
+			<integer>2220</integer>
 			<key>ypos</key>
-			<integer>110</integer>
+			<integer>100</integer>
 		</dict>
 		<key>F1325793-7F9C-498B-9BBB-902A9349DFC1</key>
 		<dict>
 			<key>note</key>
 			<string>Toggle debug layout</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>240</integer>
+			<integer>230</integer>
 		</dict>
 		<key>F1C25779-58E1-4E2F-8919-2222088581E1</key>
 		<dict>
 			<key>note</key>
 			<string>13</string>
 			<key>xpos</key>
-			<integer>2530</integer>
+			<integer>2680</integer>
 			<key>ypos</key>
-			<integer>2090</integer>
+			<integer>2080</integer>
 		</dict>
 		<key>F469FFED-AC36-4B5D-B761-A5C784037E38</key>
 		<dict>
 			<key>note</key>
 			<string>List installed packages</string>
 			<key>xpos</key>
-			<integer>1780</integer>
+			<integer>1930</integer>
 			<key>ypos</key>
-			<integer>1620</integer>
+			<integer>1610</integer>
 		</dict>
 		<key>F4F8B3C6-DDA7-46DF-B77D-50CEADCDC4FC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1670</integer>
 			<key>ypos</key>
-			<integer>1810</integer>
+			<integer>1800</integer>
+		</dict>
+		<key>F9D679BA-BFE0-476F-A2FA-75F71A09F74F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>980</integer>
+			<key>ypos</key>
+			<integer>1380</integer>
 		</dict>
 		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
 		<dict>
 			<key>note</key>
 			<string>Disable/Enable</string>
 			<key>xpos</key>
-			<integer>2630</integer>
+			<integer>2780</integer>
 			<key>ypos</key>
-			<integer>1010</integer>
+			<integer>1000</integer>
 		</dict>
 		<key>FCB9A8B9-D4AE-4D57-A0A1-A93B6BABE4F2</key>
 		<dict>
 			<key>note</key>
 			<string>08</string>
 			<key>xpos</key>
-			<integer>1680</integer>
+			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>1570</integer>
+			<integer>1560</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
