@@ -1697,6 +1697,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B986FEEE-E650-46C7-9C86-6DF90497F864</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D3E26F07-2D48-4A3E-881F-0C63876FE144</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>BB0A60C4-2F87-444B-8938-AEF5F2F2F1A7</key>
 		<array>
 			<dict>
@@ -1790,6 +1803,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>EFFE7088-1ACC-4315-9346-BC5607565A63</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D3E26F07-2D48-4A3E-881F-0C63876FE144</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2086,19 +2112,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>5E89349C-E31D-40BC-A828-91A81C965ECF</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>ECBC0BA2-3FA9-46AE-98C2-467707D33917</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -3698,9 +3711,9 @@
 				<key>argument</key>
 				<integer>1</integer>
 				<key>focusedappvariable</key>
-				<false/>
+				<true/>
 				<key>focusedappvariablename</key>
-				<string></string>
+				<string>focused_app</string>
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
@@ -3711,15 +3724,38 @@
 				<false/>
 				<key>modsmode</key>
 				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+				</array>
 				<key>relatedAppsMode</key>
-				<integer>0</integer>
+				<integer>1</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>ECBC0BA2-3FA9-46AE-98C2-467707D33917</string>
+			<string>B986FEEE-E650-46C7-9C86-6DF90497F864</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>.*.apk$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>D3E26F07-2D48-4A3E-881F-0C63876FE144</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6261,6 +6297,15 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>1610</integer>
 		</dict>
+		<key>B986FEEE-E650-46C7-9C86-6DF90497F864</key>
+		<dict>
+			<key>note</key>
+			<string>Hotkey to open select apk file</string>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>1050</integer>
+		</dict>
 		<key>BB0A60C4-2F87-444B-8938-AEF5F2F2F1A7</key>
 		<dict>
 			<key>xpos</key>
@@ -6333,6 +6378,13 @@ Use keyword "avd" to list and start emulator</string>
 			<integer>1930</integer>
 			<key>ypos</key>
 			<integer>850</integer>
+		</dict>
+		<key>D3E26F07-2D48-4A3E-881F-0C63876FE144</key>
+		<dict>
+			<key>xpos</key>
+			<integer>420</integer>
+			<key>ypos</key>
+			<integer>1080</integer>
 		</dict>
 		<key>D5C1C4B2-9ACD-4611-B432-202822D374CC</key>
 		<dict>
@@ -6446,15 +6498,6 @@ Use keyword "avd" to list and start emulator</string>
 			<integer>2180</integer>
 			<key>ypos</key>
 			<integer>2320</integer>
-		</dict>
-		<key>ECBC0BA2-3FA9-46AE-98C2-467707D33917</key>
-		<dict>
-			<key>note</key>
-			<string>Hotkey to open select apk file</string>
-			<key>xpos</key>
-			<integer>250</integer>
-			<key>ypos</key>
-			<integer>1050</integer>
 		</dict>
 		<key>ED7185EE-E248-4535-AB02-D48AFC8196B4</key>
 		<dict>

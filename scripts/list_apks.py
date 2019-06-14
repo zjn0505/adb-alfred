@@ -15,10 +15,8 @@ def main(wf):
     log.debug("dir {}".format(the_dir))
     arr = os.listdir(the_dir)
 
-    
-
     for file in arr:
-        if ".apk" in file:
+        if file.endswith(".apk"):
             if len(arg) > 0 and arg.lower() not in file.lower():
                 continue
             fullPath = os.path.join(the_dir, file)

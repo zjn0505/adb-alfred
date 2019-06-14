@@ -206,6 +206,9 @@ def main(wf):
 
     fileCount = 1
     if os.path.isdir(apkFileOrFolder):
+        if os.getenv('focused_app') != None:
+            wf.warn_empty(title="Can't open a folder with hotkey, try apk files.")
+
         apkFileAll, apkFileDirect = showFolerInstallItems()
         fileCount = len(apkFileAll)
         directFileCount = len(apkFileDirect)
