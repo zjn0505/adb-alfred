@@ -21,6 +21,7 @@ def list_emulators():
     emulators = result.rstrip().split('\n')
     for emulator in emulators:
         it = wf.add_item(title=emulator, uid=emulator, arg=emulator, valid=True)
+        it.setvar("func", "")
         m = it.add_modifier('ctrl', "Start a cold boot")
         m.setvar("func", "-no-snapshot-load")
         m = it.add_modifier('alt', "Wipe emulator data")
