@@ -20,7 +20,11 @@ def list_emulators():
                     shell=True)
     emulators = result.rstrip().split('\n')
     for emulator in emulators:
-        wf.add_item(title=emulator, uid=emulator, arg=emulator, valid=True)
+        it = wf.add_item(title=emulator, uid=emulator, arg=emulator, valid=True)
+        m = it.add_modifier('ctrl', "Start a cold boot")
+        m.setvar("func", "-no-snapshot-load")
+        m = it.add_modifier('alt', "Wipe emulator data")
+        m.setvar("func", "-wipe-data")
 
 def main(wf):
     if not emulator_path:
