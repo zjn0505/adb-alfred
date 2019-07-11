@@ -98,6 +98,7 @@ def list_devices(args):
             it.setvar('full_info', item.subtitle)
             if item.valid:
                 it.setvar('device_api', item.get('device_api'))
+            it.setvar("serial", name)
             it.setvar('name', item.get('name'))
             if item.subtitle and not re.match(regexIp + ":5555", name):
                 cmd_ip = adb_path + ' -s ' + name + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
