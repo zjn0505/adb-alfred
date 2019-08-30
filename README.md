@@ -8,6 +8,8 @@ https://app.bitrise.io/app/48bd64d386f7c944/status.svg?token=5M-EP8LTG0wjJSKcqCo
 
 adb with alfred workflow
 
+As Android dev, if you 
+
 Keywords
 ----
 
@@ -50,12 +52,18 @@ Features
 - `adb` to list connected devices
 
   - `adb connect`, `adb disconnect` `adb restart` can also be accessed from root level
+  
+  - devices have modifiers to run history commands
 
 ![list devices](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2001%20list%20devices.png)
 
 - select one connected device for device options
 
-  - Input custom commands like `shell dumpsys -l | grep wifi` to execute directly in terminal
+  - input custom commands like `shell dumpsys -l | grep wifi` to execute directly in terminal
+  
+  - select from options like 'app list', 'debug layout', 'screenshot', 'dump task stack', etc.
+  
+  - most options have modifiers for quick control.
 
 ![device options](https://github.com/zjn0505/adb-alfred/raw/master/art/screenshot%2002%20show%20device%20options.png)
 
@@ -73,9 +81,13 @@ Features
 
 - `apk` to search for local apk files, and check package info
 
-- `apkf` to directly list apk files under current front Finder window
+  - `apkf` to directly list apk files under current front Finder window
+
+  - custom hotkey to open current selected apk file
 
 - `avd` to list installed emulators, select one to start an emulator
+
+  - modifier keys to do cold boot, or wipe emulator data
 
 References
 ------
