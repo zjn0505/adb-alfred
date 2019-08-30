@@ -8,7 +8,13 @@ https://app.bitrise.io/app/48bd64d386f7c944/status.svg?token=5M-EP8LTG0wjJSKcqCo
 
 adb with alfred workflow
 
-As Android dev, if you 
+Android developers may need to work on 
+  - multiple connected devices
+  - devices beyound your arm's reach
+  - devices without hard and soft navigation buttons
+  - or need to clear app data 200 times a day
+  
+then this workflow is very handy for them, as most `adb -s {serial} shell` commands can be done within 10 keystrokes in alfred.
 
 Keywords
 ----
