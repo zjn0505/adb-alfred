@@ -24,11 +24,16 @@ Keywords
 
 Dependencies
 ----
+
+These dependencies are included in Android Studio and Android command line tools. [link](https://developer.android.com/studio/#downloads)
+
 - [adb](https://developer.android.com/studio/command-line/adb)
 - [aapt](https://developer.android.com/studio/command-line/aapt2)
 - [emulator](https://developer.android.com/studio/run/emulator-commandline)
 
-These dependencies are included in Android Studio and Android command line tools. [link](https://developer.android.com/studio/#downloads)
+Optional but powerful widgets this workflow uses
+
+- [scrcpy](https://github.com/Genymobile/scrcpy)  - screen mirror, control device from your mac
 
 Configurations
 ----
