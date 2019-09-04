@@ -9,6 +9,8 @@ serial = os.getenv('serial')
 api = os.getenv('device_api')
 ip = os.getenv("ip")
 
+rc = subprocess.call(['/usr/local/bin/scrcpy', '-v'])
+
 def wordMatch(arg, sentence): 
     words = arg.lower().split(" ")
     sentenceComponents = sentence.lower().split(" ")
@@ -188,6 +190,18 @@ def main(wf):
         itemCount += 1
         it.add_modifier('cmd', 'Dump the first application', arg="dump_stack:first_app")
         it.add_modifier('alt', 'Dump the first stack', arg="dump_stack:first_stack")
+
+
+    # Screen Copy with scrcpy
+    title = "Screen Copy with scrcpy"
+    log.debug("Rcrc")
+    log.debug(rc)
+    if rc == 0 and (addAll or wordMatch(arg, title)) and not isEmulator:
+        it = wf.add_item(title=title,
+                    uid="scr_cpy",
+                    arg="scr_cpy",
+                    valid=True)
+        itemCount += 1
 
     # COMMAND HISTORY
     title = "Command history"
