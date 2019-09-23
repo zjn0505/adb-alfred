@@ -1471,7 +1471,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9B14C086-40D8-42DA-92B0-B527FE47C807</string>
+				<string>11DD8375-62F3-42E4-83AB-95F0FF2CBDD1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1484,7 +1484,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9B14C086-40D8-42DA-92B0-B527FE47C807</string>
+				<string>11DD8375-62F3-42E4-83AB-95F0FF2CBDD1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1508,19 +1508,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>9B14C086-40D8-42DA-92B0-B527FE47C807</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>11DD8375-62F3-42E4-83AB-95F0FF2CBDD1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2706,25 +2693,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{var:last_func}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>0</integer>
-				<key>matchstring</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>9B14C086-40D8-42DA-92B0-B527FE47C807</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>111'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -3859,7 +3827,7 @@
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>524288</integer>
+				<integer>655360</integer>
 				<key>hotstring</key>
 				<string>A</string>
 				<key>leftcursor</key>
@@ -6441,13 +6409,6 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>1280</integer>
 		</dict>
-		<key>9B14C086-40D8-42DA-92B0-B527FE47C807</key>
-		<dict>
-			<key>xpos</key>
-			<integer>2810</integer>
-			<key>ypos</key>
-			<integer>200</integer>
-		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
 			<key>xpos</key>
@@ -6912,7 +6873,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.8.0</string>
+	<string>1.8.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
