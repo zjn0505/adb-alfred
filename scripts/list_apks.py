@@ -10,20 +10,20 @@ def main(wf):
         arg = wf.args[0].strip()
         log.debug(arg)
     
-    the_dir = subprocess.check_output(["osascript", "scripts/getFinder.applescript"])
-    the_dir = the_dir.strip()
-    log.debug("dir {}".format(the_dir))
-    arr = os.listdir(the_dir.encode("utf-8"))
+    the_dir = subprocess.check_output(["osascript", "scripts/getFinder.applescript"]).strip().decode("utf-8")
+
+    log.debug("dir")
+    log.debug(the_dir)
+    arr = os.listdir(the_dir)
 
     log.debug("length {0}".format(len(arg)))
+    log.debug("file length {0}".format(len(arr)))
     for file in arr:
         if file.endswith(".apk"):
-            fileUtf = file.decode("utf-8")
-            if len(arg) > 0 and (arg.lower() not in fileUtf.lower()):
+            log.debug(file)
+            if len(arg) > 0 and (arg.lower() not in file.lower()):
                 continue
-            log.debug("File " + fileUtf)
             fullPath = os.path.join(the_dir, file)
-            # log.debug(fullPath)
             wf.add_item(title=file, subtitle=fullPath, uid=file, arg=fullPath, valid=True)
     wf.send_feedback()
 
