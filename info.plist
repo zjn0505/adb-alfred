@@ -1861,6 +1861,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>CB2093F8-E6AB-4654-8F94-7FDA91C624AB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8633EBC3-4911-4F76-B926-75BEE8BD839E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D18A1AD3-E0AD-422C-A477-E940251249B3</key>
 		<array>
 			<dict>
@@ -3827,7 +3850,7 @@
 				<key>hotkey</key>
 				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>655360</integer>
+				<integer>524288</integer>
 				<key>hotstring</key>
 				<string>A</string>
 				<key>leftcursor</key>
@@ -4653,7 +4676,7 @@
 			<key>config</key>
 			<dict>
 				<key>alfredfiltersresults</key>
-				<false/>
+				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
@@ -4706,7 +4729,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>python scripts/list_avd.py "{query}"</string>
+				<string>python scripts/launch_avd.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4989,6 +5012,78 @@
 			<string>0461824C-6237-42B9-9882-BEC93329153D</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>geny</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python scripts/list_genymotion.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>CB2093F8-E6AB-4654-8F94-7FDA91C624AB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python scripts/launch_genymotion.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8633EBC3-4911-4F76-B926-75BEE8BD839E</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -6270,6 +6365,13 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>2500</integer>
 		</dict>
+		<key>8633EBC3-4911-4F76-B926-75BEE8BD839E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>615</integer>
+			<key>ypos</key>
+			<integer>1785</integer>
+		</dict>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<dict>
 			<key>note</key>
@@ -6620,6 +6722,15 @@ Use keyword "avd" to list and start emulator</string>
 			<key>ypos</key>
 			<integer>70</integer>
 		</dict>
+		<key>CB2093F8-E6AB-4654-8F94-7FDA91C624AB</key>
+		<dict>
+			<key>note</key>
+			<string>List Genymotion emulators</string>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>1785</integer>
+		</dict>
 		<key>CCAADCF9-C6AA-4026-BCCD-594143511EC7</key>
 		<dict>
 			<key>note</key>
@@ -6873,7 +6984,7 @@ Use keyword "avd" to list and start emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.8.1</string>
+	<string>1.9.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
