@@ -19,7 +19,7 @@ then this workflow is very handy for them, as most `adb -s {serial} shell` comma
 Keywords
 ----
 
-`adb`, `apk`, `apkf`, `avd`
+`adb`, `apk`, `apkf`, `avd`, `geny`
 
 
 Dependencies
@@ -34,6 +34,7 @@ These dependencies are included in Android Studio and Android command line tools
 Optional but powerful widgets this workflow uses
 
 - [scrcpy](https://github.com/Genymobile/scrcpy)  - screen mirror, control device from your mac
+- [Genymotion](https://www.genymotion.com/) - Genymotion emulators can be listed and launched with adb-alfred
 
 Configurations
 ----
