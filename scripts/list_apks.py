@@ -13,17 +13,19 @@ def main(wf):
     the_dir = subprocess.check_output(["osascript", "scripts/getFinder.applescript"])
     the_dir = the_dir.strip()
     log.debug("dir {}".format(the_dir))
-    arr = os.listdir(the_dir)
+    arr = os.listdir(the_dir.encode("utf-8"))
 
+    log.debug("length {0}".format(len(arg)))
     for file in arr:
         if file.endswith(".apk"):
-            if len(arg) > 0 and arg.lower() not in file.lower():
+            fileUtf = file.decode("utf-8")
+            if len(arg) > 0 and (arg.lower() not in fileUtf.lower()):
                 continue
+            log.debug("File " + fileUtf)
             fullPath = os.path.join(the_dir, file)
-            log.debug(fullPath)
+            # log.debug(fullPath)
             wf.add_item(title=file, subtitle=fullPath, uid=file, arg=fullPath, valid=True)
     wf.send_feedback()
-
 
 if __name__ == '__main__':
     wf = Workflow3()
