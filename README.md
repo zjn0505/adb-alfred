@@ -30,8 +30,9 @@ These dependencies are included in Android Studio and Android command line tools
 - [adb](https://developer.android.com/studio/command-line/adb)
 - [aapt](https://developer.android.com/studio/command-line/aapt2)
 - [emulator](https://developer.android.com/studio/run/emulator-commandline)
+- [apksigner](https://developer.android.com/studio/command-line/apksigner) (optional)
 
-Optional but powerful widgets this workflow uses
+Other optional but powerful widgets this workflow uses
 
 - [scrcpy](https://github.com/Genymobile/scrcpy)  - screen mirror, control device from your mac
 - [Genymotion](https://www.genymotion.com/) - Genymotion emulators can be listed and launched with adb-alfred
@@ -50,13 +51,14 @@ What's required:
 |Name|Value (example)|
 |--|--|
 |`adb_path`|~/Library/Android/sdk/platform-tools/adb|
-|`aapt_path`|~/Library/Android/sdk/build-tools/28.0.3/aapt|
+|`aapt_path`|~/Library/Android/sdk/build-tools/29.0.2/aapt|
 |`emulator_path`|~/Library/Android/sdk/emulator/emulator|
 
 What's optional:
 
 |Name|Value (example)|
 |--|--|
+|`apksigner_path`|~/Library/Android/sdk/build-tools/29.0.2/apksigner|
 |`config_clipboard`|`1` to copy some outputs to clipboard|
 
 Features
@@ -88,6 +90,8 @@ Features
 - select `Install apk` in device options to select APK or APKs on local drive for installation
 
   - `adb install -t -d -g` and bulk installation
+  
+  - apk signature info will be listed
   
 ![install options](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2004%20show%20install%20options.png)
 
