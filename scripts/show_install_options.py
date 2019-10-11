@@ -13,6 +13,7 @@ aapt_path = os.getenv('aapt_path')
 serial = os.getenv('serial')
 apkFileOrFolder = pipes.quote(os.getenv('apkFile'))
 deviceApi = os.getenv('device_api')
+apksigner_path = os.getenv("apksigner_path")
 
 needsTestFlag = False
 needsDowngradeFlag = False
@@ -61,6 +62,7 @@ def showApkInstallItems():
 
     arg = wf.args[0].strip()
 
+    apk = None
     if not aapt_path:
         head, tail = os.path.split(apkFileOrFolder)
         wf.add_item(title=tail, subtitle=apkFileOrFolder, copytext=tail, arg=apkFileOrFolder, valid=True)
@@ -179,6 +181,9 @@ def showApkInstallItems():
                     if deviceApi and apk.has_key("max") and deviceApi > apk["maxs"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, higher than apk maxSdkVersion {0}, ".format(deviceApi, apk["max"]), icon=ICON_ERROR, valid=False)
 
+
+    return apk
+
 def showFolerInstallItems():
     arg = wf.args[0].strip()
     apkFilesAll = []
@@ -203,7 +208,7 @@ def main(wf):
 
     arg = wf.args[0].strip()
     log.debug(arg)
-
+    apk = None
     fileCount = 1
     if os.path.isdir(apkFileOrFolder):
         if os.getenv('focused_app') != None:
@@ -223,7 +228,7 @@ def main(wf):
                 mod = it.add_modifier('cmd', subtitle='only install apks under root directory', valid=True)
                 mod.setvar('apkFile', apkFileDirect)
     else:
-        showApkInstallItems()
+        apk = showApkInstallItems()
 
     if fileCount == 0:
         wf.warn_empty(title="No APK files find under current path", subtitle=apkFileOrFolder)
@@ -251,6 +256,70 @@ def main(wf):
 
         wf.setvar("option", installOptions)
 
+        # add "-" to apksigner path will disable signature check
+        if (apksigner_path != None and apksigner_path != "" and (not apksigner_path.startswith("-")) and apk != None):
+            log.debug("Apksigner path " + apksigner_path)
+            cmd = "{0} verify -v --print-certs {1}".format(apksigner_path, apkFileOrFolder)
+            log.debug(cmd)
+            result = subprocess.check_output(cmd, 
+                stderr=subprocess.STDOUT,
+                shell=True)
+            if result:
+                log.debug(result)
+                infos = result.rstrip().split('\n')
+                v1Verified = False
+                v2Verified = False
+                v3Verified = False
+                
+                signer = []
+
+                reg = re.compile(r"^Signer #(\d+) certificate (.*):(.*)")
+
+                for info in infos:
+                    if info.startswith("Verified using v1 scheme") and info.endswith("true"):
+                        v1Verified = True
+                    elif info.startswith("Verified using v2 scheme") and info.endswith("true"):
+                        v2Verified = True
+                    elif info.startswith("Verified using v3 scheme") and info.endswith("true"):
+                        v3Verified = True
+
+                    a = reg.search(info)
+                    if a != None and len(a.groups()) == 3:
+                        i = int(a.group(1))
+                        key = a.group(2)
+                        value = a.group(3)
+                        log.debug("KEYKEY " + key + " !!")
+                        if key == "DN":
+                            signer.append({})
+                            signer[i-1]["DN"] = a.group(3)
+                        elif "SHA-256 digest" in key:
+                            log.debug(a.group(3))
+                            signer[i-1]["SHA256"] = a.group(3)
+                        elif "SHA-1 digest" in key:
+                            signer[i-1]["SHA1"] = a.group(3)
+                        elif "MD5 digest" in key:
+                            signer[i-1]["MD5"] = a.group(3)
+                
+                title = "Signature " + infos[0]
+                if infos[0] == "Verifies":
+                    title = "Signature verified"
+                subtitle = "Scheme V1 {0}, V2 {1}, V3 {2}".format(v1Verified, v2Verified, v3Verified)
+                wf.add_item(title=title, subtitle=subtitle, icon=ICON_INFO, valid=False)
+                log.debug(signer)
+                for i in range(len(signer)):
+                    item = signer[i]
+
+                    sha256 = "SHA-256:{0}".format(item["SHA256"])
+                    sha1 = "SHA-1:{0}".format(item["SHA1"])
+                    md5 = "MD5:{0}".format(item["MD5"])
+                    title = "Signer #{0} {1}".format(i, md5)
+                    if sha256:
+                        it = wf.add_item(title=title, subtitle=item["DN"], icon=ICON_INFO, valid=False)
+                        if sha256:
+                            it.add_modifier('cmd', subtitle=sha256, valid=False)
+                        if sha1:
+                            it.add_modifier('alt', subtitle=sha1, valid=False)
+                    
     wf.send_feedback()
 
 if __name__ == '__main__':
