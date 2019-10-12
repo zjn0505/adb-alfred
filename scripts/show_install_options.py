@@ -261,16 +261,23 @@ def main(wf):
             log.debug("Apksigner path " + apksigner_path)
             cmd = "{0} verify -v --print-certs {1}".format(apksigner_path, apkFileOrFolder)
             log.debug(cmd)
-            result = subprocess.check_output(cmd, 
-                stderr=subprocess.STDOUT,
-                shell=True)
+            result = ""
+            verified = False
+            try:
+                result = subprocess.check_output(cmd, 
+                    stderr=subprocess.STDOUT,
+                    shell=True)
+                verified = True
+            except subprocess.CalledProcessError as exc:
+                log.error("Not verified")
+                result = exc.output
             if result:
                 log.debug(result)
                 infos = result.rstrip().split('\n')
                 v1Verified = False
                 v2Verified = False
                 v3Verified = False
-                
+                error = []
                 signer = []
 
                 reg = re.compile(r"^Signer #(\d+) certificate (.*):(.*)")
@@ -282,6 +289,8 @@ def main(wf):
                         v2Verified = True
                     elif info.startswith("Verified using v3 scheme") and info.endswith("true"):
                         v3Verified = True
+                    elif info.startswith("ERROR"):
+                        error.append(info)
 
                     a = reg.search(info)
                     if a != None and len(a.groups()) == 3:
@@ -304,7 +313,13 @@ def main(wf):
                 if infos[0] == "Verifies":
                     title = "Signature verified"
                 subtitle = "Scheme V1 {0}, V2 {1}, V3 {2}".format(v1Verified, v2Verified, v3Verified)
-                wf.add_item(title=title, subtitle=subtitle, icon=ICON_INFO, valid=False)
+                if verified:
+                    wf.add_item(title=title, subtitle=subtitle, icon=ICON_INFO, valid=False)
+                else:
+                    if len(error) > 0:
+                        subtitle = error[0]
+                    wf.add_item(title=title, subtitle=subtitle, icon=ICON_ERROR, valid=False)
+                    log.error(infos)
                 log.debug(signer)
                 for i in range(len(signer)):
                     item = signer[i]
