@@ -5742,8 +5742,9 @@
 	<string># Workflow Configuration
 
 - adb_path,  e.g. "~/Library/Android/sdk/platform-tools/adb"
-- aapt_path, e.g. "~/Library/Android/sdk/build-tools/28.0.3/aapt"
+- aapt_path, e.g. "~/Library/Android/sdk/build-tools/29.0.2/aapt"
 - emulator_path, e.g. "~/Library/Android/sdk/emulator/emulator"
+- apksigner_path, e.g. "~/Library/Android/sdk/build-tools/29.0.2/apksigner"
 - config_clipboard, set as 1 if needs copy output to clipboard, 
 
 # Usage
@@ -5761,12 +5762,15 @@ Use keyword "adb" to get quick access to:
 - toggle debug layout and demo mode
 - advanced reboot
 - input key or text on device
+- and many more convenient functions
 
 Use keyword "apk" to check the infomation of apk file and execute installation
 
 Use keyword "apkf" to list all apk files of the front Finder window
 
-Use keyword "avd" to list and start emulator</string>
+Use keyword "avd" to list and start Android emulator
+
+Use keyword "geny" to list and start Genymotion emulator</string>
 	<key>uidata</key>
 	<dict>
 		<key>01B9D557-FFBF-462C-8CDA-68526EC37F97</key>
