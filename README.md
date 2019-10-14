@@ -68,6 +68,24 @@ Features
   - `adb connect`, `adb disconnect` `adb restart` can also be accessed from root level
   
   - devices have modifiers to run history commands
+  
+<details><summary> <b>Full features at this level</b> </summary>
+
+|Feature|Trigger|
+|:--|:--|
+|Check all connected devices|`adb` or hotkey|
+|Check ip address of connected device|`adb` + `cmd` (emulators and wireless connected devices excluded)|
+|Copy device serial to clipboard|`adb` + `cmd` + `c`|
+|Check device system info|`adb` + `option`|
+|Re-run last used command on one device|`adb` + `ctrl`|
+|Check history commands of one device|`adb` + `fn`|
+|Check wireless connection history|`adb connect`|
+|Clear wireless connection history|`adb connect` + `cmd`|
+|Connect to device wirelessly|`adb connect {ip}:{port}`|
+|Remove wireless connection history of one device|`adb connect` + `cmd` on device|
+|Disconnect wireless devices|`adb disconnect`|
+
+</details>
 
 ![list devices](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2001%20list%20devices.png)
 
@@ -78,6 +96,32 @@ Features
   - select from options like 'app list', 'debug layout', 'screenshot', 'dump task stack', etc.
   
   - most options have modifiers for quick control.
+  
+<details><summary> <b>Full features at this level</b> </summary>
+
+|Feature|Trigger|
+|:--|:--|
+|Custom command in terminal|input directly, e.g. `shell dumpsys -l \| grep wifi`|
+|Custom command silently|input + `cmd`|
+|Show history command|`Command history`|
+|Clear history command|`Command history` + `cmd`|
+|Show applications list|`Show apps list`|
+|Select app to launch|`Show apps list` + `cmd`|
+|Select app to uninstall|`Show apps list` + `option`|
+|Select app to force stop|`Show apps list` + `ctrl`|
+|Select app to clear data|`Show apps list` + `fn`|
+|Select app to show app info|`Show apps list` + `shift`|
+|Install apk or all apks in folder|`Install apk`|
+|Take screenshot to clipboard|`Take screenshot`|
+|Take screenshot to desktop|`Take screenshot` + `cmd`|
+|Open settings|`Open settings`|
+|Open developer tools|`Open settings` + `cmd`|
+|Open WiFi settings|`Open settings` + `option`|
+|Open application settings|`Open settings` + `ctrl`|
+|Open date settings|`Open settings` + `fn`|
+|Open accessibility settings|`Open settings` + `shift`|
+
+</details>
 
 ![device options](https://github.com/zjn0505/adb-alfred/raw/master/art/screenshot%2002%20show%20device%20options.png)
 
@@ -104,9 +148,35 @@ Features
 - `avd` to list installed emulators, select one to start an emulator
 
   - modifier keys to do cold boot, or wipe emulator data
-
+  
 References
 ------
 - [109021017/alfred-adb-workflow](https://github.com/109021017/alfred-adb-workflow)
 
 - [nassendelft/alfred-android-adb](https://github.com/nassendelft/alfred-android-adb)
+
+Full feature list
+------
+
+<details><summary> in this workflow  </summary>
+  
+  
+  
+|Function|Trigger|
+|:--|:--|
+|Check all connected devices|`adb` or hotkey|
+|Check ip address of connected device|`adb` + `cmd` (emulators and wireless connected devices excluded)|
+|Copy device serial to clipboard|`adb` + `cmd` + `c`|
+|Check device system info|`adb` + `option`|
+|Re-run last used command on one device|`adb` + `ctrl`|
+|Check history commands of one device|`adb` + `fn`|
+|Check wireless connection history|`adb connect`|
+|Clear wireless connection history|`adb connect` + `cmd`|
+|Connect to device wirelessly|`adb connect {ip}:{port}`|
+|Remove wireless connection history of one device|`adb connect` + `cmd` on device|
+|Disconnect wireless devices|`adb disconnect`|
+
+    
+  
+
+</details>
