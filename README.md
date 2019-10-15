@@ -135,7 +135,7 @@ Features
 |Reboot to recovery|`Reboot system` + `option`|
 |Reboot to sideload|`Reboot system` + `ctrl`|
 |Connect over WiFi (wired device)|`Connect over Wi-Fi`|
-|Input or keyevent|in `Keyevent input`|
+|Input text or button keyevent|in `Keyevent input`|
 |Dump task stacks|`Dump task stacks`|
 |Dump task stacks of first app|`Dump task stacks` + `cmd`|
 |Dump first task stacks|`Dump task stacks` + `option`|
@@ -148,6 +148,22 @@ Features
 - select `Show app list` in device options to list and search in all installed applications
 
   - select one application to show package options
+  
+<details><summary> <b>Full features at this level</b> </summary>
+
+|Feature|Trigger|
+|:--|:--|
+|Copy package name|`cmd` + `c` here or in previous level|
+|Open app info page|`App info`|
+|Force stop application|`Force stop`|
+|Start application|`Start application`|
+|Clear data|`Clear app data`|
+|Uninstall|`Uninstall app`|
+|Uninstall but keep data and cache|`Uninstall app` + `cmd`|
+|Disable/Enable app|`Disable app`/`Enable app`|
+|Get apk file|`Extract apk file`|
+
+</details>
   
 ![package options](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2003%20show%20package%20options.png)
 
@@ -219,11 +235,21 @@ Full feature list
 |Reboot to recovery|`adb` -> `Reboot system` + `option`|
 |Reboot to sideload|`adb` -> `Reboot system` + `ctrl`|
 |Connect over WiFi (wired device)|`adb` -> `Connect over Wi-Fi`|
-|Input or keyevent|`adb` -> `Keyevent input`|
+|Keyevent|`adb` -> `Keyevent input` -> `Back`/`Home`/`App switch`/`Power`/`Status bar`|
+|Text input|`adb` -> `Keyevent input` -> input directly|
 |Dump task stacks|`adb` -> `Dump task stacks`|
 |Dump task stacks of first app|`adb` -> `Dump task stacks` + `cmd`|
 |Dump first task stacks|`adb` -> `Dump task stacks` + `option`|
 |Screen copy (real device)|`adb` -> `Screen Copy with scrcpy`|
+|Copy package name|`adb` -> `Show apps list` -> `cmd` + `c`|
+|Open app info page|`adb` -> `Show apps list` -> `App info`|
+|Force stop application|`adb` -> `Show apps list` -> `Force stop`|
+|Start application|`adb` -> `Show apps list` -> `Start application`|
+|Clear data|`adb` -> `Show apps list` -> `Clear app data`|
+|Uninstall|`adb` -> `Show apps list` -> `Uninstall app`|
+|Uninstall but keep data and cache|`adb` -> `Show apps list` -> `Uninstall app` + `cmd`|
+|Disable/Enable app|`adb` -> `Show apps list` -> `Disable app`/`Enable app`|
+|Get apk file|`adb` -> `Show apps list` -> `Extract apk file`|
 </details>
 
 References
