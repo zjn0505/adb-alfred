@@ -1,9 +1,11 @@
-# adb-alfred [![release](https://img.shields.io/github/release/zjn0505/adb-alfred.svg)](https://github.com/zjn0505/adb-alfred/releases/latest) [![Build Status][1]][2] ![Total downloads][3]
+# adb-alfred [![release](https://img.shields.io/github/release/zjn0505/adb-alfred.svg)][4] [![Build Status][1]][2] [![Total downloads][3]][4]
 
 [1]: 
 https://app.bitrise.io/app/48bd64d386f7c944/status.svg?token=5M-EP8LTG0wjJSKcqCoSew&branch=master "Bitrise build status icon"
 [2]: https://app.bitrise.io/app/48bd64d386f7c944#/builds "Bitrise build page"
 [3]: https://img.shields.io/github/downloads/zjn0505/adb-alfred/total.svg "Total downloads"
+[4]: https://github.com/zjn0505/adb-alfred/releases/latest
+
 ![logo](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/adb%20alfred.png)
 
 adb with alfred workflow
