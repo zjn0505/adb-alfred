@@ -86,6 +86,7 @@ Features
 |Connect to device wirelessly|`adb connect {ip}:{port}`|
 |Remove wireless connection history of one device|`adb connect` + `cmd` on device|
 |Disconnect wireless devices|`adb disconnect`|
+|Restart adb service|`adb restart`|
 
 </details>
 
@@ -122,6 +123,23 @@ Features
 |Open application settings|`Open settings` + `ctrl`|
 |Open date settings|`Open settings` + `fn`|
 |Open accessibility settings|`Open settings` + `shift`|
+|Toggle debug layout|`Toggle debug layout`|
+|Toggle pointer location|`Toggle debug layout` + `cmd`|
+|Toggle show taps|`Toggle debug layout` + `option`|
+|Toggle GPU profile|`Toggle debug layout` + `ctrl`|
+|Toggle GPU overdraw|`Toggle debug layout` + `fn`|
+|Turn off all UI debuggers|`Toggle debug layout` + `shift`|
+|Demo mode (API 23+)|`Toggle demo mode`|
+|Reboot|`Reboot system`|
+|Reboot to bootloader|`Reboot system` + `cmd`|
+|Reboot to recovery|`Reboot system` + `option`|
+|Reboot to sideload|`Reboot system` + `ctrl`|
+|Connect over WiFi (wired device)|`Connect over Wi-Fi`|
+|Input or keyevent|in `Keyevent input`|
+|Dump task stacks|`Dump task stacks`|
+|Dump task stacks of first app|`Dump task stacks` + `cmd`|
+|Dump first task stacks|`Dump task stacks` + `option`|
+|Screen copy (real device)|`Screen Copy with scrcpy`|
 
 </details>
 
@@ -150,20 +168,12 @@ Features
 - `avd` to list installed emulators, select one to start an emulator
 
   - modifier keys to do cold boot, or wipe emulator data
-  
-References
-------
-- [109021017/alfred-adb-workflow](https://github.com/109021017/alfred-adb-workflow)
-
-- [nassendelft/alfred-android-adb](https://github.com/nassendelft/alfred-android-adb)
 
 Full feature list
 ------
 
 <details><summary> in this workflow  </summary>
-  
-  
-  
+
 |Function|Trigger|
 |:--|:--|
 |Check all connected devices|`adb` or hotkey|
@@ -177,8 +187,47 @@ Full feature list
 |Connect to device wirelessly|`adb connect {ip}:{port}`|
 |Remove wireless connection history of one device|`adb connect` + `cmd` on device|
 |Disconnect wireless devices|`adb disconnect`|
-
-    
-  
-
+|Restart adb service|`adb restart`|
+|Custom command in terminal|`adb` -> input, e.g. `shell dumpsys -l \| grep wifi`|
+|Custom command silently|`adb` -> input + `cmd`|
+|Show history command|`adb` -> `Command history`|
+|Clear history command|`adb` -> `Command history` + `cmd`|
+|Show applications list|`adb` -> `Show apps list`|
+|Select app to launch|`adb` -> `Show apps list` + `cmd`|
+|Select app to uninstall|`adb` -> `Show apps list` + `option`|
+|Select app to force stop|`adb` -> `Show apps list` + `ctrl`|
+|Select app to clear data|`adb` -> `Show apps list` + `fn`|
+|Select app to show app info|`adb` -> `Show apps list` + `shift`|
+|Install apk or all apks in folder|`adb` -> `Install apk`|
+|Take screenshot to clipboard|`adb` -> `Take screenshot`|
+|Take screenshot to desktop|`adb` -> `Take screenshot` + `cmd`|
+|Open settings|`adb` -> `Open settings`|
+|Open developer tools|`adb` -> `Open settings` + `cmd`|
+|Open WiFi settings|`adb` -> `Open settings` + `option`|
+|Open application settings|`adb` -> `Open settings` + `ctrl`|
+|Open date settings|`adb` -> `Open settings` + `fn`|
+|Open accessibility settings|`adb` -> `Open settings` + `shift`|
+|Toggle debug layout|`adb` -> `Toggle debug layout`|
+|Toggle pointer location|`adb` -> `Toggle debug layout` + `cmd`|
+|Toggle show taps|`adb` -> `Toggle debug layout` + `option`|
+|Toggle GPU profile|`adb` -> `Toggle debug layout` + `ctrl`|
+|Toggle GPU overdraw|`adb` -> `Toggle debug layout` + `fn`|
+|Turn off all UI debuggers|`adb` -> `Toggle debug layout` + `shift`|
+|Demo mode (API 23+)|`adb` -> `Toggle demo mode`|
+|Reboot|`adb` -> `Reboot system`|
+|Reboot to bootloader|`adb` -> `Reboot system` + `cmd`|
+|Reboot to recovery|`adb` -> `Reboot system` + `option`|
+|Reboot to sideload|`adb` -> `Reboot system` + `ctrl`|
+|Connect over WiFi (wired device)|`adb` -> `Connect over Wi-Fi`|
+|Input or keyevent|`adb` -> `Keyevent input`|
+|Dump task stacks|`adb` -> `Dump task stacks`|
+|Dump task stacks of first app|`adb` -> `Dump task stacks` + `cmd`|
+|Dump first task stacks|`adb` -> `Dump task stacks` + `option`|
+|Screen copy (real device)|`adb` -> `Screen Copy with scrcpy`|
 </details>
+
+References
+------
+- [109021017/alfred-adb-workflow](https://github.com/109021017/alfred-adb-workflow)
+
+- [nassendelft/alfred-android-adb](https://github.com/nassendelft/alfred-android-adb)
