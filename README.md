@@ -184,6 +184,9 @@ Features
 - `avd` to list installed emulators, select one to start an emulator
 
   - modifier keys to do cold boot, or wipe emulator data
+  
+- `geny` to list installed Genymotion emulators, select one to start an emulator
+
 
 Full feature list
 ------
@@ -250,6 +253,13 @@ Full feature list
 |Uninstall but keep data and cache|`adb` -> `Show apps list` -> `Uninstall app` + `cmd`|
 |Disable/Enable app|`adb` -> `Show apps list` -> `Disable app`/`Enable app`|
 |Get apk file|`adb` -> `Show apps list` -> `Extract apk file`|
+|Search for apk files|`apk`|
+|List apk files in current Finder|`apkf`|
+|Open current selected apk file in workflow|with hotkey|
+|List installed emulators|`avd`|
+|Wipe emulator data|`avd` + `option`|
+|Cold boot an emulator|`avd` + `ctrl`|
+|List installed Genymotion emulators|`geny`|
 </details>
 
 References
