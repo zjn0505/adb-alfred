@@ -2432,7 +2432,7 @@
 			<key>uid</key>
 			<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2515,7 +2515,7 @@
 			<key>uid</key>
 			<string>86E0AE80-E859-4D5D-B15B-D8631B27C24D</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3055,7 +3055,7 @@
 			<key>uid</key>
 			<string>155750E3-45FB-464D-92EC-5A2D40E6EE50</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3632,7 +3632,7 @@
 			<key>uid</key>
 			<string>09888B11-904A-4B29-BC71-E743740A9A19</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3909,7 +3909,7 @@
 			<key>uid</key>
 			<string>A429E820-14E4-4E2B-8466-EEECD42BD4AA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4109,7 +4109,7 @@
 			<key>uid</key>
 			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4147,7 +4147,7 @@
 			<key>uid</key>
 			<string>97D46C32-564A-4D98-A740-81706B950CA4</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4311,7 +4311,7 @@
 			<key>uid</key>
 			<string>3359B203-2E42-4A93-B948-DD5840AD2204</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4358,7 +4358,7 @@
 			<key>uid</key>
 			<string>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4623,7 +4623,7 @@
 			<key>uid</key>
 			<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4670,7 +4670,7 @@
 			<key>uid</key>
 			<string>F469FFED-AC36-4B5D-B761-A5C784037E38</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4719,7 +4719,7 @@
 			<key>uid</key>
 			<string>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4964,7 +4964,7 @@
 			<key>uid</key>
 			<string>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5011,7 +5011,7 @@
 			<key>uid</key>
 			<string>0461824C-6237-42B9-9882-BEC93329153D</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5060,7 +5060,7 @@
 			<key>uid</key>
 			<string>CB2093F8-E6AB-4654-8F94-7FDA91C624AB</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5182,7 +5182,7 @@
 			<key>uid</key>
 			<string>E65C40C2-C240-4D08-8CB7-7F7B3CF0F84E</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5199,7 +5199,7 @@
 			<key>uid</key>
 			<string>C38782A7-0016-44BC-94F8-B6EC35107210</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5394,7 +5394,7 @@
 			<key>uid</key>
 			<string>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
