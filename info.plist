@@ -5741,10 +5741,10 @@
 	<key>readme</key>
 	<string># Workflow Configuration
 
-- adb_path,  e.g. "~/Library/Android/sdk/platform-tools/adb"
 - aapt_path, e.g. "~/Library/Android/sdk/build-tools/29.0.2/aapt"
-- emulator_path, e.g. "~/Library/Android/sdk/emulator/emulator"
+- adb_path,  e.g. "~/Library/Android/sdk/platform-tools/adb"
 - apksigner_path, e.g. "~/Library/Android/sdk/build-tools/29.0.2/apksigner"
+- emulator_path, e.g. "~/Library/Android/sdk/emulator/emulator"
 - config_clipboard, set as 1 if needs copy output to clipboard, 
 
 # Usage
