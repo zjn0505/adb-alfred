@@ -175,7 +175,7 @@ Features
   
 ![install options](https://raw.githubusercontent.com/zjn0505/adb-alfred/master/art/screenshot%2004%20show%20install%20options.png)
 
-- `apk` to search for local apk files, and check package info
+- `apk` to search for local apk files, and check package info, or analyze it in Android Studio
 
   - `apkf` to directly list apk files under current front Finder window
 
@@ -254,6 +254,10 @@ Full feature list
 |Disable/Enable app|`adb` -> `Show apps list` -> `Disable app`/`Enable app`|
 |Get apk file|`adb` -> `Show apps list` -> `Extract apk file`|
 |Search for apk files|`apk`|
+|Inspect apk minSdkVersion|`apk` -> select file -> `cmd`|
+|Inspect apk maxSdkVersion|`apk` -> select file -> `option`|
+|Inspect apk targetSdkVersion|`apk` -> select file -> `ctrl`|
+|Analyze apk in Android Studio|`apk` -> select file -> `fn`|
 |List apk files in current Finder|`apkf`|
 |Open current selected apk file in workflow|with hotkey|
 |List installed emulators|`avd`|
