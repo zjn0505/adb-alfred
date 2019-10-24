@@ -220,6 +220,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4A96B42A-76A0-4228-AC8B-26E60AF742D0</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>Analyze APK in Android Studio</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>11086EB4-2930-4F46-A979-32AD4DA8EBA1</key>
 		<array>
@@ -4547,6 +4557,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>openwith</key>
+				<string>/Applications/Android Studio.app</string>
+				<key>sourcefile</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>4A96B42A-76A0-4228-AC8B-26E60AF742D0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>10'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -6134,6 +6159,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>2680</integer>
 			<key>ypos</key>
 			<integer>870</integer>
+		</dict>
+		<key>4A96B42A-76A0-4228-AC8B-26E60AF742D0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>980</integer>
+			<key>ypos</key>
+			<integer>1530</integer>
 		</dict>
 		<key>4C080E3F-1926-4006-B9DF-784BA5D78D52</key>
 		<dict>
