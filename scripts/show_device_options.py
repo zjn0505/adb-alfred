@@ -221,22 +221,23 @@ def main(wf):
         config = os.getenv('self_script_device_%d' % idx)
         if config:
             title = config.split("|")[0]
-            path = config.split("|")[1]
-            it = wf.add_item(title=title,
-                        subtitle="with script: %s" % path,
-                        arg="self_script_device_%d" % idx,
-                        valid=True)
-            it.setvar("self_script_device", config)
-            mod = it.add_modifier("cmd", subtitle="apply cmd modifier")
-            mod.setvar("mod", "cmd")
-            mod = it.add_modifier("alt", subtitle="apply alt modifier")
-            mod.setvar("mod", "alt")
-            mod = it.add_modifier("ctrl", subtitle="apply ctrl modifier")
-            mod.setvar("mod", "ctrl")
-            mod = it.add_modifier("fn", subtitle="apply fn modifier")
-            mod.setvar("mod", "fn")
-            mod = it.add_modifier("shift", subtitle="apply shift modifier")
-            mod.setvar("mod", "shift")
+            if addAll or wordMatch(arg, title) or wordMatch(arg, "Self script"):
+                path = config.split("|")[1]
+                it = wf.add_item(title=title,
+                            subtitle="with script: %s" % path,
+                            arg="self_script_device_%d" % idx,
+                            valid=True)
+                it.setvar("self_script_device", config)
+                mod = it.add_modifier("cmd", subtitle="apply cmd modifier")
+                mod.setvar("mod", "cmd")
+                mod = it.add_modifier("alt", subtitle="apply alt modifier")
+                mod.setvar("mod", "alt")
+                mod = it.add_modifier("ctrl", subtitle="apply ctrl modifier")
+                mod.setvar("mod", "ctrl")
+                mod = it.add_modifier("fn", subtitle="apply fn modifier")
+                mod.setvar("mod", "fn")
+                mod = it.add_modifier("shift", subtitle="apply shift modifier")
+                mod.setvar("mod", "shift")
             idx = idx + 1
         else:
             idx = -1
