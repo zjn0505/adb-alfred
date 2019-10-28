@@ -334,6 +334,33 @@ def main(wf):
                             it.add_modifier('cmd', subtitle=sha256, valid=False)
                         if sha1:
                             it.add_modifier('alt', subtitle=sha1, valid=False)
+
+        if os.getenv("from_shortcut"):
+            idx = 1
+            while idx > 0:
+                config = os.getenv('self_script_app_%d' % idx)
+                if config:
+                    title = config.split("|")[0]
+                    path = config.split("|")[1]
+                    it = wf.add_item(title=title,
+                                subtitle="with script: %s" % path,
+                                arg=path,
+                                valid=True)
+                    it.setvar("package", apk["packName"])
+                    it.setvar("self_script_app", config)
+                    mod = it.add_modifier("cmd", subtitle="apply cmd modifier")
+                    mod.setvar("mod", "cmd")
+                    mod = it.add_modifier("alt", subtitle="apply alt modifier")
+                    mod.setvar("mod", "alt")
+                    mod = it.add_modifier("ctrl", subtitle="apply ctrl modifier")
+                    mod.setvar("mod", "ctrl")
+                    mod = it.add_modifier("fn", subtitle="apply fn modifier")
+                    mod.setvar("mod", "fn")
+                    mod = it.add_modifier("shift", subtitle="apply shift modifier")
+                    mod.setvar("mod", "shift")
+                    idx = idx + 1
+                else:
+                    idx = -1
                     
     wf.send_feedback()
 

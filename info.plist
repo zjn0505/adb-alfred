@@ -198,6 +198,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0FAEC779-9830-43AB-8D5B-A6FA3C8E90D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>92A77ABB-145D-4771-8F24-6D6F6809D36D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</key>
 		<array>
 			<dict>
@@ -212,7 +225,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>700A7846-7245-4F35-8025-53D42AB866E2</string>
+				<string>F973A136-392C-4EEF-8E36-3276AB9E7891</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -227,6 +240,16 @@
 				<integer>8388608</integer>
 				<key>modifiersubtext</key>
 				<string>Analyze APK in Android Studio</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0FAEC779-9830-43AB-8D5B-A6FA3C8E90D6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -739,17 +762,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>7E8E8902-5D0D-4AB3-9006-27971FEF917D</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>5FF17710-F5EB-4244-9E4F-946321A4C69B</string>
+				<string>92A77ABB-145D-4771-8F24-6D6F6809D36D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -933,6 +946,16 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>21CD145D-AC24-40F8-BB60-A7BF7837DB20</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A5C2BE7D-1D18-41E6-9C13-8D9E6B5E73E9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1328,6 +1351,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7E8E8902-5D0D-4AB3-9006-27971FEF917D</key>
+		<array/>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<array>
 			<dict>
@@ -1466,6 +1491,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2D3DFF43-9667-4D48-AC9A-D0D96AA51688</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>92A77ABB-145D-4771-8F24-6D6F6809D36D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5FF17710-F5EB-4244-9E4F-946321A4C69B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>7E8E8902-5D0D-4AB3-9006-27971FEF917D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1662,6 +1710,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>D5C1C4B2-9ACD-4611-B432-202822D374CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A5C2BE7D-1D18-41E6-9C13-8D9E6B5E73E9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>576D57FC-A9D4-4D3F-9550-16ADD69AC1CC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2406,6 +2467,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>F973A136-392C-4EEF-8E36-3276AB9E7891</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>700A7846-7245-4F35-8025-53D42AB866E2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
 		<array>
 			<dict>
@@ -2626,6 +2700,24 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>serial</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>758F2BFC-527A-4C8D-9D3B-000CCF42574B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>inputstring</key>
 				<string>{query}</string>
 				<key>matchcasesensitive</key>
@@ -2639,24 +2731,6 @@
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>variables</key>
-				<dict>
-					<key>serial</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>758F2BFC-527A-4C8D-9D3B-000CCF42574B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4487,12 +4561,33 @@
 				<dict>
 					<key>apkFile</key>
 					<string>{query}</string>
+					<key>from_shortcut</key>
+					<string>true</string>
 				</dict>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:self_script_app}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>F973A136-392C-4EEF-8E36-3276AB9E7891</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4570,29 +4665,6 @@
 			<string>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>7E8E8902-5D0D-4AB3-9006-27971FEF917D</string>
-			<key>version</key>
-			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4954,6 +5026,25 @@ print path</string>
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>5FF17710-F5EB-4244-9E4F-946321A4C69B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:self_script_app}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>0FAEC779-9830-43AB-8D5B-A6FA3C8E90D6</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5383,6 +5474,37 @@ print path</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>7BF391A6-D555-4661-B622-20D0B522E854</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>python $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7E8E8902-5D0D-4AB3-9006-27971FEF917D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>92A77ABB-145D-4771-8F24-6D6F6809D36D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5867,6 +5989,25 @@ print path</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^self_script_device</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>A5C2BE7D-1D18-41E6-9C13-8D9E6B5E73E9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string># Workflow Configuration
@@ -5992,6 +6133,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>1670</integer>
 			<key>ypos</key>
 			<integer>1970</integer>
+		</dict>
+		<key>0FAEC779-9830-43AB-8D5B-A6FA3C8E90D6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>840</integer>
+			<key>ypos</key>
+			<integer>1670</integer>
 		</dict>
 		<key>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</key>
 		<dict>
@@ -6306,6 +6454,8 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		</dict>
 		<key>576D57FC-A9D4-4D3F-9550-16ADD69AC1CC</key>
 		<dict>
+			<key>note</key>
+			<string>self-script-vars-and-args</string>
 			<key>xpos</key>
 			<integer>2780</integer>
 			<key>ypos</key>
@@ -6364,7 +6514,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>note</key>
 			<string>Self-scripts</string>
 			<key>xpos</key>
-			<integer>3090</integer>
+			<integer>3150</integer>
 			<key>ypos</key>
 			<integer>1660</integer>
 		</dict>
@@ -6431,7 +6581,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<key>700A7846-7245-4F35-8025-53D42AB866E2</key>
 		<dict>
 			<key>xpos</key>
-			<integer>840</integer>
+			<integer>910</integer>
 			<key>ypos</key>
 			<integer>1410</integer>
 		</dict>
@@ -6529,7 +6679,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>3080</integer>
 			<key>ypos</key>
-			<integer>1500</integer>
+			<integer>2040</integer>
 		</dict>
 		<key>8633EBC3-4911-4F76-B926-75BEE8BD839E</key>
 		<dict>
@@ -6619,6 +6769,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>1740</integer>
 			<key>ypos</key>
 			<integer>1030</integer>
+		</dict>
+		<key>92A77ABB-145D-4771-8F24-6D6F6809D36D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2970</integer>
+			<key>ypos</key>
+			<integer>2070</integer>
 		</dict>
 		<key>93E3005E-CB38-4064-B1CA-AF5491BB8CE5</key>
 		<dict>
@@ -6725,6 +6882,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>2320</integer>
 			<key>ypos</key>
 			<integer>1090</integer>
+		</dict>
+		<key>A5C2BE7D-1D18-41E6-9C13-8D9E6B5E73E9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1670</integer>
+			<key>ypos</key>
+			<integer>2670</integer>
 		</dict>
 		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
 		<dict>
@@ -7113,6 +7277,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>1800</integer>
 		</dict>
+		<key>F973A136-392C-4EEF-8E36-3276AB9E7891</key>
+		<dict>
+			<key>xpos</key>
+			<integer>840</integer>
+			<key>ypos</key>
+			<integer>1410</integer>
+		</dict>
 		<key>F9D679BA-BFE0-476F-A2FA-75F71A09F74F</key>
 		<dict>
 			<key>xpos</key>
@@ -7155,15 +7326,21 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<string>Open in Google Play|self_scripts/open_in_google_play.py</string>
 		<key>self_script_app_2</key>
 		<string>Open in Exodus|self_scripts/open_in_exodus.py</string>
+		<key>self_script_app_3</key>
+		<string></string>
+		<key>self_script_device_1</key>
+		<string>Toggle Airplane Mode|self_scripts/toggle_airplane_mode.py</string>
+		<key>self_script_device_2</key>
+		<string></string>
+		<key>self_script_device_3</key>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
-		<string>self_script_app_2</string>
 		<string>apksigner_path</string>
 		<string>adb_path</string>
 		<string>emulator_path</string>
 		<string>aapt_path</string>
-		<string>self_script_app_1</string>
 	</array>
 	<key>version</key>
 	<string>1.11.0</string>

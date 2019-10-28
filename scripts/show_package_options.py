@@ -103,6 +103,17 @@ def main(wf):
                         arg="self_script_app_%d" % idx,
                         valid=True)
             it.setvar("self_script_app", config)
+            mod = it.add_modifier("cmd", subtitle="apply cmd modifier")
+            mod.setvar("mod", "cmd")
+            mod = it.add_modifier("alt", subtitle="apply alt modifier")
+            mod.setvar("mod", "alt")
+            mod = it.add_modifier("ctrl", subtitle="apply ctrl modifier")
+            mod.setvar("mod", "ctrl")
+            mod = it.add_modifier("fn", subtitle="apply fn modifier")
+            mod.setvar("mod", "fn")
+            mod = it.add_modifier("shift", subtitle="apply shift modifier")
+            mod.setvar("mod", "shift")
+
             idx = idx + 1
         else:
             idx = -1
