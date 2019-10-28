@@ -64,6 +64,7 @@ What's optional:
 |`config_clipboard`|`1` to copy some outputs to clipboard|
 
 What's customizable:
+
 |Name|Value (example)|
 |--|--|
 |`self_script_app_` + `{number}`|Open in Google Play\|self_scripts/open_in_google_play.py|
@@ -283,7 +284,7 @@ Or you can use "self script" feature to add customizable step for device operati
 For example.
 1. In workflow configuration, add `self_script_app_1` as key and `Open in F-Droid|~/Documents/myscript/open_in_fdroid.py` as value.
 
-2. Now open an apk or select an installed package on device, there will be a new "Open in F-Droid" option.
+2. Now open an apk or select an installed package on device, there will be a new option titled "Open in F-Droid".
 
 3. Once selected, you local script `~/Documents/myscript/open_in_fdroid.py` will be triggered with all existing workflow variables, especially package name in this example.
 
