@@ -91,7 +91,22 @@ def main(wf):
                 valid=True)
     if versionName:
         it.setvar("pretty_version", versionName)
-                
+
+    idx = 1
+    while idx > 0:
+        config = os.getenv('self_script_app_%d' % idx)
+        if config:
+            title = config.split("|")[0]
+            path = config.split("|")[1]
+            it = wf.add_item(title=title,
+                        subtitle="with script: %s" % path,
+                        arg="self_script_app_%d" % idx,
+                        valid=True)
+            it.setvar("self_script_app", config)
+            idx = idx + 1
+        else:
+            idx = -1
+
     wf.send_feedback()
 
 if __name__ == '__main__':
