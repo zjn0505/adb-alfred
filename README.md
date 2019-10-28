@@ -63,6 +63,14 @@ What's optional:
 |`apksigner_path`|~/Library/Android/sdk/build-tools/29.0.2/apksigner|
 |`config_clipboard`|`1` to copy some outputs to clipboard|
 
+What's customizable:
+|Name|Value (example)|
+|--|--|
+|`self_script_app_` + `{number}`|Open in Google Play\|self_scripts/open_in_google_play.py|
+|`self_script_device_` + `{number}`|Toggle Airplane Mode\|self_scripts/toggle_airplane_mode.py|
+
+see  [Self script customization](#self-script-customization)
+
 Features
 ----
 - `adb` to list connected devices
@@ -265,6 +273,24 @@ Full feature list
 |Cold boot an emulator|`avd` + `ctrl`|
 |List installed Genymotion emulators|`geny`|
 </details>
+
+Self script customization
+-----
+If there is some cool feature you used a lot but not included in this workflow.
+You can either add your step, code and link the flow together.
+Or you can use "self script" feature to add customizable step for device operation or apk/app operation.
+
+For example.
+1. In workflow configuration, add `self_script_app_1` as key and `Open in F-Droid|~/Documents/myscript/open_in_fdroid.py` as value.
+
+2. Now open an apk or select an installed package on device, there will be a new "Open in F-Droid" option.
+
+3. Once selected, you local script `~/Documents/myscript/open_in_fdroid.py` will be triggered with all existing workflow variables, especially package name in this example.
+
+4. Ideally, F-Droid webpage of current application will be opened.
+
+5. Unlike the first option, the customized flow in the second will persist across workflow updates.
+
 
 References
 ------
