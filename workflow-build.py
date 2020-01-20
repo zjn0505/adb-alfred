@@ -45,8 +45,6 @@ import string
 import sys
 from unicodedata import normalize
 
-from docopt import docopt
-
 __version__ = "0.5"
 __author__ = "Dean Jackson <deanishe@deanishe.net>"
 
@@ -302,26 +300,16 @@ def main(args=None):
     """Run CLI."""
     # ------------------------------------------------------------
     # CLI flags
-    args = docopt(__doc__, version=__version__)
+
     init_logging()
-
-    if args.get('--verbose'):
-        log.setLevel(logging.INFO)
-    elif args.get('--quiet'):
-        log.setLevel(logging.ERROR)
-    elif args.get('--debug'):
-        log.setLevel(logging.DEBUG)
-    else:
-        log.setLevel(DEFAULT_LOG_LEVEL)
-
+    log.setLevel(logging.DEBUG)
     log.debug('log level=%s', logging.getLevelName(log.level))
-    log.debug('args=%r', args)
+
 
     # Build options
-    dry_run = args['--dry-run']
-    force = args['--force']
-    outputdir = os.path.abspath(args['--output'] or os.curdir)
-    workflow_dirs = [os.path.abspath(p) for p in args['<workflow-dir>']]
+    force = True
+    outputdir = os.path.abspath(os.curdir)
+    workflow_dirs = [os.path.abspath('./')]
     verbose = log.level == logging.DEBUG
 
     log.debug(u'outputdir=%r, workflow_dirs=%r', outputdir, workflow_dirs)
@@ -330,7 +318,7 @@ def main(args=None):
     # Build workflow(s)
     errors = False
     for path in workflow_dirs:
-        ok = build_workflow(path, outputdir, force, verbose, dry_run)
+        ok = build_workflow(path, outputdir, force, verbose)
         if not ok:
             errors = True
 
