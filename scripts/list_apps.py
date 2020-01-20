@@ -13,6 +13,7 @@ def main(wf):
             wf.add_item(title=app,
                     uid=app,
                     arg=app,
+                    copytext=app,
                     valid=True)
 
     wf.send_feedback()
