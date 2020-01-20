@@ -202,6 +202,12 @@ def main(wf):
                     uid="scr_cpy",
                     arg="scr_cpy",
                     valid=True)
+
+        it.setvar("dimension", 0)
+        mod = it.add_modifier("cmd", subtitle="Run with maximum resolution restriction 1024")
+        mod.setvar("dimension", 1024)
+        mod = it.add_modifier("alt", subtitle="Record screen and save to User folder")
+        mod.setvar("record", 1)
         itemCount += 1
 
     # COMMAND HISTORY

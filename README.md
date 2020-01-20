@@ -149,6 +149,8 @@ Features
 |Dump task stacks of first app|`Dump task stacks` + `cmd`|
 |Dump first task stacks|`Dump task stacks` + `option`|
 |Screen copy (real device)|`Screen Copy with scrcpy`|
+|Screen copy with max dimemsion 1024|`Screen Copy with scrcpy` + `cmd`|
+|Screen copy with record screen|`Screen Copy with scrcpy` + `option`|
 
 </details>
 

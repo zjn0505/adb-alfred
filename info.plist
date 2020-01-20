@@ -405,7 +405,17 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</string>
+				<string>D2253896-D365-4CC2-BB8B-3754DAB3D84F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>51936B7D-22F7-4B6F-AFDA-BA5BF6A4709A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -737,6 +747,32 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1BC881D2-3B09-4133-B9A1-13A2827AD580</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>51936B7D-22F7-4B6F-AFDA-BA5BF6A4709A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>53A52C7A-6D94-44D7-833D-56026D9563ED</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1597,6 +1633,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>985042C5-29B2-4311-A6E7-933A0D8EBAB2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A7240891-46F3-41FA-9D04-EAB6ED585E5B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<array>
 			<dict>
@@ -1731,6 +1780,29 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A7240891-46F3-41FA-9D04-EAB6ED585E5B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
 		<array>
 			<dict>
@@ -1762,6 +1834,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>09084E4E-89ED-475D-BAF3-3C5A8815C66F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DCF91C6E-CA02-4E41-A6A8-4C60BAD3948A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1983,6 +2068,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D2253896-D365-4CC2-BB8B-3754DAB3D84F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>53A52C7A-6D94-44D7-833D-56026D9563ED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>985042C5-29B2-4311-A6E7-933A0D8EBAB2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -5878,7 +5986,7 @@ print path</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string>'{query}', {allvars}</string>
+				<string>scrcpy '{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
 				<true/>
 				<key>processoutputs</key>
@@ -5888,6 +5996,43 @@ print path</string>
 			<string>alfred.workflow.utility.debug</string>
 			<key>uid</key>
 			<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:dimension}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>1024</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>53A52C7A-6D94-44D7-833D-56026D9563ED</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:serial}</string>
+				<key>variables</key>
+				<dict>
+					<key>dimension</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5912,7 +6057,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>scrcpy -s {query}</string>
+				<string>scrcpy -s {query} -m {var:dimension}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.terminalcommand</string>
@@ -5977,6 +6122,25 @@ print path</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{var:record}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>D2253896-D365-4CC2-BB8B-3754DAB3D84F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>{var:serial}</string>
 				<key>variables</key>
@@ -5985,7 +6149,78 @@ print path</string>
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</string>
+			<string>A7240891-46F3-41FA-9D04-EAB6ED585E5B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:dimension}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>1024</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>985042C5-29B2-4311-A6E7-933A0D8EBAB2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>scrcpy -s {query} -m 1024 -r ~/{var:timestamp}.mp4</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>DCF91C6E-CA02-4E41-A6A8-4C60BAD3948A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:record}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>51936B7D-22F7-4B6F-AFDA-BA5BF6A4709A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:serial}</string>
+				<key>variables</key>
+				<dict>
+					<key>timestamp</key>
+					<string>device-{time :yyyy-MM-dd-HHmmss}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6445,6 +6680,20 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>310</integer>
 		</dict>
+		<key>51936B7D-22F7-4B6F-AFDA-BA5BF6A4709A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1750</integer>
+			<key>ypos</key>
+			<integer>2640</integer>
+		</dict>
+		<key>53A52C7A-6D94-44D7-833D-56026D9563ED</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1830</integer>
+			<key>ypos</key>
+			<integer>2460</integer>
+		</dict>
 		<key>53C9D27B-FA0D-4E36-BDAC-1A6499D211FB</key>
 		<dict>
 			<key>xpos</key>
@@ -6565,9 +6814,9 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<key>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1870</integer>
+			<integer>2040</integer>
 			<key>ypos</key>
-			<integer>2430</integer>
+			<integer>2420</integer>
 		</dict>
 		<key>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</key>
 		<dict>
@@ -6834,6 +7083,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>1280</integer>
 		</dict>
+		<key>985042C5-29B2-4311-A6E7-933A0D8EBAB2</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1830</integer>
+			<key>ypos</key>
+			<integer>2550</integer>
+		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
 			<key>xpos</key>
@@ -6844,9 +7100,9 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<key>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1830</integer>
+			<integer>1890</integer>
 			<key>ypos</key>
-			<integer>2510</integer>
+			<integer>2460</integer>
 		</dict>
 		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
 		<dict>
@@ -6890,6 +7146,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>2670</integer>
 		</dict>
+		<key>A7240891-46F3-41FA-9D04-EAB6ED585E5B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1890</integer>
+			<key>ypos</key>
+			<integer>2550</integer>
+		</dict>
 		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
 		<dict>
 			<key>xpos</key>
@@ -6921,6 +7184,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>2180</integer>
 			<key>ypos</key>
 			<integer>2170</integer>
+		</dict>
+		<key>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1840</integer>
+			<key>ypos</key>
+			<integer>2640</integer>
 		</dict>
 		<key>AB1BC7DE-EFE7-4132-AF36-4713517586AA</key>
 		<dict>
@@ -7077,6 +7347,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>1330</integer>
 		</dict>
+		<key>D2253896-D365-4CC2-BB8B-3754DAB3D84F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1750</integer>
+			<key>ypos</key>
+			<integer>2510</integer>
+		</dict>
 		<key>D2F900A6-2B55-4594-9D6B-F84C581F901E</key>
 		<dict>
 			<key>note</key>
@@ -7116,6 +7393,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>970</integer>
 		</dict>
+		<key>DCF91C6E-CA02-4E41-A6A8-4C60BAD3948A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1930</integer>
+			<key>ypos</key>
+			<integer>2610</integer>
+		</dict>
 		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
 		<dict>
 			<key>xpos</key>
@@ -7133,7 +7417,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<key>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1925</integer>
+			<integer>2020</integer>
 			<key>ypos</key>
 			<integer>2480</integer>
 		</dict>
@@ -7343,7 +7627,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.12.0</string>
+	<string>1.12.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
