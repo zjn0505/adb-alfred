@@ -36,7 +36,7 @@ These dependencies are included in Android Studio and Android command line tools
 
 Other optional but powerful widgets this workflow uses
 
-- [scrcpy](https://github.com/Genymobile/scrcpy)  - screen mirror, control device from your mac
+- [scrcpy](https://github.com/Genymobile/scrcpy)  - screen mirror, screen recording, control device from your mac
 - [Genymotion](https://www.genymotion.com/) - Genymotion emulators can be listed and launched with adb-alfred
 
 Configurations
@@ -255,6 +255,8 @@ Full feature list
 |Dump task stacks of first app|`adb` -> `Dump task stacks` + `cmd`|
 |Dump first task stacks|`adb` -> `Dump task stacks` + `option`|
 |Screen copy (real device)|`adb` -> `Screen Copy with scrcpy`|
+|Screen copy with max dimemsion 1024|`adb` -> `Screen Copy with scrcpy` + `cmd`|
+|Screen copy with record screen|`adb` -> `Screen Copy with scrcpy` + `option`|
 |Copy package name|`adb` -> `Show apps list` -> `cmd` + `c`|
 |Open app info page|`adb` -> `Show apps list` -> `App info`|
 |Force stop application|`adb` -> `Show apps list` -> `Force stop`|
@@ -284,11 +286,11 @@ You can either add your step, code and link the flow together.
 Or you can use "self script" feature to add customizable step for device operation or apk/app operation.
 
 For example.
-1. In workflow configuration, add `self_script_app_1` as key and `Open in F-Droid|~/Documents/myscript/open_in_fdroid.py` as value.
+1. In workflow configuration, add `self_script_app_1` as key and `Open in F-Droid|Users/username/Documents/myscript/open_in_fdroid.py` as value.
 
 2. Now open an apk or select an installed package on device, there will be a new option titled "Open in F-Droid".
 
-3. Once selected, you local script `~/Documents/myscript/open_in_fdroid.py` will be triggered with all existing workflow variables, especially package name in this example.
+3. Once selected, you local script `Users/username/Documents/myscript/open_in_fdroid.py` will be triggered with all existing workflow variables, especially package name in this example.
 
 4. Ideally, F-Droid webpage of current application will be opened.
 
