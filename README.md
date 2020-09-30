@@ -294,7 +294,11 @@ For example.
 
 4. Ideally, F-Droid webpage of current application will be opened.
 
-5. Unlike the first option, the customized flow in the second will persist across workflow updates.
+5. Unlike the first option to add you own step, the customized flow with self script will be persisted across this workflow updates.
+
+If your self script produces a json data in the format of [script filter](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/), it will populate a alfred list after execution.
+
+Please check [self_scripts](https://github.com/zjn0505/adb-alfred/tree/master/self_scripts) for references.
 
 
 References
