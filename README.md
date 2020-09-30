@@ -281,7 +281,7 @@ Full feature list
 
 Self script customization
 -----
-If there is some cool feature you used a lot but not included in this workflow.
+If there is some cool features you used a lot but not included in this workflow.
 You can either add your step, code and link the flow together.
 Or you can use "self script" feature to add customizable step for device operation or apk/app operation.
 
