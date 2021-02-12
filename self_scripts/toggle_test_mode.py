@@ -17,10 +17,8 @@ for cmd in get_cmds:
               stderr=subprocess.STDOUT,
               shell=True).strip()
   mode = "0.0"
-  state = "false"
   if result == "0.0":
       mode = "1.0"
-      state = "true"
 
 put_window_animation_scale_cmd = "{0} -s {1} shell settings put global window_animation_scale {2}".format(adb_path, serial, mode)
 put_transition_animation_scale_cmd = "{0} -s {1} shell settings put global transition_animation_scale {2}".format(adb_path, serial, mode)
