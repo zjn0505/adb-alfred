@@ -6,10 +6,6 @@ import subprocess
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
 
-get_window_animation_scale_cmd = "adb shell settings get global window_animation_scale"
-get_transition_animation_scale_cmd = "adb shell settings get global transition_animation_scale"
-get_animator_duration_scale_cmd = "adb shell settings get global animator_duration_scale"
-
 get_window_animation_scale_cmd = "{0} -s {1} shell settings get global window_animation_scale".format(adb_path, serial)
 get_transition_animation_scale_cmd = "{0} -s {1} shell settings get global transition_animation_scale".format(adb_path, serial)
 get_animator_duration_scale_cmd = "{0} -s {1} shell settings get global animator_duration_scale".format(adb_path, serial)
@@ -25,10 +21,6 @@ for cmd in get_cmds:
   if result == "0.0":
       mode = "1.0"
       state = "true"
-
-put_window_animation_scale_cmd = "adb shell settings put global window_animation_scale 0.0"
-put_transition_animation_scale_cmd = "adb shell settings put global transition_animation_scale 0.0"
-put_animator_duration_scale_cmd = "adb shell settings put global animator_duration_scale 0.0"
 
 put_window_animation_scale_cmd = "{0} -s {1} shell settings put global window_animation_scale {2}".format(adb_path, serial, mode)
 put_transition_animation_scale_cmd = "{0} -s {1} shell settings put global transition_animation_scale {2}".format(adb_path, serial, mode)
