@@ -161,6 +161,8 @@ def showApkInstallItems():
                     
                     if apk.has_key('max'):
                         it.add_modifier('alt', "maxSdkVersion {0}".format(apk["max"]))
+                    else:
+                        it.add_modifier('alt', "maxSdkVersion not set")
 
                     if apk.has_key('target'):
                         it.add_modifier('ctrl', "targetSdkVersion {0}".format(apk["target"]))
@@ -277,6 +279,7 @@ def main(wf):
                 v1Verified = False
                 v2Verified = False
                 v3Verified = False
+                v4Verified = None
                 error = []
                 signer = []
 
@@ -289,6 +292,8 @@ def main(wf):
                         v2Verified = True
                     elif info.startswith("Verified using v3 scheme") and info.endswith("true"):
                         v3Verified = True
+                    elif info.startswith("Verified using v4 scheme"):
+                        v4Verified = info.endswith("true")
                     elif info.startswith("ERROR"):
                         error.append(info)
 
@@ -312,7 +317,10 @@ def main(wf):
                 title = "Signature " + infos[0]
                 if infos[0] == "Verifies":
                     title = "Signature verified"
-                subtitle = "Scheme V1 {0}, V2 {1}, V3 {2}".format(v1Verified, v2Verified, v3Verified)
+                if v4Verified != None:
+                    subtitle = "Scheme V1 {0}, V2 {1}, V3 {2} V4 {3}".format(v1Verified, v2Verified, v3Verified, v4Verified)
+                else:
+                    subtitle = "Scheme V1 {0}, V2 {1}, V3 {2}".format(v1Verified, v2Verified, v3Verified)
                 if verified:
                     wf.add_item(title=title, subtitle=subtitle, icon=ICON_INFO, valid=False)
                 else:

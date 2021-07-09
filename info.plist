@@ -7774,11 +7774,11 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 	<key>variables</key>
 	<dict>
 		<key>aapt_path</key>
-		<string>~/Library/Android/sdk/build-tools/29.0.2/aapt</string>
+		<string>~/Library/Android/sdk/build-tools/30.0.3/aapt</string>
 		<key>adb_path</key>
 		<string>~/Library/Android/sdk/platform-tools/adb</string>
 		<key>apksigner_path</key>
-		<string>~/Library/Android/sdk/build-tools/29.0.2/apksigner</string>
+		<string>~/Library/Android/sdk/build-tools/30.0.3/apksigner</string>
 		<key>config_clipboard</key>
 		<string>1</string>
 		<key>emulator_path</key>
@@ -7804,7 +7804,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.12.2</string>
+	<string>1.12.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
