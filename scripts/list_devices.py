@@ -121,6 +121,10 @@ def list_devices(args):
                 mod.setvar("last_func", last_func)
                 mod = it.add_modifier("fn", subtitle="show command history", arg="cmd_history")
                 mod.setvar("function", "cmd_history")
+                if len(lastFuncs) > 1:
+                    second_last_func = lastFuncs[len(lastFuncs) - 2]
+                    mod = it.add_modifier("shift", subtitle="run 2nd last command {}".format(second_last_func))
+                    mod.setvar("last_func", second_last_func)
 
     # CONNECT
     if arg and ("connect ".startswith(arg.lower()) or re.match(regexConnect, arg)):
