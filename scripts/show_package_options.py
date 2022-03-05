@@ -82,6 +82,9 @@ def main(wf):
             valid=True)
         
         it.setvar("enabled", enabled)
+        if enabled:
+            mod = it.add_modifier("cmd", subtitle="disable for current user")
+            mod.setvar("mod", "disable_for_current_user")
 
 
     # Get apk file
