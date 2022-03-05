@@ -22,7 +22,7 @@ regexIpInput = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){0,3}([0-9]
 regexConnect = "^connect .*"
 
 def get_property(name=None):
-    infos = run_script(adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'")
+    infos = run_script(adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]\|ro.build.version.incremental]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'")
     infos = infos.rstrip().split('\n')
     return infos
 
@@ -49,13 +49,13 @@ def get_device_items(arg, devices):
         else:
             title = name
             infos = get_property(name)
-            if not infos or len(infos) < 4:
+            if not infos or len(infos) < 6:
                 continue
-            manufacturer = infos[3].title()
-            model = infos[4].title()
+            manufacturer = infos[4].title()
+            model = infos[5].title()
             valid = True
-            subtitle = "%s - %s - Android %s, API %s" % (manufacturer, model, infos[1], infos[2])
-            mod_alt = infos[0]
+            subtitle = "%s - %s - Android %s, API %s" % (manufacturer, model, infos[2], infos[3])
+            mod_alt = "%s - %s" % (infos[0], infos[1])
 
         it = Item(title=title, autocomplete=name, valid=valid, arg=name, subtitle=subtitle)
         it.setvar('status', values[1])
