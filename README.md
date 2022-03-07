@@ -89,6 +89,7 @@ Features
 |Copy device serial to clipboard|`adb` + `cmd` + `c`|
 |Check device system info|`adb` + `option`|
 |Re-run last used command on one device|`adb` + `ctrl`|
+|Re-run second last used command on one device|`adb` + `shift`|
 |Check history commands of one device|`adb` + `fn`|
 |Check wireless connection history|`adb connect`|
 |Clear wireless connection history|`adb connect` + `cmd`|
@@ -172,6 +173,7 @@ Features
 |Uninstall|`Uninstall app`|
 |Uninstall but keep data and cache|`Uninstall app` + `cmd`|
 |Disable/Enable app|`Disable app`/`Enable app`|
+|Disable app for current user|`Disable app` + `cmd`|
 |Get apk file|`Extract apk file`|
 
 </details>
