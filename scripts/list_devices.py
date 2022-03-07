@@ -60,7 +60,7 @@ def get_device_items(arg, devices):
         it = Item(title=title, autocomplete=name, valid=valid, arg=name, subtitle=subtitle)
         it.setvar('status', values[1])
         if valid:
-            it.setvar('device_api', infos[2])
+            it.setvar('device_api', infos[3])
         it.setvar('name', model)
         it.setvar('serial', values[0])
         it.setvar('build_number', mod_alt)
