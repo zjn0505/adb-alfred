@@ -4,7 +4,7 @@ import re
 import pickle
 import ipaddress
 from toolchain import run_script
-from workflow import Workflow3, ICON_INFO
+from workflow import Workflow3
 from workflow.background import run_in_background, is_running
 from item import Item
 import hashlib
@@ -85,7 +85,7 @@ def list_devices(args):
 
     if wifiDevices:
         run_in_background("update_wifi_history",
-                           ['/usr/bin/python',
+                           ['/usr/bin/python3',
                             wf.workflowfile('scripts/update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
         log.error("Save history wifi devices : count : {0}".format(len(wifiDevices)))
     
@@ -136,8 +136,9 @@ def list_devices(args):
         targetIp = arg[8:]
         
         if localIp:
-
-            history = wf.stored_data("wifi_history")
+            log.debug("history " + localIp)
+            history = wf.stored_data("wifi_history_py3")
+            log.debug(history)
             
             counter = 0
             valid = True if re.match("^" + regexIp + "(:|:5|:55|:555|:5555)?$", targetIp) else False
@@ -229,6 +230,5 @@ if __name__ == '__main__':
     if wf.update_available:
         wf.add_item(u'New version available',
                     u'Action this item to install the update',
-                    autocomplete=u'workflow:update',
-                    icon=ICON_INFO)
+                    autocomplete=u'workflow:update')
     sys.exit(wf.run(main))

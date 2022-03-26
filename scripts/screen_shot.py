@@ -22,9 +22,9 @@ try:
 
     local_path = ""
     if mod and mod == "to_desktop":
-		    local_path = "~/Desktop/screenshot_{0}.jpg".format(datetime)
+        local_path = "~/Desktop/screenshot_{0}.jpg".format(datetime)
     else:
-	        local_path = "/tmp/screenshot_{0}.jpg".format(datetime)
+        local_path = "/tmp/screenshot_{0}.jpg".format(datetime)
 	
     if mod and mod == "to_clipboard":
         if call_script(['which', 'osascript']) == 0:
@@ -35,6 +35,6 @@ try:
             run_script("rm {0}".format(local_path))
         print("Screenshot captured to clipboard")
     else:
-		print("Screenshot captured to desktop")
+        print("Screenshot captured to desktop")
 except:
 	print("Failed to capture screenshot")

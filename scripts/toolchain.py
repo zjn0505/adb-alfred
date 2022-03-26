@@ -4,7 +4,7 @@ import sys
 
 def run_script(cmd):
 	sys.stderr.write("\n Execute command: " + cmd + "\n")
-	result = subprocess.check_output(cmd, stderr=subprocess.STDOUT, shell=True).strip()
+	result = subprocess.check_output(cmd, stderr=subprocess.STDOUT, shell=True).strip().decode()
 	sys.stderr.write("\n Result: " + result + "\n")
 	return result
 

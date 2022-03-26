@@ -2686,7 +2686,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/show_device_options.py "{query}"</string>
+				<string>python3 scripts/show_device_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2766,7 +2766,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/reboot_device.py</string>
+				<string>python3 scripts/reboot_device.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -2807,7 +2807,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/list_devices.py "{query}"</string>
+				<string>python3 scripts/list_devices.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2992,7 +2992,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/save_last_func.py</string>
+				<string>python3 scripts/save_last_func.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3115,7 +3115,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/toggle_debug_layout.py</string>
+				<string>python3 scripts/toggle_debug_layout.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3264,7 +3264,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/app_info.py</string>
+				<string>python3 scripts/app_info.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3303,7 +3303,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/list_command_history.py</string>
+				<string>python3 scripts/list_command_history.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3332,7 +3332,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/clear_command_history.py</string>
+				<string>python3 scripts/clear_command_history.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3374,7 +3374,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/toggle_pointer_location.py</string>
+				<string>python3 scripts/toggle_pointer_location.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3467,7 +3467,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/adb_reset.py</string>
+				<string>python3 scripts/adb_reset.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3545,7 +3545,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/force_stop.py</string>
+				<string>python3 scripts/force_stop.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3568,7 +3568,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/toggle_show_taps.py</string>
+				<string>python3 scripts/toggle_show_taps.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3629,7 +3629,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/remove_history.py</string>
+				<string>python3 scripts/remove_history.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3688,7 +3688,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/launch_app.py</string>
+				<string>python3 scripts/launch_app.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3711,7 +3711,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/toggle_gpu_profile.py</string>
+				<string>python3 scripts/toggle_gpu_profile.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3791,7 +3791,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/adb_connect.py</string>
+				<string>python3 scripts/adb_connect.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3850,7 +3850,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/clear_data.py</string>
+				<string>python3 scripts/clear_data.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3873,7 +3873,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/toggle_gpu_overdraw.py</string>
+				<string>python3 scripts/toggle_gpu_overdraw.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3972,7 +3972,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/adb_disconnect.py</string>
+				<string>python3 scripts/adb_disconnect.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4032,7 +4032,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/disable_app.py</string>
+				<string>python3 scripts/disable_app.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4055,7 +4055,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/screen_shot.py</string>
+				<string>python3 scripts/screen_shot.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4203,7 +4203,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/open_settings.py</string>
+				<string>python3 scripts/open_settings.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4226,7 +4226,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/extract_apk.py</string>
+				<string>python3 scripts/extract_apk.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4372,7 +4372,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/list_apks.py $1</string>
+				<string>python3 scripts/list_apks.py $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4435,7 +4435,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/demo_mode.py</string>
+				<string>python3 scripts/demo_mode.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4477,7 +4477,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/uninstall_app.py</string>
+				<string>python3 scripts/uninstall_app.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4630,7 +4630,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/show_install_options.py "{query}"</string>
+				<string>python3 scripts/show_install_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4771,7 +4771,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/adb_wifi.py</string>
+				<string>python3 scripts/adb_wifi.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4959,7 +4959,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/list_apps.py "{query}"</string>
+				<string>python3 scripts/list_apps.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5004,7 +5004,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/show_package_options.py "{query}"</string>
+				<string>python3 scripts/show_package_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5033,7 +5033,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>python scripts/launch_avd.py "{query}"</string>
+				<string>python3 scripts/launch_avd.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5074,7 +5074,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/list_emulators.py "{query}"</string>
+				<string>python3 scripts/list_emulators.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5210,7 +5210,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/install_apk.py</string>
+				<string>python3 scripts/install_apk.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5298,7 +5298,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/show_install_options.py "{query}"</string>
+				<string>python3 scripts/show_install_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5402,7 +5402,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/launch_genymotion.py "$1"</string>
+				<string>python3 scripts/launch_genymotion.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5443,7 +5443,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/list_genymotion.py "{query}"</string>
+				<string>python3 scripts/list_genymotion.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5557,7 +5557,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/dump_stack.py</string>
+				<string>python3 scripts/dump_stack.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5639,7 +5639,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python $1</string>
+				<string>python3 $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5859,7 +5859,7 @@ EOB</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python scripts/show_keyevent_options.py "{query}"</string>
+				<string>python3 scripts/show_keyevent_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5888,7 +5888,7 @@ EOB</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>python scripts/execute_input.py</string>
+				<string>python3 scripts/execute_input.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5997,7 +5997,7 @@ EOB</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/custom_command.py $1</string>
+				<string>python3 scripts/custom_command.py $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -6041,7 +6041,7 @@ EOB</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python scripts/custom_command_convert.py</string>
+				<string>python3 scripts/custom_command_convert.py</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -7804,7 +7804,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.12.3</string>
+	<string>1.13.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
