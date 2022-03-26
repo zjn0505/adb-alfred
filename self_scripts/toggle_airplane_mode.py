@@ -14,7 +14,7 @@ cmd = "{0} -s {1} shell settings get global airplane_mode_on".format(adb_path, s
 
 result = subprocess.check_output(cmd, 
             stderr=subprocess.STDOUT,
-            shell=True).strip()
+            shell=True).strip().decode()
 
 mode = "0"
 state = "false"
@@ -28,6 +28,6 @@ cmd = "{0} -s {1} shell settings put global airplane_mode_on {2} \
 sys.stderr.write(cmd)
 result = subprocess.check_output(cmd, 
     stderr=subprocess.STDOUT,
-    shell=True).strip()
+    shell=True).strip().decode()
     
 print(result)

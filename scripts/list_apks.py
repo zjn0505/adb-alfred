@@ -2,7 +2,6 @@ import subprocess
 import os
 import sys
 from workflow import Workflow3
-from item import Item
 
 def main(wf):
     arg = ""

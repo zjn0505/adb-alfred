@@ -9,7 +9,7 @@ extra = os.getenv('extra')
 def main(wf):
 
 	historyWifiDevices = []
-	history = wf.stored_data("wifi_history")
+	history = wf.stored_data("wifi_history_py3")
 	if history:
 		historyWifiDevices = pickle.loads(history)
 		if extra == "all":

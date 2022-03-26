@@ -1,19 +1,16 @@
 import subprocess
 import sys
-from workflow import Workflow3, ICON_INFO
+from workflow import Workflow3
+from toolchain import run_script
 
 
 def list_genymotion():
     arg = wf.args[0].strip()
     shell_cmd = "/usr/local/bin/VBoxManage list vms -l | grep '^Name:\|Hardware UUID:\|Log folder:' | tr -s ' '"
-    sys.stderr.write(shell_cmd + "\n")
-    result = subprocess.check_output(shell_cmd,
-                    stderr=subprocess.STDOUT,
-                    shell=True)
-    sys.stderr.write(result + "\n")
+    result = run_script(shell_cmd)
     array = result.strip().split('\n')
 
-    size = len(array) / 3
+    size = len(array) // 3
 
     for item in range(size):
         index = item * 3
@@ -36,6 +33,5 @@ if __name__ == '__main__':
     if wf.update_available:
         wf.add_item(u'New version available',
                     u'Action this item to install the update',
-                    autocomplete=u'workflow:update',
-                    icon=ICON_INFO)
+                    autocomplete=u'workflow:update')
     sys.exit(wf.run(main))

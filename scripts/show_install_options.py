@@ -3,10 +3,8 @@ import os
 import sys
 import re
 import pipes
-from workflow import Workflow3, ICON_WARNING, ICON_INFO, ICON_ERROR, web
- 
-reload(sys)
-sys.setdefaultencoding("utf-8")
+from workflow import Workflow3, ICON_INFO, ICON_ERROR, ICON_WARNING
+from toolchain import run_script
 
 adb_path = os.getenv('adb_path')
 aapt_path = os.getenv('aapt_path')
@@ -62,6 +60,7 @@ def showApkInstallItems():
 
     arg = wf.args[0].strip()
 
+    log.debug("Path {0}".format(apkFileOrFolder))
     apk = None
     if not aapt_path:
         head, tail = os.path.split(apkFileOrFolder)
@@ -69,10 +68,8 @@ def showApkInstallItems():
         wf.add_item(title="aapt not found", subtitle="Please config 'aapt_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
     else:
         cmd = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkFileOrFolder)
-        result = subprocess.check_output(cmd, 
-            stderr=subprocess.STDOUT,
-            shell=True)
-        log.debug(cmd)
+        result = run_script(cmd)
+
         if result:
             log.debug(result)
             infos = result.rstrip().split('\n')
@@ -101,7 +98,7 @@ def showApkInstallItems():
                     log.debug(set(permissions) & set(dangerousPermissions))
                     hasDangerousPermission = True
 
-                if not apk.has_key('label'):
+                if "label" not in apk:
                     apk["label"] = ""
 
                 log.debug(apk)
@@ -118,9 +115,9 @@ def showApkInstallItems():
                         elif info.startswith("versionName="):
                             apk["versionName"] = info.split("'")[1]
 
-                    if deviceApi and apk.has_key("min") and deviceApi < apk["min"]:
+                    if deviceApi and "min" in apk and deviceApi < apk["min"]:
                         validApkByApiCheck = False
-                    if deviceApi and apk.has_key("max") and deviceApi > apk["maxs"]:
+                    if deviceApi and "max" in apk and deviceApi > apk["maxs"]:
                         validApkByApiCheck = False
 
                     currentApkResult = ""
@@ -130,7 +127,7 @@ def showApkInstallItems():
                         shell_cmd = "{0} -s {1} shell dumpsys package {2} | grep 'versionCode\|versionName' | awk '{{print $1}}'".format(adb_path, serial, apk["packName"])
 
                         try:
-                            currentApkResult = subprocess.check_output(shell_cmd, stderr=subprocess.STDOUT, shell=True)
+                            currentApkResult = run_script(shell_cmd)
                         except subprocess.CalledProcessError as e:
                             log.debug(e)
 
@@ -156,15 +153,15 @@ def showApkInstallItems():
 
                     it.setvar('option', installOptions)
 
-                    if apk.has_key('min'):
+                    if "min" in apk:
                         it.add_modifier('cmd', "minSdkVersion {0}".format(apk["min"]))
                     
-                    if apk.has_key('max'):
+                    if "max" in apk:
                         it.add_modifier('alt', "maxSdkVersion {0}".format(apk["max"]))
                     else:
                         it.add_modifier('alt', "maxSdkVersion not set")
 
-                    if apk.has_key('target'):
+                    if "target" in apk:
                         it.add_modifier('ctrl', "targetSdkVersion {0}".format(apk["target"]))
 
                     if currentVersionCode:    
@@ -178,9 +175,9 @@ def showApkInstallItems():
                         wf.setvar("version_name", apk["versionName"])
                         wf.setvar("app_name", apk['label'])
 
-                    if deviceApi and apk.has_key("min") and deviceApi < apk["min"]:
+                    if deviceApi and "min" in apk and deviceApi < apk["min"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, lower than apk minSdkVersion {0}, ".format(deviceApi, apk["min"]), icon=ICON_ERROR, valid=False)
-                    if deviceApi and apk.has_key("max") and deviceApi > apk["maxs"]:
+                    if deviceApi and "max" in apk and deviceApi > apk["maxs"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, higher than apk maxSdkVersion {0}, ".format(deviceApi, apk["max"]), icon=ICON_ERROR, valid=False)
 
 
@@ -201,7 +198,6 @@ def showFolerInstallItems():
     return apkFilesAll, apkFileDirect
     
 def main(wf):
-        
     global needsTestFlag
     global needsDowngradeFlag
     global hasDangerousPermission
@@ -266,13 +262,11 @@ def main(wf):
             result = ""
             verified = False
             try:
-                result = subprocess.check_output(cmd, 
-                    stderr=subprocess.STDOUT,
-                    shell=True)
+                result = run_script(cmd)
                 verified = True
             except subprocess.CalledProcessError as exc:
                 log.error("Not verified")
-                result = exc.output
+                result = exc.output.decode('utf8')
             if result:
                 log.debug(result)
                 infos = result.rstrip().split('\n')

@@ -16,7 +16,7 @@ def main(wf):
         items = pickle.loads(sys.argv[2])
 
         historyWifiDevices = []
-        history = wf.stored_data("wifi_history")
+        history = wf.stored_data("wifi_history_py3")
         if history:
             historyWifiDevices = pickle.loads(history)
 
@@ -34,7 +34,7 @@ def main(wf):
                     cmd_ip = adb_path + ' -s ' + item.variables['serial'] + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
                     ip = subprocess.check_output(cmd_ip,
                                         stderr=subprocess.STDOUT,
-                                        shell=True)
+                                        shell=True).decode()
                     if ip:
                         item.mask = ip.split('/')[1].split("\n")[0]
                 historyWifiDevices.append(item)
