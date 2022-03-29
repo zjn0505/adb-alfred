@@ -48,7 +48,7 @@ def get_device_items(arg, devices):
             title = name + " [CONNECTING]"
         else:
             title = name
-            infos = get_property(name)
+            infos = wf.cached_data("{0}-property".format(name), lambda: get_property(name), max_age=600)
             if not infos or len(infos) < 6:
                 continue
             manufacturer = infos[4].title()
