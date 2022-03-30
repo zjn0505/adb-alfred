@@ -8,8 +8,9 @@ def main(wf):
     apps = run_script(CMD_LIST_APPS)
     apps = apps.rstrip().split('\n')
 
+    log.debug(arg)
     for app in apps:
-        if arg is '' or arg in app:
+        if arg is '' or any(x.isupper() for x in arg) and arg in app or arg.islower() and arg in app.lower():
             wf.add_item(title=app,
                     uid=app,
                     arg=app,
