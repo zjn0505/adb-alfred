@@ -192,12 +192,12 @@ def main(wf):
 
     # Screen Copy with scrcpy
     title = "Screen Copy with scrcpy"
+    log.debug("Screen Copy with scrcpy")
     try:
-        rc = subprocess.call(['/usr/local/bin/scrcpy', '-v'])
+        rc = subprocess.check_output(['/usr/local/bin/scrcpy', '-v'])
     except OSError:
         rc = -1
-    log.debug(rc)
-    if rc == 0 and (addAll or wordMatch(arg, title)) and not isEmulator:
+    if rc != -1 and (addAll or wordMatch(arg, title)) and not isEmulator:
         it = wf.add_item(title=title,
                     uid="scr_cpy",
                     arg="scr_cpy",
@@ -209,6 +209,7 @@ def main(wf):
         mod = it.add_modifier("alt", subtitle="Record screen and save to User folder")
         mod.setvar("record", 1)
         itemCount += 1
+    log.debug(rc)
 
     # COMMAND HISTORY
     title = "Command history"
