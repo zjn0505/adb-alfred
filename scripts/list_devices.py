@@ -24,6 +24,7 @@ regexConnect = "^connect .*"
 def get_property(name=None):
     infos = run_script(adb_path + " -s " + name + " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]\|ro.build.version.incremental]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'")
     infos = infos.rstrip().split('\n')
+    log.debug("getprop result for {0}: {1}".format(name, infos))
     return infos
 
 def get_device_items(arg, devices):
@@ -46,10 +47,14 @@ def get_device_items(arg, devices):
             title = name + " [OFFLINE]"
         elif values[1] == 'connecting':
             title = name + " [CONNECTING]"
+        elif values[1] == 'authorizing':
+            title = name + " [AUTHORIZING]"
         else:
             title = name
             infos = wf.cached_data("{0}-property".format(name), lambda: get_property(name), max_age=600)
             if not infos or len(infos) < 6:
+                log.error("Info length {0}, infos: {1}".format(len(infos), infos))
+                wf.clear_cache(lambda f: f == "{0}-property.pickle".format(name))
                 continue
             manufacturer = infos[4].title()
             model = infos[5].title()
@@ -80,7 +85,7 @@ def list_devices(args):
 
     devices = run_script(adb_path + " devices -l | sed -n '1!p' | tr -s ' '")
     devices = devices.rstrip().split('\n')
-
+    log.debug("{} adb device(s) found".format(len(devices)))
     items, wifiDevices = get_device_items(arg, devices)
 
     if wifiDevices:
