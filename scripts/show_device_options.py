@@ -144,7 +144,7 @@ def main(wf):
     # REBOOT SYSTEM
     title = "Reboot system"
 
-    if addAll or wordMatch(arg, title):
+    if addAll or wordMatch(arg, title) or wordMatch(arg, "restart"):
         it = wf.add_item(title=title,
                     uid="adb_reboot",
                     arg="adb_reboot",
@@ -196,7 +196,12 @@ def main(wf):
     try:
         rc = subprocess.check_output(['/usr/local/bin/scrcpy', '-v'])
     except OSError:
-        rc = -1
+        log.error("OS error 1")
+        try:
+            rc = subprocess.check_output(['/opt/homebrew/bin/scrcpy', '-v'])
+        except OSError:
+            log.error("OS error 2")
+            rc = -1
     if rc != -1 and (addAll or wordMatch(arg, title)) and not isEmulator:
         it = wf.add_item(title=title,
                     uid="scr_cpy",
