@@ -424,6 +424,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>2228943F-B964-46CD-9512-1CD8D213EE1F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
 		<array>
 			<dict>
@@ -529,6 +542,16 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1697,6 +1720,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>2228943F-B964-46CD-9512-1CD8D213EE1F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1707,7 +1740,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</string>
+				<string>B5BA12A7-6B77-4680-B60A-21CF55C78A53</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1808,7 +1841,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
+				<string>2228943F-B964-46CD-9512-1CD8D213EE1F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1818,7 +1851,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</string>
+				<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1940,6 +1973,19 @@
 		</array>
 		<key>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</key>
 		<array/>
+		<key>B5BA12A7-6B77-4680-B60A-21CF55C78A53</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E536E77-0D6C-4EFF-90AE-E16A453A708C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<array>
 			<dict>
@@ -2117,7 +2163,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>53A52C7A-6D94-44D7-833D-56026D9563ED</string>
+				<string>985042C5-29B2-4311-A6E7-933A0D8EBAB2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2127,7 +2173,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>985042C5-29B2-4311-A6E7-933A0D8EBAB2</string>
+				<string>53A52C7A-6D94-44D7-833D-56026D9563ED</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2669,6 +2715,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -2705,7 +2753,7 @@
 			<key>uid</key>
 			<string>86E0AE80-E859-4D5D-B15B-D8631B27C24D</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2788,6 +2836,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -2826,7 +2876,7 @@
 			<key>uid</key>
 			<string>6CC71670-241E-4E01-ADC6-0EA61C4D238C</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -2879,6 +2929,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>serial</key>
@@ -2914,6 +2966,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{var:function}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>function</key>
@@ -3072,9 +3126,11 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>0</integer>
+				<integer>-1</integer>
 				<key>hotmod</key>
-				<integer>0</integer>
+				<integer>524288</integer>
+				<key>hotstring</key>
+				<string>double tap</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -3094,6 +3150,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{var:function}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>function</key>
@@ -3173,6 +3231,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>function</key>
@@ -3208,6 +3268,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{var:last_func}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -3286,6 +3348,8 @@
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -3322,7 +3386,7 @@
 			<key>uid</key>
 			<string>155750E3-45FB-464D-92EC-5A2D40E6EE50</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -3430,6 +3494,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -3903,7 +3969,7 @@
 			<key>uid</key>
 			<string>09888B11-904A-4B29-BC71-E743740A9A19</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4011,6 +4077,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>func_pack</key>
@@ -4113,6 +4181,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>time</key>
@@ -4185,6 +4255,10 @@
 				<integer>1</integer>
 				<key>matchstring</key>
 				<string>^.*?:</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
 				<key>replacestring</key>
 				<string></string>
 			</dict>
@@ -4193,7 +4267,7 @@
 			<key>uid</key>
 			<string>A429E820-14E4-4E2B-8466-EEECD42BD4AA</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4297,6 +4371,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{var:func_pack}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>package</key>
@@ -4353,6 +4429,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -4391,7 +4469,7 @@
 			<key>uid</key>
 			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4417,6 +4495,10 @@
 				<integer>1</integer>
 				<key>matchstring</key>
 				<string>:.*?$</string>
+				<key>regexcaseinsensitive</key>
+				<false/>
+				<key>regexmultiline</key>
+				<false/>
 				<key>replacestring</key>
 				<string></string>
 			</dict>
@@ -4425,7 +4507,7 @@
 			<key>uid</key>
 			<string>97D46C32-564A-4D98-A740-81706B950CA4</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4584,10 +4666,14 @@
 				<false/>
 				<key>keyword</key>
 				<string>apk</string>
+				<key>limit</key>
+				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
 				<array/>
+				<key>sortmode</key>
+				<integer>0</integer>
 				<key>subtext</key>
 				<string>Input the file name of APK</string>
 				<key>title</key>
@@ -4604,7 +4690,7 @@
 			<key>uid</key>
 			<string>3359B203-2E42-4A93-B948-DD5840AD2204</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4613,6 +4699,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -4649,7 +4737,7 @@
 			<key>uid</key>
 			<string>0FC0C2BA-6944-4D39-906C-9662D9AC3CB9</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4675,6 +4763,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{var:func}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>package</key>
@@ -4693,6 +4783,8 @@
 			<dict>
 				<key>argument</key>
 				<string>{var:package}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>function</key>
@@ -4711,6 +4803,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>apkFile</key>
@@ -4750,6 +4844,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>apkFile</key>
@@ -4810,6 +4906,8 @@
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -4941,7 +5039,9 @@ print path</string>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -4978,7 +5078,7 @@ print path</string>
 			<key>uid</key>
 			<string>F469FFED-AC36-4B5D-B761-A5C784037E38</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4987,6 +5087,8 @@ print path</string>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5023,7 +5125,7 @@ print path</string>
 			<key>uid</key>
 			<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5055,6 +5157,8 @@ print path</string>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5093,7 +5197,7 @@ print path</string>
 			<key>uid</key>
 			<string>8AD63E6A-3E8B-46BD-AD8B-D4DE2C7684E3</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5119,6 +5223,8 @@ print path</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>package</key>
@@ -5156,6 +5262,8 @@ print path</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -5281,6 +5389,8 @@ print path</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5317,7 +5427,7 @@ print path</string>
 			<key>uid</key>
 			<string>0461824C-6237-42B9-9882-BEC93329153D</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5371,10 +5481,14 @@ print path</string>
 				</array>
 				<key>includesystem</key>
 				<false/>
+				<key>limit</key>
+				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>scopes</key>
 				<array/>
+				<key>sortmode</key>
+				<integer>0</integer>
 				<key>subtext</key>
 				<string>or folder name for batch installation</string>
 				<key>title</key>
@@ -5392,7 +5506,7 @@ print path</string>
 			<key>uid</key>
 			<string>3E9B3C3E-8DF7-41E9-8D66-FCE678F91D4C</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5424,6 +5538,8 @@ print path</string>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5462,13 +5578,15 @@ print path</string>
 			<key>uid</key>
 			<string>CB2093F8-E6AB-4654-8F94-7FDA91C624AB</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>apkFile</key>
@@ -5487,6 +5605,8 @@ print path</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -5523,6 +5643,8 @@ print path</string>
 				<false/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
 				<key>transient</key>
 				<false/>
 			</dict>
@@ -5531,7 +5653,7 @@ print path</string>
 			<key>uid</key>
 			<string>C38782A7-0016-44BC-94F8-B6EC35107210</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5540,6 +5662,8 @@ print path</string>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5576,7 +5700,7 @@ print path</string>
 			<key>uid</key>
 			<string>E65C40C2-C240-4D08-8CB7-7F7B3CF0F84E</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5621,6 +5745,8 @@ print path</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -5661,6 +5787,8 @@ print path</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5699,7 +5827,7 @@ EOB</string>
 			<key>uid</key>
 			<string>CB5FFDF0-7BC2-4D5E-94A1-98073B517B6C</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5723,6 +5851,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>json</key>
@@ -5842,6 +5972,8 @@ EOB</string>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -5878,7 +6010,7 @@ EOB</string>
 			<key>uid</key>
 			<string>2568CA4E-55DB-4F9B-B8E4-DF6AF5F97D40</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -5927,6 +6059,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>key</key>
@@ -5945,6 +6079,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -6080,6 +6216,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>cmd</key>
@@ -6132,60 +6270,6 @@ EOB</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>scrcpy '{query}', {allvars}</string>
-				<key>cleardebuggertext</key>
-				<true/>
-				<key>processoutputs</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.debug</string>
-			<key>uid</key>
-			<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:dimension}</string>
-				<key>matchcasesensitive</key>
-				<true/>
-				<key>matchmode</key>
-				<integer>1</integer>
-				<key>matchstring</key>
-				<string>1024</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>53A52C7A-6D94-44D7-833D-56026D9563ED</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:serial}</string>
-				<key>variables</key>
-				<dict>
-					<key>dimension</key>
-					<string>0</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -6195,21 +6279,6 @@ EOB</string>
 			<string>alfred.workflow.action.terminalcommand</string>
 			<key>uid</key>
 			<string>5DCDC4BC-FEBF-44E3-A428-BCB6C66092E5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>scrcpy -s {query} -m {var:dimension}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.terminalcommand</string>
-			<key>uid</key>
-			<string>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6237,6 +6306,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string>{var:adb_path} -s {var:serial} {var:cmd}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -6244,6 +6315,23 @@ EOB</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>7E37DE51-4178-4C89-9357-09981E6E9678</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:serial}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A7240891-46F3-41FA-9D04-EAB6ED585E5B</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6288,21 +6376,6 @@ EOB</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string>{var:serial}</string>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>A7240891-46F3-41FA-9D04-EAB6ED585E5B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>inputstring</key>
 				<string>{var:dimension}</string>
 				<key>matchcasesensitive</key>
@@ -6316,6 +6389,149 @@ EOB</string>
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>985042C5-29B2-4311-A6E7-933A0D8EBAB2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>scrcpy -s {query} -m {var:dimension}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:crop}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>2228943F-B964-46CD-9512-1CD8D213EE1F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:dimension}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>1024</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>53A52C7A-6D94-44D7-833D-56026D9563ED</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>scrcpy '{query}', {allvars}</string>
+				<key>cleardebuggertext</key>
+				<true/>
+				<key>processoutputs</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.debug</string>
+			<key>uid</key>
+			<string>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:serial}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>dimension</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>9EED7350-35F9-467C-AC6D-F6BDF095AF5D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>scrcpy -s {query} -m {var:dimension} --crop {var:crop}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.terminalcommand</string>
+			<key>uid</key>
+			<string>1E536E77-0D6C-4EFF-90AE-E16A453A708C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^self_script_device</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>A5C2BE7D-1D18-41E6-9C13-8D9E6B5E73E9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:crop}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>B5BA12A7-6B77-4680-B60A-21CF55C78A53</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6358,6 +6574,8 @@ EOB</string>
 			<dict>
 				<key>argument</key>
 				<string>{var:serial}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>timestamp</key>
@@ -6368,25 +6586,6 @@ EOB</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>^self_script_device</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>A5C2BE7D-1D18-41E6-9C13-8D9E6B5E73E9</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6601,6 +6800,15 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>940</integer>
 		</dict>
+		<key>1E536E77-0D6C-4EFF-90AE-E16A453A708C</key>
+		<dict>
+			<key>note</key>
+			<string>Scrcpy - crop</string>
+			<key>xpos</key>
+			<integer>2050</integer>
+			<key>ypos</key>
+			<integer>2665</integer>
+		</dict>
 		<key>208A6634-44C3-447D-BDE7-FF37725783FA</key>
 		<dict>
 			<key>note</key>
@@ -6616,6 +6824,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>1670</integer>
 			<key>ypos</key>
 			<integer>2510</integer>
+		</dict>
+		<key>2228943F-B964-46CD-9512-1CD8D213EE1F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1990</integer>
+			<key>ypos</key>
+			<integer>2550</integer>
 		</dict>
 		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
 		<dict>
@@ -6839,14 +7054,14 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>1750</integer>
 			<key>ypos</key>
-			<integer>2640</integer>
+			<integer>2840</integer>
 		</dict>
 		<key>53A52C7A-6D94-44D7-833D-56026D9563ED</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>2460</integer>
+			<integer>2620</integer>
 		</dict>
 		<key>53C9D27B-FA0D-4E36-BDAC-1A6499D211FB</key>
 		<dict>
@@ -6968,9 +7183,9 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<key>6E8E9373-EB2A-4B0F-B487-78FBE3D33686</key>
 		<dict>
 			<key>xpos</key>
-			<integer>2040</integer>
+			<integer>1990</integer>
 			<key>ypos</key>
-			<integer>2420</integer>
+			<integer>2620</integer>
 		</dict>
 		<key>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</key>
 		<dict>
@@ -7242,7 +7457,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>1830</integer>
 			<key>ypos</key>
-			<integer>2550</integer>
+			<integer>2510</integer>
 		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
@@ -7256,7 +7471,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>1890</integer>
 			<key>ypos</key>
-			<integer>2460</integer>
+			<integer>2620</integer>
 		</dict>
 		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
 		<dict>
@@ -7305,7 +7520,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>1890</integer>
 			<key>ypos</key>
-			<integer>2550</integer>
+			<integer>2510</integer>
 		</dict>
 		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
 		<dict>
@@ -7342,9 +7557,9 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<key>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1840</integer>
+			<integer>1890</integer>
 			<key>ypos</key>
-			<integer>2640</integer>
+			<integer>2840</integer>
 		</dict>
 		<key>AB1BC7DE-EFE7-4132-AF36-4713517586AA</key>
 		<dict>
@@ -7393,6 +7608,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>580</integer>
 			<key>ypos</key>
 			<integer>1520</integer>
+		</dict>
+		<key>B5BA12A7-6B77-4680-B60A-21CF55C78A53</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1990</integer>
+			<key>ypos</key>
+			<integer>2695</integer>
 		</dict>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<dict>
@@ -7565,10 +7787,12 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		</dict>
 		<key>DCF91C6E-CA02-4E41-A6A8-4C60BAD3948A</key>
 		<dict>
+			<key>note</key>
+			<string>Scrcpy - record</string>
 			<key>xpos</key>
-			<integer>1930</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2610</integer>
+			<integer>2810</integer>
 		</dict>
 		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
 		<dict>
@@ -7586,10 +7810,12 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		</dict>
 		<key>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</key>
 		<dict>
+			<key>note</key>
+			<string>Scrcpy</string>
 			<key>xpos</key>
-			<integer>2020</integer>
+			<integer>2050</integer>
 			<key>ypos</key>
-			<integer>2480</integer>
+			<integer>2520</integer>
 		</dict>
 		<key>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</key>
 		<dict>
@@ -7774,11 +8000,11 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 	<key>variables</key>
 	<dict>
 		<key>aapt_path</key>
-		<string>~/Library/Android/sdk/build-tools/30.0.3/aapt</string>
+		<string>~/Library/Android/sdk/build-tools/31.0.0/aapt</string>
 		<key>adb_path</key>
 		<string>~/Library/Android/sdk/platform-tools/adb</string>
 		<key>apksigner_path</key>
-		<string>~/Library/Android/sdk/build-tools/30.0.3/apksigner</string>
+		<string>~/Library/Android/sdk/build-tools/31.0.0/apksigner</string>
 		<key>config_clipboard</key>
 		<string>1</string>
 		<key>emulator_path</key>

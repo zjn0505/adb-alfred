@@ -213,6 +213,10 @@ def main(wf):
         mod.setvar("dimension", 1024)
         mod = it.add_modifier("alt", subtitle="Record screen and save to User folder")
         mod.setvar("record", 1)
+        log.debug("Manufacturer {0}".format(os.getenv("ro.product.manufacturer")))
+        if os.getenv("ro.product.manufacturer") == "Oculus" and os.getenv("name") == "Quest 2":
+            mod = it.add_modifier("ctrl", subtitle="Quest 2 - Mirror one eye")
+            mod.setvar("crop", "1832:1920:0:0")
         itemCount += 1
     log.debug(rc)
 

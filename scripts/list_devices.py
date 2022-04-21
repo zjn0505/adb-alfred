@@ -66,6 +66,7 @@ def get_device_items(arg, devices):
         it.setvar('status', values[1])
         if valid:
             it.setvar('device_api', infos[3])
+            it.setvar('ro.product.manufacturer', manufacturer)
         it.setvar('name', model)
         it.setvar('serial', values[0])
         it.setvar('build_number', mod_alt)
@@ -103,6 +104,7 @@ def list_devices(args):
             it.setvar('full_info', item.subtitle)
             if item.valid:
                 it.setvar('device_api', item.get('device_api'))
+                it.setvar('ro.product.manufacturer', item.get('ro.product.manufacturer'))
             it.setvar("serial", name)
             it.setvar('name', item.get('name'))
             if item.subtitle and not re.match(regexIp + ":5555", name):
