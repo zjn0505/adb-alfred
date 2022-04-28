@@ -107,7 +107,8 @@ def list_devices(args):
                 it.setvar('ro.product.manufacturer', item.get('ro.product.manufacturer'))
             it.setvar("serial", name)
             it.setvar('name', item.get('name'))
-            if item.subtitle and not re.match(regexIp + ":5555", name):
+            if item.subtitle and not re.match(regexIp + ":5555", name) and not name.startswith("emulator-"):
+            # if item.subtitle and not re.match(regexIp + ":5555", name):
                 cmd_ip = adb_path + ' -s ' + name + " shell ip -f inet addr show wlan0 | grep inet | tr -s ' ' |  awk '{print $2}'"
                 ip = run_script(cmd_ip)
                 if '/' in ip and re.match(regexIp, ip.split('/')[0]):
@@ -118,7 +119,8 @@ def list_devices(args):
 
             # last func
             if name.startswith("emulator-"):
-                name = hashlib.md5(item.subtitle).hexdigest()
+                log.debug(item.subtitle)
+                name = hashlib.md5(item.subtitle.encode("utf-8")).hexdigest()
             it.setvar("his_tag", name)
             lastFuncs = wf.cached_data('last_func:' + name, max_age=0)
             if lastFuncs and len(lastFuncs) > 0:

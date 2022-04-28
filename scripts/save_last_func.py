@@ -1,7 +1,5 @@
 import os
 import sys
-import pickle
-import hashlib
 from workflow import Workflow3
 
 function = os.getenv("function")
