@@ -2074,6 +2074,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C4BFE506-D83A-4933-96A8-42228EC98C25</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>C6A84CEC-A533-4892-A67F-8D01904475E4</key>
 		<array>
 			<dict>
@@ -2429,6 +2442,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>C4BFE506-D83A-4933-96A8-42228EC98C25</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>16B1106B-C18C-423A-A5AE-BE8676769C18</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -2684,6 +2707,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FA3DC615-5F82-4781-AA59-C59B8BE51488</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>ED7185EE-E248-4535-AB02-D48AFC8196B4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
 		<array>
 			<dict>
@@ -2734,7 +2770,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/show_device_options.py "{query}"</string>
+				<string>python3 show_device_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -2814,7 +2850,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/reboot_device.py</string>
+				<string>python3 reboot_device.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -2857,7 +2893,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/list_devices.py "{query}"</string>
+				<string>python3 list_devices.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -3046,7 +3082,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/save_last_func.py</string>
+				<string>python3 save_last_func.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3173,7 +3209,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/toggle_debug_layout.py</string>
+				<string>python3 toggle_debug_layout.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3326,7 +3362,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/app_info.py</string>
+				<string>python3 app_info.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3367,7 +3403,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/list_command_history.py</string>
+				<string>python3 list_command_history.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3396,7 +3432,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/clear_command_history.py</string>
+				<string>python3 clear_command_history.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3438,7 +3474,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/toggle_pointer_location.py</string>
+				<string>python3 toggle_pointer_location.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3533,7 +3569,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/adb_reset.py</string>
+				<string>python3 adb_reset.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3611,7 +3647,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/force_stop.py</string>
+				<string>python3 force_stop.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3634,7 +3670,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/toggle_show_taps.py</string>
+				<string>python3 toggle_show_taps.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3695,7 +3731,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/remove_history.py</string>
+				<string>python3 remove_history.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3754,7 +3790,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/launch_app.py</string>
+				<string>python3 launch_app.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3777,7 +3813,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/toggle_gpu_profile.py</string>
+				<string>python3 toggle_gpu_profile.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3857,7 +3893,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/adb_connect.py</string>
+				<string>python3 adb_connect.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3916,7 +3952,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/clear_data.py</string>
+				<string>python3 clear_data.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -3939,7 +3975,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/toggle_gpu_overdraw.py</string>
+				<string>python3 toggle_gpu_overdraw.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4038,7 +4074,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/adb_disconnect.py</string>
+				<string>python3 adb_disconnect.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4095,12 +4131,47 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>focused_app</string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>524288</integer>
+				<key>hotstring</key>
+				<string>A</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>B986FEEE-E650-46C7-9C86-6DF90497F864</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/disable_app.py</string>
+				<string>python3 disable_app.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4123,7 +4194,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/screen_shot.py</string>
+				<string>python3 screen_shot.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4179,6 +4250,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>.*.apk$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>D3E26F07-2D48-4A3E-881F-0C63876FE144</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -4193,58 +4283,6 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>91DBE388-01F6-45EE-A1E7-3A64000857CB</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>focusedappvariable</key>
-				<true/>
-				<key>focusedappvariablename</key>
-				<string>focused_app</string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedApps</key>
-				<array>
-					<string>com.apple.finder</string>
-				</array>
-				<key>relatedAppsMode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>B986FEEE-E650-46C7-9C86-6DF90497F864</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>.*.apk$</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>D3E26F07-2D48-4A3E-881F-0C63876FE144</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -4277,7 +4315,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/open_settings.py</string>
+				<string>python3 open_settings.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4295,12 +4333,61 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>apkf</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 list_apks.py $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/extract_apk.py</string>
+				<string>python3 extract_apk.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4425,55 +4512,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>keyword</key>
-				<string>apkf</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>python3 scripts/list_apks.py $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>15 '{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -4517,7 +4555,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/demo_mode.py</string>
+				<string>python3 demo_mode.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4559,7 +4597,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/uninstall_app.py</string>
+				<string>python3 uninstall_app.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4573,44 +4611,6 @@
 			<string>873C7D72-9821-4192-9962-D46D7E2B3D5E</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{var:function}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>^uninstall_app(:.*)?</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>adb</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>self</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
-			<key>uid</key>
-			<string>F9D679BA-BFE0-476F-A2FA-75F71A09F74F</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4695,6 +4695,44 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^uninstall_app(:.*)?</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>0501E974-BEAD-46A7-8183-1ACA16FA8FE7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>adb</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>F9D679BA-BFE0-476F-A2FA-75F71A09F74F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -4718,7 +4756,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/show_install_options.py "{query}"</string>
+				<string>python3 show_install_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -4867,7 +4905,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/adb_wifi.py</string>
+				<string>python3 adb_wifi.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -4881,6 +4919,25 @@
 			<string>4204602D-966C-4A9A-A398-EF35B429CF6D</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>filetypes</key>
+				<array>
+					<string>dyn.ah62d4rv4ge80c6dp</string>
+				</array>
+				<key>name</key>
+				<string>Show apk info</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>FA3DC615-5F82-4781-AA59-C59B8BE51488</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -4926,20 +4983,13 @@
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
-				<string>import sys
-import os
-
-function = os.getenv('function')
-config = os.getenv(function)
-path = config.split("|")[1]
-
-print path</string>
+				<string>python3 self_scripts/runner.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>3</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -5059,7 +5109,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/list_apps.py "{query}"</string>
+				<string>python3 list_apps.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5106,7 +5156,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/show_package_options.py "{query}"</string>
+				<string>python3 show_package_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5135,7 +5185,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>python3 scripts/launch_avd.py "{query}"</string>
+				<string>python3 launch_avd.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5178,7 +5228,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/list_emulators.py "{query}"</string>
+				<string>python3 list_emulators.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5318,7 +5368,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/install_apk.py</string>
+				<string>python3 install_apk.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5408,7 +5458,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/show_install_options.py "{query}"</string>
+				<string>python3 show_install_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5516,7 +5566,7 @@ print path</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/launch_genymotion.py "$1"</string>
+				<string>python3 launch_genymotion.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5559,7 +5609,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/list_genymotion.py "{query}"</string>
+				<string>python3 list_genymotion.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -5639,6 +5689,23 @@ print path</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C4BFE506-D83A-4933-96A8-42228EC98C25</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
@@ -5681,7 +5748,7 @@ print path</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/dump_stack.py</string>
+				<string>python3 dump_stack.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -5991,7 +6058,7 @@ EOB</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>python3 scripts/show_keyevent_options.py "{query}"</string>
+				<string>python3 show_keyevent_options.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -6020,7 +6087,7 @@ EOB</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>python3 scripts/execute_input.py</string>
+				<string>python3 execute_input.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -6133,7 +6200,7 @@ EOB</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/custom_command.py $1</string>
+				<string>python3 custom_command.py $1</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -6177,7 +6244,7 @@ EOB</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>python3 scripts/custom_command_convert.py</string>
+				<string>python3 custom_command_convert.py</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -6901,7 +6968,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1380</integer>
+			<integer>1330</integer>
 		</dict>
 		<key>3578F438-4C73-4387-844F-2EAEA64F613E</key>
 		<dict>
@@ -7219,7 +7286,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1220</integer>
+			<integer>1160</integer>
 		</dict>
 		<key>758F2BFC-527A-4C8D-9D3B-000CCF42574B</key>
 		<dict>
@@ -7639,7 +7706,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>250</integer>
 			<key>ypos</key>
-			<integer>1050</integer>
+			<integer>1000</integer>
 		</dict>
 		<key>BB0A60C4-2F87-444B-8938-AEF5F2F2F1A7</key>
 		<dict>
@@ -7670,6 +7737,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>3660</integer>
 			<key>ypos</key>
 			<integer>1940</integer>
+		</dict>
+		<key>C4BFE506-D83A-4933-96A8-42228EC98C25</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2180</integer>
+			<key>ypos</key>
+			<integer>1880</integer>
 		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
@@ -7760,7 +7834,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>xpos</key>
 			<integer>420</integer>
 			<key>ypos</key>
-			<integer>1080</integer>
+			<integer>1030</integer>
 		</dict>
 		<key>D5C1C4B2-9ACD-4611-B432-202822D374CC</key>
 		<dict>
@@ -7978,6 +8052,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>1380</integer>
 		</dict>
+		<key>FA3DC615-5F82-4781-AA59-C59B8BE51488</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>1485</integer>
+		</dict>
 		<key>FB5790E8-22CF-4B6A-A83D-726346FC7D4F</key>
 		<dict>
 			<key>note</key>
@@ -8030,7 +8111,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 		<string>aapt_path</string>
 	</array>
 	<key>version</key>
-	<string>1.13.2</string>
+	<string>1.13.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>

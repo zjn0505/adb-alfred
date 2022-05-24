@@ -1,6 +1,6 @@
 import sys
 import os
-from workflow import Workflow3
+from workflow import Workflow
 
 def main(wf):
 
@@ -21,6 +21,6 @@ def main(wf):
     wf.send_feedback()
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

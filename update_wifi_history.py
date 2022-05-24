@@ -2,7 +2,7 @@ import os
 import sys
 import re
 import pickle
-from workflow import Workflow3
+from workflow import Workflow
 from item import Item
 import subprocess
 
@@ -44,6 +44,6 @@ def main(wf):
 
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

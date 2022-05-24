@@ -2,7 +2,7 @@ import subprocess
 import os
 import sys
 import re
-from workflow import Workflow3
+from workflow import Workflow
  
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
@@ -269,6 +269,6 @@ def main(wf):
     wf.send_feedback()
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

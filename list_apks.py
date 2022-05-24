@@ -1,7 +1,7 @@
 import subprocess
 import os
 import sys
-from workflow import Workflow3
+from workflow import Workflow
 
 def main(wf):
     arg = ""
@@ -9,7 +9,7 @@ def main(wf):
         arg = wf.args[0].strip()
         log.debug(arg)
     
-    the_dir = subprocess.check_output(["osascript", "scripts/getFinder.applescript"]).strip().decode("utf-8")
+    the_dir = subprocess.check_output(["osascript", "getFinder.applescript"]).strip().decode("utf-8")
 
     log.debug("dir")
     log.debug(the_dir)
@@ -27,6 +27,6 @@ def main(wf):
     wf.send_feedback()
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

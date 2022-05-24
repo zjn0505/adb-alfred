@@ -4,14 +4,14 @@ import re
 import pickle
 import ipaddress
 from toolchain import run_script
-from workflow import Workflow3
+from workflow import Workflow
 from workflow.background import run_in_background, is_running
 from item import Item
 import hashlib
 
 GITHUB_SLUG = 'zjn0505/adb-alfred'
 VERSION = open(os.path.join(os.path.dirname(__file__),
-                            '../version')).read().strip()
+                            './version')).read().strip()
  
 adb_path = os.getenv('adb_path')
 
@@ -92,7 +92,7 @@ def list_devices(args):
     if wifiDevices:
         run_in_background("update_wifi_history",
                            ['/usr/bin/python3',
-                            wf.workflowfile('scripts/update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
+                            wf.workflowfile('update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
         log.error("Save history wifi devices : count : {0}".format(len(wifiDevices)))
     
     for item in items:
@@ -233,7 +233,7 @@ def main(wf):
 
 if __name__ == '__main__':
     update_settings = {'github_slug': GITHUB_SLUG, 'version': VERSION}
-    wf = Workflow3(update_settings=update_settings)
+    wf = Workflow(update_settings=update_settings)
     log = wf.logger
     log.debug("Hello from adb")
     if wf.update_available:

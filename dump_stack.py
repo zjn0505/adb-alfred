@@ -1,6 +1,6 @@
 import os
 import sys
-from workflow import Workflow3
+from workflow import Workflow
 from toolchain import run_script
 from commands import CMD_DUMP_STACK
 
@@ -52,12 +52,16 @@ def main(wf):
                     arg=item.name,
                     copytext=item.name,
                     valid=True)
-                it.add_modifier("cmd", subtitle="Package: " + item.package)
+                m = it.add_modifier("cmd", subtitle="Package: " + item.package)
+                m.setvar("package", item.package)
+                
         wf.send_feedback()
-    except:
+    except Exception as e:
         log.debug("Error")
+        log.error(e)
+
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))
