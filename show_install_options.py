@@ -3,13 +3,15 @@ import os
 import sys
 import re
 import pipes
-from workflow import Workflow3, ICON_INFO, ICON_ERROR, ICON_WARNING
+from workflow import Workflow, ICON_INFO, ICON_NOTE, ICON_ERROR, ICON_WARNING
 from toolchain import run_script
+from workflow.background import is_running, run_in_background
+import hashlib
 
 adb_path = os.getenv('adb_path')
 aapt_path = os.getenv('aapt_path')
 serial = os.getenv('serial')
-apkFileOrFolder = pipes.quote(os.getenv('apkFile'))
+apkFileOrFolder = os.getenv('apkFile')
 deviceApi = os.getenv('device_api')
 apksigner_path = os.getenv("apksigner_path")
 
@@ -60,17 +62,20 @@ def showApkInstallItems():
 
     arg = wf.args[0].strip()
 
-    log.debug("Path {0}".format(apkFileOrFolder))
+    apkPath = pipes.quote(apkFileOrFolder)
+    log.debug("Path {0}".format(apkPath))
     apk = None
     if not aapt_path:
-        head, tail = os.path.split(apkFileOrFolder)
-        wf.add_item(title=tail, subtitle=apkFileOrFolder, copytext=tail, arg=apkFileOrFolder, valid=True)
+        head, tail = os.path.split(apkPath)
+        wf.add_item(title=tail, subtitle=apkPath, copytext=tail, arg=apkPath, valid=True)
         wf.add_item(title="aapt not found", subtitle="Please config 'aapt_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
     else:
-        cmd = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkFileOrFolder)
+        cmd = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkPath)
         result = run_script(cmd)
+        log.debug("result" + result)
 
         if result:
+            log.debug("Show results")
             log.debug(result)
             infos = result.rstrip().split('\n')
             if infos:
@@ -115,9 +120,9 @@ def showApkInstallItems():
                         elif info.startswith("versionName="):
                             apk["versionName"] = info.split("'")[1]
 
-                    if deviceApi and "min" in apk and deviceApi < apk["min"]:
+                    if deviceApi and "min" in apk and int(deviceApi) < apk["min"]:
                         validApkByApiCheck = False
-                    if deviceApi and "max" in apk and deviceApi > apk["maxs"]:
+                    if deviceApi and "max" in apk and int(deviceApi) > apk["maxs"]:
                         validApkByApiCheck = False
 
                     currentApkResult = ""
@@ -175,9 +180,9 @@ def showApkInstallItems():
                         wf.setvar("version_name", apk["versionName"])
                         wf.setvar("app_name", apk['label'])
 
-                    if deviceApi and "min" in apk and deviceApi < apk["min"]:
+                    if deviceApi and "min" in apk and int(deviceApi) < apk["min"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, lower than apk minSdkVersion {0}, ".format(deviceApi, apk["min"]), icon=ICON_ERROR, valid=False)
-                    if deviceApi and "max" in apk and deviceApi > apk["maxs"]:
+                    if deviceApi and "max" in apk and int(deviceApi) > apk["maxs"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, higher than apk maxSdkVersion {0}, ".format(deviceApi, apk["max"]), icon=ICON_ERROR, valid=False)
 
 
@@ -208,6 +213,7 @@ def main(wf):
     log.debug(arg)
     apk = None
     fileCount = 1
+
     if os.path.isdir(apkFileOrFolder):
         if os.getenv('focused_app') != None:
             wf.warn_empty(title="Can't open a folder with hotkey, try apk files.")
@@ -257,16 +263,22 @@ def main(wf):
         # add "-" to apksigner path will disable signature check
         if (apksigner_path != None and apksigner_path != "" and (not apksigner_path.startswith("-")) and apk != None):
             log.debug("Apksigner path " + apksigner_path)
+
+
+            # Unconditionally load data from cache
+
+            hash = hashlib.md5(apkFileOrFolder.encode("utf-8")).hexdigest()
+            result = wf.cached_data('apk_print_cert' + hash, max_age=0)
+
+            if not wf.cached_data_fresh('apk_print_cert' + hash, max_age=30):
+                run_in_background('apk_dump', ['/usr/bin/python3',
+                                    wf.workflowfile('apk_print_cert.py'), hash])
+
             cmd = "{0} verify -v --print-certs {1}".format(apksigner_path, apkFileOrFolder)
-            log.debug(cmd)
-            result = ""
-            verified = False
-            try:
-                result = run_script(cmd)
-                verified = True
-            except subprocess.CalledProcessError as exc:
-                log.error("Not verified")
-                result = exc.output.decode('utf8')
+            log.debug("Hellp " + cmd)
+
+            log.debug(result)
+
             if result:
                 log.debug(result)
                 infos = result.rstrip().split('\n')
@@ -315,12 +327,14 @@ def main(wf):
                     subtitle = "Scheme V1 {0}, V2 {1}, V3 {2} V4 {3}".format(v1Verified, v2Verified, v3Verified, v4Verified)
                 else:
                     subtitle = "Scheme V1 {0}, V2 {1}, V3 {2}".format(v1Verified, v2Verified, v3Verified)
-                if verified:
+                if result.endswith("True") == True:
+                    log.error("Cert verified")
                     wf.add_item(title=title, subtitle=subtitle, icon=ICON_INFO, valid=False)
                 else:
+                    log.error("Cert not verified")
                     if len(error) > 0:
                         subtitle = error[0]
-                    wf.add_item(title=title, subtitle=subtitle, icon=ICON_ERROR, valid=False)
+                    wf.add_item(title=title, subtitle=subtitle, icon=ICON_ERROR, valid=False, copytext=subtitle)
                     log.error(infos)
                 log.debug(signer)
                 for i in range(len(signer)):
@@ -348,7 +362,8 @@ def main(wf):
                                 subtitle="with script: %s" % path,
                                 arg=path,
                                 valid=True)
-                    it.setvar("package", apk["packName"])
+                    if apk and apk["packName"]:
+                        it.setvar("package", apk["packName"])
                     it.setvar("self_script_app", config)
                     mod = it.add_modifier("cmd", subtitle="apply cmd modifier")
                     mod.setvar("mod", "cmd")
@@ -363,10 +378,17 @@ def main(wf):
                     idx = idx + 1
                 else:
                     idx = -1
+
+        if is_running('apk_dump'):
+            wf.rerun = 1
+            if result:
+                wf.add_item('Updating APK certs...', subtitle="Please wait a bit for the results", icon=ICON_NOTE)
+            else:
+                wf.add_item('Checking APK certs...', subtitle="Please wait a bit for the results", icon=ICON_NOTE)
                     
     wf.send_feedback()
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

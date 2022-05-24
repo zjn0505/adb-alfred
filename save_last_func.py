@@ -1,11 +1,11 @@
 import os
 import sys
-from workflow import Workflow3
+from workflow import Workflow
 
 function = os.getenv("function")
 serial = os.getenv("serial")
 his_tag = os.getenv("his_tag")
-wf = Workflow3()
+wf = Workflow()
 
 his = wf.cached_data('last_func:' + his_tag, max_age=0)
 

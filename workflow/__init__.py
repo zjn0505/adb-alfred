@@ -1,21 +1,15 @@
-#!/usr/bin/env python
-# encoding: utf-8
-#
-# Copyright (c) 2014 Dean Jackson <deanishe@deanishe.net>
-#
-# MIT Licence. See http://opensource.org/licenses/MIT
-#
-# Created on 2014-02-15
-#
+#!/usr/bin/env python3
 
 """A helper library for `Alfred <http://www.alfredapp.com/>`_ workflows."""
-
 import os
 
-# Filter matching rules
-# Icons
-# Exceptions
 # Workflow objects
+from .workflow import Workflow, manager, Variables
+
+# Exceptions
+from .workflow import PasswordNotFound, KeychainError
+
+# Icons
 from .workflow import (
     ICON_ACCOUNT,
     ICON_BURN,
@@ -38,8 +32,12 @@ from .workflow import (
     ICON_SYNC,
     ICON_TRASH,
     ICON_USER,
-    ICON_WARNING,
     ICON_WEB,
+    ICON_WARNING,
+)
+
+# Filter matching rules
+from .workflow import (
     MATCH_ALL,
     MATCH_ALLCHARS,
     MATCH_ATOM,
@@ -49,23 +47,20 @@ from .workflow import (
     MATCH_INITIALS_STARTSWITH,
     MATCH_STARTSWITH,
     MATCH_SUBSTRING,
-    KeychainError,
-    PasswordNotFound,
-    Workflow,
-    manager,
 )
-from .workflow3 import Variables, Workflow3
 
-__title__ = "Alfred-Workflow"
-__version__ = open(os.path.join(os.path.dirname(__file__), "version")).read()
-__author__ = "Dean Jackson"
-__licence__ = "MIT"
-__copyright__ = "Copyright 2014-2019 Dean Jackson"
+# pylint: disable=consider-using-with
+__version__ = open(
+    os.path.join(os.path.dirname(__file__), "version"), encoding="utf-8"
+).read()
+__title__ = "Alpynist"
+__author__ = "Arthur Pinheiro"
+__license__ = "MIT"
+__copyright__ = "Copyright 2022 Arthur Pinheiro"
 
 __all__ = [
     "Variables",
     "Workflow",
-    "Workflow3",
     "manager",
     "PasswordNotFound",
     "KeychainError",
@@ -90,7 +85,6 @@ __all__ = [
     "ICON_SYNC",
     "ICON_TRASH",
     "ICON_USER",
-    "ICON_WARNING",
     "ICON_WEB",
     "MATCH_ALL",
     "MATCH_ALLCHARS",

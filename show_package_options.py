@@ -1,7 +1,7 @@
 import subprocess
 import os
 import sys
-from workflow import Workflow3, ICON_INFO
+from workflow import Workflow, ICON_INFO
 from toolchain import run_script
 from commands import CMD_DUMP_PACKAGE
  
@@ -124,6 +124,6 @@ def main(wf):
     wf.send_feedback()
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

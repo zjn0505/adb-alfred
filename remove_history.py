@@ -1,7 +1,7 @@
 import os
 import sys
 import pickle
-from workflow import Workflow3
+from workflow import Workflow
 
 ip = os.getenv('ip')
 extra = os.getenv('extra')
@@ -23,6 +23,6 @@ def main(wf):
 		print("Connection history removed")
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
     sys.exit(wf.run(main))

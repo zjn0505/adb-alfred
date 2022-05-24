@@ -1,6 +1,6 @@
 import subprocess
 import sys
-from workflow import Workflow3
+from workflow import Workflow
 from toolchain import run_script
 
 
@@ -27,7 +27,7 @@ def main(wf):
     wf.send_feedback()
 
 if __name__ == '__main__':
-    wf = Workflow3()
+    wf = Workflow()
     log = wf.logger
 
     if wf.update_available:

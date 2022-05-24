@@ -4,7 +4,7 @@ import pickle
 
 from workflow.background import run_in_background, is_running
 from item import Item
-from workflow import Workflow3
+from workflow import Workflow
 from toolchain import run_script
 from commands import CMD_GET_TCPIP
 from commands import CMD_TCPIP
@@ -19,7 +19,7 @@ def connect():
 		wifiDevices = []
 		wifiDevices.append(it)
 		run_in_background("update_wifi_history", 
-			['/usr/bin/python', wf.workflowfile('scripts/update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
+			['/usr/bin/python3', wf.workflowfile('update_wifi_history.py'), 'add', pickle.dumps(wifiDevices)])
 	print("Executed: " + result)
 
 def init():
@@ -35,5 +35,5 @@ def init():
 
 if __name__ == '__main__':
 	if ip:
-		wf = Workflow3()
+		wf = Workflow()
 		init()
