@@ -24,7 +24,7 @@ regexConnect = "^connect .*"
 
 def get_property(name=None):
     infos = run_script(adb_path + " -s " + name +
-                       " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]\|ro.build.version.incremental]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'")
+                       " shell getprop | grep 'ro.build.version.release]\|ro.build.version.sdk]\|ro.product.manufacturer]\|ro.product.model\|ro.build.display.id]\|ro.build.version.incremental]\|ro.product.cpu.abi]' | awk -F'[][]' -v n=2 '{ print $(2*n) }'")
     infos = infos.rstrip().split('\n')
     log.debug("getprop result for {0}: {1}".format(name, infos))
     return infos
@@ -56,17 +56,18 @@ def get_device_items(arg, devices):
             title = name
             infos = wf.cached_data(
                 "{0}-property".format(name), lambda: get_property(name), max_age=600)
-            if not infos or len(infos) < 6:
+            if not infos or len(infos) < 7:
                 log.error("Info length {0}, infos: {1}".format(
                     len(infos), infos))
                 wf.clear_cache(
                     lambda f: f == "{0}-property.pickle".format(name))
                 continue
-            manufacturer = infos[4].title()
-            model = infos[5].title()
+            cpuABI = infos[4]
+            manufacturer = infos[5].title()
+            model = infos[6].title()
             valid = True
-            subtitle = "%s - %s - Android %s, API %s" % (
-                manufacturer, model, infos[2], infos[3])
+            subtitle = "%s - %s - Android %s, API %s, %s" % (
+                manufacturer, model, infos[2], infos[3], cpuABI)
             mod_alt = "%s - %s" % (infos[0], infos[1])
 
         it = Item(title=title, autocomplete=name,
