@@ -264,18 +264,12 @@ def main(wf):
         if (apksigner_path != None and apksigner_path != "" and (not apksigner_path.startswith("-")) and apk != None):
             log.debug("Apksigner path " + apksigner_path)
 
-
-            # Unconditionally load data from cache
-
             hash = hashlib.md5(apkFileOrFolder.encode("utf-8")).hexdigest()
             result = wf.cached_data('apk_print_cert' + hash, max_age=0)
 
             if not wf.cached_data_fresh('apk_print_cert' + hash, max_age=30):
                 run_in_background('apk_dump', ['/usr/bin/python3',
                                     wf.workflowfile('apk_print_cert.py'), hash])
-
-            cmd = "{0} verify -v --print-certs {1}".format(apksigner_path, apkFileOrFolder)
-            log.debug("Hellp " + cmd)
 
             log.debug(result)
 

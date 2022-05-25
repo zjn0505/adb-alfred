@@ -63,6 +63,7 @@ CMD_CUSTOM_COMMAND = adbs + '{}'
 CMD_CURRENT_FOCUS = adbshell + 'dumpsys window | grep mCurrentFocus'
 CMD_CALL_STATUSBAR = adbshell + 'service call statusbar {}'
 CMD_INPUT = adbshell + 'input {0} {1} {2}'
+CMD_DOUBLE_INPUT = adbshell + "'input {0} {1} && input {0} {1}'"
 
 # Force stop
 CMD_FORCE_STOP = adbshell + 'am force-stop {}'

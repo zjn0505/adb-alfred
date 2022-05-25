@@ -5,7 +5,7 @@ from toolchain import run_script
 from commands import CMD_CHECK_KEYBOARD
 
 
-def wordMatch(arg, sentence): 
+def wordMatch(arg, sentence):
     words = arg.lower().split(" ")
     sentenceComponents = sentence.lower().split(" ")
     for word in words:
@@ -17,6 +17,7 @@ def wordMatch(arg, sentence):
         if not included:
             return False
     return True
+
 
 def main(wf):
 
@@ -30,41 +31,43 @@ def main(wf):
     wf.setvar("function", "keyevent")
     # Back
     title = "Back"
-    
+
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="KEYCODE_BACK",
-                    arg="KEYCODE_BACK",
-                    valid=True)
+                         uid="KEYCODE_BACK",
+                         arg="KEYCODE_BACK",
+                         valid=True)
         it.setvar('mod', 'none')
-        m = it.add_modifier('cmd', 'Long press ' + arg)
+        m = it.add_modifier('cmd', 'Long press')
         m.setvar('mod', 'cmd')
+        m = it.add_modifier('alt', 'Double click')
+        m.setvar('mod', 'alt')
         itemCount += 1
 
     # Home
     title = "Home"
-    
+
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="KEYCODE_HOME",
-                    arg="KEYCODE_HOME",
-                    valid=True)
+                         uid="KEYCODE_HOME",
+                         arg="KEYCODE_HOME",
+                         valid=True)
 
         it.setvar('mod', 'none')
-        m = it.add_modifier('cmd', 'Long press ' + arg)
+        m = it.add_modifier('cmd', 'Long press')
         m.setvar('mod', 'cmd')
         itemCount += 1
 
     # APP SWITCH
     title = "App switch"
-    
+
     if addAll or wordMatch(arg, title + " recent"):
         it = wf.add_item(title=title,
-                    uid="KEYCODE_APP_SWITCH",
-                    arg="KEYCODE_APP_SWITCH",
-                    valid=True)
+                         uid="KEYCODE_APP_SWITCH",
+                         arg="KEYCODE_APP_SWITCH",
+                         valid=True)
         it.setvar('mod', 'none')
-        m = it.add_modifier('cmd', 'Long press ' + arg)
+        m = it.add_modifier('cmd', 'Long press')
         m.setvar('mod', 'cmd')
         itemCount += 1
 
@@ -73,12 +76,12 @@ def main(wf):
 
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="KEYCODE_POWER",
-                    arg="KEYCODE_POWER",
-                    valid=True)
+                         uid="KEYCODE_POWER",
+                         arg="KEYCODE_POWER",
+                         valid=True)
 
         it.setvar('mod', 'none')
-        m = it.add_modifier('cmd', 'Long press ' + arg)
+        m = it.add_modifier('cmd', 'Long press')
         m.setvar('mod', 'cmd')
         itemCount += 1
 
@@ -87,10 +90,10 @@ def main(wf):
 
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="STATUS_BAR",
-                    arg="STATUS_BAR",
-                    subtitle="Toggle status bar menu",
-                    valid=True)
+                         uid="STATUS_BAR",
+                         arg="STATUS_BAR",
+                         subtitle="Toggle status bar menu",
+                         valid=True)
 
         it.setvar("function", "STATUS_BAR")
         itemCount += 1
@@ -100,9 +103,9 @@ def main(wf):
     result = run_script(CMD_CHECK_KEYBOARD)
     if (addAll or wordMatch(arg, title)) and "true" in result:
         it = wf.add_item(title=title,
-                    uid="KEYCODE_ESCAPE",
-                    arg="KEYCODE_ESCAPE",
-                    valid=True)
+                         uid="KEYCODE_ESCAPE",
+                         arg="KEYCODE_ESCAPE",
+                         valid=True)
 
         it.setvar('mod', 'none')
         itemCount += 1
@@ -110,9 +113,9 @@ def main(wf):
     # OTHER KEYEVENTS
     if re.match("keycode_\w*", arg.lower()):
         it = wf.add_item(title="Other keyevents",
-                            subtitle="input keyevent " + arg.upper(),
-                            arg=arg.upper(),
-                            valid=True)
+                         subtitle="input keyevent " + arg.upper(),
+                         arg=arg.upper(),
+                         valid=True)
 
         it.setvar('mod', 'none')
         m = it.add_modifier('cmd', 'Long press ' + arg.upper())
@@ -123,11 +126,12 @@ def main(wf):
     if itemCount == 0:
         log.debug("arg :" + arg)
         it = wf.add_item(title="Input as text",
-                        subtitle="input text " + arg,
-                        arg=arg,
-                        valid=True)
+                         subtitle="input text " + arg,
+                         arg=arg,
+                         valid=True)
         it.setvar("function", "text")
     wf.send_feedback()
+
 
 if __name__ == '__main__':
     wf = Workflow()

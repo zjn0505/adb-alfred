@@ -3,13 +3,14 @@ import os
 import sys
 import re
 from workflow import Workflow
- 
+
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
 api = os.getenv('device_api')
 ip = os.getenv("ip")
 
-def wordMatch(arg, sentence): 
+
+def wordMatch(arg, sentence):
     words = arg.lower().split(" ")
     sentenceComponents = sentence.lower().split(" ")
     for word in words:
@@ -21,6 +22,7 @@ def wordMatch(arg, sentence):
         if not included:
             return False
     return True
+
 
 def main(wf):
 
@@ -36,7 +38,7 @@ def main(wf):
 
     # SHOW INSTALLED PACKAGES
     title = "Show apps list"
-    
+
     if addAll or (wordMatch(arg, title + " start launch uninstall force stop clear info") and not arg.startswith("ins")):
         func = ""
         if "start" in arg.lower() or "launch" in arg.lower():
@@ -55,9 +57,9 @@ def main(wf):
             title = "Select app to show app info"
             func = "app_info"
         it = wf.add_item(title=title,
-                    uid="list_app",
-                    arg="list_app",
-                    valid=True)
+                         uid="list_app",
+                         arg="list_app",
+                         valid=True)
         it.setvar("func", func)
         if func == "":
             m = it.add_modifier('cmd', "Select app to launch")
@@ -78,7 +80,7 @@ def main(wf):
 
     # INSTALL APK
     title = "Install apk"
-    
+
     if addAll or wordMatch(arg, title):
         wf.add_item(title=title,
                     uid="install_apk",
@@ -89,42 +91,47 @@ def main(wf):
 
     # SCREENSHOT
     title = "Take screenshot"
-    
+
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="screenshot",
-                    arg="screenshot:to_clipboard",
-                    subtitle="take a screenshot and copy to clipboard, `cmd` to copy to desktop",
-                    valid=True)
-        it.add_modifier('cmd', 'take a screenshot and copy to desktop', arg="screenshot:to_desktop")
+                         uid="screenshot",
+                         arg="screenshot:to_clipboard",
+                         subtitle="take a screenshot and copy to clipboard, `cmd` to copy to desktop",
+                         valid=True)
+        it.add_modifier(
+            'cmd', 'take a screenshot and copy to desktop', arg="screenshot:to_desktop")
         itemCount += 1
 
     # OPEN SETTINGS
     title = "Open settings"
-    
+
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="open_settings",
-                    arg="open_settings",
-                    subtitle="'cmd' - Dev Tool, 'alt' - WiFi, 'ctrl' - App, 'fn' - Date, 'shift' - Accessibility",
-                    valid=True)
-        it.add_modifier('cmd', 'Open Developer Settings', arg="open_settings:developer_options")
+                         uid="open_settings",
+                         arg="open_settings",
+                         subtitle="'cmd' - Dev Tool, 'alt' - WiFi, 'ctrl' - App, 'fn' - Date, 'shift' - Accessibility",
+                         valid=True)
+        it.add_modifier('cmd', 'Open Developer Settings',
+                        arg="open_settings:developer_options")
         it.add_modifier('alt', 'Open WiFi Settings', arg="open_settings:wifi")
         it.add_modifier('fn', 'Open Date Settings', arg="open_settings:date")
-        it.add_modifier('shift', 'Open Accessibility Settings', arg="open_settings:accessibility")
-        it.add_modifier('ctrl', 'Open Application Settings', arg="open_settings:application")
+        it.add_modifier('shift', 'Open Accessibility Settings',
+                        arg="open_settings:accessibility")
+        it.add_modifier('ctrl', 'Open Application Settings',
+                        arg="open_settings:application")
         itemCount += 1
 
     # TOGGLE DEBUG LAYOUT
     title = "Toggle debug layout"
-    
+
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="debug_layout",
-                    arg="debug_layout",
-                    valid=True)
+                         uid="debug_layout",
+                         arg="debug_layout",
+                         valid=True)
         itemCount += 1
-        it.add_modifier('cmd', 'Toggle pointer location', arg="pointer_location")
+        it.add_modifier('cmd', 'Toggle pointer location',
+                        arg="pointer_location")
         it.add_modifier('alt', 'Toggle show taps', arg="show_taps")
         it.add_modifier('ctrl', 'Toggle GPU profile', arg="gpu_profile")
         it.add_modifier('fn', 'Toggle GPU overdraw', arg="gpu_overdraw")
@@ -133,7 +140,7 @@ def main(wf):
     # DEMO MODE
     if api and int(api) >= 23:
         title = "Toggle demo mode"
-        
+
         if addAll or wordMatch(arg, title):
             wf.add_item(title=title,
                         uid="demo_mode",
@@ -146,10 +153,10 @@ def main(wf):
 
     if addAll or wordMatch(arg, title) or wordMatch(arg, "restart"):
         it = wf.add_item(title=title,
-                    uid="adb_reboot",
-                    arg="adb_reboot",
-                    subtitle="'cmd' - Bootloader, 'alt' - Recovery, 'ctrl' - Sideload",
-                    valid=True)
+                         uid="adb_reboot",
+                         arg="adb_reboot",
+                         subtitle="'cmd' - Bootloader, 'alt' - Recovery, 'ctrl' - Sideload",
+                         valid=True)
         itemCount += 1
         it.add_modifier('cmd', 'Bootloader', arg="adb_reboot:bootloader")
         it.add_modifier('alt', 'Recovery', arg="adb_reboot:recovery")
@@ -158,7 +165,7 @@ def main(wf):
     # CONNECT OVER WIFI
     if not isWifiDevice and not isEmulator and ip:
         title = "Connect over Wi-Fi"
-        
+
         if addAll or wordMatch(arg, title):
             wf.add_item(title=title,
                         subtitle=ip,
@@ -171,24 +178,31 @@ def main(wf):
     title = "Keyevent input"
 
     if addAll or wordMatch(arg, title):
-        wf.add_item(title=title,
-                    uid="keyevent_input",
-                    arg="keyevent_input",
-                    valid=True)
+        it = wf.add_item(title=title,
+                         uid="keyevent_input",
+                         arg="keyevent_input",
+                         valid=True)
+        it.add_modifier("cmd", "Back", arg='keyevent_input_KEYCODE_BACK')
+        it.add_modifier("alt", "Home", arg='keyevent_input_KEYCODE_HOME')
+        it.add_modifier("ctrl", "App Switch",
+                        arg='keyevent_input_KEYCODE_APP_SWITCH')
+        it.add_modifier("fn", "Escape", arg='keyevent_input_KEYCODE_ESCAPE')
+        it.add_modifier("shift", "Power", arg='keyevent_input_KEYCODE_POWER')
         itemCount += 1
-        
+
     # DUMP STACK
     title = "Dump task stacks"
 
     if addAll or wordMatch(arg, title):
         it = wf.add_item(title=title,
-                    uid="dump_stack",
-                    arg="dump_stack",
-                    valid=True)
+                         uid="dump_stack",
+                         arg="dump_stack",
+                         valid=True)
         itemCount += 1
-        it.add_modifier('cmd', 'Dump the first application', arg="dump_stack:first_app")
-        it.add_modifier('alt', 'Dump the first stack', arg="dump_stack:first_stack")
-
+        it.add_modifier('cmd', 'Dump the first application',
+                        arg="dump_stack:first_app")
+        it.add_modifier('alt', 'Dump the first stack',
+                        arg="dump_stack:first_stack")
 
     # Screen Copy with scrcpy
     title = "Screen Copy with scrcpy"
@@ -204,16 +218,19 @@ def main(wf):
             rc = -1
     if rc != -1 and (addAll or wordMatch(arg, title)) and not isEmulator:
         it = wf.add_item(title=title,
-                    uid="scr_cpy",
-                    arg="scr_cpy",
-                    valid=True)
+                         uid="scr_cpy",
+                         arg="scr_cpy",
+                         valid=True)
 
         it.setvar("dimension", 0)
-        mod = it.add_modifier("cmd", subtitle="Run with maximum resolution restriction 1024")
+        mod = it.add_modifier(
+            "cmd", subtitle="Run with maximum resolution restriction 1024")
         mod.setvar("dimension", 1024)
-        mod = it.add_modifier("alt", subtitle="Record screen and save to User folder")
+        mod = it.add_modifier(
+            "alt", subtitle="Record screen and save to User folder")
         mod.setvar("record", 1)
-        log.debug("Manufacturer {0}".format(os.getenv("ro.product.manufacturer")))
+        log.debug("Manufacturer {0}".format(
+            os.getenv("ro.product.manufacturer")))
         if os.getenv("ro.product.manufacturer") == "Oculus" and os.getenv("name") == "Quest 2":
             mod = it.add_modifier("ctrl", subtitle="Quest 2 - Mirror one eye")
             mod.setvar("crop", "1832:1920:0:0")
@@ -226,11 +243,12 @@ def main(wf):
 
     if (addAll or wordMatch(arg, title)) and lastFuncs and len(lastFuncs) > 0:
         it = wf.add_item(title=title,
-                    subtitle="show command history",
-                    arg="cmd_history",
-                    valid=True)
+                         subtitle="show command history",
+                         arg="cmd_history",
+                         valid=True)
         itemCount += 1
-        it.add_modifier('cmd', 'clear command history', arg="cmd_history:clear")
+        it.add_modifier('cmd', 'clear command history',
+                        arg="cmd_history:clear")
 
     idx = 1
     while idx > 0:
@@ -240,9 +258,9 @@ def main(wf):
             if addAll or wordMatch(arg, title) or wordMatch(arg, "Self script"):
                 path = config.split("|")[1]
                 it = wf.add_item(title=title,
-                            subtitle="with script: %s" % path,
-                            arg="self_script_device_%d" % idx,
-                            valid=True)
+                                 subtitle="with script: %s" % path,
+                                 arg="self_script_device_%d" % idx,
+                                 valid=True)
                 it.setvar("self_script_device", config)
                 mod = it.add_modifier("cmd", subtitle="apply cmd modifier")
                 mod.setvar("mod", "cmd")
@@ -261,12 +279,14 @@ def main(wf):
     # CUSTOM ACTION
     if itemCount == 0:
         it = wf.add_item(title="Execute custom command for " + serial,
-                        subtitle="adb " + arg,
-                        arg="adb_cmd:in_terminal:" + arg,
-                        valid=True)
-        m = it.add_modifier('cmd', 'Run without opening terminal', arg="adb_cmd:in_background:" + arg)
-        
+                         subtitle="adb " + arg,
+                         arg="adb_cmd:in_terminal:" + arg,
+                         valid=True)
+        m = it.add_modifier('cmd', 'Run without opening terminal',
+                            arg="adb_cmd:in_background:" + arg)
+
     wf.send_feedback()
+
 
 if __name__ == '__main__':
     wf = Workflow()

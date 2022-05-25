@@ -1279,6 +1279,41 @@
 				<false/>
 			</dict>
 		</array>
+		<key>72B23139-5425-4A9B-8870-18BA68507960</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>09084E4E-89ED-475D-BAF3-3C5A8815C66F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>802DDD9C-EE8B-424C-B8D0-7A6C01BEF398</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4D037152-7CC5-482E-8F94-E9EF92983E07</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</key>
 		<array>
 			<dict>
@@ -1864,7 +1899,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</string>
+				<string>72B23139-5425-4A9B-8870-18BA68507960</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2944,25 +2979,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>^(?!(restart_adb|adb_connect|adb_disconnect)).*$</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2977,6 +2993,25 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>758F2BFC-527A-4C8D-9D3B-000CCF42574B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^(?!(restart_adb|adb_connect|adb_disconnect)).*$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6110,9 +6145,9 @@ EOB</string>
 				<key>matchcasesensitive</key>
 				<true/>
 				<key>matchmode</key>
-				<integer>0</integer>
+				<integer>2</integer>
 				<key>matchstring</key>
-				<string>keyevent_input</string>
+				<string>keyevent_input.*</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.filter</string>
@@ -6155,6 +6190,36 @@ EOB</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>1BF435B5-BCB2-4F5C-A115-0E4C3918B24C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:function}</string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>keyevent_input</string>
+						<key>outputlabel</key>
+						<string>options</string>
+						<key>uid</key>
+						<string>802DDD9C-EE8B-424C-B8D0-7A6C01BEF398</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>shortcut</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>72B23139-5425-4A9B-8870-18BA68507960</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -7278,6 +7343,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>1830</integer>
 			<key>ypos</key>
 			<integer>640</integer>
+		</dict>
+		<key>72B23139-5425-4A9B-8870-18BA68507960</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1745</integer>
+			<key>ypos</key>
+			<integer>2230</integer>
 		</dict>
 		<key>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</key>
 		<dict>
