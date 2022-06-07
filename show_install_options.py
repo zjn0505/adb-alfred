@@ -122,7 +122,7 @@ def showApkInstallItems():
 
                     if deviceApi and "min" in apk and int(deviceApi) < apk["min"]:
                         validApkByApiCheck = False
-                    if deviceApi and "max" in apk and int(deviceApi) > apk["maxs"]:
+                    if deviceApi and "max" in apk and int(deviceApi) > apk["max"]:
                         validApkByApiCheck = False
 
                     currentApkResult = ""
@@ -338,12 +338,12 @@ def main(wf):
                     sha1 = "SHA-1:{0}".format(item["SHA1"])
                     md5 = "MD5:{0}".format(item["MD5"])
                     title = "Signer #{0} {1}".format(i, md5)
-                    if sha256:
-                        it = wf.add_item(title=title, subtitle=item["DN"], icon=ICON_INFO, valid=False)
-                        if sha256:
-                            it.add_modifier('cmd', subtitle=sha256, valid=False)
+                    if sha1:
+                        it = wf.add_item(title=title, subtitle=item["DN"], icon=ICON_INFO, valid=False, copytext=sha1)
                         if sha1:
-                            it.add_modifier('alt', subtitle=sha1, valid=False)
+                            it.add_modifier('cmd', subtitle=sha1, valid=False)
+                        if sha256:
+                            it.add_modifier('alt', subtitle=sha256, valid=False)
 
         if os.getenv("from_shortcut"):
             idx = 1
