@@ -1471,6 +1471,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8330B9ED-1C12-4C48-903D-60629B4C0702</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E6F1A658-F4F0-49C5-96E9-4036A8AB51BF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>86E0AE80-E859-4D5D-B15B-D8631B27C24D</key>
 		<array>
 			<dict>
@@ -1561,6 +1574,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3D0F8B6B-F91B-4C81-A16E-9A24A6C2C462</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8C752D7F-4A38-480E-B908-DDA844CF8913</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>11C25097-223D-4E8A-928A-D85DAE9A40AC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8330B9ED-1C12-4C48-903D-60629B4C0702</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1983,6 +2019,8 @@
 				<false/>
 			</dict>
 		</array>
+		<key>B01199D3-B213-4598-A3E9-EB101E6728F3</key>
+		<array/>
 		<key>B2115A23-1679-4F90-9EC4-E996DA7BF2EA</key>
 		<array>
 			<dict>
@@ -2008,6 +2046,19 @@
 		</array>
 		<key>B37C7FAB-F5FB-4F18-A10E-831FBCD1A733</key>
 		<array/>
+		<key>B4E2872B-3F18-4C1D-A4F3-F464D88F4493</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>16B1106B-C18C-423A-A5AE-BE8676769C18</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>B5BA12A7-6B77-4680-B60A-21CF55C78A53</key>
 		<array>
 			<dict>
@@ -2101,19 +2152,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3578F438-4C73-4387-844F-2EAEA64F613E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>C4BFE506-D83A-4933-96A8-42228EC98C25</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2477,9 +2515,9 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>C4BFE506-D83A-4933-96A8-42228EC98C25</string>
+				<string>8C752D7F-4A38-480E-B908-DDA844CF8913</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -2487,7 +2525,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>16B1106B-C18C-423A-A5AE-BE8676769C18</string>
+				<string>B4E2872B-3F18-4C1D-A4F3-F464D88F4493</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2554,6 +2592,29 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E6F1A658-F4F0-49C5-96E9-4036A8AB51BF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>89D37B8E-3886-41E7-A948-FAE513D4FD56</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B81B0663-A4BF-4BB1-94B2-66752B977EBC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -2979,6 +3040,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^(?!(restart_adb|adb_connect|adb_disconnect)).*$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string></string>
 				<key>passthroughargument</key>
@@ -2993,25 +3073,6 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>758F2BFC-527A-4C8D-9D3B-000CCF42574B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>inputstring</key>
-				<string>{query}</string>
-				<key>matchcasesensitive</key>
-				<false/>
-				<key>matchmode</key>
-				<integer>2</integer>
-				<key>matchstring</key>
-				<string>^(?!(restart_adb|adb_connect|adb_disconnect)).*$</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.filter</string>
-			<key>uid</key>
-			<string>061518C5-6CFD-42EF-AB68-D2B11F98889E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5734,7 +5795,45 @@
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>C4BFE506-D83A-4933-96A8-42228EC98C25</string>
+			<string>E6F1A658-F4F0-49C5-96E9-4036A8AB51BF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:func}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>8330B9ED-1C12-4C48-903D-60629B4C0702</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:package}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>8C752D7F-4A38-480E-B908-DDA844CF8913</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -5839,6 +5938,25 @@
 			<string>alfred.workflow.utility.filter</string>
 			<key>uid</key>
 			<string>16B1106B-C18C-423A-A5AE-BE8676769C18</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:package}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>B4E2872B-3F18-4C1D-A4F3-F464D88F4493</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -6785,7 +6903,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>note</key>
 			<string>Show install options</string>
 			<key>xpos</key>
-			<integer>2370</integer>
+			<integer>2400</integer>
 			<key>ypos</key>
 			<integer>1770</integer>
 		</dict>
@@ -6815,7 +6933,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>note</key>
 			<string>Execute Input</string>
 			<key>xpos</key>
-			<integer>2370</integer>
+			<integer>2400</integer>
 			<key>ypos</key>
 			<integer>2140</integer>
 		</dict>
@@ -7255,7 +7373,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>note</key>
 			<string>Run custom command</string>
 			<key>xpos</key>
-			<integer>2370</integer>
+			<integer>2400</integer>
 			<key>ypos</key>
 			<integer>2290</integer>
 		</dict>
@@ -7438,6 +7556,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>2040</integer>
 		</dict>
+		<key>8330B9ED-1C12-4C48-903D-60629B4C0702</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2250</integer>
+			<key>ypos</key>
+			<integer>1855</integer>
+		</dict>
 		<key>8633EBC3-4911-4F76-B926-75BEE8BD839E</key>
 		<dict>
 			<key>xpos</key>
@@ -7503,6 +7628,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>250</integer>
 			<key>ypos</key>
 			<integer>1620</integer>
+		</dict>
+		<key>8C752D7F-4A38-480E-B908-DDA844CF8913</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2180</integer>
+			<key>ypos</key>
+			<integer>1880</integer>
 		</dict>
 		<key>8E1EF5A4-122C-46C6-B7E2-096F6F6EF95E</key>
 		<dict>
@@ -7748,6 +7880,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>ypos</key>
 			<integer>1520</integer>
 		</dict>
+		<key>B4E2872B-3F18-4C1D-A4F3-F464D88F4493</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2180</integer>
+			<key>ypos</key>
+			<integer>1970</integer>
+		</dict>
 		<key>B5BA12A7-6B77-4680-B60A-21CF55C78A53</key>
 		<dict>
 			<key>xpos</key>
@@ -7767,7 +7906,7 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<key>note</key>
 			<string>Show package options</string>
 			<key>xpos</key>
-			<integer>2370</integer>
+			<integer>2400</integer>
 			<key>ypos</key>
 			<integer>1610</integer>
 		</dict>
@@ -7809,13 +7948,6 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>3660</integer>
 			<key>ypos</key>
 			<integer>1940</integer>
-		</dict>
-		<key>C4BFE506-D83A-4933-96A8-42228EC98C25</key>
-		<dict>
-			<key>xpos</key>
-			<integer>2180</integer>
-			<key>ypos</key>
-			<integer>1880</integer>
 		</dict>
 		<key>C57F7CCE-4AC2-4490-9EB7-DB4D43A6C31B</key>
 		<dict>
@@ -8022,6 +8154,13 @@ Use keyword "geny" to list and start Genymotion emulator</string>
 			<integer>1670</integer>
 			<key>ypos</key>
 			<integer>1490</integer>
+		</dict>
+		<key>E6F1A658-F4F0-49C5-96E9-4036A8AB51BF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>2315</integer>
+			<key>ypos</key>
+			<integer>1855</integer>
 		</dict>
 		<key>E9EFF180-2EDA-445B-A876-6C4F791198FE</key>
 		<dict>

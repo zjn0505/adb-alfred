@@ -54,6 +54,18 @@ def main(wf):
                     valid=True)
                 m = it.add_modifier("cmd", subtitle="Package: " + item.package)
                 m.setvar("package", item.package)
+                m = it.add_modifier("alt", subtitle="Uninstall: " + item.package, arg = item.package)
+                m.setvar("package", item.package)
+                m.setvar("func", "uninstall_app")
+                m = it.add_modifier("ctrl", subtitle="Force stop: " + item.package, arg = item.package)
+                m.setvar("package", item.package)
+                m.setvar("func", "force_stop")
+                m = it.add_modifier("fn", subtitle="Clear data: " + item.package, arg = item.package)
+                m.setvar("package", item.package)
+                m.setvar("func", "clear_app_data")
+                m = it.add_modifier("shift", subtitle="Show app info: " + item.package, arg = item.package)
+                m.setvar("package", item.package)
+                m.setvar("func", "app_info")
                 
         wf.send_feedback()
     except Exception as e:
