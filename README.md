@@ -256,6 +256,11 @@ Full feature list
 |Dump task stacks|`adb` -> `Dump task stacks`|
 |Dump task stacks of first app|`adb` -> `Dump task stacks` + `cmd`|
 |Dump first task stacks|`adb` -> `Dump task stacks` + `option`|
+|Show dumpped task app info in workflow|`adb` -> `Dump task stacks` -> `cmd`|
+|Uninstall dumpped task's application|`adb` -> `Dump task stacks` -> `option`|
+|Force stop dumpped task|`adb` -> `Dump task stacks` -> `ctrl`|
+|Clear data of dumpped task's application|`adb` -> `Dump task stacks` -> `fn`|
+|Show dumpped task app info page|`adb` -> `Dump task stacks` -> `shift`|
 |Screen copy (real device)|`adb` -> `Screen Copy with scrcpy`|
 |Screen copy with max dimemsion 1024|`adb` -> `Screen Copy with scrcpy` + `cmd`|
 |Screen copy with record screen|`adb` -> `Screen Copy with scrcpy` + `option`|
