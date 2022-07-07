@@ -272,8 +272,20 @@ if __name__ == '__main__':
                   help_url="https://github.com/zjn0505/adb-alfred")
     log = wf.logger
     log.debug("Hello from adb")
-    if wf.update_available:
+
+    arg = wf.args[0] if wf.args else ''
+
+    if arg == "clear cache":
+        wf.clear_cache()
+    elif arg == "open cache":
+        wf.open_cachedir()
+    elif arg == "clear data":
+        wf.clear_data()
+    elif arg == "open data":
+        wf.open_datadir()
+    elif wf.update_available:
         wf.add_item(u'New version available',
                     u'Action this item to install the update',
                     autocomplete=u'workflow:update')
+
     sys.exit(wf.run(main))

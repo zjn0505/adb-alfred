@@ -605,7 +605,7 @@ class PickleSerializer(BaseSerializer):
         :type file_obj: ``file`` object
 
         """
-        return pickle.dump(obj, file_obj, protocol=-1)
+        return pickle.dump(obj, file_obj, protocol=4)
 
 
 # Set up default manager and register built-in serializers
