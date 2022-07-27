@@ -42,6 +42,7 @@ def main(wf):
                 subtitle="Open app info page",
                 arg="app_info",
                 valid=True) 
+    it.add_modifier("cmd", subtitle="Copy version name")
     
     if (infos and enabled):
         # Force stop
