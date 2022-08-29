@@ -15,6 +15,8 @@ def main(wf):
     infos= None
     versionName = ""
     enabled = True
+    userId = None
+    versionCopyText = ""
     # Package info
     try:
         result = run_script(shell_cmd)
@@ -24,13 +26,22 @@ def main(wf):
         result = result[result.rfind("enabled="):]
         infos = result.rstrip().split('\n')
         log.debug(infos)
+
+        userIdInfo = [x.strip() for x in infos if x.strip().startswith("userId=")]
+        log.debug(userIdInfo)
+        if len(userIdInfo) == 1:
+            userId = userIdInfo[0][7:]
+        
         versionName = infos[1].strip()[12:]
         versionCode = infos[2].strip()[12:]
+        if userId != None:
+            versionCode = versionCode + " userId={0}".format(userId) 
         it = wf.add_item(title=packName,
                         subtitle="{0}({1})".format(versionName, versionCode),
                         valid=False,
                         copytext=packName,
                         icon=ICON_INFO)
+        versionCopyText = it.subtitle
     if infos:
         appInfo = infos[0].strip()
         enabled = (appInfo[appInfo.find("enabled=") + 8] != '2')
@@ -38,11 +49,12 @@ def main(wf):
 
     # App info
     title = "App info"
-    wf.add_item(title=title,
+    it = wf.add_item(title=title,
                 subtitle="Open app info page",
                 arg="app_info",
-                valid=True) 
-    it.add_modifier("cmd", subtitle="Copy version name")
+                copytext=versionCopyText,
+                valid=True)
+    it.add_modifier("cmd", subtitle="cmd + C to copy app info")
     
     if (infos and enabled):
         # Force stop
@@ -51,7 +63,7 @@ def main(wf):
                     arg="force_stop",
                     valid=True) 
 
-    if (infos and len(infos) > 3 and enabled):
+    if (infos and len(infos) > 4 and enabled):
         # Start app
         title = "Start application"
         wf.add_item(title=title,

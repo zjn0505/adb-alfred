@@ -97,7 +97,7 @@ CMD_LIST_APPS = adbshell + "'pm list packages -f' | grep package: | sed -e 's/.*
 CMD_CHECK_KEYBOARD = adbshell + "dumpsys input_method | grep mInputShown | awk '{{print $4}}'"
 
 # Dump package
-CMD_DUMP_PACKAGE = adbshell + "dumpsys package {} | grep 'versionCode\|versionName\|enabled=\|android.intent.action.MAIN' | tail -r"
+CMD_DUMP_PACKAGE = adbshell + "dumpsys package {} | grep 'versionCode\|versionName\|enabled=\|android.intent.action.MAIN\|userId' | tail -r"
 
 # Dump task stack
 CMD_DUMP_STACK = adbshell + "dumpsys activity activities | grep 'Hist \|taskAffinity='"
