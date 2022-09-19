@@ -100,4 +100,4 @@ CMD_CHECK_KEYBOARD = adbshell + "dumpsys input_method | grep mInputShown | awk '
 CMD_DUMP_PACKAGE = adbshell + "dumpsys package {} | grep 'versionCode\|versionName\|enabled=\|android.intent.action.MAIN:\|userId' | tail -r"
 
 # Dump task stack
-CMD_DUMP_STACK = adbshell + "dumpsys activity activities | grep 'Hist \|taskAffinity='"
+CMD_DUMP_STACK = adbshell + "dumpsys activity activities | grep 'Hist \|taskAffinity=\|app=ProcessRecord'"
