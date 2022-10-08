@@ -70,14 +70,21 @@ def showApkInstallItems():
         wf.add_item(title=tail, subtitle=apkPath, copytext=tail, arg=apkPath, valid=True)
         wf.add_item(title="aapt not found", subtitle="Please config 'aapt_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
     else:
-        cmd = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkPath)
-        result = run_script(cmd)
-        log.debug("result" + result)
+        cmd_dump_badging = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkPath)
+        cmd_list_all = "{0} list -a {1} |  grep 'sharedUserId'".format(aapt_path, apkPath)
+        result_dump = run_script(cmd_dump_badging)
+        is_system_app = False
+        try: 
+            is_system_app = run_script(cmd_list_all).find("android.uid.system") > 0
+        except:
+            log.debug("Failed to dump sharedUserId")
+        log.debug("result dump " + result_dump)
+        log.debug("Is system app " + str(is_system_app))
 
-        if result:
+        if result_dump:
             log.debug("Show results")
-            log.debug(result)
-            infos = result.rstrip().split('\n')
+            log.debug(result_dump)
+            infos = result_dump.rstrip().split('\n')
             if infos:
                 apk = {}
                 permissions = []
@@ -143,7 +150,11 @@ def showApkInstallItems():
                         if int(currentVersionCode) > int(apk["versionCode"].strip()):
                             needsDowngradeFlag = True
 
-                    it = wf.add_item(title="{0} - {1}({2})".format(apk['label'], apk["versionName"], apk["versionCode"]), subtitle=apk["packName"], copytext=apk["packName"], arg=apkFileOrFolder, valid=validApkByApiCheck)
+                    subtitle = apk["packName"]
+                    if is_system_app:
+                        subtitle = apk["packName"] + " - sharedUserId=\"android.uid.system\""
+
+                    it = wf.add_item(title="{0} - {1}({2})".format(apk['label'], apk["versionName"], apk["versionCode"]), subtitle=subtitle, copytext=apk["packName"], arg=apkFileOrFolder, valid=validApkByApiCheck)
                     it.setvar('apkFile', [apkFileOrFolder])
                     
                     installOptions = ""
