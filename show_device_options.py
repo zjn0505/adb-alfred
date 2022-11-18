@@ -204,6 +204,18 @@ def main(wf):
         it.add_modifier('alt', 'Dump the first stack',
                         arg="dump_stack:first_stack")
 
+    # DEMO MODE
+    if api and int(api) >= 23:
+        title = "Dump notifications"
+
+        if addAll or wordMatch(arg, title):
+            it = wf.add_item(title=title,
+                        uid="dump_notification",
+                        arg="dump_notification",
+                        valid=True)
+            itemCount += 1
+            it.add_modifier('alt', 'Exclude empty notification', arg="dump_notification:exclude_empty")
+
     # Screen Copy with scrcpy
     title = "Screen Copy with scrcpy"
     log.debug("Screen Copy with scrcpy")

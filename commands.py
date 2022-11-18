@@ -101,3 +101,6 @@ CMD_DUMP_PACKAGE = adbshell + "dumpsys package {} | grep 'versionCode\|versionNa
 
 # Dump task stack
 CMD_DUMP_STACK = adbshell + "dumpsys activity activities | grep 'Hist \|taskAffinity=\|app=ProcessRecord'"
+
+# Dump notification
+CMD_DUMP_NOTIFICATION = adbshell + "dumpsys notification --noredact | sed -n '/Notification List/,/Notification Preferences/p'"

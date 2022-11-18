@@ -149,6 +149,8 @@ Features
 |Dump task stacks|`Dump task stacks`|
 |Dump task stacks of first app|`Dump task stacks` + `cmd`|
 |Dump first task stacks|`Dump task stacks` + `option`|
+|Dump notifications|`Dump notifications`|
+|Dump notifications, exclude empty ones|`Dump notifications` + `cmd`|
 |Screen copy (real device)|`Screen Copy with scrcpy`|
 |Screen copy with max dimemsion 1024|`Screen Copy with scrcpy` + `cmd`|
 |Screen copy with record screen|`Screen Copy with scrcpy` + `option`|
@@ -261,6 +263,10 @@ Full feature list
 |Force stop dumpped task|`adb` -> `Dump task stacks` -> `ctrl`|
 |Clear data of dumpped task's application|`adb` -> `Dump task stacks` -> `fn`|
 |Show dumpped task app info page|`adb` -> `Dump task stacks` -> `shift`|
+|Dump notifications|`adb` -> `Dump notifications`|
+|Dump notifications, exclude empty ones|`adb` -> `Dump notifications` + `cmd`|
+|Show app info of notification|`adb` -> `Dump notifications` -> `cmd`|
+|Show channel info of notification|`adb` -> `Dump notifications` -> `option`|
 |Screen copy (real device)|`adb` -> `Screen Copy with scrcpy`|
 |Screen copy with max dimemsion 1024|`adb` -> `Screen Copy with scrcpy` + `cmd`|
 |Screen copy with record screen|`adb` -> `Screen Copy with scrcpy` + `option`|

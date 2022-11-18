@@ -8,6 +8,19 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>010C84AE-88CB-465E-823C-175D948358BC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A0A794B6-BE79-4920-BAE9-F5B2AAF1A8D8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>01E60B8E-41F3-4D01-B7E2-5D2F6621B98F</key>
 		<array>
 			<dict>
@@ -997,6 +1010,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>C145CE7D-832D-4815-AA14-A8F6D4EFD2BE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>A7827D60-49E5-4845-955D-E0E6AA964E29</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -1820,6 +1843,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>A0A794B6-BE79-4920-BAE9-F5B2AAF1A8D8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8C752D7F-4A38-480E-B908-DDA844CF8913</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
 		<array>
 			<dict>
@@ -2152,6 +2188,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>3578F438-4C73-4387-844F-2EAEA64F613E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C145CE7D-832D-4815-AA14-A8F6D4EFD2BE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>010C84AE-88CB-465E-823C-175D948358BC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -6173,6 +6222,89 @@ EOB</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>python3 dump_notification.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A0A794B6-BE79-4920-BAE9-F5B2AAF1A8D8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{var:function}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^dump_notification(:.*)?</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>C145CE7D-832D-4815-AA14-A8F6D4EFD2BE</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>010C84AE-88CB-465E-823C-175D948358BC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argument</key>
 				<string>14'{query}', {allvars}</string>
 				<key>cleardebuggertext</key>
@@ -6884,6 +7016,13 @@ Full function list at:
 https://github.com/zjn0505/adb-alfred</string>
 	<key>uidata</key>
 	<dict>
+		<key>010C84AE-88CB-465E-823C-175D948358BC</key>
+		<dict>
+			<key>xpos</key>
+			<real>1830</real>
+			<key>ypos</key>
+			<real>2150</real>
+		</dict>
 		<key>01B9D557-FFBF-462C-8CDA-68526EC37F97</key>
 		<dict>
 			<key>note</key>
@@ -6944,7 +7083,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2400</real>
 			<key>ypos</key>
-			<real>2140</real>
+			<real>2300</real>
 		</dict>
 		<key>09888B11-904A-4B29-BC71-E743740A9A19</key>
 		<dict>
@@ -7041,7 +7180,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1830</real>
 			<key>ypos</key>
-			<real>2170</real>
+			<real>2330</real>
 		</dict>
 		<key>1C6C769C-33CE-4C97-BF58-D0BA22B4E9A9</key>
 		<dict>
@@ -7066,7 +7205,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2050</real>
 			<key>ypos</key>
-			<real>2665</real>
+			<real>2825</real>
 		</dict>
 		<key>208A6634-44C3-447D-BDE7-FF37725783FA</key>
 		<dict>
@@ -7082,14 +7221,14 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1670</real>
 			<key>ypos</key>
-			<real>2510</real>
+			<real>2670</real>
 		</dict>
 		<key>2228943F-B964-46CD-9512-1CD8D213EE1F</key>
 		<dict>
 			<key>xpos</key>
 			<real>1990</real>
 			<key>ypos</key>
-			<real>2550</real>
+			<real>2710</real>
 		</dict>
 		<key>22B91932-B6D7-48A0-9B52-33690AB7C852</key>
 		<dict>
@@ -7105,7 +7244,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1930</real>
 			<key>ypos</key>
-			<real>2140</real>
+			<real>2300</real>
 		</dict>
 		<key>28B2D97B-07BD-497C-AEF2-753A9CAEEF09</key>
 		<dict>
@@ -7130,7 +7269,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2270</real>
 			<key>ypos</key>
-			<real>2390</real>
+			<real>2550</real>
 		</dict>
 		<key>2EA58399-95FB-4AC8-92E3-16070F86559F</key>
 		<dict>
@@ -7176,7 +7315,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1930</real>
 			<key>ypos</key>
-			<real>2290</real>
+			<real>2450</real>
 		</dict>
 		<key>38F77EED-1B8C-4A81-970F-9937F947E558</key>
 		<dict>
@@ -7192,7 +7331,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2780</real>
 			<key>ypos</key>
-			<real>2290</real>
+			<real>2450</real>
 		</dict>
 		<key>3AFBBC8E-7BD4-49F2-8A7C-75287B360EB1</key>
 		<dict>
@@ -7297,7 +7436,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2270</real>
 			<key>ypos</key>
-			<real>2240</real>
+			<real>2400</real>
 		</dict>
 		<key>4E30CBC8-28EC-43CC-B9E1-D8B32DEB5A1A</key>
 		<dict>
@@ -7313,14 +7452,14 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1750</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>3000</real>
 		</dict>
 		<key>53A52C7A-6D94-44D7-833D-56026D9563ED</key>
 		<dict>
 			<key>xpos</key>
 			<real>1830</real>
 			<key>ypos</key>
-			<real>2620</real>
+			<real>2780</real>
 		</dict>
 		<key>53C9D27B-FA0D-4E36-BDAC-1A6499D211FB</key>
 		<dict>
@@ -7359,7 +7498,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2180</real>
 			<key>ypos</key>
-			<real>2500</real>
+			<real>2660</real>
 		</dict>
 		<key>5D56F0F0-ECEA-4EE6-A7B5-CB8CFAF84F0E</key>
 		<dict>
@@ -7375,7 +7514,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2780</real>
 			<key>ypos</key>
-			<real>2470</real>
+			<real>2630</real>
 		</dict>
 		<key>5E89349C-E31D-40BC-A828-91A81C965ECF</key>
 		<dict>
@@ -7384,7 +7523,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2400</real>
 			<key>ypos</key>
-			<real>2290</real>
+			<real>2450</real>
 		</dict>
 		<key>5FF17710-F5EB-4244-9E4F-946321A4C69B</key>
 		<dict>
@@ -7444,7 +7583,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1990</real>
 			<key>ypos</key>
-			<real>2620</real>
+			<real>2780</real>
 		</dict>
 		<key>7007AA6B-9FDA-4D1C-926D-915B9DD28A0D</key>
 		<dict>
@@ -7476,7 +7615,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1745</real>
 			<key>ypos</key>
-			<real>2230</real>
+			<real>2390</real>
 		</dict>
 		<key>7568F43B-9DB6-4F18-8F99-44BD327BDE6B</key>
 		<dict>
@@ -7554,7 +7693,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2270</real>
 			<key>ypos</key>
-			<real>2500</real>
+			<real>2660</real>
 		</dict>
 		<key>7E8E8902-5D0D-4AB3-9006-27971FEF917D</key>
 		<dict>
@@ -7611,7 +7750,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2110</real>
 			<key>ypos</key>
-			<real>2320</real>
+			<real>2480</real>
 		</dict>
 		<key>89201298-073F-4809-9CD0-B80F85F57FD1</key>
 		<dict>
@@ -7737,7 +7876,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1830</real>
 			<key>ypos</key>
-			<real>2510</real>
+			<real>2670</real>
 		</dict>
 		<key>9D0629D5-9DBC-44A6-9B5A-875B9A0C0674</key>
 		<dict>
@@ -7751,7 +7890,16 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1890</real>
 			<key>ypos</key>
-			<real>2620</real>
+			<real>2780</real>
+		</dict>
+		<key>A0A794B6-BE79-4920-BAE9-F5B2AAF1A8D8</key>
+		<dict>
+			<key>note</key>
+			<string>Dump notification</string>
+			<key>xpos</key>
+			<real>1930</real>
+			<key>ypos</key>
+			<real>2120</real>
 		</dict>
 		<key>A108A1D0-8DC2-4B62-805A-1A4A34FD5EE1</key>
 		<dict>
@@ -7793,21 +7941,21 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1670</real>
 			<key>ypos</key>
-			<real>2670</real>
+			<real>2830</real>
 		</dict>
 		<key>A7240891-46F3-41FA-9D04-EAB6ED585E5B</key>
 		<dict>
 			<key>xpos</key>
 			<real>1890</real>
 			<key>ypos</key>
-			<real>2510</real>
+			<real>2670</real>
 		</dict>
 		<key>A7827D60-49E5-4845-955D-E0E6AA964E29</key>
 		<dict>
 			<key>xpos</key>
 			<real>1670</real>
 			<key>ypos</key>
-			<real>2170</real>
+			<real>2330</real>
 		</dict>
 		<key>A7A732FB-5BB9-41F1-B2EA-B2B51AF0258C</key>
 		<dict>
@@ -7816,7 +7964,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2180</real>
 			<key>ypos</key>
-			<real>2110</real>
+			<real>2270</real>
 		</dict>
 		<key>A83BC89A-9B15-4875-802C-0867AB333ACD</key>
 		<dict>
@@ -7832,14 +7980,14 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2180</real>
 			<key>ypos</key>
-			<real>2170</real>
+			<real>2330</real>
 		</dict>
 		<key>AA03CA79-DCDC-4D3F-9409-6CBAC5667780</key>
 		<dict>
 			<key>xpos</key>
 			<real>1890</real>
 			<key>ypos</key>
-			<real>2840</real>
+			<real>3000</real>
 		</dict>
 		<key>AB1BC7DE-EFE7-4132-AF36-4713517586AA</key>
 		<dict>
@@ -7901,7 +8049,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1990</real>
 			<key>ypos</key>
-			<real>2695</real>
+			<real>2855</real>
 		</dict>
 		<key>B6CFD765-008A-4C3D-BD7C-B07FC2B25606</key>
 		<dict>
@@ -7950,6 +8098,13 @@ https://github.com/zjn0505/adb-alfred</string>
 			<real>3310</real>
 			<key>ypos</key>
 			<real>2070</real>
+		</dict>
+		<key>C145CE7D-832D-4815-AA14-A8F6D4EFD2BE</key>
+		<dict>
+			<key>xpos</key>
+			<real>1670</real>
+			<key>ypos</key>
+			<real>2150</real>
 		</dict>
 		<key>C38782A7-0016-44BC-94F8-B6EC35107210</key>
 		<dict>
@@ -8031,7 +8186,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1750</real>
 			<key>ypos</key>
-			<real>2510</real>
+			<real>2670</real>
 		</dict>
 		<key>D2F900A6-2B55-4594-9D6B-F84C581F901E</key>
 		<dict>
@@ -8063,7 +8218,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2620</real>
 			<key>ypos</key>
-			<real>2260</real>
+			<real>2420</real>
 		</dict>
 		<key>DB07D86E-AFED-4393-8A6E-73DA686CD001</key>
 		<dict>
@@ -8079,7 +8234,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2050</real>
 			<key>ypos</key>
-			<real>2810</real>
+			<real>2970</real>
 		</dict>
 		<key>DEEEFF2D-7B24-4EF2-AFC0-92891FC2CE23</key>
 		<dict>
@@ -8093,7 +8248,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>1670</real>
 			<key>ypos</key>
-			<real>2320</real>
+			<real>2480</real>
 		</dict>
 		<key>E0DC1303-FDF3-4DD5-9ED5-E6FEB10EB5F3</key>
 		<dict>
@@ -8102,7 +8257,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2050</real>
 			<key>ypos</key>
-			<real>2520</real>
+			<real>2680</real>
 		</dict>
 		<key>E1BB63C6-F3A5-49CB-9C42-1BEB9CA47239</key>
 		<dict>
@@ -8199,7 +8354,7 @@ https://github.com/zjn0505/adb-alfred</string>
 			<key>xpos</key>
 			<real>2180</real>
 			<key>ypos</key>
-			<real>2320</real>
+			<real>2480</real>
 		</dict>
 		<key>ED7185EE-E248-4535-AB02-D48AFC8196B4</key>
 		<dict>
