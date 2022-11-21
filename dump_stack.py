@@ -37,7 +37,7 @@ def main(wf):
         log.debug("Start")
         for index in range(len(stackData)):
             data = stackData[index].strip()
-            if data.find("* Hist #") >= 0:
+            if data.find("* Hist ") >= 0:
                 # Hist: * Hist #0: ActivityRecord{118a7ef u0 com.roboteam.teamy.china/com.roboteam.teamy.home.HomeActivity t1564}
                 start = data.find(" u0 ") + 4
                 activityData = data[start:data.find(" ", start)]
