@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 from workflow import Workflow
 from toolchain import run_script
 from commands import CMD_DUMP_STACK
@@ -38,12 +39,11 @@ def main(wf):
         for index in range(len(stackData)):
             data = stackData[index].strip()
             if data.find("* Hist ") >= 0:
-                # Hist: * Hist #0: ActivityRecord{118a7ef u0 com.roboteam.teamy.china/com.roboteam.teamy.home.HomeActivity t1564}
-                start = data.find(" u0 ") + 4
+                # * Hist #0: ActivityRecord{118a7ef u0 com.roboteam.teamy.china/com.roboteam.teamy.home.HomeActivity t1564}
+                # * Hist #0: ActivityRecord{520a6a3 u10 com.miui.home/.launcher.Launcher t1000001}
+                start = re.search(" u\d+ ", data).span()[1]
                 activityData = data[start:data.find(" ", start)]
                 packageName = activityData.split("/")[0]
-                log.debug("activityData")
-                log.debug(activityData)
                 activityName = activityData.split("/")[1]
                 if activityName.startswith("."):
                     activityName = packageName + activityName
