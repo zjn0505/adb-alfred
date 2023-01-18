@@ -13,6 +13,7 @@ def main(wf):
             i-=1
             it = wf.add_item(title=cmd,
                     arg=cmd,
+                    match=cmd.replace(":", " "),
                     valid=True)
             it.setvar("last_func", cmd)
             it.setvar("function", cmd)
