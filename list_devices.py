@@ -9,10 +9,6 @@ from workflow.background import run_in_background, is_running
 from item import Item
 import hashlib
 
-GITHUB_SLUG = 'zjn0505/adb-alfred'
-VERSION = open(os.path.join(os.path.dirname(__file__),
-                            './version')).read().strip()
-
 adb_path = os.getenv('adb_path')
 
 regexIp = "^((([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.)){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]))"
@@ -267,9 +263,7 @@ def main(wf):
 
 
 if __name__ == '__main__':
-    update_settings = {'github_slug': GITHUB_SLUG, 'version': VERSION}
-    wf = Workflow(update_settings=update_settings,
-                  help_url="https://github.com/zjn0505/adb-alfred")
+    wf = Workflow(help_url="https://github.com/zjn0505/adb-alfred")
     log = wf.logger
     log.debug("Hello from adb")
 
