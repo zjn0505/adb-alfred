@@ -47,7 +47,8 @@ def main(wf):
                 activityName = activityData.split("/")[1]
                 if activityName.startswith("."):
                     activityName = packageName + activityName
-
+                if activityName.endswith("}"):
+                    activityName = activityName[0:-1]
                 activityList.append(Activity(name=activityName, package=packageName))
             elif data.find("app=ProcessRecord") >= 0:
                 # ProcessRecord:  app=ProcessRecord{8b2b5e1 1333:com.android.settings/1000}
