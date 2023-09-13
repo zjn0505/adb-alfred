@@ -1,7 +1,7 @@
 import os
 from toolchain import run_script
 from toolchain import call_script
-from commands import CMD_REBOOT
+
 from commands import CMD_SCREENCAP
 from commands import CMD_PULL_TEMP_TO_DESKTOP
 from commands import CMD_RM_TEMP

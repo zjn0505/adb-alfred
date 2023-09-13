@@ -69,6 +69,8 @@ def showApkInstallItems():
         head, tail = os.path.split(apkPath)
         wf.add_item(title=tail, subtitle=apkPath, copytext=tail, arg=apkPath, valid=True)
         wf.add_item(title="aapt not found", subtitle="Please config 'aapt_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
+        if not apksigner_path:
+            wf.add_item(title="apksigner not found", subtitle="Please config 'apksigner_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
     else:
         cmd_dump_badging = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkPath)
         cmd_list_all = "{0} list -a {1} |  grep 'sharedUserId'".format(aapt_path, apkPath)
@@ -149,10 +151,9 @@ def showApkInstallItems():
                         currentVersionCode = infos[0][12:].strip()
                         if int(currentVersionCode) > int(apk["versionCode"].strip()):
                             needsDowngradeFlag = True
-
                     subtitle = apk["packName"]
                     if is_system_app:
-                        subtitle = apk["packName"] + " - sharedUserId=\"android.uid.system\""
+                        subtitle = apk["packName"] + " ⚠️ sharedUserId=\"android.uid.system\" ⚠️"
 
                     it = wf.add_item(title="{0} - {1}({2})".format(apk['label'], apk["versionName"], apk["versionCode"]), subtitle=subtitle, copytext=apk["packName"], arg=apkFileOrFolder, valid=validApkByApiCheck)
                     it.setvar('apkFile', [apkFileOrFolder])
@@ -180,6 +181,9 @@ def showApkInstallItems():
                     if "target" in apk:
                         it.add_modifier('ctrl', "targetSdkVersion {0}".format(apk["target"]))
 
+                    if not apksigner_path:
+                        wf.add_item(title="apksigner not found", subtitle="Please config 'apksigner_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
+                        
                     if currentVersionCode:    
                         it = wf.add_item(title="Current version - {0}({1})".format(infos[1][12:].strip(), currentVersionCode), valid=False)
                         mod = it.add_modifier('cmd', subtitle='Uninstall currently installed version first, then install selected apk file', valid=True)

@@ -3,6 +3,8 @@ import os
 import sys
 import re
 from workflow import Workflow
+import commands
+import time
 
 adb_path = os.getenv('adb_path')
 serial = os.getenv('serial')
@@ -59,6 +61,7 @@ def main(wf):
         it = wf.add_item(title=title,
                          uid="list_app",
                          arg="list_app",
+                         copytext=commands.CMD_LIST_APPS,
                          valid=True)
         it.setvar("func", func)
         if func == "":
@@ -86,6 +89,7 @@ def main(wf):
                     uid="install_apk",
                     arg="install_apk",
                     subtitle="install apk or apks",
+                    copytext=commands.CMD_INSTALL_APP.format("", ""),
                     valid=True)
         itemCount += 1
 
@@ -93,10 +97,12 @@ def main(wf):
     title = "Take screenshot"
 
     if addAll or wordMatch(arg, title):
+        timestamp = int(time.time())
         it = wf.add_item(title=title,
                          uid="screenshot",
                          arg="screenshot:to_clipboard",
                          subtitle="take a screenshot and copy to clipboard, `cmd` to copy to desktop",
+                         copytext=commands.CMD_SCREENCAP.format(timestamp),
                          valid=True)
         it.add_modifier(
             'cmd', 'take a screenshot and copy to desktop', arg="screenshot:to_desktop")
@@ -110,6 +116,7 @@ def main(wf):
                          uid="open_settings",
                          arg="open_settings",
                          subtitle="'cmd' - Dev Tool, 'alt' - WiFi, 'ctrl' - App, 'fn' - Date, 'shift' - Accessibility",
+                         copytext=commands.CMD_OPEN_SETTINGS.format("android.settings.SETTINGS"),
                          valid=True)
         it.add_modifier('cmd', 'Open Developer Settings',
                         arg="open_settings:developer_options")
@@ -128,6 +135,7 @@ def main(wf):
         it = wf.add_item(title=title,
                          uid="debug_layout",
                          arg="debug_layout",
+                         copytext=commands.CMD_SET_DEBUG_LAYOUT.format('on'),
                          valid=True)
         itemCount += 1
         it.add_modifier('cmd', 'Toggle pointer location',
@@ -145,6 +153,7 @@ def main(wf):
             wf.add_item(title=title,
                         uid="demo_mode",
                         arg="demo_mode",
+                        copytext=commands.CMD_DEMO_MODE_STATUS,
                         valid=True)
             itemCount += 1
 
@@ -156,6 +165,7 @@ def main(wf):
                          uid="adb_reboot",
                          arg="adb_reboot",
                          subtitle="'cmd' - Bootloader, 'alt' - Recovery, 'ctrl' - Sideload",
+                         copytext=commands.CMD_REBOOT.format(''),
                          valid=True)
         itemCount += 1
         it.add_modifier('cmd', 'Bootloader', arg="adb_reboot:bootloader")
@@ -166,11 +176,12 @@ def main(wf):
     if not isWifiDevice and not isEmulator and ip:
         title = "Connect over Wi-Fi"
 
-        if addAll or wordMatch(arg, title):
+        if addAll or wordMatch(arg, title) or wordMatch(arg, "Connect over WiFi"):
             wf.add_item(title=title,
                         subtitle=ip,
                         uid="debug_wifi",
                         arg="debug_wifi",
+                        copytext=commands.CMD_TCPIP + ";" + commands.CMD_ADB_CONNECT.format(ip.split("/")[0]),
                         valid=True)
             itemCount += 1
 
@@ -181,6 +192,7 @@ def main(wf):
         it = wf.add_item(title=title,
                          uid="keyevent_input",
                          arg="keyevent_input",
+                         copytext=commands.CMD_INPUT.format("keyevent", "", "KEYCODE_HOME"),
                          valid=True)
         it.add_modifier("cmd", "Back", arg='keyevent_input_KEYCODE_BACK')
         it.add_modifier("alt", "Home", arg='keyevent_input_KEYCODE_HOME')
@@ -197,6 +209,7 @@ def main(wf):
         it = wf.add_item(title=title,
                          uid="dump_stack",
                          arg="dump_stack",
+                         copytext=commands.CMD_DUMP_STACK,
                          valid=True)
         itemCount += 1
         it.add_modifier('cmd', 'Dump the first application',
@@ -204,7 +217,7 @@ def main(wf):
         it.add_modifier('alt', 'Dump the first stack',
                         arg="dump_stack:first_stack")
 
-    # DEMO MODE
+    # DUMP NOTIFICATIONS
     if api and int(api) >= 23:
         title = "Dump notifications"
 
@@ -212,9 +225,11 @@ def main(wf):
             it = wf.add_item(title=title,
                         uid="dump_notification",
                         arg="dump_notification",
+                        copytext=commands.CMD_DUMP_NOTIFICATION,
                         valid=True)
             itemCount += 1
             it.add_modifier('alt', 'Exclude empty notification', arg="dump_notification:exclude_empty")
+
 
     # Screen Copy with scrcpy
     title = "Screen Copy with scrcpy"
@@ -232,6 +247,7 @@ def main(wf):
         it = wf.add_item(title=title,
                          uid="scr_cpy",
                          arg="scr_cpy",
+                         copytext="scrcpy -s {}".format(serial),
                          valid=True)
 
         it.setvar("dimension", 0)

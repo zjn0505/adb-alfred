@@ -91,7 +91,7 @@ CMD_PULL_APK_TO_DESKTOP = adbs + 'pull {0} ~/Desktop/{1}-{2}.apk'
 CMD_INSTALL_APP = adbs + 'install -r {0} {1}'
 
 # List apps
-CMD_LIST_APPS = adbshell + "'pm list packages -f' | grep package: | sed -e 's/.*=//' | sed 's/\r//g' | sort"
+CMD_LIST_APPS = adbshell + "'pm list packages -f' | grep package: | sed -e 's/.*=//' | sed 's/\\r//g' | sort"
 
 # Check keyboard
 CMD_CHECK_KEYBOARD = adbshell + "dumpsys input_method | grep mInputShown | awk '{{print $4}}'"
@@ -104,3 +104,6 @@ CMD_DUMP_STACK = adbshell + "dumpsys activity activities | grep 'Hist \|taskAffi
 
 # Dump notification
 CMD_DUMP_NOTIFICATION = adbshell + "dumpsys notification --noredact | sed -n '/Notification List/,/Notification Preferences/p'"
+
+# Reset appops
+CMD_RESET_APPOPS = adbshell + "cmd appops reset {}"

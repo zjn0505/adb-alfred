@@ -4,6 +4,7 @@ import sys
 from workflow import Workflow, ICON_INFO
 from toolchain import run_script
 from commands import CMD_DUMP_PACKAGE
+import commands
  
 packName = os.getenv('package')
 
@@ -68,12 +69,14 @@ def main(wf):
         title = "Start application"
         wf.add_item(title=title,
                     arg="start_app",
+                    copytext=commands.CMD_LAUNCH_APP.format(packName),
                     valid=True)
 
     # Clear data
     title = "Clear app data"
     wf.add_item(title=title,
                 arg="clear_app_data",
+                copytext=commands.CMD_CLEAR_DATA.format(packName),
                 valid=True)
 
     # Uninstall
@@ -81,6 +84,7 @@ def main(wf):
     it = wf.add_item(title=title,
                 arg="uninstall_app",
                 subtitle="`cmd` to keep data and cache",
+                copytext=commands.CMD_UNINSTALL_APP.format(packName, ""),
                 valid=True)
 
     mod = it.add_modifier("cmd", subtitle="keep the data and cache directories")
@@ -92,6 +96,7 @@ def main(wf):
         title = ("Enable app", "Disable app")[enabled]
         it = wf.add_item(title=title,
             arg="dis_enable_app",
+            copytext=commands.CMD_DISABLE_APP.format(("enable", "disable")[enabled], packName),
             valid=True)
         
         it.setvar("enabled", enabled)
@@ -99,11 +104,19 @@ def main(wf):
             mod = it.add_modifier("cmd", subtitle="disable for current user")
             mod.setvar("mod", "disable_for_current_user")
 
+    # Reset AppOps
+    title = "Reset AppOps"
+    it = wf.add_item(title=title,
+                arg="reset_appops",
+                subtitle="Reset permissions to default. Will not work if exec too often.",
+                copytext=commands.CMD_RESET_APPOPS.format(packName),
+                valid=True)
 
     # Get apk file
     title = "Extract apk file"
     it = wf.add_item(title=title,
                 arg="extract_apk",
+                copytext=commands.CMD_SHOW_APK_PATH.format(packName),
                 valid=True)
     if versionName:
         it.setvar("pretty_version", versionName)

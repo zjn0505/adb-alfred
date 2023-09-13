@@ -8,6 +8,8 @@ from workflow import Workflow
 from workflow.background import run_in_background, is_running
 from item import Item
 import hashlib
+import subprocess
+
 
 adb_path = os.getenv('adb_path')
 
@@ -255,7 +257,14 @@ def list_devices(args):
 
 def main(wf):
     if not adb_path:
-        wf.warn_empty(title="adb not found",
+        try:
+            # fetch system adb path and save to configuration
+            rc = subprocess.check_output(['which', 'adb'])
+            adb_path_p = rc.decode('utf-8').strip()
+            wf.setvar("adb_path", adb_path_p, persist=True)
+            wf.rerun = 1
+        except:
+            wf.warn_empty(title="adb not found",
                       subtitle="Please config 'adb_path' in workflow settings")
     else:
         list_devices(wf.args)
