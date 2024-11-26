@@ -43,8 +43,10 @@ jobs:
         with:
           draft: true
           prerelease: true
-          name: Release ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
           body: |
             Release candidate for version ${{ github.ref_name }}
+          files: |
+            adb-v${{ env.VERSION }}.alfredworkflow
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
