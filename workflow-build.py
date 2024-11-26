@@ -166,12 +166,21 @@ def init_logging():
 
 def safename(name):
     """Make name filesystem and web-safe."""
-    if isinstance(name, str):
-        name = unicode(name, 'utf-8')
+    # Remove the old Python 2 unicode conversion
+    # if isinstance(name, str):
+    #     name = unicode(name, 'utf-8')
+    
+    # Ensure we're working with a string
+    if not isinstance(name, str):
+        name = str(name)
 
     # remove non-ASCII
     s = normalize('NFD', name)
     b = s.encode('us-ascii', 'ignore')
+    
+    # In Python 3, we need to decode bytes back to str
+    if isinstance(b, bytes):
+        b = b.decode('ascii')
 
     clean = []
     for c in b:
@@ -219,7 +228,8 @@ def build_workflow(workflow_dir, outputdir, overwrite=False, verbose=False,
     with chdir(workflow_dir):
         # ------------------------------------------------------------
         # Read workflow metadata from info.plist
-        info = plistlib.readPlist(u'info.plist')
+        with open('info.plist', 'rb') as fp:
+            info = plistlib.load(fp)
         version = None
         if not os.path.exists(u'info.plist'):
             log.error(u'info.plist not found')
