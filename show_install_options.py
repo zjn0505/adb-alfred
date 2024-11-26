@@ -2,7 +2,7 @@ import subprocess
 import os
 import sys
 import re
-import pipes
+import shlex
 from workflow import Workflow, ICON_INFO, ICON_NOTE, ICON_ERROR, ICON_WARNING
 from toolchain import run_script
 from workflow.background import is_running, run_in_background
@@ -62,7 +62,7 @@ def showApkInstallItems():
 
     arg = wf.args[0].strip()
 
-    apkPath = pipes.quote(apkFileOrFolder)
+    apkPath = shlex.quote(apkFileOrFolder)
     log.debug("Path {0}".format(apkPath))
     apk = None
     if not aapt_path:
@@ -72,7 +72,7 @@ def showApkInstallItems():
         if not apksigner_path:
             wf.add_item(title="apksigner not found", subtitle="Please config 'apksigner_path' in workflow settings for richer APK info", valid=False, icon=ICON_WARNING)
     else:
-        cmd_dump_badging = "{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkPath)
+        cmd_dump_badging = r"{0} dump badging {1} |  grep 'package:\|application-label:\|dkVersion:\|uses-permission:\|application-debuggable\|testOnly='".format(aapt_path, apkPath)
         cmd_list_all = "{0} list -a {1} |  grep 'sharedUserId'".format(aapt_path, apkPath)
         result_dump = run_script(cmd_dump_badging)
         is_system_app = False
@@ -138,7 +138,7 @@ def showApkInstallItems():
                     currentVersionCode = ""
 
                     if serial:
-                        shell_cmd = "{0} -s {1} shell dumpsys package {2} | grep 'versionCode\|versionName' | awk '{{print $1}}'".format(adb_path, serial, apk["packName"])
+                        shell_cmd = r"{0} -s {1} shell dumpsys package {2} | grep 'versionCode\|versionName' | awk '{{print $1}}'".format(adb_path, serial, apk["packName"])
 
                         try:
                             currentApkResult = run_script(shell_cmd)
@@ -197,7 +197,7 @@ def showApkInstallItems():
 
                     if deviceApi and "min" in apk and int(deviceApi) < apk["min"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, lower than apk minSdkVersion {0}, ".format(deviceApi, apk["min"]), icon=ICON_ERROR, valid=False)
-                    if deviceApi and "max" in apk and int(deviceApi) > apk["maxs"]:
+                    if deviceApi and "max" in apk and int(deviceApi) > apk["max"]:
                         wf.add_item(title="Incompatiable device", subtitle="current device api level is {1}, higher than apk maxSdkVersion {0}, ".format(deviceApi, apk["max"]), icon=ICON_ERROR, valid=False)
 
 
