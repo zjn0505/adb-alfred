@@ -8692,7 +8692,7 @@ You may be able to check it in terminal with "which emulator".</string>
 		<string>Screen Info|self_scripts/screen_info.py</string>
 	</dict>
 	<key>version</key>
-	<string>1.13.6</string>
+	<string>1.13.7</string>
 	<key>webaddress</key>
 	<string>https://github.com/zjn0505/adb-alfred</string>
 </dict>
