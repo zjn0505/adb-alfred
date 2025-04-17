@@ -1,5 +1,5 @@
 import os
-import pipes
+import shlex
 from toolchain import run_script
 from commands import CMD_CURRENT_FOCUS
 from commands import CMD_CALL_STATUSBAR
@@ -10,7 +10,7 @@ text = os.getenv('key')
 mod = os.getenv('mod')
 
 if cmd == "text":
-    text = pipes.quote(text.replace(" ", "%s"))
+    text = shlex.quote(text.replace(" ", "%s"))
 
 shell_cmd = ""
 

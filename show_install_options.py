@@ -167,6 +167,9 @@ def showApkInstallItems():
 
                     if "g" in arg:
                         installOptions = installOptions + "g"
+                        
+                    if "b" in arg:
+                        installOptions = installOptions + "b"
 
                     it.setvar('option', installOptions)
 
@@ -272,6 +275,12 @@ def main(wf):
             wf.add_item(title="Add 'g' to grant all permissions", icon=ICON_INFO, valid=False)
         elif 'g' in arg and (not serial or int(deviceApi) > 22) and hasDangerousPermission:
             installOptions.append("g")
+            
+        # Only after API 34 Android 14, arg 'l' can be used to bypass low target sdk block, https://developer.android.com/about/versions/14/behavior-changes-all#minimum-target-api-level
+        if  "b" not in arg and (not serial or int(deviceApi) >= 34) and apk["target"] < 23:
+            wf.add_item(title="Add 'b' to bypass low target sdk block", icon=ICON_INFO, valid=False)
+        elif 'b' in arg and (not serial or int(deviceApi) >= 34) and apk["target"] < 23:
+            installOptions.append("b")
 
         wf.setvar("option", installOptions)
 
@@ -286,7 +295,7 @@ def main(wf):
                 run_in_background('apk_dump', ['/usr/bin/python3',
                                     wf.workflowfile('apk_print_cert.py'), hash])
 
-            log.debug(result)
+            log.debug("Cert Result || " + result+ " ||")
 
             if result:
                 log.debug(result)

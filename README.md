@@ -184,7 +184,7 @@ Features
 
 - select `Install apk` in device options to select APK or APKs on local drive for installation
 
-  - `adb install -t -d -g` and bulk installation
+  - `adb install -t -d -g --bypass-low-target-sdk-block` and bulk installation
   
   - apk signature info will be listed
   

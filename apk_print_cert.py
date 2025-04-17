@@ -1,6 +1,6 @@
 import os
 import sys
-import pipes
+import shlex
 from workflow import Workflow
 from toolchain import run_script
 import subprocess
@@ -13,7 +13,7 @@ apksigner_path = os.getenv("apksigner_path")
 def main(wf):
 
     hash = sys.argv[1]
-    apkPath = pipes.quote(apkFileOrFolder)
+    apkPath = shlex.quote(apkFileOrFolder)
     cmd = "{0} verify -v --print-certs {1}".format(apksigner_path, apkPath)
     
     result = ""
