@@ -295,7 +295,7 @@ def main(wf):
                 run_in_background('apk_dump', ['/usr/bin/python3',
                                     wf.workflowfile('apk_print_cert.py'), hash])
 
-            log.debug("Cert Result || " + result+ " ||")
+            # log.debug("Cert Result || " + result+ " ||")
 
             if result:
                 log.debug(result)
